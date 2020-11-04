@@ -1,11 +1,8 @@
 version: 2
 jobs:
-    # Builds the Showcase app using @pxblue/react-native-components persisted in /dist folder.
     build_showcase:
         docker:
             - image: circleci/node:12.9.1-browsers
-        environment:
-            - MASTER_BRANCH: master
         steps:
             - checkout
             - restore_cache:
@@ -33,6 +30,6 @@ jobs:
 
 workflows:
     version: 2
-    react-native_library:
+    react-native_showcase-demo:
         jobs:
             - build_showcase:
