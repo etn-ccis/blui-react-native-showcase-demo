@@ -1,0 +1,38 @@
+version: 2
+jobs:
+    # Builds the Showcase app using @pxblue/react-native-components persisted in /dist folder.
+    build_showcase:
+        docker:
+            - image: circleci/node:12.9.1-browsers
+        environment:
+            - MASTER_BRANCH: master
+        steps:
+            - checkout
+            - restore_cache:
+                  keys:
+                      - v2-dependencies-react-native-{{ checksum "yarn.lock" }}
+            - run:
+                  name: Install Dependencies
+                  command: |
+                      yarn install --frozen-lockfile
+            - save_cache:
+                  name: Save Cache
+                  paths:
+                      - node_modules
+                  key: v2-dependencies-react-native-{{ checksum "yarn.lock" }}
+            - attach_workspace:
+                  at: .
+            - run:
+                  name: Prettier Check
+                  command: |
+                      yarn prettier:check
+            - run:
+                  name: Build Showcase
+                  command: |
+                      yarn build
+
+workflows:
+    version: 2
+    react-native_library:
+        jobs:
+            - build_showcase:

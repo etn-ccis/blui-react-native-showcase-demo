@@ -1,10 +1,8 @@
 import * as React from 'react';
 import { SafeAreaView, ScrollView, View, I18nManager } from 'react-native';
-// import { Button, Card, ListItem } from 'react-native-elements';
 import { StackNavigationProp } from '@react-navigation/stack';
 import RNRestart from 'react-native-restart';
 import {
-    Body1,
     ChannelValue,
     EmptyState,
     Header,
@@ -105,7 +103,9 @@ export const App: React.FC<AppProps> = ({ navigation }) => (
                     description={'Not a single thing'}
                     IconClass={ChartLineVariant}
                     actions={
-                        <Button mode={'outlined'} labelStyle={{ color: PXBColors.blue[500] }} >Add a Device</Button>
+                        <Button mode={'outlined'} labelStyle={{ color: PXBColors.blue[500] }}>
+                            Add a Device
+                        </Button>
                     }
                 />
             </Card>
@@ -145,10 +145,12 @@ export const App: React.FC<AppProps> = ({ navigation }) => (
                     divider={'full'}
                     IconClass={Sunny}
                     title={'Temperature'}
-                    rightComponent={<React.Fragment>
-                        <ChannelValue value={1} units={'h'} IconClass={Clock} />
-                        <ChannelValue value={24} units={'m'} />
-                    </React.Fragment>}
+                    rightComponent={
+                        <React.Fragment>
+                            <ChannelValue value={1} units={'h'} IconClass={Clock} />
+                            <ChannelValue value={24} units={'m'} />
+                        </React.Fragment>
+                    }
                 />
             </Card>
             <InfoListItem
@@ -233,23 +235,9 @@ export const App: React.FC<AppProps> = ({ navigation }) => (
                 }
             >
                 <View style={{ justifyContent: 'center', marginLeft: -16 }}>
-                    <InfoListItem
-                        dense
-                        IconClass={Notifications}
-                        iconColor={PXBColors.red[500]}
-                        title={'1 Alarm'}
-                    />
-                    <InfoListItem
-                        dense
-                        IconClass={Info}
-                        iconColor={PXBColors.blue[500]}
-                        title={'1 Event'}
-                    />
-                    <InfoListItem
-                        dense
-                        IconClass={Clouds}
-                        title={'Online'}
-                    />
+                    <InfoListItem dense IconClass={Notifications} iconColor={PXBColors.red[500]} title={'1 Alarm'} />
+                    <InfoListItem dense IconClass={Info} iconColor={PXBColors.blue[500]} title={'1 Event'} />
+                    <InfoListItem dense IconClass={Clouds} title={'Online'} />
                 </View>
             </ScoreCard>
             <ScoreCard
@@ -306,23 +294,9 @@ export const App: React.FC<AppProps> = ({ navigation }) => (
                 }
             >
                 <View style={{ justifyContent: 'center', marginLeft: -16 }}>
-                    <InfoListItem
-                        dense
-                        IconClass={Notifications}
-                        iconColor={PXBColors.red[500]}
-                        title={'1 Alarm'}
-                    />
-                    <InfoListItem
-                        dense
-                        IconClass={Info}
-                        iconColor={PXBColors.blue[500]}
-                        title={'1 Event'}
-                    />
-                    <InfoListItem
-                        dense
-                        IconClass={Clouds}
-                        title={'Online'}
-                    />
+                    <InfoListItem dense IconClass={Notifications} iconColor={PXBColors.red[500]} title={'1 Alarm'} />
+                    <InfoListItem dense IconClass={Info} iconColor={PXBColors.blue[500]} title={'1 Event'} />
+                    <InfoListItem dense IconClass={Clouds} title={'Online'} />
                 </View>
             </ScoreCard>
             <SafeAreaView />
