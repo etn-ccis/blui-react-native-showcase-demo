@@ -1,4 +1,4 @@
-# React Showcase Demo
+# React Native Showcase Demo
 
 [![](https://img.shields.io/circleci/project/github/pxblue/react-native-showcase-demo/master.svg?style=flat)](https://circleci.com/gh/pxblue/react-native-showcase-demo/tree/master)
 
