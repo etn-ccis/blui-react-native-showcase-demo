@@ -10,8 +10,10 @@
         "lint": "eslint \"**/**.{ts,tsx}\"",
         "lint:fix": "eslint \"**/**.{ts,tsx}\" --fix",
         "prettier": "prettier \"**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --write",
+        "build": "react-native bundle --entry-file=index.tsx --bundle-output=build.bundle",
         "prettier:check": "prettier \"**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --check",
-        "rnlink": "npx react-native link"
+        "rnlink": "npx react-native link",
+        "precommit": "yarn prettier && yarn lint && yarn build"
     },
     "dependencies": {
         "@pxblue/colors": "^3.0.0",
