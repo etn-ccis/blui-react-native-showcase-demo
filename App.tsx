@@ -13,7 +13,7 @@ import {
     ScoreCard,
     wrapIcon,
     MobileStepper,
-    DotStepperVariant
+    DotStepperVariant,
 } from '@pxblue/react-native-components';
 import { Card, Button, Divider } from 'react-native-paper';
 
@@ -88,12 +88,11 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
             case 'text':
                 setMobileStepperVariant('progress');
                 break;
-            default: 
+            default:
                 setMobileStepperVariant('dots');
                 break;
         }
-    }
-
+    };
 
     return (
         <View style={{ flex: 1, backgroundColor: PXBColors.gray[50] }}>
