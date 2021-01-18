@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { SafeAreaView, ScrollView, View, I18nManager } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import RNRestart from 'react-native-restart';
@@ -24,6 +24,7 @@ import _Temp from '@pxblue/icons-svg/temp.svg';
 import _Humidity from '@pxblue/icons-svg/moisture.svg';
 import _Battery from '@pxblue/icons-svg/battery.svg';
 import { RootStackParamList } from './router';
+import { MobileStepperExample } from './components/mobile-stepper-example';
 
 const backgroundImage = require('./assets/images/farm.jpg');
 
@@ -299,6 +300,8 @@ export const App: React.FC<AppProps> = ({ navigation }) => (
                     <InfoListItem dense IconClass={Clouds} title={'Online'} />
                 </View>
             </ScoreCard>
+
+            <MobileStepperExample />
             <SafeAreaView />
         </ScrollView>
     </View>
