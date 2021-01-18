@@ -103,8 +103,8 @@ export const navGroupItems2: NavItem[] = [
         itemID: 'g2i3',
     },
     {
-        subtitle: 'You cant see me, fix InfoListItem',
-        title: 'Alerts',
+        subtitle: 'Click me to clear',
+        title: 'Clear Selection',
         itemID: 'g2i4',
         activeItemFontColor: Colors.white[50],
         activeItemBackgroundColor: Colors.blue[900],
@@ -120,6 +120,11 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
         (id: string) => {
             // Expandable items do not require navigation or selection.
             if (id === 'g2i1i1' || id === 'g2i1' || id === 'g1i3i3' || id === 'g1i3') {
+                return;
+            }
+
+            if (id === 'g2i4') {
+                setSelected('');
                 return;
             }
 
