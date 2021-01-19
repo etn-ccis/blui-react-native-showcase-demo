@@ -14,13 +14,14 @@ import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import _Humidity from '@pxblue/icons-svg/moisture.svg';
 import _Battery from '@pxblue/icons-svg/battery.svg';
 import { Image, View, I18nManager } from 'react-native';
-import { IconButton, Divider } from 'react-native-paper';
+import { IconButton, Divider, useTheme } from 'react-native-paper';
 import * as Colors from '@pxblue/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
 
 const headerBgImage = require('../assets/images/topology_40.png');
 const eatonLogo = require('../assets/images/eatonLogo.png');
+const eatonLogoWhite = require('../assets/images/eatonLogoWhite.png');
 const Battery = wrapIcon({ IconClass: _Battery, flip: I18nManager.isRTL });
 const Humidity = wrapIcon({ IconClass: _Humidity, flip: false });
 const Clock = wrapIcon({ IconClass: MaterialCommunityIcon, name: 'clock-outline', flip: false });
@@ -115,6 +116,7 @@ export type NavDrawerProps = {
     navigation: StackNavigationProp<RootStackParamList, 'NavigationDrawer'>;
 };
 export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
+    const theme = useTheme();
     const [selected, setSelected] = useState('');
     const selectItem = useCallback(
         (id: string) => {
@@ -135,6 +137,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 title={'Drawer Title'}
                 subtitle={'Drawer Subtitle'}
                 backgroundImage={headerBgImage}
+                fontColor={Colors.white[50]}
                 icon={
                     <IconButton
                         icon="menu"
@@ -161,8 +164,15 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
             </DrawerBody>
             <DrawerFooter>
                 <Divider />
-                <View style={{ padding: 16, backgroundColor: 'white', alignItems: 'center' }}>
-                    <Image source={eatonLogo} style={{ height: 60, width: '80%' }} />
+                <View
+                    style={{
+                        padding: 16,
+                        backgroundColor: theme.dark ? Colors.darkBlack[100] : 'white',
+                        alignItems: 'center',
+                    }}
+                >
+                    {!theme.dark && <Image source={eatonLogo} style={{ height: 60, width: '80%' }} />}
+                    {theme.dark && <Image source={eatonLogoWhite} style={{ height: 60, width: '80%' }} />}
                 </View>
             </DrawerFooter>
         </Drawer>

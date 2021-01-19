@@ -1,11 +1,12 @@
 import React, { useCallback, useState } from 'react';
 import { View, Text } from 'react-native';
-import { MobileStepper, DotStepperVariant } from '@pxblue/react-native-components';
-import { Card, Button, Divider } from 'react-native-paper';
+import { MobileStepper, DotStepperVariant, Body1 } from '@pxblue/react-native-components';
+import { Card, Button, Divider, useTheme } from 'react-native-paper';
 
 const PADDING = 10;
 
 export const MobileStepperExample: React.FC = () => {
+    const theme = useTheme();
     const totalSteps = 5;
     const [currentStep, setCurrentStep] = useState(0);
     const [mobileStepperVariant, setMobileStepperVariant] = useState<DotStepperVariant>('dots');
@@ -37,7 +38,7 @@ export const MobileStepperExample: React.FC = () => {
                 Cycle Variant
             </Button>
             <Divider />
-            <Text style={{ margin: 32, textAlign: 'center' }}>Step #{currentStep + 1}</Text>
+            <Body1 style={{ margin: 32, textAlign: 'center', color: theme.colors.text }}>Step #{currentStep + 1}</Body1>
             <Divider />
             <MobileStepper
                 activeStep={currentStep}
