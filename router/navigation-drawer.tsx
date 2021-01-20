@@ -171,8 +171,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                         alignItems: 'center',
                     }}
                 >
-                    {!theme.dark && <Image source={eatonLogo} style={{ height: 60, width: '80%' }} />}
-                    {theme.dark && <Image source={eatonLogoWhite} style={{ height: 60, width: '80%' }} />}
+                    <Image source={theme.dark ? eatonLogoWhite : eatonLogo} style={{ height: 60, width: '80%' }} />
                 </View>
             </DrawerFooter>
         </Drawer>
