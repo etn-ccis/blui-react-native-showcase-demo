@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { MobileStepper, DotStepperVariant, Body1 } from '@pxblue/react-native-components';
 import { Card, Button, Divider, useTheme } from 'react-native-paper';
 
