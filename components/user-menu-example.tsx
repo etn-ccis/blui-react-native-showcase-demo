@@ -95,6 +95,9 @@ export const UserMenuExample: React.FC = () => {
                 <UserMenu
                     menuTitle={'John Smith'}
                     menuSubtitle={'j.smith@example.com'}
+                    backgroundColor={Colors.blue[500]}
+                    fontColor={Colors.white[50]}
+                    iconColor={Colors.white[50]}
                     menuItems={menuItems}
                     avatar={<Avatar.Text label={'PX'} size={40} color={Colors.white[50]} />}
                 />
