@@ -2,7 +2,7 @@ import { InfoListItem, InfoListItemProps, UserMenu, wrapIcon } from '@pxblue/rea
 import React, { useState } from 'react';
 import { Image, View } from 'react-native';
 import { Avatar, Card, Divider } from 'react-native-paper';
-import * as PXBColors from '@pxblue/colors';
+import * as Colors from '@pxblue/colors';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 const VpnKeyIcon = wrapIcon({ IconClass: MatIcon, name: 'vpn-key', flip: false });
 const SettingsIcon = wrapIcon({ IconClass: MatIcon, name: 'settings', flip: false });
@@ -26,8 +26,8 @@ export const UserMenuExample: React.FC = () => {
                     <Avatar.Icon
                         icon="account-circle"
                         size={40}
-                        color={PXBColors.white[50]}
-                        style={{ backgroundColor: PXBColors.red[500] }}
+                        color={Colors.white[50]}
+                        style={{ backgroundColor: Colors.red[500] }}
                     />
                 }
                 title={'Custom Menu Title'}
@@ -70,8 +70,8 @@ export const UserMenuExample: React.FC = () => {
                         <Avatar.Icon
                             icon="account-circle"
                             size={40}
-                            color={PXBColors.white[50]}
-                            style={{ backgroundColor: PXBColors.red[500] }}
+                            color={Colors.white[50]}
+                            style={{ backgroundColor: Colors.red[500] }}
                         />
                     }
                 />
@@ -87,7 +87,7 @@ export const UserMenuExample: React.FC = () => {
                                 height: 40,
                                 borderRadius: 40,
                                 resizeMode: 'contain',
-                                backgroundColor: PXBColors.green[500],
+                                backgroundColor: Colors.green[500],
                             }}
                         />
                     }
@@ -96,7 +96,7 @@ export const UserMenuExample: React.FC = () => {
                     menuTitle={'John Smith'}
                     menuSubtitle={'j.smith@example.com'}
                     menuItems={menuItems}
-                    avatar={<Avatar.Text label={'PX'} size={40} color={PXBColors.white[50]} />}
+                    avatar={<Avatar.Text label={'PX'} size={40} color={Colors.white[50]} />}
                 />
             </View>
         </Card>
