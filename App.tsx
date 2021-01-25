@@ -27,7 +27,7 @@ import { RootStackParamList } from './router';
 import { MobileStepperExample } from './components/mobile-stepper-example';
 import { useThemeContext } from './contexts/ThemeContext';
 import { UserMenuExample } from './components/user-menu-example';
-import { KitchenSinkExample } from './components/kitchen-sink-example';
+import { KitchenSink } from './components/kitchen-sink';
 
 const backgroundImage = require('./assets/images/farm.jpg');
 
@@ -327,7 +327,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
 
                 <MobileStepperExample />
 
-                <KitchenSinkExample />
+                <KitchenSink />
 
                 <SafeAreaView />
             </ScrollView>

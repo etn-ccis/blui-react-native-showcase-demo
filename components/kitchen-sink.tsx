@@ -1,18 +1,44 @@
-import { Body1, H5, InfoListItem, InfoListItemProps, Spacer, Subtitle1, UserMenu, wrapIcon } from '@pxblue/react-native-components';
+/* eslint-disable no-console */
+import { Body1, H5, Subtitle1 } from '@pxblue/react-native-components';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { ActivityIndicator, Appbar, Avatar, Badge, Banner, BottomNavigation, Button, Card, Checkbox, Chip, DataTable, Dialog, Divider, FAB, HelperText, IconButton, List, Menu, Modal, Paragraph, Portal, ProgressBar, RadioButton, Snackbar, Surface, Switch, Text, TextInput, Title, ToggleButton, TouchableRipple } from 'react-native-paper';
-import * as PXBColors from '@pxblue/colors';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
+import {
+    ActivityIndicator,
+    Appbar,
+    Avatar,
+    Badge,
+    Banner,
+    BottomNavigation,
+    Button,
+    Card,
+    Checkbox,
+    Chip,
+    DataTable,
+    Dialog,
+    Divider,
+    FAB,
+    HelperText,
+    IconButton,
+    List,
+    Menu,
+    Modal,
+    Paragraph,
+    Portal,
+    ProgressBar,
+    RadioButton,
+    Snackbar,
+    Surface,
+    Switch,
+    TextInput,
+    Title,
+    ToggleButton,
+} from 'react-native-paper';
 import { useTheme } from '@react-navigation/native';
-const VpnKeyIcon = wrapIcon({ IconClass: MatIcon, name: 'vpn-key', flip: false });
-const SettingsIcon = wrapIcon({ IconClass: MatIcon, name: 'settings', flip: false });
-const ExitToAppIcon = wrapIcon({ IconClass: MatIcon, name: 'exit-to-app', flip: false });
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
-const MusicRoute = () => <Subtitle1>Music</Subtitle1>;
-const AlbumsRoute = () => <Subtitle1>Albums</Subtitle1>;
-const RecentsRoute = () => <Subtitle1>Recents</Subtitle1>;
+const MusicRoute = (): JSX.Element => <Subtitle1>Music</Subtitle1>;
+const AlbumsRoute = (): JSX.Element => <Subtitle1>Albums</Subtitle1>;
+const RecentsRoute = (): JSX.Element => <Subtitle1>Recents</Subtitle1>;
 
 const styles = StyleSheet.create({
     card: {
@@ -29,7 +55,7 @@ const styles = StyleSheet.create({
     },
 });
 
-export const KitchenSinkExample: React.FC = () => {
+export const KitchenSink: React.FC = (): JSX.Element => {
     const theme = useTheme();
     const [bannerVisible, setBannerVisible] = React.useState(true);
     const [checkboxOne, setCheckboxOne] = React.useState<'checked' | 'unchecked' | 'indeterminate'>('unchecked');
@@ -52,30 +78,33 @@ export const KitchenSinkExample: React.FC = () => {
 
     const onChangeHelperTextInputText = (text: string): void => setHelperTextInputText(text);
 
-    const helperTextInputHasErrors = () => {
-        return !helperTextInputText.includes('@');
-    };
+    const helperTextInputHasErrors = (): boolean => !helperTextInputText.includes('@');
 
     const [routes] = React.useState([
-      { key: 'music', title: 'Music', icon: 'music' },
-      { key: 'albums', title: 'Albums', icon: 'album' },
-      { key: 'recents', title: 'Recents', icon: 'history' },
+        { key: 'music', title: 'Music', icon: 'music' },
+        { key: 'albums', title: 'Albums', icon: 'album' },
+        { key: 'recents', title: 'Recents', icon: 'history' },
     ]);
 
     const renderScene = BottomNavigation.SceneMap({
         music: MusicRoute,
         albums: AlbumsRoute,
         recents: RecentsRoute,
-      });
+    });
 
     return (
         <>
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Activity Indicator</H5>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', marginTop: 24 }}>
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            justifyContent: 'space-evenly',
+                            alignItems: 'center',
+                            marginTop: 24,
+                        }}
+                    >
                         <ActivityIndicator animating={true} size={'small'} />
                         <ActivityIndicator animating={true} size={'large'} />
                     </View>
@@ -83,21 +112,17 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Appbar</H5>
                     <View style={{ marginTop: 24 }}>
                         <Appbar.Header style={{ width: 350 }}>
                             <Appbar.Content title="Title" subtitle="Subtitle" />
                         </Appbar.Header>
-                        <Spacer />
                         <Appbar.Header style={{ width: 350 }}>
                             <Appbar.Content title="Title" subtitle="Subtitle" />
                             <Appbar.Action icon="magnify" />
                             <Appbar.Action icon="dots-vertical" />
                         </Appbar.Header>
-                        <Spacer />
                         <Appbar.Header style={{ width: 350 }}>
                             <Appbar.BackAction />
                             <Appbar.Content title="Title" subtitle="Subtitle" />
@@ -109,11 +134,16 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Avatar</H5>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', marginTop: 24 }}>
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            justifyContent: 'space-evenly',
+                            alignItems: 'center',
+                            marginTop: 24,
+                        }}
+                    >
                         <Avatar.Icon size={40} icon="account-circle" />
                         <Avatar.Image size={40} source={AvatarTestImage} />
                         <Avatar.Text size={40} label="PX" />
@@ -122,22 +152,29 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Badge</H5>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', marginTop: 24 }}>
-                        <Badge size={24}></Badge>
-                        <Badge size={24}>3</Badge>
-                        <Badge size={40}>8</Badge>
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            justifyContent: 'space-evenly',
+                            alignItems: 'center',
+                            marginTop: 24,
+                        }}
+                    >
+                        <Badge size={24} visible></Badge>
+                        <Badge size={24} visible>
+                            3
+                        </Badge>
+                        <Badge size={40} visible>
+                            8
+                        </Badge>
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Banner</H5>
                     <View style={{ marginTop: 24 }}>
                         <Banner
@@ -145,50 +182,70 @@ export const KitchenSinkExample: React.FC = () => {
                             actions={[
                                 {
                                     label: 'Fix it',
-                                    onPress: () => setBannerVisible(false),
+                                    onPress: (): void => setBannerVisible(false),
                                 },
                                 {
                                     label: 'Learn more',
-                                    onPress: () => setBannerVisible(false),
+                                    onPress: (): void => setBannerVisible(false),
                                 },
                             ]}
-                            icon='account-circle'
+                            icon="account-circle"
                         >
                             There was a problem processing a transaction on your credit card.
                         </Banner>
-                        {!bannerVisible && (<Button mode={'contained'} onPress={(): void => { setBannerVisible(true) }}>Show Banner</Button>)}
+                        {!bannerVisible && (
+                            <Button
+                                mode={'contained'}
+                                onPress={(): void => {
+                                    setBannerVisible(true);
+                                }}
+                            >
+                                Show Banner
+                            </Button>
+                        )}
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>BottomNavigation</H5>
                     <View style={{ marginTop: 24 }}>
-                    <BottomNavigation
-                        navigationState={{ index, routes }}
-                        onIndexChange={setIndex}
-                        renderScene={renderScene}
-                    />
+                        <BottomNavigation
+                            navigationState={{ index, routes }}
+                            onIndexChange={setIndex}
+                            renderScene={renderScene}
+                        />
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Button</H5>
                     <View style={{ alignItems: 'center', marginTop: 24 }}>
-                        <Button icon="download" mode="text" onPress={() => console.log('Pressed Text Button')} style={{ width: 150 }}>
+                        <Button
+                            icon="download"
+                            mode="text"
+                            onPress={(): void => console.log('Pressed Text Button')}
+                            style={{ width: 150 }}
+                        >
                             Press me
                         </Button>
-                        <Button icon="download" mode="outlined" onPress={() => console.log('Pressed Outlined Button')} style={{ marginTop: 24, width: 150 }}>
+                        <Button
+                            icon="download"
+                            mode="outlined"
+                            onPress={(): void => console.log('Pressed Outlined Button')}
+                            style={{ marginTop: 24, width: 150 }}
+                        >
                             Press me
                         </Button>
-                        <Button icon="download" mode="contained" onPress={() => console.log('Pressed Contained Button')} style={{ marginTop: 24, width: 150 }}>
+                        <Button
+                            icon="download"
+                            mode="contained"
+                            onPress={(): void => console.log('Pressed Contained Button')}
+                            style={{ marginTop: 24, width: 150 }}
+                        >
                             Press me
                         </Button>
                     </View>
@@ -196,13 +253,15 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Card</H5>
                     <View style={{ marginTop: 24 }}>
                         <Card>
-                            <Card.Title title="Card Title" subtitle="Card Subtitle" left={() => <Avatar.Icon icon="account-circle" size={40} />} />
+                            <Card.Title
+                                title="Card Title"
+                                subtitle="Card Subtitle"
+                                left={(): JSX.Element => <Avatar.Icon icon="account-circle" size={40} />}
+                            />
                             <Card.Content>
                                 <Title>Card title</Title>
                                 <Paragraph>Card content</Paragraph>
@@ -218,41 +277,68 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Checkbox</H5>
                     <View style={{ marginTop: 24 }}>
-                        <Checkbox.Item label="Init Unchecked" status={checkboxOne} onPress={(): void => checkboxOne === 'unchecked' ? setCheckboxOne('checked') : setCheckboxOne('unchecked')} />
-                        <Checkbox.Item label="Init checked" status={checkboxTwo} onPress={(): void => checkboxTwo === 'unchecked' ? setCheckboxTwo('checked') : setCheckboxTwo('unchecked')} />
+                        <Checkbox.Item
+                            label="Init Unchecked"
+                            status={checkboxOne}
+                            onPress={(): void =>
+                                checkboxOne === 'unchecked' ? setCheckboxOne('checked') : setCheckboxOne('unchecked')
+                            }
+                        />
+                        <Checkbox.Item
+                            label="Init checked"
+                            status={checkboxTwo}
+                            onPress={(): void =>
+                                checkboxTwo === 'unchecked' ? setCheckboxTwo('checked') : setCheckboxTwo('unchecked')
+                            }
+                        />
                         <Checkbox.Item label="Indeterminate" status={'indeterminate'} />
                         <Checkbox.Item label="Disabled Checked" status={'checked'} disabled={true} />
                         <Checkbox.Item label="Disabled Unchecked" status={'unchecked'} disabled={true} />
-
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Chip</H5>
                     <View style={{ alignItems: 'center', marginTop: 24 }}>
-                        <Chip icon="information" style={{ width: 250 }}>Unselected Flat Chip</Chip>
-                        <Chip icon="information" mode={'outlined'} style={{ marginTop: 24, width: 250 }}>Unselected Outlined Chip</Chip>
-                        <Chip icon="information" selected={true} style={{ marginTop: 24, width: 250 }}>Selected Flat Chip</Chip>
-                        <Chip icon="information" mode={'outlined'} selected={true} style={{ marginTop: 24, width: 250 }}>Selected Outlined Chip</Chip>
-                        <Chip icon="information" disabled={true} style={{ marginTop: 24, width: 250 }}>Disabled Flat Chip</Chip>
-                        <Chip icon="information" mode={'outlined'} disabled={true} style={{ marginTop: 24, width: 250 }}>Disabled Outlined Chip</Chip>
+                        <Chip icon="information" style={{ width: 250 }}>
+                            Unselected Flat Chip
+                        </Chip>
+                        <Chip icon="information" mode={'outlined'} style={{ marginTop: 24, width: 250 }}>
+                            Unselected Outlined Chip
+                        </Chip>
+                        <Chip icon="information" selected={true} style={{ marginTop: 24, width: 250 }}>
+                            Selected Flat Chip
+                        </Chip>
+                        <Chip
+                            icon="information"
+                            mode={'outlined'}
+                            selected={true}
+                            style={{ marginTop: 24, width: 250 }}
+                        >
+                            Selected Outlined Chip
+                        </Chip>
+                        <Chip icon="information" disabled={true} style={{ marginTop: 24, width: 250 }}>
+                            Disabled Flat Chip
+                        </Chip>
+                        <Chip
+                            icon="information"
+                            mode={'outlined'}
+                            disabled={true}
+                            style={{ marginTop: 24, width: 250 }}
+                        >
+                            Disabled Outlined Chip
+                        </Chip>
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Data Table</H5>
                     <View style={{ marginTop: 24 }}>
                         <DataTable>
@@ -282,9 +368,7 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Dialog</H5>
                     <View style={{ marginTop: 24 }}>
                         <Portal>
@@ -299,15 +383,22 @@ export const KitchenSinkExample: React.FC = () => {
                                 </Dialog.Actions>
                             </Dialog>
                         </Portal>
-                        {!dialogVisible && (<Button mode={'contained'} onPress={(): void => { setDialogVisible(true) }}>Show Dialog</Button>)}
+                        {!dialogVisible && (
+                            <Button
+                                mode={'contained'}
+                                onPress={(): void => {
+                                    setDialogVisible(true);
+                                }}
+                            >
+                                Show Dialog
+                            </Button>
+                        )}
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Divider</H5>
                     <View style={{ marginTop: 24 }}>
                         <Body1>Item 1</Body1>
@@ -321,39 +412,39 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Fab</H5>
                     <View style={{ marginTop: 24, alignItems: 'center' }}>
                         <FAB
                             style={{ margin: 16, width: 40 }}
                             small
                             icon="plus"
-                            onPress={() => console.log('Pressed Small Fab')}
+                            onPress={(): void => console.log('Pressed Small Fab')}
                         />
                         <FAB
                             style={{ margin: 16, width: 56 }}
                             icon="plus"
-                            onPress={() => console.log('Pressed Default Fab')}
+                            onPress={(): void => console.log('Pressed Default Fab')}
                         />
                         <FAB
                             style={{ margin: 16 }}
                             label={'Extended Fab'}
                             icon="check"
-                            onPress={() => console.log('Pressed Extended Fab')}
+                            onPress={(): void => console.log('Pressed Extended Fab')}
                         />
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Helper Text</H5>
                     <View style={{ marginTop: 24 }}>
-                        <TextInput label="Email" value={helperTextInputText} onChangeText={onChangeHelperTextInputText} />
+                        <TextInput
+                            label="Email"
+                            value={helperTextInputText}
+                            onChangeText={onChangeHelperTextInputText}
+                        />
                         <HelperText type="error" visible={helperTextInputHasErrors()}>
                             Email address is invalid!
                         </HelperText>
@@ -362,73 +453,57 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Icon Button</H5>
-                    <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 24 }}>
-                        <IconButton
-                            icon="fire"
-                            size={24}
-                            onPress={() => console.log('Icon Button Pressed')}
-                        />
-                        <IconButton
-                            icon="fire"
-                            size={40}
-                            onPress={() => console.log('Icon Button Pressed')}
-                        />
-                        <IconButton
-                            icon="fire"
-                            size={56}
-                            onPress={() => console.log('Icon Button Pressed')}
-                        />
-                        <IconButton
-                            icon="fire"
-                            size={72}
-                            onPress={() => console.log('Icon Button Pressed')}
-                        />
+                    <View
+                        style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 24 }}
+                    >
+                        <IconButton icon="fire" size={24} onPress={(): void => console.log('Icon Button Pressed')} />
+                        <IconButton icon="fire" size={40} onPress={(): void => console.log('Icon Button Pressed')} />
+                        <IconButton icon="fire" size={56} onPress={(): void => console.log('Icon Button Pressed')} />
+                        <IconButton icon="fire" size={72} onPress={(): void => console.log('Icon Button Pressed')} />
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>List</H5>
                     <View style={{ marginTop: 24 }}>
                         <View>
                             <List.Item
                                 title="Item 1"
                                 description="Item 1 Description"
-                                left={() => <List.Icon icon="folder" />}
+                                left={(): JSX.Element => <List.Icon icon="folder" />}
                             />
                             <List.Item
                                 title="Item 2"
                                 description="Item 2 Description"
-                                left={() => <List.Icon icon="folder" />}
+                                left={(): JSX.Element => <List.Icon icon="folder" />}
                             />
                             <List.Item
                                 title="Item 3"
                                 description="Item 3 Description"
-                                left={() => <List.Icon icon="folder" />}
+                                left={(): JSX.Element => <List.Icon icon="folder" />}
                             />
                         </View>
                         <View>
                             <List.Section title="Accordions">
                                 <List.Accordion
                                     title="Accordion 1"
-                                    left={props => <List.Icon {...props} icon="folder" />}
+                                    left={(): JSX.Element => <List.Icon icon="folder" />}
                                     expanded={accordionOneExpanded}
-                                    onPress={(): void => setAccordionOneExpanded(!accordionOneExpanded)}>
+                                    onPress={(): void => setAccordionOneExpanded(!accordionOneExpanded)}
+                                >
                                     <List.Item title="Item 1" description="Item 1 Description" />
                                     <List.Item title="Item 2" description="Item 2 Description" />
                                 </List.Accordion>
                                 <List.Accordion
                                     title="Accordion 2"
-                                    left={props => <List.Icon {...props} icon="folder" />}
+                                    left={(): JSX.Element => <List.Icon icon="folder" />}
                                     expanded={accordionTwoExpanded}
-                                    onPress={(): void => setAccordionTwoExpanded(!accordionTwoExpanded)}>
+                                    onPress={(): void => setAccordionTwoExpanded(!accordionTwoExpanded)}
+                                >
                                     <List.Item title="Item 1" description="Item 1 Description" />
                                     <List.Item title="Item 2" description="Item 2 Description" />
                                 </List.Accordion>
@@ -439,15 +514,18 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Menu</H5>
                     <View style={{ marginTop: 24 }}>
                         <Menu
                             visible={menuVisible}
                             onDismiss={(): void => setMenuVisible(false)}
-                            anchor={<Button mode={'contained'} onPress={(): void => setMenuVisible(true)}>Show menu</Button>}>
+                            anchor={
+                                <Button mode={'contained'} onPress={(): void => setMenuVisible(true)}>
+                                    Show menu
+                                </Button>
+                            }
+                        >
                             <Menu.Item onPress={(): void => setMenuVisible(false)} title="Item 1" />
                             <Menu.Item onPress={(): void => setMenuVisible(false)} title="Item 2" />
                             <Divider />
@@ -459,25 +537,37 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Modal</H5>
                     <View style={{ marginTop: 24 }}>
                         <Portal theme={theme}>
-                            <Modal visible={modalVisible} onDismiss={(): void => setModalVisible(false)} contentContainerStyle={{ backgroundColor: theme.colors.background, padding: 24, height: 300, marginHorizontal: 24 }}>
-                                <Body1>Example Modal.  Click outside this area to dismiss.</Body1>
+                            <Modal
+                                visible={modalVisible}
+                                onDismiss={(): void => setModalVisible(false)}
+                                contentContainerStyle={{
+                                    backgroundColor: theme.colors.background,
+                                    padding: 24,
+                                    height: 300,
+                                    marginHorizontal: 24,
+                                }}
+                            >
+                                <Body1>Example Modal. Click outside this area to dismiss.</Body1>
                             </Modal>
                         </Portal>
-                        <Button mode={'contained'} onPress={(): void => { setModalVisible(true) }}>Show Modal</Button>
+                        <Button
+                            mode={'contained'}
+                            onPress={(): void => {
+                                setModalVisible(true);
+                            }}
+                        >
+                            Show Modal
+                        </Button>
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Progress Bar</H5>
                     <View style={{ marginTop: 24 }}>
                         <ProgressBar progress={0} />
@@ -489,12 +579,13 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Radio Button</H5>
                     <View style={{ marginTop: 24 }}>
-                        <RadioButton.Group onValueChange={(value: string): void => setRadioButtonValue(value)} value={radioButtonValue}>
+                        <RadioButton.Group
+                            onValueChange={(value: string): void => setRadioButtonValue(value)}
+                            value={radioButtonValue}
+                        >
                             <RadioButton.Item label="First item" value="first" />
                             <RadioButton.Item label="Second item" value="second" />
                             <RadioButton.Item label="Third item" value="third" />
@@ -504,9 +595,7 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Snackbar</H5>
                     <View style={{ marginTop: 24 }}>
                         <Portal>
@@ -516,21 +605,22 @@ export const KitchenSinkExample: React.FC = () => {
                                 action={{
                                     label: 'Dismiss',
                                     onPress: (): void => {
-                                        setSnackbarVisible(false)
+                                        setSnackbarVisible(false);
                                     },
-                                }}>
-                                Hey there! I'm a Snackbar.
+                                }}
+                            >
+                                Hey there! I&apos;m a Snackbar.
                             </Snackbar>
                         </Portal>
-                        <Button mode={'contained'} onPress={(): void => setSnackbarVisible(!snackbarVisible)}>{snackbarVisible ? 'Hide Snackbar' : 'Show Snackbar'}</Button>
+                        <Button mode={'contained'} onPress={(): void => setSnackbarVisible(!snackbarVisible)}>
+                            {snackbarVisible ? 'Hide Snackbar' : 'Show Snackbar'}
+                        </Button>
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Surface</H5>
                     <View style={{ marginTop: 24 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
@@ -570,12 +660,15 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Switch</H5>
                     <View style={{ marginTop: 24, alignItems: 'center' }}>
-                        <Switch value={isSwitchOn} onValueChange={(): void => { setIsSwitchOn(!isSwitchOn) }} />
+                        <Switch
+                            value={isSwitchOn}
+                            onValueChange={(): void => {
+                                setIsSwitchOn(!isSwitchOn);
+                            }}
+                        />
                         <Switch disabled value={true} style={{ marginTop: 24 }} />
                         <Switch disabled value={false} style={{ marginTop: 24 }} />
                     </View>
@@ -583,9 +676,7 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Text Input</H5>
                     <View style={{ marginTop: 24 }}>
                         <TextInput
@@ -596,13 +687,13 @@ export const KitchenSinkExample: React.FC = () => {
                         <TextInput
                             label="Email"
                             mode="outlined"
-                            style={{marginTop: 24}}
+                            style={{ marginTop: 24 }}
                             value={emailInputText}
                             onChangeText={(text: string): void => setEmailInputText(text)}
                         />
                         <TextInput
                             label="Name Error"
-                            style={{marginTop: 24}}
+                            style={{ marginTop: 24 }}
                             value={errorNameInputText}
                             onChangeText={(text: string): void => setErrorNameInputText(text)}
                             error
@@ -610,22 +701,17 @@ export const KitchenSinkExample: React.FC = () => {
                         <TextInput
                             label="Email Error"
                             mode="outlined"
-                            style={{marginTop: 24}}
+                            style={{ marginTop: 24 }}
                             value={errorEmailInputText}
                             onChangeText={(text: string): void => setErrorEmailInputText(text)}
                             error
                         />
-                        <TextInput
-                            label="Name Disabled"
-                            value="John Smith"
-                            style={{marginTop: 24}}
-                            disabled
-                        />
+                        <TextInput label="Name Disabled" value="John Smith" style={{ marginTop: 24 }} disabled />
                         <TextInput
                             label="Email Disabled"
                             mode="outlined"
                             value="j.smith@email.com"
-                            style={{marginTop: 24}}
+                            style={{ marginTop: 24 }}
                             disabled
                         />
                     </View>
@@ -633,12 +719,13 @@ export const KitchenSinkExample: React.FC = () => {
             </Card>
 
             <Card style={styles.card}>
-                <View
-                    style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Toggle Button</H5>
                     <View style={{ marginTop: 24, alignItems: 'center' }}>
-                        <ToggleButton.Row onValueChange={(value: string) => setToggleButtonValue(value)} value={toggleButtonValue}>
+                        <ToggleButton.Row
+                            onValueChange={(value: string): void => setToggleButtonValue(value)}
+                            value={toggleButtonValue}
+                        >
                             <ToggleButton icon="format-align-left" value="left" />
                             <ToggleButton icon="format-align-center" value="center" />
                             <ToggleButton icon="format-align-right" value="right" />

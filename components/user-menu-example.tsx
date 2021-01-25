@@ -1,12 +1,14 @@
 import { InfoListItem, InfoListItemProps, UserMenu, wrapIcon } from '@pxblue/react-native-components';
 import React, { useState } from 'react';
-import { View } from 'react-native';
-import { Card, Divider } from 'react-native-paper';
+import { Image, View } from 'react-native';
+import { Avatar, Card, Divider } from 'react-native-paper';
 import * as PXBColors from '@pxblue/colors';
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 const VpnKeyIcon = wrapIcon({ IconClass: MatIcon, name: 'vpn-key', flip: false });
 const SettingsIcon = wrapIcon({ IconClass: MatIcon, name: 'settings', flip: false });
 const ExitToAppIcon = wrapIcon({ IconClass: MatIcon, name: 'exit-to-app', flip: false });
+const NumericOneBoxIcon = wrapIcon({ IconClass: MatIcon, name: 'looks-one', flip: false });
+const NumericTwoBoxIcon = wrapIcon({ IconClass: MatIcon, name: 'looks-two', flip: false });
 const avatarTestImage = require('../assets/images/test-avatar.png');
 
 export const UserMenuExample: React.FC = () => {
@@ -19,10 +21,29 @@ export const UserMenuExample: React.FC = () => {
 
     const customMenu = (): JSX.Element => (
         <View>
-            <InfoListItem title={'Custom Menu Title'} subtitle={'Custom Menu Subtitle'} />
+            <InfoListItem
+                leftComponent={
+                    <Avatar.Icon
+                        icon="account-circle"
+                        size={40}
+                        color={PXBColors.white[50]}
+                        style={{ backgroundColor: PXBColors.red[500] }}
+                    />
+                }
+                title={'Custom Menu Title'}
+                subtitle={'Custom Menu Subtitle'}
+            />
             <Divider />
-            <InfoListItem title={'Custom Menu Info List Item 1'} onPress={(): void => closeMenu()} />
-            <InfoListItem title={'Custom Menu Info List Item 2'} onPress={(): void => closeMenu()} />
+            <InfoListItem
+                title={'Custom Menu Info List Item 1'}
+                IconClass={NumericOneBoxIcon}
+                onPress={(): void => closeMenu()}
+            />
+            <InfoListItem
+                title={'Custom Menu Info List Item 2'}
+                IconClass={NumericTwoBoxIcon}
+                onPress={(): void => closeMenu()}
+            />
         </View>
     );
 
@@ -33,69 +54,51 @@ export const UserMenuExample: React.FC = () => {
     ];
 
     return (
-        <>
-            <Card style={{ padding: 0, margin: 10, marginBottom: 0 }}>
-                <View
-                    style={{ flexDirection: 'row', justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
-                    <UserMenu
-                        avatarIcon={'account-circle'}
-                        avatarType={'icon'}
-                        avatarColor={PXBColors.white[50]}
-                        avatarSize={56}
-                        avatarBackgroundColor={PXBColors.red[500]}
-                        menu={customMenu()}
-                        menuClose={menuClose}
-                    />
-                    <UserMenu
-                        avatarImage={avatarTestImage}
-                        avatarType={'image'}
-                        avatarSize={56}
-                        avatarBackgroundColor={PXBColors.green[500]}
-                        menuTitle={'John Doe'}
-                        menuSubtitle={'j.doe@example.com'}
-                        menuItems={menuItems}
-                    />
-                    <UserMenu
-                        avatarText={'PX'}
-                        avatarType={'text'}
-                        avatarColor={PXBColors.white[50]}
-                        avatarSize={56}
-                        avatarBackgroundColor={PXBColors.black[500]}
-                        menuTitle={'John Doe'}
-                        menuSubtitle={'j.doe@example.com'}
-                        menuItems={menuItems}
-                    />
-                </View>
-            </Card>
-            <Card style={{ padding: 0, margin: 10, marginBottom: 0 }}>
-                <View
-                    style={{ flexDirection: 'row', justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}
-                >
-                    <UserMenu
-                        avatarIcon={'account-circle'}
-                        avatarType={'icon'}
-                        avatarColor={PXBColors.white[50]}
-                        menu={customMenu()}
-                        menuClose={menuClose}
-                    />
-                    <UserMenu
-                        avatarImage={avatarTestImage}
-                        avatarType={'image'}
-                        menuTitle={'John Doe'}
-                        menuSubtitle={'j.doe@example.com'}
-                        menuItems={menuItems}
-                    />
-                    <UserMenu
-                        avatarText={'PX'}
-                        avatarType={'text'}
-                        avatarColor={PXBColors.white[50]}
-                        menuTitle={'John Doe'}
-                        menuSubtitle={'j.doe@example.com'}
-                        menuItems={menuItems}
-                    />
-                </View>
-            </Card>
-        </>
+        <Card style={{ padding: 0, margin: 10, marginBottom: 5 }}>
+            <View
+                style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-evenly',
+                    marginHorizontal: 24,
+                    marginVertical: 24,
+                }}
+            >
+                <UserMenu
+                    menu={customMenu()}
+                    menuClose={menuClose}
+                    avatar={
+                        <Avatar.Icon
+                            icon="account-circle"
+                            size={40}
+                            color={PXBColors.white[50]}
+                            style={{ backgroundColor: PXBColors.red[500] }}
+                        />
+                    }
+                />
+                <UserMenu
+                    menuTitle={'John Smith'}
+                    menuSubtitle={'j.smith@example.com'}
+                    menuItems={menuItems}
+                    avatar={
+                        <Image
+                            source={avatarTestImage}
+                            style={{
+                                width: 40,
+                                height: 40,
+                                borderRadius: 40,
+                                resizeMode: 'contain',
+                                backgroundColor: PXBColors.green[500],
+                            }}
+                        />
+                    }
+                />
+                <UserMenu
+                    menuTitle={'John Smith'}
+                    menuSubtitle={'j.smith@example.com'}
+                    menuItems={menuItems}
+                    avatar={<Avatar.Text label={'PX'} size={40} color={PXBColors.white[50]} />}
+                />
+            </View>
+        </Card>
     );
 };
