@@ -65,7 +65,9 @@ export const UserMenuExample: React.FC = () => {
                 <UserMenu
                     menu={customMenu()}
                     menuOpen={menuOpen}
-                    toggleMenu={() => {setMenuOpen(!menuOpen)}}
+                    toggleMenu={(): void => {
+                        setMenuOpen(!menuOpen);
+                    }}
                     avatar={
                         <Avatar.Icon
                             icon="account-circle"
