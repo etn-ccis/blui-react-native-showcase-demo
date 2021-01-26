@@ -12,11 +12,10 @@ const NumericTwoBoxIcon = wrapIcon({ IconClass: MatIcon, name: 'looks-two', flip
 const avatarTestImage = require('../assets/images/test-avatar.png');
 
 export const UserMenuExample: React.FC = () => {
-    const [menuClose, setMenuClose] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const closeMenu = (): void => {
-        setMenuClose(true);
-        setTimeout((): void => setMenuClose(false), 0);
+        setMenuOpen(false);
     };
 
     const customMenu = (): JSX.Element => (
@@ -65,7 +64,8 @@ export const UserMenuExample: React.FC = () => {
             >
                 <UserMenu
                     menu={customMenu()}
-                    menuClose={menuClose}
+                    menuOpen={menuOpen}
+                    toggleMenu={() => {setMenuOpen(!menuOpen)}}
                     avatar={
                         <Avatar.Icon
                             icon="account-circle"
