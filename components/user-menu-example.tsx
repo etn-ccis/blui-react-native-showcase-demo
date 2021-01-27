@@ -21,7 +21,7 @@ export const UserMenuExample: React.FC = () => {
     const customMenu = (): JSX.Element => (
         <View>
             <InfoListItem
-                leftComponent={
+                customIcon={
                     <Avatar.Icon
                         icon="account-circle"
                         size={40}
