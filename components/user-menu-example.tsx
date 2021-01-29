@@ -50,7 +50,7 @@ export const UserMenuExample: React.FC = () => {
                                 width: 40,
                                 height: 40,
                                 borderRadius: 40,
-                                resizeMode: 'contain',
+                                resizeMode: 'cover',
                                 backgroundColor: Colors.green[500],
                             }}
                         />
