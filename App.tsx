@@ -26,6 +26,8 @@ import _Battery from '@pxblue/icons-svg/battery.svg';
 import { RootStackParamList } from './router';
 import { MobileStepperExample } from './components/mobile-stepper-example';
 import { useThemeContext } from './contexts/ThemeContext';
+import { UserMenuExample } from './components/user-menu-example';
+import { KitchenSink } from './components/kitchen-sink';
 
 const backgroundImage = require('./assets/images/farm.jpg');
 
@@ -104,6 +106,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                 searchableConfig={{ placeholder: 'Search', autoFocus: true }}
             />
             <ScrollView>
+                <UserMenuExample />
                 <Card style={{ padding: 0, margin: PADDING, marginBottom: 0 }}>
                     <EmptyState
                         title={'Nothing Found'}
@@ -323,6 +326,9 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                 </ScoreCard>
 
                 <MobileStepperExample />
+
+                <KitchenSink />
+
                 <SafeAreaView />
             </ScrollView>
         </View>
