@@ -50,10 +50,8 @@ const Humidity = wrapIcon({ IconClass: _Humidity, flip: false });
 const Pie = wrapIcon({ IconClass: MaterialCommunityIcon, name: 'chart-pie', flip: false });
 const Clock = wrapIcon({ IconClass: MaterialCommunityIcon, name: 'clock-outline', flip: false });
 const MailIcon = wrapIcon({ IconClass: MatIcon, name: 'mail', flip: false });
-const SwapIcon = wrapIcon({ IconClass: MatIcon, name: 'swap-horiz', flip: false });
 const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: I18nManager.isRTL });
 const MoreIcon = wrapIcon({ IconClass: MatIcon, name: 'more-vert', flip: false });
-const InvertColorsIcon = wrapIcon({ IconClass: MatIcon, name: 'invert-colors', flip: false });
 
 const PADDING = 10;
 
@@ -90,23 +88,18 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                 }}
                 actionItems={[
                     {
-                        icon: SwapIcon,
-                        onPress: (): void => {
-                            toggleRTL();
-                        },
-                    },
-                    {
-                        icon: InvertColorsIcon,
-                        onPress: (): void => {
-                            setTheme(themeType === 'light' ? 'dark' : 'light');
-                        },
+                        component: (
+                            <UserMenuExample
+                                onToggleRTL={toggleRTL}
+                                onToggleTheme={(): void => setTheme(themeType === 'light' ? 'dark' : 'light')}
+                            />
+                        ),
                     },
                 ]}
                 backgroundImage={backgroundImage}
                 searchableConfig={{ placeholder: 'Search', autoFocus: true }}
             />
             <ScrollView>
-                <UserMenuExample />
                 <Card style={{ padding: 0, margin: PADDING, marginBottom: 0 }}>
                     <EmptyState
                         title={'Nothing Found'}
