@@ -26,7 +26,14 @@ export const UserMenuExample: React.FC<UserMenuExampleProps> = (props) => {
             menuTitle={'John Smith'}
             menuSubtitle={'Account Manager'}
             menuItems={menuItems}
-            avatar={<Avatar.Icon icon="account-circle" size={40} color={Colors.white[50]} />}
+            avatar={
+                <Avatar.Icon
+                    icon="account-circle"
+                    size={40}
+                    color={Colors.blue[500]}
+                    style={{ backgroundColor: Colors.blue[50] }}
+                />
+            }
         />
     );
 };
