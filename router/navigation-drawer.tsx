@@ -18,6 +18,7 @@ import { IconButton, Divider, useTheme } from 'react-native-paper';
 import * as Colors from '@pxblue/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
+import { blueDarkSupplement } from '@pxblue/react-native-themes';
 
 const headerBgImage = require('../assets/images/topology_40.png');
 const eatonLogo = require('../assets/images/eatonLogo.png');
@@ -132,11 +133,16 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
     );
 
     return (
-        <Drawer activeItem={selected} onItemSelect={(id: string): void => selectItem(id)}>
+        <Drawer
+            activeItem={selected}
+            onItemSelect={(id: string): void => selectItem(id)}
+            theme={theme.dark ? blueDarkSupplement : {}}
+        >
             <DrawerHeader
                 title={'Drawer Title'}
                 subtitle={'Drawer Subtitle'}
                 backgroundImage={headerBgImage}
+                backgroundColor={Colors.blue[500]}
                 fontColor={Colors.white[50]}
                 icon={
                     <IconButton

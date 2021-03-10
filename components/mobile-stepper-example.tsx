@@ -2,6 +2,8 @@ import React, { useCallback, useState } from 'react';
 import { View } from 'react-native';
 import { MobileStepper, DotStepperVariant, Body1 } from '@pxblue/react-native-components';
 import { Card, Button, Divider, useTheme } from 'react-native-paper';
+import { blueDarkSupplement } from '@pxblue/react-native-themes';
+import * as Colors from '@pxblue/colors';
 
 const PADDING = 10;
 
@@ -34,7 +36,11 @@ export const MobileStepperExample: React.FC = () => {
 
     return (
         <Card style={{ padding: 0, margin: PADDING, marginBottom: PADDING }}>
-            <Button mode="contained" onPress={(): void => cycleStepperVariant()}>
+            <Button
+                mode="contained"
+                onPress={(): void => cycleStepperVariant()}
+                theme={theme.dark ? blueDarkSupplement : {}}
+            >
                 Cycle Variant
             </Button>
             <Divider />
@@ -62,12 +68,14 @@ export const MobileStepperExample: React.FC = () => {
                             disabled={currentStep === totalSteps - 1}
                             onPress={(): void => updateStep(1)}
                             mode="contained"
+                            theme={theme.dark ? blueDarkSupplement : {}}
                         >
                             Next
                         </Button>
                     </View>
                 }
                 variant={mobileStepperVariant}
+                activeColor={Colors.blue[500]}
             ></MobileStepper>
         </Card>
     );
