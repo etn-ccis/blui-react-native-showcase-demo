@@ -29,7 +29,6 @@ import { useThemeContext } from './contexts/ThemeContext';
 import { UserMenuExample } from './components/user-menu-example';
 import { KitchenSink } from './components/kitchen-sink';
 import { blueDarkSupplement } from '@pxblue/react-native-themes';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const backgroundImage = require('./assets/images/farm.jpg');
 
@@ -113,7 +112,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                                 Add a Device
                             </Button>
                         }
-                        iconColor={theme.dark ? Colors.black[200] : Colors.black[500]}
+                        iconColor={theme.dark ? PXBColors.black[200] : PXBColors.black[500]}
                     />
                 </Card>
                 <Card style={{ padding: 0, margin: PADDING, marginBottom: PADDING }}>
