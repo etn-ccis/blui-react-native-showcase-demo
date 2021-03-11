@@ -28,7 +28,7 @@ import { MobileStepperExample } from './components/mobile-stepper-example';
 import { useThemeContext } from './contexts/ThemeContext';
 import { UserMenuExample } from './components/user-menu-example';
 import { KitchenSink } from './components/kitchen-sink';
-import { blueDarkSupplement } from '@pxblue/react-native-themes';
+import { blueDarkAlt } from '@pxblue/react-native-themes';
 
 const backgroundImage = require('./assets/images/farm.jpg');
 
@@ -99,7 +99,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                 ]}
                 backgroundImage={backgroundImage}
                 searchableConfig={{ placeholder: 'Search', autoFocus: true }}
-                theme={theme.dark ? blueDarkSupplement : {}}
+                theme={theme.dark ? blueDarkAlt : {}}
             />
             <ScrollView>
                 <Card style={{ padding: 0, margin: PADDING, marginBottom: 0 }}>
@@ -108,7 +108,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                         description={'Not a single thing'}
                         IconClass={ChartLineVariant}
                         actions={
-                            <Button mode={'contained'} icon={'plus'} theme={theme.dark ? blueDarkSupplement : {}}>
+                            <Button mode={'outlined'} icon={'plus'}>
                                 Add a Device
                             </Button>
                         }
@@ -152,6 +152,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     <InfoListItem
                         divider={'full'}
                         IconClass={Sunny}
+                        // @TODO: Remove icon color definition after InfoListItem getIconColor function is fixed
                         iconColor={theme.colors.text}
                         title={'Temperature'}
                         rightComponent={<ChannelValue value={68} units={'°F'} />}
@@ -159,6 +160,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     <InfoListItem
                         divider={'full'}
                         IconClass={Sunny}
+                        // @TODO: Remove icon color definition after InfoListItem getIconColor function is fixed
                         iconColor={theme.colors.text}
                         title={'Temperature'}
                         rightComponent={<ChannelValue value={68} units={'°F'} />}
@@ -166,6 +168,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     <InfoListItem
                         divider={'full'}
                         IconClass={Sunny}
+                        // @TODO: Remove icon color definition after InfoListItem getIconColor function is fixed
                         iconColor={theme.colors.text}
                         title={'Temperature'}
                         rightComponent={
@@ -179,10 +182,8 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                 <InfoListItem
                     title={'Emerson Field West'}
                     subtitle={['DG 100', 'EDR 5000', 'Online']}
-                    statusColor={theme.dark ? PXBColors.green[200] : PXBColors.green[500]}
-                    fontColor={theme.dark ? PXBColors.green[200] : PXBColors.green[500]}
+                    statusColor={PXBColors.green[500]}
                     hidePadding={true}
-                    backgroundColor={theme.colors.surface}
                     IconClass={Battery}
                     avatar
                     rightComponent={<MatIcon name={'mail'} size={24} color={theme.colors.text} />}
@@ -194,8 +195,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                 <InfoListItem
                     title={'South Hills Farm'}
                     subtitle={'Offline'}
-                    backgroundColor={theme.colors.surface}
-                    statusColor={theme.dark ? PXBColors.red[200] : PXBColors.red[500]}
+                    statusColor={PXBColors.red[500]}
                     divider={'full'}
                     IconClass={Pie}
                     iconAlign={'center'}
@@ -208,11 +208,10 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                 />
                 <InfoListItem
                     title={'Cherry East'}
-                    backgroundColor={theme.colors.surface}
                     subtitle={['DG 100', 'EDR 5000', 'Online']}
                     subtitleSeparator={'/'}
                     hidePadding
-                    rightComponent={<ListItemTag label={'ACTIVE'} theme={theme.dark ? blueDarkSupplement : {}} />}
+                    rightComponent={<ListItemTag label={'ACTIVE'} theme={theme.dark ? blueDarkAlt : {}} />}
                     onPress={(): void => {
                         /* do nothing */
                     }}
@@ -261,8 +260,9 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                         <InfoListItem
                             dense
                             IconClass={Notifications}
-                            iconColor={theme.dark ? PXBColors.red[200] : PXBColors.red[500]}
+                            iconColor={PXBColors.red[500]}
                             title={'1 Alarm'}
+                            fontColor={theme.dark ? PXBColors.red[200] : PXBColors.red[500]}
                         />
                         <InfoListItem
                             dense
@@ -301,14 +301,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     ]}
                     badge={
                         <HeroBanner style={{ flex: 0, minWidth: 180, justifyContent: 'flex-end' }}>
-                            <Hero
-                                label={'Temperature'}
-                                iconColor={theme.dark ? PXBColors.black[200] : theme.colors.text}
-                                iconSize={70}
-                                value={69}
-                                units={'°F'}
-                                IconClass={Temp}
-                            />
+                            <Hero label={'Temperature'} iconSize={70} value={69} units={'°F'} IconClass={Temp} />
                             <Hero
                                 label={'Humidity'}
                                 iconSize={70}
@@ -335,8 +328,9 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                         <InfoListItem
                             dense
                             IconClass={Notifications}
-                            iconColor={theme.dark ? PXBColors.red[200] : PXBColors.red[500]}
+                            iconColor={PXBColors.red[500]}
                             title={'1 Alarm'}
+                            fontColor={theme.dark ? PXBColors.red[200] : PXBColors.red[500]}
                         />
                         <InfoListItem
                             dense

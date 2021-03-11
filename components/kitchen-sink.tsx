@@ -9,7 +9,6 @@ import {
     Badge,
     Banner,
     BottomNavigation,
-    Button,
     Card,
     Checkbox,
     Chip,
@@ -29,12 +28,14 @@ import {
     Snackbar,
     Surface,
     Switch,
-    TextInput,
     Title,
     ToggleButton,
     useTheme,
 } from 'react-native-paper';
-import { blueDarkSupplement } from '@pxblue/react-native-themes';
+import { MyCustomButton as Button } from './custom-button';
+import { MyCustomTextInput as TextInput } from './custom-text-input';
+import { blueDarkAlt } from '@pxblue/react-native-themes';
+import color from 'color';
 import * as Colors from '@pxblue/colors';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
@@ -107,8 +108,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             marginTop: 24,
                         }}
                     >
-                        <ActivityIndicator animating={true} size={'small'} />
-                        <ActivityIndicator animating={true} size={'large'} />
+                        <ActivityIndicator animating={true} size={'small'} theme={theme.dark ? blueDarkAlt : {}} />
+                        <ActivityIndicator animating={true} size={'large'} theme={theme.dark ? blueDarkAlt : {}} />
                     </View>
                 </View>
             </Card>
@@ -117,15 +118,15 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Appbar</H5>
                     <View style={{ marginTop: 24 }}>
-                        <Appbar theme={theme.dark ? blueDarkSupplement : {}} style={{ marginBottom: 16 }}>
-                            <Appbar.Header style={{ width: 350 }} theme={theme.dark ? blueDarkSupplement : {}}>
+                        <Appbar theme={theme.dark ? blueDarkAlt : {}} style={{ marginBottom: 16 }}>
+                            <Appbar.Header style={{ width: 350 }} theme={theme.dark ? blueDarkAlt : {}}>
                                 <Appbar.Content title="Title" subtitle="Subtitle" />
                                 <Appbar.Action icon="magnify" />
                                 <Appbar.Action icon="dots-vertical" />
                             </Appbar.Header>
                         </Appbar>
-                        <Appbar theme={theme.dark ? blueDarkSupplement : {}}>
-                            <Appbar.Header style={{ width: 350 }} theme={theme.dark ? blueDarkSupplement : {}}>
+                        <Appbar theme={theme.dark ? blueDarkAlt : {}}>
+                            <Appbar.Header style={{ width: 350 }} theme={theme.dark ? blueDarkAlt : {}}>
                                 <Appbar.BackAction />
                                 <Appbar.Content title="Title" subtitle="Subtitle" />
                                 <Appbar.Action icon="magnify" />
@@ -147,9 +148,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             marginTop: 24,
                         }}
                     >
-                        <Avatar.Icon size={40} icon="account-circle" />
-                        <Avatar.Image size={40} source={AvatarTestImage} />
-                        <Avatar.Text size={40} label="PX" />
+                        <Avatar.Icon size={40} icon="account-circle" theme={theme.dark ? blueDarkAlt : {}} />
+                        <Avatar.Image size={40} source={AvatarTestImage} theme={theme.dark ? blueDarkAlt : {}} />
+                        <Avatar.Text size={40} label="PX" theme={theme.dark ? blueDarkAlt : {}} />
                     </View>
                 </View>
             </Card>
@@ -165,11 +166,11 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             marginTop: 24,
                         }}
                     >
-                        <Badge size={24} visible></Badge>
-                        <Badge size={24} visible>
+                        <Badge size={24} visible theme={theme.dark ? blueDarkAlt : {}}></Badge>
+                        <Badge size={24} visible theme={theme.dark ? blueDarkAlt : {}}>
                             3
                         </Badge>
-                        <Badge size={40} visible>
+                        <Badge size={40} visible theme={theme.dark ? blueDarkAlt : {}}>
                             8
                         </Badge>
                     </View>
@@ -202,7 +203,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 onPress={(): void => {
                                     setBannerVisible(true);
                                 }}
-                                theme={theme.dark ? blueDarkSupplement : {}}
                             >
                                 Show Banner
                             </Button>
@@ -219,7 +219,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             navigationState={{ index, routes }}
                             onIndexChange={setIndex}
                             renderScene={renderScene}
-                            theme={theme.dark ? blueDarkSupplement : {}}
+                            theme={theme.dark ? blueDarkAlt : {}}
                         />
                     </View>
                 </View>
@@ -250,7 +250,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             mode="contained"
                             onPress={(): void => console.log('Pressed Contained Button')}
                             style={{ marginTop: 24, width: 150 }}
-                            theme={theme.dark ? blueDarkSupplement : {}}
                         >
                             Press me
                         </Button>
@@ -266,7 +265,13 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             <Card.Title
                                 title="Card Title"
                                 subtitle="Card Subtitle"
-                                left={(): JSX.Element => <Avatar.Icon icon="account-circle" size={40} />}
+                                left={(): JSX.Element => (
+                                    <Avatar.Icon
+                                        icon="account-circle"
+                                        size={40}
+                                        theme={theme.dark ? blueDarkAlt : {}}
+                                    />
+                                )}
                             />
                             <Card.Content>
                                 <Title>Card title</Title>
@@ -331,7 +336,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             style={{
                                 marginTop: 24,
                                 width: 250,
-                                backgroundColor: theme.dark ? 'rgba(161, 167, 170, .24)' : Colors.white[400],
+                                backgroundColor: theme.dark
+                                    ? color(Colors.black[200]).alpha(0.24).rgb().string()
+                                    : Colors.white[400],
                             }}
                         >
                             Disabled Flat Chip
@@ -346,7 +353,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             style={{
                                 marginTop: 24,
                                 width: 250,
-                                backgroundColor: theme.dark ? 'rgba(0, 123, 193, 0.24)' : 'rgba(0, 123, 193, 0.05)',
+                                backgroundColor: theme.dark
+                                    ? color(Colors.blue[500]).alpha(0.24).rgb().string()
+                                    : color(Colors.blue[500]).alpha(0.05).rgb().string(),
                             }}
                             selectedColor={theme.colors.primary}
                         >
@@ -416,7 +425,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 onPress={(): void => {
                                     setDialogVisible(true);
                                 }}
-                                theme={theme.dark ? blueDarkSupplement : {}}
                             >
                                 Show Dialog
                             </Button>
@@ -448,20 +456,20 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             small
                             icon="plus"
                             onPress={(): void => console.log('Pressed Small Fab')}
-                            theme={theme.dark ? blueDarkSupplement : {}}
+                            theme={theme.dark ? blueDarkAlt : {}}
                         />
                         <FAB
                             style={{ margin: 16, width: 56 }}
                             icon="plus"
                             onPress={(): void => console.log('Pressed Default Fab')}
-                            theme={theme.dark ? blueDarkSupplement : {}}
+                            theme={theme.dark ? blueDarkAlt : {}}
                         />
                         <FAB
                             style={{ margin: 16 }}
                             label={'Extended Fab'}
                             icon="check"
                             onPress={(): void => console.log('Pressed Extended Fab')}
-                            theme={theme.dark ? blueDarkSupplement : {}}
+                            theme={theme.dark ? blueDarkAlt : {}}
                         />
                     </View>
                 </View>
@@ -476,7 +484,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             value={helperTextInputText}
                             onChangeText={onChangeHelperTextInputText}
                             error={helperTextInputHasErrors()}
-                            theme={theme.dark ? blueDarkSupplement : {}}
                         />
                         <HelperText type="error" visible={helperTextInputHasErrors()}>
                             Email address is invalid!
@@ -554,11 +561,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             visible={menuVisible}
                             onDismiss={(): void => setMenuVisible(false)}
                             anchor={
-                                <Button
-                                    mode={'contained'}
-                                    onPress={(): void => setMenuVisible(true)}
-                                    theme={theme.dark ? blueDarkSupplement : {}}
-                                >
+                                <Button mode={'contained'} onPress={(): void => setMenuVisible(true)}>
                                     Show menu
                                 </Button>
                             }
@@ -596,7 +599,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             onPress={(): void => {
                                 setModalVisible(true);
                             }}
-                            theme={theme.dark ? blueDarkSupplement : {}}
                         >
                             Show Modal
                         </Button>
@@ -609,21 +611,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <H5>Progress Bar</H5>
                     <View style={{ marginTop: 24 }}>
                         <ProgressBar progress={0} />
-                        <ProgressBar
-                            progress={0.5}
-                            style={{ marginTop: 24 }}
-                            theme={theme.dark ? blueDarkSupplement : {}}
-                        />
-                        <ProgressBar
-                            progress={1.0}
-                            style={{ marginTop: 24 }}
-                            theme={theme.dark ? blueDarkSupplement : {}}
-                        />
-                        <ProgressBar
-                            indeterminate
-                            style={{ marginTop: 24 }}
-                            theme={theme.dark ? blueDarkSupplement : {}}
-                        />
+                        <ProgressBar progress={0.5} style={{ marginTop: 24 }} theme={theme.dark ? blueDarkAlt : {}} />
+                        <ProgressBar progress={1.0} style={{ marginTop: 24 }} theme={theme.dark ? blueDarkAlt : {}} />
+                        <ProgressBar indeterminate style={{ marginTop: 24 }} theme={theme.dark ? blueDarkAlt : {}} />
                     </View>
                 </View>
             </Card>
@@ -658,16 +648,12 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         setSnackbarVisible(false);
                                     },
                                 }}
-                                theme={theme.dark ? blueDarkSupplement : {}}
+                                theme={theme.dark ? blueDarkAlt : {}}
                             >
                                 Hey there! I&apos;m a Snackbar.
                             </Snackbar>
                         </Portal>
-                        <Button
-                            mode={'contained'}
-                            onPress={(): void => setSnackbarVisible(!snackbarVisible)}
-                            theme={theme.dark ? blueDarkSupplement : {}}
-                        >
+                        <Button mode={'contained'} onPress={(): void => setSnackbarVisible(!snackbarVisible)}>
                             {snackbarVisible ? 'Hide Snackbar' : 'Show Snackbar'}
                         </Button>
                     </View>
@@ -738,7 +724,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             label="Name"
                             value={nameInputText}
                             onChangeText={(text: string): void => setNameInputText(text)}
-                            theme={theme.dark ? blueDarkSupplement : {}}
                         />
                         <TextInput
                             label="Email"
@@ -746,7 +731,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             style={{ marginTop: 24 }}
                             value={emailInputText}
                             onChangeText={(text: string): void => setEmailInputText(text)}
-                            theme={theme.dark ? blueDarkSupplement : {}}
                         />
                         <TextInput
                             label="Name Error"
@@ -754,7 +738,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             value={errorNameInputText}
                             onChangeText={(text: string): void => setErrorNameInputText(text)}
                             error
-                            theme={theme.dark ? blueDarkSupplement : {}}
                         />
                         <TextInput
                             label="Email Error"
@@ -762,23 +745,15 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             style={{ marginTop: 24 }}
                             value={errorEmailInputText}
                             onChangeText={(text: string): void => setErrorEmailInputText(text)}
-                            theme={theme.dark ? blueDarkSupplement : {}}
                             error
                         />
-                        <TextInput
-                            label="Name Disabled"
-                            value="John Smith"
-                            style={{ marginTop: 24 }}
-                            disabled
-                            theme={theme.dark ? blueDarkSupplement : {}}
-                        />
+                        <TextInput label="Name Disabled" value="John Smith" style={{ marginTop: 24 }} disabled />
                         <TextInput
                             label="Email Disabled"
                             mode="outlined"
                             value="j.smith@email.com"
                             style={{ marginTop: 24 }}
                             disabled
-                            theme={theme.dark ? blueDarkSupplement : {}}
                         />
                     </View>
                 </View>
