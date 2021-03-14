@@ -35,7 +35,7 @@ import {
 import { MyCustomButton as Button } from './custom-button';
 import { MyCustomTextInput as TextInput } from './custom-text-input';
 import { blueDarkAlt } from '@pxblue/react-native-themes';
-import color from 'color';
+import Color from 'color';
 import * as Colors from '@pxblue/colors';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
@@ -337,7 +337,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 marginTop: 24,
                                 width: 250,
                                 backgroundColor: theme.dark
-                                    ? color(Colors.black[200]).alpha(0.24).rgb().string()
+                                    ? Color(Colors.black[200]).alpha(0.24).rgb().string()
                                     : Colors.white[400],
                             }}
                         >
@@ -354,8 +354,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 marginTop: 24,
                                 width: 250,
                                 backgroundColor: theme.dark
-                                    ? color(Colors.blue[500]).alpha(0.24).rgb().string()
-                                    : color(Colors.blue[500]).alpha(0.05).rgb().string(),
+                                    ? Color(Colors.blue[500]).alpha(0.24).rgb().string()
+                                    : Color(Colors.blue[500]).alpha(0.05).rgb().string(),
                             }}
                             selectedColor={theme.colors.primary}
                         >

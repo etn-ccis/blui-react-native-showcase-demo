@@ -3,11 +3,15 @@ import React from 'react';
 import { Button, useTheme } from 'react-native-paper';
 
 export const MyCustomButton: typeof Button = (props) => {
-    const theme = useTheme();
+    const theme = useTheme(props.theme);
     return (
         <Button
             {...props}
-            theme={props.mode === 'contained' && theme.dark ? Object.assign({}, blueDarkAlt, props.theme) : {}}
+            theme={
+                props.mode === 'contained' && theme.dark
+                    ? Object.assign({}, JSON.parse(JSON.stringify(blueDarkAlt)), props.theme)
+                    : {}
+            }
         />
     );
 };
