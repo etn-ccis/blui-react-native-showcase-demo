@@ -152,24 +152,18 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     <InfoListItem
                         divider={'full'}
                         IconClass={Sunny}
-                        // @TODO: Remove icon color definition after InfoListItem getIconColor function is fixed
-                        iconColor={theme.colors.text}
                         title={'Temperature'}
                         rightComponent={<ChannelValue value={68} units={'°F'} />}
                     />
                     <InfoListItem
                         divider={'full'}
                         IconClass={Sunny}
-                        // @TODO: Remove icon color definition after InfoListItem getIconColor function is fixed
-                        iconColor={theme.colors.text}
                         title={'Temperature'}
                         rightComponent={<ChannelValue value={68} units={'°F'} />}
                     />
                     <InfoListItem
                         divider={'full'}
                         IconClass={Sunny}
-                        // @TODO: Remove icon color definition after InfoListItem getIconColor function is fixed
-                        iconColor={theme.colors.text}
                         title={'Temperature'}
                         rightComponent={
                             <React.Fragment>

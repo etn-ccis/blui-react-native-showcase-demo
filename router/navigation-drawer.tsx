@@ -151,7 +151,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 }
                 theme={theme.dark ? blueDarkAlt : {}}
             />
-            <DrawerBody>
+            <DrawerBody theme={theme.dark ? blueDarkAlt : {}}>
                 <DrawerNavGroup items={navGroupItems1} title={'Group 1'} hidePadding={false} />
                 <DrawerNavGroup
                     items={navGroupItems2}

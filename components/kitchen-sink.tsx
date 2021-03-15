@@ -315,6 +315,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={styles.card}>
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Chip</H5>
+                    <Body1 style={{ marginTop: 8 }}>
+                        The following Chip styles are hardcoded and not achievable via the theme.
+                    </Body1>
                     <View style={{ alignItems: 'center', marginTop: 24 }}>
                         <Chip
                             icon="information"
@@ -327,6 +330,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             selected={true}
                             selectedColor={theme.dark ? theme.colors.text : theme.colors.surface}
                             style={{ marginTop: 24, width: 250, backgroundColor: Colors.blue[500] }}
+                            textStyle={{ color: theme.dark ? theme.colors.text : theme.colors.surface }}
                         >
                             Selected Flat Chip
                         </Chip>
@@ -585,7 +589,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 visible={modalVisible}
                                 onDismiss={(): void => setModalVisible(false)}
                                 contentContainerStyle={{
-                                    backgroundColor: theme.colors.background,
+                                    backgroundColor: theme.colors.surface,
                                     padding: 24,
                                     height: 300,
                                     marginHorizontal: 24,
