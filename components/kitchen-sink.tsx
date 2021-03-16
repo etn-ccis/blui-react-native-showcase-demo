@@ -56,6 +56,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    information: {
+        marginTop: 8,
+    },
+    row: {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+    },
 });
 
 export const KitchenSink: React.FC = (): JSX.Element => {
@@ -63,6 +71,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const [bannerVisible, setBannerVisible] = React.useState(true);
     const [checkboxOne, setCheckboxOne] = React.useState<'checked' | 'unchecked' | 'indeterminate'>('unchecked');
     const [checkboxTwo, setCheckboxTwo] = React.useState<'checked' | 'unchecked' | 'indeterminate'>('checked');
+    const [checkboxAndroidOne, setCheckboxAndroidOne] = React.useState<'checked' | 'unchecked' | 'indeterminate'>(
+        'unchecked'
+    );
+    const [checkboxAndroidTwo, setCheckboxAndroidTwo] = React.useState<'checked' | 'unchecked' | 'indeterminate'>(
+        'checked'
+    );
+    const [checkboxIOSOne, setCheckboxIOSOne] = React.useState<'checked' | 'unchecked' | 'indeterminate'>('unchecked');
+    const [checkboxIOSTwo, setCheckboxIOSTwo] = React.useState<'checked' | 'unchecked' | 'indeterminate'>('checked');
     const [dialogVisible, setDialogVisible] = React.useState(false);
     const [helperTextInputText, setHelperTextInputText] = React.useState('');
     const [accordionOneExpanded, setAccordionOneExpanded] = React.useState(false);
@@ -70,6 +86,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const [menuVisible, setMenuVisible] = React.useState(false);
     const [modalVisible, setModalVisible] = React.useState(false);
     const [radioButtonValue, setRadioButtonValue] = React.useState('first');
+    const [radioButtonAndroidValue, setRadioButtonAndroidValue] = React.useState('first');
+    const [radioButtonIOSValue, setRadioButtonIOSValue] = React.useState('first');
     const [snackbarVisible, setSnackbarVisible] = React.useState(false);
     const [isSwitchOn, setIsSwitchOn] = React.useState(false);
     const [toggleButtonValue, setToggleButtonValue] = useState('left');
@@ -314,8 +332,92 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
             <Card style={styles.card}>
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
+                    <H5>Checkbox (Android)</H5>
+                    <View style={{ marginTop: 24 }}>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Init Unchecked</Body1>
+                            <Checkbox.Android
+                                status={checkboxAndroidOne}
+                                onPress={(): void =>
+                                    checkboxAndroidOne === 'unchecked'
+                                        ? setCheckboxAndroidOne('checked')
+                                        : setCheckboxAndroidOne('unchecked')
+                                }
+                            />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Init Checked</Body1>
+                            <Checkbox.Android
+                                status={checkboxAndroidTwo}
+                                onPress={(): void =>
+                                    checkboxAndroidTwo === 'unchecked'
+                                        ? setCheckboxAndroidTwo('checked')
+                                        : setCheckboxAndroidTwo('unchecked')
+                                }
+                            />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Indeterminate</Body1>
+                            <Checkbox.Android status={'indeterminate'} />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Disabled Checked</Body1>
+                            <Checkbox.Android status={'checked'} disabled={true} />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Disabled Unchecked</Body1>
+                            <Checkbox.Android status={'unchecked'} disabled={true} />
+                        </View>
+                    </View>
+                </View>
+            </Card>
+
+            <Card style={styles.card}>
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
+                    <H5>Checkbox (iOS)</H5>
+                    <View style={{ marginTop: 24 }}>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Init Unchecked</Body1>
+                            <Checkbox.IOS
+                                status={checkboxIOSOne}
+                                onPress={(): void =>
+                                    checkboxIOSOne === 'unchecked'
+                                        ? setCheckboxIOSOne('checked')
+                                        : setCheckboxIOSOne('unchecked')
+                                }
+                            />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Init Checked</Body1>
+                            <Checkbox.IOS
+                                status={checkboxIOSTwo}
+                                onPress={(): void =>
+                                    checkboxIOSTwo === 'unchecked'
+                                        ? setCheckboxIOSTwo('checked')
+                                        : setCheckboxIOSTwo('unchecked')
+                                }
+                            />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Indeterminate</Body1>
+                            <Checkbox.IOS status={'indeterminate'} />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Disabled Checked</Body1>
+                            <Checkbox.IOS status={'checked'} disabled={true} />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Disabled Unchecked</Body1>
+                            <Checkbox.IOS status={'unchecked'} disabled={true} />
+                        </View>
+                    </View>
+                </View>
+            </Card>
+
+            <Card style={styles.card}>
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Chip</H5>
-                    <Body1 style={{ marginTop: 8 }}>
+                    <Body1 style={styles.information}>
                         The following Chip styles are hardcoded and not achievable via the theme.
                     </Body1>
                     <View style={{ alignItems: 'center', marginTop: 24 }}>
@@ -624,7 +726,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
             <Card style={styles.card}>
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Radio Button</H5>
+                    <H5>Radio Button Item</H5>
                     <View style={{ marginTop: 24 }}>
                         <RadioButton.Group
                             onValueChange={(value: string): void => setRadioButtonValue(value)}
@@ -633,6 +735,56 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             <RadioButton.Item label="First item" value="first" />
                             <RadioButton.Item label="Second item" value="second" />
                             <RadioButton.Item label="Third item" value="third" />
+                        </RadioButton.Group>
+                    </View>
+                </View>
+            </Card>
+
+            <Card style={styles.card}>
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
+                    <H5>Radio Button (Android)</H5>
+                    <View style={{ marginTop: 24 }}>
+                        <RadioButton.Group
+                            onValueChange={(value: string): void => setRadioButtonAndroidValue(value)}
+                            value={radioButtonAndroidValue}
+                        >
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>First Item</Body1>
+                                <RadioButton.Android value="first" />
+                            </View>
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>Second Item</Body1>
+                                <RadioButton.Android value="second" />
+                            </View>
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>Third Item</Body1>
+                                <RadioButton.Android value="third" />
+                            </View>
+                        </RadioButton.Group>
+                    </View>
+                </View>
+            </Card>
+
+            <Card style={styles.card}>
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
+                    <H5>Radio Button (iOS)</H5>
+                    <View style={{ marginTop: 24 }}>
+                        <RadioButton.Group
+                            onValueChange={(value: string): void => setRadioButtonIOSValue(value)}
+                            value={radioButtonIOSValue}
+                        >
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>First Item</Body1>
+                                <RadioButton.IOS value="first" />
+                            </View>
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>Second Item</Body1>
+                                <RadioButton.IOS value="second" />
+                            </View>
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>Third Item</Body1>
+                                <RadioButton.IOS value="third" />
+                            </View>
                         </RadioButton.Group>
                     </View>
                 </View>
@@ -708,14 +860,23 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Switch</H5>
                     <View style={{ marginTop: 24, alignItems: 'center' }}>
-                        <Switch
-                            value={isSwitchOn}
-                            onValueChange={(): void => {
-                                setIsSwitchOn(!isSwitchOn);
-                            }}
-                        />
-                        <Switch disabled value={true} style={{ marginTop: 24 }} />
-                        <Switch disabled value={false} style={{ marginTop: 24 }} />
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Enabled</Body1>
+                            <Switch
+                                value={isSwitchOn}
+                                onValueChange={(): void => {
+                                    setIsSwitchOn(!isSwitchOn);
+                                }}
+                            />
+                        </View>
+                        <View style={[styles.row, { marginTop: 24 }]}>
+                            <Body1 style={{ flex: 1 }}>Disabled (on)</Body1>
+                            <Switch disabled value={true} />
+                        </View>
+                        <View style={[styles.row, { marginTop: 24 }]}>
+                            <Body1 style={{ flex: 1 }}>Disabled (off)</Body1>
+                            <Switch disabled value={false} />
+                        </View>
                     </View>
                 </View>
             </Card>
