@@ -3,19 +3,15 @@ import { Body1, H5, Subtitle1 } from '@pxblue/react-native-components';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import {
-    ActivityIndicator,
-    Appbar,
-    Avatar,
-    Badge,
+    Appbar as PaperAppbar,
     Banner,
-    BottomNavigation,
+    BottomNavigation as PaperBottomNavigation,
     Card,
     Checkbox,
     Chip,
     DataTable,
     Dialog,
     Divider,
-    FAB,
     HelperText,
     IconButton,
     List,
@@ -23,18 +19,27 @@ import {
     Modal,
     Paragraph,
     Portal,
-    ProgressBar,
     RadioButton,
-    Snackbar,
     Surface,
     Switch,
     Title,
     ToggleButton,
     useTheme,
 } from 'react-native-paper';
+import { MyCustomActivityIndicator as ActivityIndicator } from './custom-activity-indicator';
+import { MyCustomAppbar as Appbar } from './custom-appbar';
+import {
+    MyCustomIconAvatar as IconAvatar,
+    MyCustomImageAvatar as ImageAvatar,
+    MyCustomTextAvatar as TextAvatar,
+} from './custom-avatar';
+import { MyCustomBadge as Badge } from './custom-badge';
+import { MyCustomBottomNavigation as BottomNavigation } from './custom-bottom-navigation';
 import { MyCustomButton as Button } from './custom-button';
+import { MyCustomFAB as FAB } from './custom-fab';
+import { MyCustomProgressBar as ProgressBar } from './custom-progress-bar';
+import { MyCustomSnackbar as Snackbar } from './custom-snackbar';
 import { MyCustomTextInput as TextInput } from './custom-text-input';
-import { blueDarkAlt } from '@pxblue/react-native-themes';
 import Color from 'color';
 import * as Colors from '@pxblue/colors';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
@@ -107,7 +112,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
         { key: 'recents', title: 'Recents', icon: 'history' },
     ]);
 
-    const renderScene = BottomNavigation.SceneMap({
+    const renderScene = PaperBottomNavigation.SceneMap({
         music: MusicRoute,
         albums: AlbumsRoute,
         recents: RecentsRoute,
@@ -126,8 +131,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             marginTop: 24,
                         }}
                     >
-                        <ActivityIndicator animating={true} size={'small'} theme={theme.dark ? blueDarkAlt : {}} />
-                        <ActivityIndicator animating={true} size={'large'} theme={theme.dark ? blueDarkAlt : {}} />
+                        <ActivityIndicator animating={true} size={'small'} />
+                        <ActivityIndicator animating={true} size={'large'} />
                     </View>
                 </View>
             </Card>
@@ -136,20 +141,16 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Appbar</H5>
                     <View style={{ marginTop: 24 }}>
-                        <Appbar theme={theme.dark ? blueDarkAlt : {}} style={{ marginBottom: 16 }}>
-                            <Appbar.Header style={{ width: 350 }} theme={theme.dark ? blueDarkAlt : {}}>
-                                <Appbar.Content title="Title" subtitle="Subtitle" />
-                                <Appbar.Action icon="magnify" />
-                                <Appbar.Action icon="dots-vertical" />
-                            </Appbar.Header>
+                        <Appbar style={{ marginBottom: 16 }}>
+                            <PaperAppbar.Content title="Title" subtitle="Subtitle" />
+                            <PaperAppbar.Action icon="magnify" />
+                            <PaperAppbar.Action icon="dots-vertical" />
                         </Appbar>
-                        <Appbar theme={theme.dark ? blueDarkAlt : {}}>
-                            <Appbar.Header style={{ width: 350 }} theme={theme.dark ? blueDarkAlt : {}}>
-                                <Appbar.BackAction />
-                                <Appbar.Content title="Title" subtitle="Subtitle" />
-                                <Appbar.Action icon="magnify" />
-                                <Appbar.Action icon="dots-vertical" />
-                            </Appbar.Header>
+                        <Appbar>
+                            <PaperAppbar.BackAction />
+                            <PaperAppbar.Content title="Title" subtitle="Subtitle" />
+                            <PaperAppbar.Action icon="magnify" />
+                            <PaperAppbar.Action icon="dots-vertical" />
                         </Appbar>
                     </View>
                 </View>
@@ -166,9 +167,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             marginTop: 24,
                         }}
                     >
-                        <Avatar.Icon size={40} icon="account-circle" theme={theme.dark ? blueDarkAlt : {}} />
-                        <Avatar.Image size={40} source={AvatarTestImage} theme={theme.dark ? blueDarkAlt : {}} />
-                        <Avatar.Text size={40} label="PX" theme={theme.dark ? blueDarkAlt : {}} />
+                        <IconAvatar size={40} icon="account-circle" />
+                        <ImageAvatar size={40} source={AvatarTestImage} />
+                        <TextAvatar size={40} label="PX" />
                     </View>
                 </View>
             </Card>
@@ -184,11 +185,11 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             marginTop: 24,
                         }}
                     >
-                        <Badge size={24} visible theme={theme.dark ? blueDarkAlt : {}}></Badge>
-                        <Badge size={24} visible theme={theme.dark ? blueDarkAlt : {}}>
+                        <Badge size={24} visible></Badge>
+                        <Badge size={24} visible>
                             3
                         </Badge>
-                        <Badge size={40} visible theme={theme.dark ? blueDarkAlt : {}}>
+                        <Badge size={40} visible>
                             8
                         </Badge>
                     </View>
@@ -237,7 +238,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             navigationState={{ index, routes }}
                             onIndexChange={setIndex}
                             renderScene={renderScene}
-                            theme={theme.dark ? blueDarkAlt : {}}
                         />
                     </View>
                 </View>
@@ -279,17 +279,11 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Card</H5>
                     <View style={{ marginTop: 24 }}>
-                        <Card>
+                        <Card style={{ elevation: 4 }}>
                             <Card.Title
                                 title="Card Title"
                                 subtitle="Card Subtitle"
-                                left={(): JSX.Element => (
-                                    <Avatar.Icon
-                                        icon="account-circle"
-                                        size={40}
-                                        theme={theme.dark ? blueDarkAlt : {}}
-                                    />
-                                )}
+                                left={(): JSX.Element => <IconAvatar icon="account-circle" size={40} />}
                             />
                             <Card.Content>
                                 <Title>Card title</Title>
@@ -562,20 +556,17 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             small
                             icon="plus"
                             onPress={(): void => console.log('Pressed Small Fab')}
-                            theme={theme.dark ? blueDarkAlt : {}}
                         />
                         <FAB
                             style={{ margin: 16, width: 56 }}
                             icon="plus"
                             onPress={(): void => console.log('Pressed Default Fab')}
-                            theme={theme.dark ? blueDarkAlt : {}}
                         />
                         <FAB
                             style={{ margin: 16 }}
                             label={'Extended Fab'}
                             icon="check"
                             onPress={(): void => console.log('Pressed Extended Fab')}
-                            theme={theme.dark ? blueDarkAlt : {}}
                         />
                     </View>
                 </View>
@@ -717,9 +708,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <H5>Progress Bar</H5>
                     <View style={{ marginTop: 24 }}>
                         <ProgressBar progress={0} />
-                        <ProgressBar progress={0.5} style={{ marginTop: 24 }} theme={theme.dark ? blueDarkAlt : {}} />
-                        <ProgressBar progress={1.0} style={{ marginTop: 24 }} theme={theme.dark ? blueDarkAlt : {}} />
-                        <ProgressBar indeterminate style={{ marginTop: 24 }} theme={theme.dark ? blueDarkAlt : {}} />
+                        <ProgressBar progress={0.5} style={{ marginTop: 24 }} />
+                        <ProgressBar progress={1.0} style={{ marginTop: 24 }} />
+                        <ProgressBar indeterminate style={{ marginTop: 24 }} />
                     </View>
                 </View>
             </Card>
@@ -804,7 +795,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         setSnackbarVisible(false);
                                     },
                                 }}
-                                theme={theme.dark ? blueDarkAlt : {}}
                             >
                                 Hey there! I&apos;m a Snackbar.
                             </Snackbar>

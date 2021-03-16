@@ -13,7 +13,8 @@ import {
     ScoreCard,
     wrapIcon,
 } from '@pxblue/react-native-components';
-import { Card, Button, useTheme } from 'react-native-paper';
+import { Card, useTheme } from 'react-native-paper';
+import { MyCustomButton as Button } from '../showcase/components/custom-button';
 
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -264,12 +265,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                             iconColor={theme.dark ? PXBColors.blue[200] : PXBColors.blue[500]}
                             title={'1 Event'}
                         />
-                        <InfoListItem
-                            dense
-                            IconClass={Clouds}
-                            title={'Online'}
-                            iconColor={theme.dark ? PXBColors.black[200] : theme.colors.text}
-                        />
+                        <InfoListItem dense IconClass={Clouds} title={'Online'} />
                     </View>
                 </ScoreCard>
                 <ScoreCard
@@ -332,12 +328,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                             iconColor={theme.dark ? PXBColors.blue[200] : PXBColors.blue[500]}
                             title={'1 Event'}
                         />
-                        <InfoListItem
-                            dense
-                            IconClass={Clouds}
-                            title={'Online'}
-                            iconColor={theme.dark ? PXBColors.black[200] : theme.colors.text}
-                        />
+                        <InfoListItem dense IconClass={Clouds} title={'Online'} />
                     </View>
                 </ScoreCard>
 

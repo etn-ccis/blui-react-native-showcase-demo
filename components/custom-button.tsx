@@ -7,11 +7,7 @@ export const MyCustomButton: typeof Button = (props) => {
     return (
         <Button
             {...props}
-            theme={
-                props.mode === 'contained' && theme.dark
-                    ? Object.assign({}, JSON.parse(JSON.stringify(blueDarkAlt)), props.theme)
-                    : {}
-            }
+            theme={props.mode === 'contained' && theme.dark ? Object.assign({}, blueDarkAlt, props.theme) : {}}
         />
     );
 };
