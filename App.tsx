@@ -29,7 +29,6 @@ import { MobileStepperExample } from './components/mobile-stepper-example';
 import { useThemeContext } from './contexts/ThemeContext';
 import { UserMenuExample } from './components/user-menu-example';
 import { KitchenSink } from './components/kitchen-sink';
-import { blueDarkAlt } from '@pxblue/react-native-themes';
 
 const backgroundImage = require('./assets/images/farm.jpg');
 
@@ -100,8 +99,6 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                 ]}
                 backgroundImage={backgroundImage}
                 searchableConfig={{ placeholder: 'Search', autoFocus: true }}
-                // @TODO: Remove hardcoded background color once the Header component is updated to use the darkThemeAlt.colors.primary in the component library
-                backgroundColor={PXBColors.blue[500]}
             />
             <ScrollView>
                 <Card style={{ padding: 0, margin: PADDING, marginBottom: 0 }}>
@@ -114,7 +111,6 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                                 Add a Device
                             </Button>
                         }
-                        iconColor={theme.dark ? PXBColors.black[200] : PXBColors.black[500]}
                     />
                 </Card>
                 <Card style={{ padding: 0, margin: PADDING, marginBottom: PADDING }}>
@@ -207,8 +203,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     subtitle={['DG 100', 'EDR 5000', 'Online']}
                     subtitleSeparator={'/'}
                     hidePadding
-                    // @TODO: Remove hardcoded background color once the ListItemTag component is updated to use the darkThemeAlt.colors.primary in the component library
-                    rightComponent={<ListItemTag label={'ACTIVE'} backgroundColor={PXBColors.blue[500]} />}
+                    rightComponent={<ListItemTag label={'ACTIVE'} />}
                     onPress={(): void => {
                         /* do nothing */
                     }}
