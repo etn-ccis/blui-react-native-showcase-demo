@@ -26,20 +26,20 @@ import {
     ToggleButton,
     useTheme,
 } from 'react-native-paper';
-import { MyCustomActivityIndicator as ActivityIndicator } from './custom-activity-indicator';
-import { MyCustomAppbar as Appbar } from './custom-appbar';
+import { ThemedActivityIndicator as ActivityIndicator } from './themed-activity-indicator';
+import { ThemedAppbar as Appbar } from './themed-appbar';
 import {
-    MyCustomIconAvatar as IconAvatar,
-    MyCustomImageAvatar as ImageAvatar,
-    MyCustomTextAvatar as TextAvatar,
-} from './custom-avatar';
-import { MyCustomBadge as Badge } from './custom-badge';
-import { MyCustomBottomNavigation as BottomNavigation } from './custom-bottom-navigation';
-import { MyCustomButton as Button } from './custom-button';
-import { MyCustomFAB as FAB } from './custom-fab';
-import { MyCustomProgressBar as ProgressBar } from './custom-progress-bar';
-import { MyCustomSnackbar as Snackbar } from './custom-snackbar';
-import { MyCustomTextInput as TextInput } from './custom-text-input';
+    ThemedIconAvatar as IconAvatar,
+    ThemedImageAvatar as ImageAvatar,
+    ThemedTextAvatar as TextAvatar,
+} from './themed-avatar';
+import { ThemedBadge as Badge } from './themed-badge';
+import { ThemedBottomNavigation as BottomNavigation } from './themed-bottom-navigation';
+import { ThemedButton as Button } from './themed-button';
+import { ThemedFAB as FAB } from './themed-fab';
+import { ThemedProgressBar as ProgressBar } from './themed-progress-bar';
+import { ThemedSnackbar as Snackbar } from './themed-snackbar';
+import { ThemedTextInput as TextInput } from './themed-text-input';
 import Color from 'color';
 import * as Colors from '@pxblue/colors';
 const AvatarTestImage = require('../assets/images/test-avatar.png');

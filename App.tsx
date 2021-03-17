@@ -14,7 +14,7 @@ import {
     wrapIcon,
 } from '@pxblue/react-native-components';
 import { Card, useTheme } from 'react-native-paper';
-import { MyCustomButton as Button } from './components/custom-button';
+import { ThemedButton as Button } from '../showcase/components/themed-button';
 
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
