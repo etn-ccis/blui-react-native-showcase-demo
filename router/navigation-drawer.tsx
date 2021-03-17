@@ -149,8 +149,10 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                         }}
                     />
                 }
-                theme={theme.dark ? blueDarkAlt : {}}
+                // @TODO: Remove hardcoded background color once the DrawerHeader component is updated to use the darkThemeAlt.colors.primary in the component library
+                backgroundColor={Colors.blue[500]}
             />
+            {/* @TODO: Remove blueDarkAlt theme assignment here once the DrawerNavItem component is updated (activeItemBackgroundColor, activeItemFontColor, and activeItemIconColor to use blueDarkAlt theme definitions) */}
             <DrawerBody theme={theme.dark ? blueDarkAlt : {}}>
                 <DrawerNavGroup items={navGroupItems1} title={'Group 1'} hidePadding={false} />
                 <DrawerNavGroup

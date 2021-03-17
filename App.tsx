@@ -14,7 +14,7 @@ import {
     wrapIcon,
 } from '@pxblue/react-native-components';
 import { Card, useTheme } from 'react-native-paper';
-import { ThemedButton as Button } from '../showcase/components/themed-button';
+import { ThemedButton as Button } from './components/themed-button';
 
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -100,7 +100,8 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                 ]}
                 backgroundImage={backgroundImage}
                 searchableConfig={{ placeholder: 'Search', autoFocus: true }}
-                theme={theme.dark ? blueDarkAlt : {}}
+                // @TODO: Remove hardcoded background color once the Header component is updated to use the darkThemeAlt.colors.primary in the component library
+                backgroundColor={PXBColors.blue[500]}
             />
             <ScrollView>
                 <Card style={{ padding: 0, margin: PADDING, marginBottom: 0 }}>
@@ -206,7 +207,8 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     subtitle={['DG 100', 'EDR 5000', 'Online']}
                     subtitleSeparator={'/'}
                     hidePadding
-                    rightComponent={<ListItemTag label={'ACTIVE'} theme={theme.dark ? blueDarkAlt : {}} />}
+                    // @TODO: Remove hardcoded background color once the ListItemTag component is updated to use the darkThemeAlt.colors.primary in the component library
+                    rightComponent={<ListItemTag label={'ACTIVE'} backgroundColor={PXBColors.blue[500]} />}
                     onPress={(): void => {
                         /* do nothing */
                     }}
