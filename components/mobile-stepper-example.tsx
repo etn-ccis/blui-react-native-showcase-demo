@@ -1,7 +1,9 @@
 import React, { useCallback, useState } from 'react';
 import { View } from 'react-native';
 import { MobileStepper, DotStepperVariant, Body1 } from '@pxblue/react-native-components';
-import { Card, Button, Divider, useTheme } from 'react-native-paper';
+import { Card, Divider, useTheme } from 'react-native-paper';
+import { ThemedButton as Button } from './themed-button';
+import * as Colors from '@pxblue/colors';
 
 const PADDING = 10;
 
@@ -68,6 +70,7 @@ export const MobileStepperExample: React.FC = () => {
                     </View>
                 }
                 variant={mobileStepperVariant}
+                activeColor={Colors.blue[500]}
             ></MobileStepper>
         </Card>
     );

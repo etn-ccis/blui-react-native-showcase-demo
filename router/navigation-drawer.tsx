@@ -18,6 +18,7 @@ import { IconButton, Divider, useTheme } from 'react-native-paper';
 import * as Colors from '@pxblue/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
+import { blueDarkAlt } from '@pxblue/react-native-themes';
 
 const headerBgImage = require('../assets/images/topology_40.png');
 const eatonLogo = require('../assets/images/eatonLogo.png');
@@ -148,8 +149,11 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                         }}
                     />
                 }
+                // @TODO: Remove hardcoded background color once the DrawerHeader component is updated to use the darkThemeAlt.colors.primary in the component library
+                backgroundColor={Colors.blue[500]}
             />
-            <DrawerBody>
+            {/* @TODO: Remove blueDarkAlt theme assignment here once the DrawerNavItem component is updated (activeItemBackgroundColor, activeItemFontColor, and activeItemIconColor to use blueDarkAlt theme definitions) */}
+            <DrawerBody theme={theme.dark ? blueDarkAlt : {}}>
                 <DrawerNavGroup items={navGroupItems1} title={'Group 1'} hidePadding={false} />
                 <DrawerNavGroup
                     items={navGroupItems2}

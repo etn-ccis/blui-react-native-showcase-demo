@@ -1516,10 +1516,10 @@
   resolved "https://registry.yarnpkg.com/@pxblue/prettier-config/-/prettier-config-1.0.2.tgz#fb00503df6557b66c3d91d43c9101e614c35d2ec"
   integrity sha512-/3cLBoTjZs3kV1ATPA/Sp0tsL7XmlV/b8HW/qt0jqR/uP5+cdXL2YIhMXQngLRa7PhpSkEiRIYK5sl0rKsXTUg==
 
-"@pxblue/react-native-components@4.1.0-beta.0":
-  version "4.1.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-4.1.0-beta.0.tgz#1fe8868d49a845e29e81c66d2d326b431d4ca232"
-  integrity sha512-Ok/4NEV0vPI8g073Nfjr6dcCmvcKw8aLZJVAdblfYzuTrrBKLdhpduOIXL1PQU4YIcaRUCr0ehgFRMmSne/3mQ==
+"@pxblue/react-native-components@5.0.0-beta.1":
+  version "5.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-5.0.0-beta.1.tgz#668840b75996b6d3bb145f395cdedf5f25d9baff"
+  integrity sha512-a4N4gNzrVwnrXBTKpKmUGrKXaItdbSWPZaQKMvP9j8GKkQsDw4biVRjWKQlqHfYv+hKKdRRnQyYE6txghZOupg==
   dependencies:
     "@pxblue/colors" "^3.0.0"
     color "^3.1.2"
@@ -1527,12 +1527,13 @@
     react-native-keyboard-aware-scroll-view "^0.8.0"
     react-native-status-bar-height "^2.3.1"
 
-"@pxblue/react-native-themes@5.1.0-beta.0":
-  version "5.1.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@pxblue/react-native-themes/-/react-native-themes-5.1.0-beta.0.tgz#86c1fd481106e6f523eae55516b3c21e2ddad143"
-  integrity sha512-Mvh+In5hahFLUZJdkCfxEoRxl5E2k7cfRX3fdv+AjU0S9m3k2VUe97Mqf+T/Nb5toinXREu+rbLF9SO+YdKJRg==
+"@pxblue/react-native-themes@5.1.0-beta.2":
+  version "5.1.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@pxblue/react-native-themes/-/react-native-themes-5.1.0-beta.2.tgz#3b724f259984a690817d2b1acd2da6a60afefff7"
+  integrity sha512-QIQzFXksacgWTWtUBeez6lQfDhaRfeI3nwFy/5dqlW2Ml4+2Q27Jh9gAiSUe/RImnbJjSRxkgONoqwA+1QYZIw==
   dependencies:
     "@pxblue/colors" "^3.0.0"
+    color "^3.1.3"
 
 "@pxblue/types@^2.0.0":
   version "2.0.0"
@@ -1842,6 +1843,25 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/color-convert@*":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/color-convert/-/color-convert-2.0.0.tgz#8f5ee6b9e863dcbee5703f5a517ffb13d3ea4e22"
+  integrity sha512-m7GG7IKKGuJUXvkZ1qqG3ChccdIM/qBBo913z+Xft0nKCX4hAU/IxKwZBU4cpRZ7GS5kV4vOblUkILtSShCPXQ==
+  dependencies:
+    "@types/color-name" "*"
+
+"@types/color-name@*":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
+  integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
+
+"@types/color@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/color/-/color-3.0.1.tgz#2900490ed04da8116c5058cd5dba3572d5a25071"
+  integrity sha512-oeUWVaAwI+xINDUx+3F2vJkl/vVB03VChFF/Gl3iQCdbcakjuoJyMOba+3BXRtnBhxZ7uBYqQBi9EpLnvSoztA==
+  dependencies:
+    "@types/color-convert" "*"
+
 "@types/graceful-fs@^4.1.2":
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/@types/graceful-fs/-/graceful-fs-4.1.4.tgz#4ff9f641a7c6d1a3508ff88bc3141b152772e753"
@@ -1898,6 +1918,18 @@
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.6.tgz#f4c7ec43e81b319a9815115031709f26987891f0"
   integrity sha512-3c+yGKvVP5Y9TYBEibGNR+kLtijnj7mYrXRg+WpFb2X9xm04g/DXYkfg4hmzJQosc9snFNUPkbYIhu+KAm6jJw==
+
+"@types/lodash.clonedeep@^4.5.6":
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/@types/lodash.clonedeep/-/lodash.clonedeep-4.5.6.tgz#3b6c40a0affe0799a2ce823b440a6cf33571d32b"
+  integrity sha512-cE1jYr2dEg1wBImvXlNtp0xDoS79rfEdGozQVgliDZj1uERH4k+rmEMTudP9b4VQ8O6nRb5gPqft0QzEQGMQgA==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.168"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.168.tgz#fe24632e79b7ade3f132891afff86caa5e5ce008"
+  integrity sha512-oVfRvqHV/V6D1yifJbVRU3TMp8OT6o6BG+U9MkwuJ3U8/CsDHvalRpsxBqivn71ztOFZBTfJMvETbqHiaNSj7Q==
 
 "@types/node@*":
   version "14.14.8"
@@ -5997,6 +6029,11 @@ lodash._reinterpolate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
+
+lodash.clonedeep@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+  integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
 
 lodash.frompairs@^4.0.1:
   version "4.0.1"

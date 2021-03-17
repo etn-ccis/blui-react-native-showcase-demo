@@ -3,20 +3,15 @@ import { Body1, H5, Subtitle1 } from '@pxblue/react-native-components';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import {
-    ActivityIndicator,
-    Appbar,
-    Avatar,
-    Badge,
+    Appbar as PaperAppbar,
     Banner,
-    BottomNavigation,
-    Button,
+    BottomNavigation as PaperBottomNavigation,
     Card,
     Checkbox,
     Chip,
     DataTable,
     Dialog,
     Divider,
-    FAB,
     HelperText,
     IconButton,
     List,
@@ -24,16 +19,29 @@ import {
     Modal,
     Paragraph,
     Portal,
-    ProgressBar,
     RadioButton,
-    Snackbar,
     Surface,
     Switch,
-    TextInput,
     Title,
     ToggleButton,
+    useTheme,
 } from 'react-native-paper';
-import { useTheme } from '@react-navigation/native';
+import { ThemedActivityIndicator as ActivityIndicator } from './themed-activity-indicator';
+import { ThemedAppbar as Appbar } from './themed-appbar';
+import {
+    ThemedIconAvatar as IconAvatar,
+    ThemedImageAvatar as ImageAvatar,
+    ThemedTextAvatar as TextAvatar,
+} from './themed-avatar';
+import { ThemedBadge as Badge } from './themed-badge';
+import { ThemedBottomNavigation as BottomNavigation } from './themed-bottom-navigation';
+import { ThemedButton as Button } from './themed-button';
+import { ThemedFAB as FAB } from './themed-fab';
+import { ThemedProgressBar as ProgressBar } from './themed-progress-bar';
+import { ThemedSnackbar as Snackbar } from './themed-snackbar';
+import { ThemedTextInput as TextInput } from './themed-text-input';
+import Color from 'color';
+import * as Colors from '@pxblue/colors';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
 const MusicRoute = (): JSX.Element => <Subtitle1>Music</Subtitle1>;
@@ -53,6 +61,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    information: {
+        marginTop: 8,
+    },
+    row: {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+    },
 });
 
 export const KitchenSink: React.FC = (): JSX.Element => {
@@ -60,6 +76,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const [bannerVisible, setBannerVisible] = React.useState(true);
     const [checkboxOne, setCheckboxOne] = React.useState<'checked' | 'unchecked' | 'indeterminate'>('unchecked');
     const [checkboxTwo, setCheckboxTwo] = React.useState<'checked' | 'unchecked' | 'indeterminate'>('checked');
+    const [checkboxAndroidOne, setCheckboxAndroidOne] = React.useState<'checked' | 'unchecked' | 'indeterminate'>(
+        'unchecked'
+    );
+    const [checkboxAndroidTwo, setCheckboxAndroidTwo] = React.useState<'checked' | 'unchecked' | 'indeterminate'>(
+        'checked'
+    );
+    const [checkboxIOSOne, setCheckboxIOSOne] = React.useState<'checked' | 'unchecked' | 'indeterminate'>('unchecked');
+    const [checkboxIOSTwo, setCheckboxIOSTwo] = React.useState<'checked' | 'unchecked' | 'indeterminate'>('checked');
     const [dialogVisible, setDialogVisible] = React.useState(false);
     const [helperTextInputText, setHelperTextInputText] = React.useState('');
     const [accordionOneExpanded, setAccordionOneExpanded] = React.useState(false);
@@ -67,6 +91,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const [menuVisible, setMenuVisible] = React.useState(false);
     const [modalVisible, setModalVisible] = React.useState(false);
     const [radioButtonValue, setRadioButtonValue] = React.useState('first');
+    const [radioButtonAndroidValue, setRadioButtonAndroidValue] = React.useState('first');
+    const [radioButtonIOSValue, setRadioButtonIOSValue] = React.useState('first');
     const [snackbarVisible, setSnackbarVisible] = React.useState(false);
     const [isSwitchOn, setIsSwitchOn] = React.useState(false);
     const [toggleButtonValue, setToggleButtonValue] = useState('left');
@@ -86,7 +112,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
         { key: 'recents', title: 'Recents', icon: 'history' },
     ]);
 
-    const renderScene = BottomNavigation.SceneMap({
+    const renderScene = PaperBottomNavigation.SceneMap({
         music: MusicRoute,
         albums: AlbumsRoute,
         recents: RecentsRoute,
@@ -115,20 +141,17 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Appbar</H5>
                     <View style={{ marginTop: 24 }}>
-                        <Appbar.Header style={{ width: 350 }}>
-                            <Appbar.Content title="Title" subtitle="Subtitle" />
-                        </Appbar.Header>
-                        <Appbar.Header style={{ width: 350 }}>
-                            <Appbar.Content title="Title" subtitle="Subtitle" />
-                            <Appbar.Action icon="magnify" />
-                            <Appbar.Action icon="dots-vertical" />
-                        </Appbar.Header>
-                        <Appbar.Header style={{ width: 350 }}>
-                            <Appbar.BackAction />
-                            <Appbar.Content title="Title" subtitle="Subtitle" />
-                            <Appbar.Action icon="magnify" />
-                            <Appbar.Action icon="dots-vertical" />
-                        </Appbar.Header>
+                        <Appbar style={{ marginBottom: 16 }}>
+                            <PaperAppbar.Content title="Title" subtitle="Subtitle" />
+                            <PaperAppbar.Action icon="magnify" />
+                            <PaperAppbar.Action icon="dots-vertical" />
+                        </Appbar>
+                        <Appbar>
+                            <PaperAppbar.BackAction />
+                            <PaperAppbar.Content title="Title" subtitle="Subtitle" />
+                            <PaperAppbar.Action icon="magnify" />
+                            <PaperAppbar.Action icon="dots-vertical" />
+                        </Appbar>
                     </View>
                 </View>
             </Card>
@@ -144,9 +167,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             marginTop: 24,
                         }}
                     >
-                        <Avatar.Icon size={40} icon="account-circle" />
-                        <Avatar.Image size={40} source={AvatarTestImage} />
-                        <Avatar.Text size={40} label="PX" />
+                        <IconAvatar size={40} icon="account-circle" />
+                        <ImageAvatar size={40} source={AvatarTestImage} />
+                        <TextAvatar size={40} label="PX" />
                     </View>
                 </View>
             </Card>
@@ -256,11 +279,11 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Card</H5>
                     <View style={{ marginTop: 24 }}>
-                        <Card>
+                        <Card style={{ elevation: 4 }}>
                             <Card.Title
                                 title="Card Title"
                                 subtitle="Card Subtitle"
-                                left={(): JSX.Element => <Avatar.Icon icon="account-circle" size={40} />}
+                                left={(): JSX.Element => <IconAvatar icon="account-circle" size={40} />}
                             />
                             <Card.Content>
                                 <Title>Card title</Title>
@@ -303,27 +326,140 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
             <Card style={styles.card}>
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
+                    <H5>Checkbox (Android)</H5>
+                    <View style={{ marginTop: 24 }}>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Init Unchecked</Body1>
+                            <Checkbox.Android
+                                status={checkboxAndroidOne}
+                                onPress={(): void =>
+                                    checkboxAndroidOne === 'unchecked'
+                                        ? setCheckboxAndroidOne('checked')
+                                        : setCheckboxAndroidOne('unchecked')
+                                }
+                            />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Init Checked</Body1>
+                            <Checkbox.Android
+                                status={checkboxAndroidTwo}
+                                onPress={(): void =>
+                                    checkboxAndroidTwo === 'unchecked'
+                                        ? setCheckboxAndroidTwo('checked')
+                                        : setCheckboxAndroidTwo('unchecked')
+                                }
+                            />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Indeterminate</Body1>
+                            <Checkbox.Android status={'indeterminate'} />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Disabled Checked</Body1>
+                            <Checkbox.Android status={'checked'} disabled={true} />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Disabled Unchecked</Body1>
+                            <Checkbox.Android status={'unchecked'} disabled={true} />
+                        </View>
+                    </View>
+                </View>
+            </Card>
+
+            <Card style={styles.card}>
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
+                    <H5>Checkbox (iOS)</H5>
+                    <View style={{ marginTop: 24 }}>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Init Unchecked</Body1>
+                            <Checkbox.IOS
+                                status={checkboxIOSOne}
+                                onPress={(): void =>
+                                    checkboxIOSOne === 'unchecked'
+                                        ? setCheckboxIOSOne('checked')
+                                        : setCheckboxIOSOne('unchecked')
+                                }
+                            />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Init Checked</Body1>
+                            <Checkbox.IOS
+                                status={checkboxIOSTwo}
+                                onPress={(): void =>
+                                    checkboxIOSTwo === 'unchecked'
+                                        ? setCheckboxIOSTwo('checked')
+                                        : setCheckboxIOSTwo('unchecked')
+                                }
+                            />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Indeterminate</Body1>
+                            <Checkbox.IOS status={'indeterminate'} />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Disabled Checked</Body1>
+                            <Checkbox.IOS status={'checked'} disabled={true} />
+                        </View>
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Disabled Unchecked</Body1>
+                            <Checkbox.IOS status={'unchecked'} disabled={true} />
+                        </View>
+                    </View>
+                </View>
+            </Card>
+
+            <Card style={styles.card}>
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Chip</H5>
+                    <Body1 style={styles.information}>
+                        The following Chip styles are hardcoded and not achievable via the theme.
+                    </Body1>
                     <View style={{ alignItems: 'center', marginTop: 24 }}>
-                        <Chip icon="information" style={{ width: 250 }}>
+                        <Chip
+                            icon="information"
+                            style={{ width: 250, backgroundColor: theme.dark ? Colors.black[500] : Colors.white[500] }}
+                        >
                             Unselected Flat Chip
+                        </Chip>
+                        <Chip
+                            icon="information"
+                            selected={true}
+                            selectedColor={theme.dark ? theme.colors.text : theme.colors.surface}
+                            style={{ marginTop: 24, width: 250, backgroundColor: Colors.blue[500] }}
+                            textStyle={{ color: theme.dark ? theme.colors.text : theme.colors.surface }}
+                        >
+                            Selected Flat Chip
+                        </Chip>
+                        <Chip
+                            icon="information"
+                            disabled={true}
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                                backgroundColor: theme.dark
+                                    ? Color(Colors.black[200]).alpha(0.24).rgb().string()
+                                    : Colors.white[400],
+                            }}
+                        >
+                            Disabled Flat Chip
                         </Chip>
                         <Chip icon="information" mode={'outlined'} style={{ marginTop: 24, width: 250 }}>
                             Unselected Outlined Chip
-                        </Chip>
-                        <Chip icon="information" selected={true} style={{ marginTop: 24, width: 250 }}>
-                            Selected Flat Chip
                         </Chip>
                         <Chip
                             icon="information"
                             mode={'outlined'}
                             selected={true}
-                            style={{ marginTop: 24, width: 250 }}
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                                backgroundColor: theme.dark
+                                    ? Color(Colors.blue[500]).alpha(0.24).rgb().string()
+                                    : Color(Colors.blue[500]).alpha(0.05).rgb().string(),
+                            }}
+                            selectedColor={theme.colors.primary}
                         >
                             Selected Outlined Chip
-                        </Chip>
-                        <Chip icon="information" disabled={true} style={{ marginTop: 24, width: 250 }}>
-                            Disabled Flat Chip
                         </Chip>
                         <Chip
                             icon="information"
@@ -444,6 +580,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             label="Email"
                             value={helperTextInputText}
                             onChangeText={onChangeHelperTextInputText}
+                            error={helperTextInputHasErrors()}
                         />
                         <HelperText type="error" visible={helperTextInputHasErrors()}>
                             Email address is invalid!
@@ -545,7 +682,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 visible={modalVisible}
                                 onDismiss={(): void => setModalVisible(false)}
                                 contentContainerStyle={{
-                                    backgroundColor: theme.colors.background,
+                                    backgroundColor: theme.colors.surface,
                                     padding: 24,
                                     height: 300,
                                     marginHorizontal: 24,
@@ -580,7 +717,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
             <Card style={styles.card}>
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Radio Button</H5>
+                    <H5>Radio Button Item</H5>
                     <View style={{ marginTop: 24 }}>
                         <RadioButton.Group
                             onValueChange={(value: string): void => setRadioButtonValue(value)}
@@ -589,6 +726,56 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             <RadioButton.Item label="First item" value="first" />
                             <RadioButton.Item label="Second item" value="second" />
                             <RadioButton.Item label="Third item" value="third" />
+                        </RadioButton.Group>
+                    </View>
+                </View>
+            </Card>
+
+            <Card style={styles.card}>
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
+                    <H5>Radio Button (Android)</H5>
+                    <View style={{ marginTop: 24 }}>
+                        <RadioButton.Group
+                            onValueChange={(value: string): void => setRadioButtonAndroidValue(value)}
+                            value={radioButtonAndroidValue}
+                        >
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>First Item</Body1>
+                                <RadioButton.Android value="first" />
+                            </View>
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>Second Item</Body1>
+                                <RadioButton.Android value="second" />
+                            </View>
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>Third Item</Body1>
+                                <RadioButton.Android value="third" />
+                            </View>
+                        </RadioButton.Group>
+                    </View>
+                </View>
+            </Card>
+
+            <Card style={styles.card}>
+                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
+                    <H5>Radio Button (iOS)</H5>
+                    <View style={{ marginTop: 24 }}>
+                        <RadioButton.Group
+                            onValueChange={(value: string): void => setRadioButtonIOSValue(value)}
+                            value={radioButtonIOSValue}
+                        >
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>First Item</Body1>
+                                <RadioButton.IOS value="first" />
+                            </View>
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>Second Item</Body1>
+                                <RadioButton.IOS value="second" />
+                            </View>
+                            <View style={styles.row}>
+                                <Body1 style={{ flex: 1 }}>Third Item</Body1>
+                                <RadioButton.IOS value="third" />
+                            </View>
                         </RadioButton.Group>
                     </View>
                 </View>
@@ -663,14 +850,23 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
                     <H5>Switch</H5>
                     <View style={{ marginTop: 24, alignItems: 'center' }}>
-                        <Switch
-                            value={isSwitchOn}
-                            onValueChange={(): void => {
-                                setIsSwitchOn(!isSwitchOn);
-                            }}
-                        />
-                        <Switch disabled value={true} style={{ marginTop: 24 }} />
-                        <Switch disabled value={false} style={{ marginTop: 24 }} />
+                        <View style={styles.row}>
+                            <Body1 style={{ flex: 1 }}>Enabled</Body1>
+                            <Switch
+                                value={isSwitchOn}
+                                onValueChange={(): void => {
+                                    setIsSwitchOn(!isSwitchOn);
+                                }}
+                            />
+                        </View>
+                        <View style={[styles.row, { marginTop: 24 }]}>
+                            <Body1 style={{ flex: 1 }}>Disabled (on)</Body1>
+                            <Switch disabled value={true} />
+                        </View>
+                        <View style={[styles.row, { marginTop: 24 }]}>
+                            <Body1 style={{ flex: 1 }}>Disabled (off)</Body1>
+                            <Switch disabled value={false} />
+                        </View>
                     </View>
                 </View>
             </Card>
