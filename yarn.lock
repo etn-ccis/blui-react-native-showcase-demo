@@ -1516,15 +1516,16 @@
   resolved "https://registry.yarnpkg.com/@pxblue/prettier-config/-/prettier-config-1.0.2.tgz#fb00503df6557b66c3d91d43c9101e614c35d2ec"
   integrity sha512-/3cLBoTjZs3kV1ATPA/Sp0tsL7XmlV/b8HW/qt0jqR/uP5+cdXL2YIhMXQngLRa7PhpSkEiRIYK5sl0rKsXTUg==
 
-"@pxblue/react-native-components@5.0.0-beta.1":
-  version "5.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-5.0.0-beta.1.tgz#668840b75996b6d3bb145f395cdedf5f25d9baff"
-  integrity sha512-a4N4gNzrVwnrXBTKpKmUGrKXaItdbSWPZaQKMvP9j8GKkQsDw4biVRjWKQlqHfYv+hKKdRRnQyYE6txghZOupg==
+"@pxblue/react-native-components@5.0.0-beta.2":
+  version "5.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@pxblue/react-native-components/-/react-native-components-5.0.0-beta.2.tgz#72d85ff426e0fd6e60693b5ffb3efdd2b7b63431"
+  integrity sha512-qGHLSqc61S7O/IuEKgM/RYR2fVLgySlO7UKR0RYXwwwnnVPoUBEpPcCl/krGSKWoCkJbgBw06eAAI5MYJ3jY0g==
   dependencies:
     "@pxblue/colors" "^3.0.0"
     color "^3.1.2"
     react-native-collapsible "^1.5.2"
     react-native-keyboard-aware-scroll-view "^0.8.0"
+    react-native-modal "^11.6.1"
     react-native-status-bar-height "^2.3.1"
 
 "@pxblue/react-native-themes@5.1.0-beta.3":
