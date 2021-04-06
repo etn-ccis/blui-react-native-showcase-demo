@@ -14,16 +14,18 @@ import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import _Humidity from '@pxblue/icons-svg/moisture.svg';
 import _Battery from '@pxblue/icons-svg/battery.svg';
 import { Image, View, I18nManager } from 'react-native';
-import { Divider } from 'react-native-elements';
-import { IconButton } from 'react-native-paper';
+import { Divider, useTheme } from 'react-native-paper';
 import * as Colors from '@pxblue/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
 
 const headerBgImage = require('../assets/images/topology_40.png');
 const eatonLogo = require('../assets/images/eatonLogo.png');
+const eatonLogoWhite = require('../assets/images/eatonLogoWhite.png');
+
 const Battery = wrapIcon({ IconClass: _Battery, flip: I18nManager.isRTL });
 const Humidity = wrapIcon({ IconClass: _Humidity, flip: false });
+const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: I18nManager.isRTL });
 const Clock = wrapIcon({ IconClass: MaterialCommunityIcon, name: 'clock-outline', flip: false });
 const MailIcon = wrapIcon({ IconClass: MatIcon, name: 'mail', flip: I18nManager.isRTL });
 
@@ -116,6 +118,7 @@ export type NavDrawerProps = {
     navigation: StackNavigationProp<RootStackParamList, 'NavigationDrawer'>;
 };
 export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
+    const theme = useTheme();
     const [selected, setSelected] = useState('');
     const selectItem = useCallback(
         (id: string) => {
@@ -136,16 +139,13 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 title={'Drawer Title'}
                 subtitle={'Drawer Subtitle'}
                 backgroundImage={headerBgImage}
-                icon={
-                    <IconButton
-                        icon="menu"
-                        size={24}
-                        color={Colors.white[50]}
-                        onPress={(): void => {
-                            navigation.closeDrawer();
-                        }}
-                    />
-                }
+                fontColor={Colors.white[50]}
+                icon={{
+                    icon: MenuIcon,
+                    onPress: (): void => {
+                        navigation.closeDrawer();
+                    },
+                }}
             />
             <DrawerBody>
                 <DrawerNavGroup items={navGroupItems1} title={'Group 1'} hidePadding={false} />
@@ -162,8 +162,14 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
             </DrawerBody>
             <DrawerFooter>
                 <Divider />
-                <View style={{ padding: 16, backgroundColor: 'white', alignItems: 'center' }}>
-                    <Image source={eatonLogo} style={{ height: 60, width: '80%' }} />
+                <View
+                    style={{
+                        padding: 16,
+                        backgroundColor: theme.dark ? Colors.darkBlack[100] : 'white',
+                        alignItems: 'center',
+                    }}
+                >
+                    <Image source={theme.dark ? eatonLogoWhite : eatonLogo} style={{ height: 60, width: '80%' }} />
                 </View>
             </DrawerFooter>
         </Drawer>
