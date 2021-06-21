@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View } from 'react-native';
 import { MobileStepper, DotStepperVariant, Body1 } from '@pxblue/react-native-components';
 import { Card, Divider, useTheme } from 'react-native-paper';
-import { ThemedButton as Button } from './wrappers/themed-button';
+import { ThemedButton as Button } from './wrappers';
 import * as Colors from '@pxblue/colors';
 
 const PADDING = 10;
