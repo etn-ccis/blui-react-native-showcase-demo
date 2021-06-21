@@ -26,20 +26,20 @@ import {
     ToggleButton,
     useTheme,
 } from 'react-native-paper';
-import { ThemedActivityIndicator as ActivityIndicator } from './themed-activity-indicator';
-import { ThemedAppbar as Appbar } from './themed-appbar';
 import {
+    ThemedActivityIndicator as ActivityIndicator,
+    ThemedAppbar as Appbar,
     ThemedIconAvatar as IconAvatar,
     ThemedImageAvatar as ImageAvatar,
     ThemedTextAvatar as TextAvatar,
-} from './themed-avatar';
-import { ThemedBadge as Badge } from './themed-badge';
-import { ThemedBottomNavigation as BottomNavigation } from './themed-bottom-navigation';
-import { ThemedButton as Button } from './themed-button';
-import { ThemedFAB as FAB } from './themed-fab';
-import { ThemedProgressBar as ProgressBar } from './themed-progress-bar';
-import { ThemedSnackbar as Snackbar } from './themed-snackbar';
-import { ThemedTextInput as TextInput } from './themed-text-input';
+    ThemedBadge as Badge,
+    ThemedBottomNavigation as BottomNavigation,
+    ThemedButton as Button,
+    ThemedFAB as FAB,
+    ThemedProgressBar as ProgressBar,
+    ThemedSnackbar as Snackbar,
+    ThemedTextInput as TextInput,
+} from './wrappers';
 import Color from 'color';
 import * as Colors from '@pxblue/colors';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
