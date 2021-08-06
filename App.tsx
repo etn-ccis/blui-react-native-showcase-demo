@@ -13,22 +13,17 @@ import {
     Header,
     Hero,
     HeroBanner,
+    IconFamily,
     InfoListItem,
     ListItemTag,
     ScoreCard,
-    wrapIcon,
 } from '@pxblue/react-native-components';
 import { Card, useTheme } from 'react-native-paper';
 import { ThemedButton as Button } from './components/wrappers';
 
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
-import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import * as PXBColors from '@pxblue/colors';
 
-import _A from '@pxblue/icons-svg/grade_a.svg';
-import _Temp from '@pxblue/icons-svg/temp.svg';
-import _Humidity from '@pxblue/icons-svg/moisture.svg';
-import _Battery from '@pxblue/icons-svg/battery.svg';
 import { RootStackParamList } from './router';
 import { MobileStepperExample } from './components/mobile-stepper-example';
 import { useThemeContext } from './contexts/ThemeContext';
@@ -37,27 +32,20 @@ import { KitchenSink } from './components/kitchen-sink';
 
 const backgroundImage = require('./assets/images/farm.jpg');
 
-const Sunny = wrapIcon({ IconClass: MatIcon, name: 'wb-sunny', flip: false });
-
-const Notifications = wrapIcon({ IconClass: MatIcon, name: 'notifications', flip: false });
-
-const Info = wrapIcon({ IconClass: MatIcon, name: 'info', flip: false });
-
-const Clouds = wrapIcon({ IconClass: MatIcon, name: 'cloud', flip: false });
-const ChartLineVariant = wrapIcon({
-    IconClass: MaterialCommunityIcon,
-    name: 'chart-line-variant',
-    flip: false,
-});
-const Battery = wrapIcon({ IconClass: _Battery, flip: I18nManager.isRTL });
-const A = wrapIcon({ IconClass: _A, flip: false });
-const Temp = wrapIcon({ IconClass: _Temp, flip: false });
-const Humidity = wrapIcon({ IconClass: _Humidity, flip: false });
-const Pie = wrapIcon({ IconClass: MaterialCommunityIcon, name: 'chart-pie', flip: false });
-const Clock = wrapIcon({ IconClass: MaterialCommunityIcon, name: 'clock-outline', flip: false });
-const MailIcon = wrapIcon({ IconClass: MatIcon, name: 'mail', flip: false });
-const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: I18nManager.isRTL });
-const MoreIcon = wrapIcon({ IconClass: MatIcon, name: 'more-vert', flip: false });
+const Sunny: IconFamily = { family: 'material', name: 'wb-sunny', direction: 'ltr' };
+const Notifications: IconFamily = { family: 'material', name: 'notifications', direction: 'ltr' };
+const Info: IconFamily = { family: 'material', name: 'info', direction: 'ltr' };
+const Clouds: IconFamily = { family: 'material', name: 'cloud', direction: 'ltr' };
+const ChartLineVariant: IconFamily = { family: 'material-community', name: 'chart-line-variant', direction: 'ltr' };
+const Battery: IconFamily = { family: 'pxblue', name: 'battery', direction: 'auto' };
+const A: IconFamily = { family: 'pxblue', name: 'grade_a', direction: 'ltr' };
+const Temp: IconFamily = { family: 'pxblue', name: 'temp', direction: 'ltr' };
+const Humidity: IconFamily = { family: 'pxblue', name: 'moisture', direction: 'ltr' };
+const Pie: IconFamily = { family: 'material-community', name: 'chart-pie', direction: 'ltr' };
+const Clock: IconFamily = { family: 'material-community', name: 'clock-outline', direction: 'ltr' };
+const MailIcon: IconFamily = { family: 'material', name: 'mail', direction: 'ltr' };
+const MenuIcon: IconFamily = { family: 'material', name: 'menu', direction: 'auto' };
+const MoreIcon: IconFamily = { family: 'material', name: 'more-vert', direction: 'ltr' };
 
 const PADDING = 10;
 
@@ -86,11 +74,9 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                 title={'South Tin Mill'}
                 subtitle={'Gary Steel Works'}
                 info={'Online'}
-                navigation={{
-                    icon: MenuIcon,
-                    onPress: (): void => {
-                        navigation.openDrawer();
-                    },
+                icon={MenuIcon}
+                onIconPress={(): void => {
+                    navigation.openDrawer();
                 }}
                 actionItems={[
                     {
@@ -110,7 +96,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     <EmptyState
                         title={'Nothing Found'}
                         description={'Not a single thing'}
-                        IconClass={ChartLineVariant}
+                        icon={ChartLineVariant}
                         actions={
                             <Button mode={'outlined'} icon={'plus'}>
                                 Add a Device
@@ -124,53 +110,53 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                             label={'Healthy'}
                             value={96}
                             units={'/100'}
-                            IconClass={A}
+                            icon={A}
                             fontSize={20}
                             iconColor={theme.dark ? PXBColors.green[200] : PXBColors.green[500]}
                         />
                         <Hero
                             label={'Battery'}
                             value={'Full'}
-                            IconClass={Battery}
+                            icon={Battery}
                             iconColor={theme.dark ? PXBColors.blue[200] : PXBColors.blue[500]}
                         />
-                        <Hero label={'Estimated'} IconClass={Clock} iconColor={PXBColors.gray[500]}>
+                        <Hero label={'Estimated'} icon={Clock} iconColor={PXBColors.gray[500]}>
                             <ChannelValue fontSize={20} value={1} units={'h'} />
                             <ChannelValue fontSize={20} value={37} units={'m'} />
                         </Hero>
                         <Hero
                             label={'Loaded'}
-                            IconClass={Pie}
+                            icon={Pie}
                             iconColor={theme.dark ? PXBColors.blue[200] : PXBColors.blue[500]}
                         >
-                            <ChannelValue fontSize={20} value={65} units={'%'} IconClass={ChartLineVariant} />
+                            <ChannelValue fontSize={20} value={65} units={'%'} icon={ChartLineVariant} />
                         </Hero>
                         <Hero
                             label={'Not Shown'}
                             value={'5th Item'}
-                            IconClass={Battery}
+                            icon={Battery}
                             iconColor={theme.dark ? PXBColors.blue[200] : PXBColors.blue[500]}
                         />
                     </HeroBanner>
                     <InfoListItem
                         divider={'full'}
-                        IconClass={Sunny}
+                        icon={Sunny}
                         title={'Temperature'}
                         rightComponent={<ChannelValue value={68} units={'°F'} />}
                     />
                     <InfoListItem
                         divider={'full'}
-                        IconClass={Sunny}
+                        icon={Sunny}
                         title={'Temperature'}
                         rightComponent={<ChannelValue value={68} units={'°F'} />}
                     />
                     <InfoListItem
                         divider={'full'}
-                        IconClass={Sunny}
+                        icon={Sunny}
                         title={'Temperature'}
                         rightComponent={
                             <React.Fragment>
-                                <ChannelValue value={1} units={'h'} IconClass={Clock} />
+                                <ChannelValue value={1} units={'h'} icon={Clock} />
                                 <ChannelValue value={24} units={'m'} />
                             </React.Fragment>
                         }
@@ -181,7 +167,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     subtitle={['DG 100', 'EDR 5000', 'Online']}
                     statusColor={PXBColors.green[500]}
                     hidePadding={true}
-                    IconClass={Battery}
+                    icon={Battery}
                     avatar
                     rightComponent={<MatIcon name={'mail'} size={24} color={theme.colors.text} />}
                     divider={'partial'}
@@ -194,7 +180,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     subtitle={'Offline'}
                     statusColor={PXBColors.red[500]}
                     divider={'full'}
-                    IconClass={Pie}
+                    icon={Pie}
                     iconAlign={'center'}
                     hidePadding={false}
                     fontColor={theme.dark ? PXBColors.red[200] : PXBColors.red[500]}
@@ -237,7 +223,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                                 iconColor={theme.dark ? PXBColors.green[200] : PXBColors.green[500]}
                                 value={98}
                                 units={'/100'}
-                                IconClass={A}
+                                icon={A}
                             />
                         </HeroBanner>
                     }
@@ -256,18 +242,18 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     <View style={{ justifyContent: 'center', marginLeft: -16 }}>
                         <InfoListItem
                             dense
-                            IconClass={Notifications}
+                            icon={Notifications}
                             iconColor={PXBColors.red[500]}
                             title={'1 Alarm'}
                             fontColor={theme.dark ? PXBColors.red[200] : PXBColors.red[500]}
                         />
                         <InfoListItem
                             dense
-                            IconClass={Info}
+                            icon={Info}
                             iconColor={theme.dark ? PXBColors.blue[200] : PXBColors.blue[500]}
                             title={'1 Event'}
                         />
-                        <InfoListItem dense IconClass={Clouds} title={'Online'} />
+                        <InfoListItem dense icon={Clouds} title={'Online'} />
                     </View>
                 </ScoreCard>
                 <ScoreCard
@@ -293,14 +279,14 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     ]}
                     badge={
                         <HeroBanner style={{ flex: 0, minWidth: 180, justifyContent: 'flex-end' }}>
-                            <Hero label={'Temperature'} iconSize={70} value={69} units={'°F'} IconClass={Temp} />
+                            <Hero label={'Temperature'} iconSize={70} value={69} units={'°F'} icon={Temp} />
                             <Hero
                                 label={'Humidity'}
                                 iconSize={70}
                                 iconColor={PXBColors.blue[200]}
                                 value={78}
                                 units={'%'}
-                                IconClass={Humidity}
+                                icon={Humidity}
                             />
                         </HeroBanner>
                     }
@@ -319,18 +305,18 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     <View style={{ justifyContent: 'center', marginLeft: -16 }}>
                         <InfoListItem
                             dense
-                            IconClass={Notifications}
+                            icon={Notifications}
                             iconColor={PXBColors.red[500]}
                             title={'1 Alarm'}
                             fontColor={theme.dark ? PXBColors.red[200] : PXBColors.red[500]}
                         />
                         <InfoListItem
                             dense
-                            IconClass={Info}
+                            icon={Info}
                             iconColor={theme.dark ? PXBColors.blue[200] : PXBColors.blue[500]}
                             title={'1 Event'}
                         />
-                        <InfoListItem dense IconClass={Clouds} title={'Online'} />
+                        <InfoListItem dense icon={Clouds} title={'Online'} />
                     </View>
                 </ScoreCard>
 
