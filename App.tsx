@@ -18,8 +18,8 @@ import {
     ListItemTag,
     ScoreCard,
 } from '@pxblue/react-native-components';
+import { ThemedButton } from '@pxblue/react-native-components/themed';
 import { Card, useTheme } from 'react-native-paper';
-import { ThemedButton as Button } from './components/wrappers';
 
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import * as PXBColors from '@pxblue/colors';
@@ -98,9 +98,9 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                         description={'Not a single thing'}
                         icon={ChartLineVariant}
                         actions={
-                            <Button mode={'outlined'} icon={'plus'}>
+                            <ThemedButton mode={'outlined'} icon={'plus'}>
                                 Add a Device
-                            </Button>
+                            </ThemedButton>
                         }
                     />
                 </Card>
