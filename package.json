@@ -77,7 +77,7 @@
             "node"
         ],
         "transformIgnorePatterns": [
-            "node_modules/(@react-native/.*|react-native|react-clone-referenced-element|@react-native-community|react-navigation|@react-navigation/.*|native-base)"
+            "node_modules/(react-clone-referenced-element|@react-native-community|react-navigation|@react-navigation/.*|@unimodules/.*|native-base|react-native-code-push)',"
         ]
     },
     "prettier": "@pxblue/prettier-config"

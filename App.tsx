@@ -20,6 +20,7 @@ import {
 } from '@pxblue/react-native-components';
 import { Card, useTheme } from 'react-native-paper';
 import { ThemedButton as Button } from './components/wrappers';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
 import * as PXBColors from '@pxblue/colors';
@@ -69,6 +70,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
 
     return (
         <View style={{ flex: 1, backgroundColor: theme.colors.background }}>
+            <SafeAreaProvider>
             <Header
                 expandable={true}
                 title={'South Tin Mill'}
@@ -91,6 +93,7 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                 backgroundImage={backgroundImage}
                 searchableConfig={{ placeholder: 'Search', autoFocus: true }}
             />
+            </SafeAreaProvider>
             <ScrollView>
                 <Card style={{ padding: 0, margin: PADDING, marginBottom: 0 }}>
                     <EmptyState

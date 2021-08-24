@@ -1,0 +1,641 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: ThemedActivityIndicator ThemedActivityIndicator renders examples correctly 1`] = `
+<View
+  accessibilityRole="progressbar"
+  accessibilityState={
+    Object {
+      "busy": true,
+    }
+  }
+  accessible={true}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    style={
+      Object {
+        "height": 24,
+        "opacity": 1,
+        "width": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "height": 24,
+            "transform": Array [
+              Object {
+                "rotate": "45deg",
+              },
+            ],
+            "width": 24,
+          }
+        }
+      >
+        <View
+          collapsable={false}
+          style={
+            Object {
+              "height": 12,
+              "overflow": "hidden",
+              "width": 24,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 24,
+                "transform": Array [
+                  Object {
+                    "translateY": 0,
+                  },
+                  Object {
+                    "rotate": "-165deg",
+                  },
+                ],
+                "width": 24,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                Object {
+                  "height": 12,
+                  "overflow": "hidden",
+                  "width": 24,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderColor": "#6200ee",
+                    "borderRadius": 12,
+                    "borderWidth": 2.4,
+                    "height": 24,
+                    "width": 24,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "height": 24,
+            "transform": Array [
+              Object {
+                "rotate": "45deg",
+              },
+            ],
+            "width": 24,
+          }
+        }
+      >
+        <View
+          collapsable={false}
+          style={
+            Object {
+              "height": 12,
+              "overflow": "hidden",
+              "top": 12,
+              "width": 24,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": 24,
+                "transform": Array [
+                  Object {
+                    "translateY": -12,
+                  },
+                  Object {
+                    "rotate": "345deg",
+                  },
+                ],
+                "width": 24,
+              }
+            }
+          >
+            <View
+              collapsable={false}
+              style={
+                Object {
+                  "height": 12,
+                  "overflow": "hidden",
+                  "width": 24,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderColor": "#6200ee",
+                    "borderRadius": 12,
+                    "borderWidth": 2.4,
+                    "height": 24,
+                    "width": 24,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Component: ThemedAppbar ThemedAppbar renders examples correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#6200ee",
+      "elevation": 4,
+      "flexDirection": "row",
+      "height": 56,
+      "paddingHorizontal": 4,
+      "shadowColor": "#000000",
+      "shadowOffset": Object {
+        "height": 3,
+        "width": 0,
+      },
+      "shadowOpacity": 0.24,
+      "shadowRadius": 4,
+    }
+  }
+/>
+`;
+
+exports[`Component: ThemedBadge ThemedBadge renders examples correctly 1`] = `
+<Text
+  numberOfLines={1}
+  style={
+    Object {
+      "alignSelf": "flex-end",
+      "backgroundColor": "#f50057",
+      "borderRadius": 10,
+      "color": "#ffffff",
+      "fontFamily": "System",
+      "fontSize": 10,
+      "fontWeight": "400",
+      "height": 20,
+      "lineHeight": 20,
+      "minWidth": 20,
+      "opacity": 1,
+      "overflow": "hidden",
+      "paddingHorizontal": 4,
+      "textAlign": "center",
+      "textAlignVertical": "center",
+    }
+  }
+/>
+`;
+
+exports[`Component: ThemedButton ThemedButton renders examples correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderColor": "transparent",
+      "borderRadius": 4,
+      "borderStyle": "solid",
+      "borderWidth": 0,
+      "elevation": 0,
+      "minWidth": 64,
+    }
+  }
+>
+  <View
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": undefined,
+      }
+    }
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 4,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        numberOfLines={1}
+        selectable={false}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontFamily": "System",
+              "fontWeight": "400",
+            },
+            Object {
+              "textAlign": "left",
+            },
+            Array [
+              Object {
+                "letterSpacing": 1,
+                "marginHorizontal": 16,
+                "marginVertical": 9,
+                "textAlign": "center",
+              },
+              undefined,
+              Object {
+                "textTransform": "uppercase",
+              },
+              Object {
+                "color": "#6200ee",
+                "fontFamily": "System",
+                "fontWeight": "500",
+              },
+              Object {
+                "fontFamily": "System",
+                "fontWeight": "500",
+              },
+              undefined,
+            ],
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Component: ThemedFAB ThemedFAB renders examples correctly 1`] = `
+<View
+  pointerEvents="auto"
+  style={
+    Object {
+      "backgroundColor": "#03dac4",
+      "borderRadius": 28,
+      "elevation": 6,
+      "opacity": 1,
+      "shadowColor": "#000000",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 0,
+      },
+      "shadowOpacity": 0.24,
+      "shadowRadius": 6,
+      "transform": Array [
+        Object {
+          "scale": 1,
+        },
+      ],
+    }
+  }
+>
+  <View
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "disabled": undefined,
+      }
+    }
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 28,
+        },
+      ]
+    }
+  >
+    <View
+      pointerEvents="none"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+          },
+          Object {
+            "height": 56,
+            "width": 56,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Component: ThemedIconAvatar ThemedIconAvatar renders examples correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#6200ee",
+        "borderRadius": 32,
+        "height": 64,
+        "width": 64,
+      },
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      Object {},
+    ]
+  }
+/>
+`;
+
+exports[`Component: ThemedImageAvatar ThemedImageAvatar renders examples correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#6200ee",
+        "borderRadius": 32,
+        "height": 64,
+        "width": 64,
+      },
+      undefined,
+    ]
+  }
+>
+  <Image
+    style={
+      Object {
+        "borderRadius": 32,
+        "height": 64,
+        "width": 64,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Component: ThemedProgressBar ThemedProgressBar renders examples correctly 1`] = `
+<View
+  accessibilityRole="progressbar"
+  accessibilityState={
+    Object {
+      "busy": true,
+    }
+  }
+  accessibilityValue={
+    Object {
+      "max": 100,
+      "min": 0,
+      "now": 0,
+    }
+  }
+  accessible={true}
+  onLayout={[Function]}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(98, 0, 238, 0.38)",
+        "height": 4,
+        "opacity": 0,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#6200ee",
+          "flex": 1,
+          "transform": Array [
+            Object {
+              "translateX": -0,
+            },
+            Object {
+              "scaleX": 0.0001,
+            },
+          ],
+          "width": 0,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Component: ThemedSnackbar ThemedSnackbar renders examples correctly 1`] = `null`;
+
+exports[`Component: ThemedTextAvatar ThemedTextAvatar renders examples correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#6200ee",
+        "borderRadius": 32,
+        "height": 64,
+        "width": 64,
+      },
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      Object {},
+    ]
+  }
+>
+  <Text
+    numberOfLines={1}
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontFamily": "System",
+          "fontWeight": "400",
+        },
+        Object {
+          "textAlign": "left",
+        },
+        Array [
+          Object {
+            "textAlign": "center",
+            "textAlignVertical": "center",
+          },
+          Object {
+            "color": "#ffffff",
+            "fontSize": 32,
+            "lineHeight": 64,
+          },
+          undefined,
+        ],
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Component: ThemedTextInput ThemedTextInput renders examples correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "rgb(231, 231, 231)",
+        "borderTopLeftRadius": 4,
+        "borderTopRightRadius": 4,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(0, 0, 0, 0.26)",
+        "bottom": 0,
+        "height": 2,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "transform": Array [
+          Object {
+            "scaleY": 0.5,
+          },
+        ],
+      }
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "paddingBottom": 0,
+          "paddingTop": 0,
+        },
+        Object {
+          "minHeight": 64,
+        },
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="rgba(0, 0, 0, 0.54)"
+      rejectResponderTermination={true}
+      selectionColor="#6200ee"
+      style={
+        Array [
+          Object {
+            "flexGrow": 1,
+            "margin": 0,
+            "zIndex": 1,
+          },
+          Object {
+            "paddingLeft": 12,
+            "paddingRight": 12,
+          },
+          Object {
+            "height": 64,
+          },
+          Object {
+            "paddingBottom": 0,
+            "paddingTop": 0,
+          },
+          Object {
+            "color": "#000000",
+            "fontFamily": "System",
+            "fontSize": 16,
+            "fontWeight": undefined,
+            "textAlign": "left",
+            "textAlignVertical": "center",
+          },
+          false,
+          Array [
+            Object {},
+          ],
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+  </View>
+</View>
+`;
