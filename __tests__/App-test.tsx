@@ -15,5 +15,5 @@ it('renders correctly', () => {
         <SafeAreaProvider>
             <App navigation={{ openDrawer: jest.fn(() => true) } as any} />
         </SafeAreaProvider>
-    )
-    });
+    );
+});

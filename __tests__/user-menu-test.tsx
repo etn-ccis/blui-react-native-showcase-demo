@@ -3,7 +3,7 @@ import React from 'react';
 import { UserMenuExample } from '../components/user-menu-example';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { ThemeContext } from '../contexts/ThemeContext';
-import { blue  } from '@pxblue/react-native-themes';
+import { blue } from '@pxblue/react-native-themes';
 import renderer from 'react-test-renderer';
 jest.useFakeTimers();
 jest.mock('react-native-safe-area-context', () => ({
@@ -16,14 +16,16 @@ jest.mock('react-native-safe-area-context', () => ({
 }));
 
 describe('Kitchen sink snapshot', () => {
-    test('Renders correctly and snapShot matches', ()=>{
-    const snap = renderer.create(
-        <ThemeContext.Provider value={{ theme: 'light', setTheme: () => {} }}>
-            <PaperProvider theme={blue}>
-                <UserMenuExample onToggleRTL={() => {}} onToggleTheme={() => {}} />
-            </PaperProvider>
-        </ThemeContext.Provider>
-    ).toJSON();
-    expect(snap).toMatchSnapshot();
-})
+    test('Renders correctly and snapShot matches', () => {
+        const snap = renderer
+            .create(
+                <ThemeContext.Provider value={{ theme: 'light', setTheme: () => {} }}>
+                    <PaperProvider theme={blue}>
+                        <UserMenuExample onToggleRTL={() => {}} onToggleTheme={() => {}} />
+                    </PaperProvider>
+                </ThemeContext.Provider>
+            )
+            .toJSON();
+        expect(snap).toMatchSnapshot();
+    });
 });
