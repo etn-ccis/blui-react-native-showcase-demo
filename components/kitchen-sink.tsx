@@ -2,6 +2,7 @@
 import { Body1, H5, Subtitle1 } from '@pxblue/react-native-components';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import {
     Appbar,
     Avatar,
@@ -136,6 +137,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
     return (
         <>
+        <SafeAreaProvider>
             <H5 style={{ marginVertical: 48 }}>Default Components</H5>
             <Card style={styles.card}>
                 <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
@@ -1307,6 +1309,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     </View>
                 </View>
             </Card>
+            </SafeAreaProvider>
         </>
     );
 };
