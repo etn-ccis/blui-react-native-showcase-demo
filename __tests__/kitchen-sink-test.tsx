@@ -4,6 +4,7 @@ import { KitchenSink } from '../components/kitchen-sink';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { blue } from '@pxblue/react-native-themes';
+import { cleanup } from '@testing-library/react-native';
 import renderer from 'react-test-renderer';
 jest.useFakeTimers();
 jest.mock('react-native-safe-area-context', () => ({
@@ -16,6 +17,7 @@ jest.mock('react-native-safe-area-context', () => ({
 }));
 
 describe('Kitchen sink snapshot', () => {
+    afterEach(cleanup);
     test('Renders correctly and snapShot matches', () => {
         const snap = renderer
             .create(
