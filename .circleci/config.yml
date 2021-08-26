@@ -59,7 +59,7 @@ workflows:
             - coverage_report:
                 requires:
             - build_showcase
-          filters:
-              branches:
-                  only:
-                      - master
+          # filters:
+          #     branches:
+          #         only:
+          #             - master
