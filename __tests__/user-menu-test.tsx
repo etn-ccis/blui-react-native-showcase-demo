@@ -21,9 +21,9 @@ describe('Kitchen sink snapshot', () => {
     test('Renders correctly and snapShot matches', () => {
         const snap = renderer
             .create(
-                <ThemeContext.Provider value={{ theme: 'light', setTheme: () => {} }}>
+                <ThemeContext.Provider value={{ theme: 'light', setTheme: (): void => {} }}>
                     <PaperProvider theme={blue}>
-                        <UserMenuExample onToggleRTL={() => {}} onToggleTheme={() => {}} />
+                        <UserMenuExample onToggleRTL={(): void => {}} onToggleTheme={(): void => {}} />
                     </PaperProvider>
                 </ThemeContext.Provider>
             )
