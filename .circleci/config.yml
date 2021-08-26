@@ -40,17 +40,17 @@ jobs:
                   root: .
                   paths:
                     - ./coverage
-          coverage_report:
-              working_directory: ~/react-native-showcase-demo
-              docker:
-                  - image: circleci/node:12.9.1-browsers
-              steps:
-                  - checkout
-                  - attach_workspace:
-                      at: .
-                  - codecov/upload:
-                      file: './coverage/clover.xml'
-                      token: 3774184d-522e-4396-994e-4c94aaa21336
+    coverage_report:
+        working_directory: ~/react-native-showcase-demo
+        docker:
+            - image: circleci/node:12.9.1-browsers
+        steps:
+            - checkout
+            - attach_workspace:
+                at: .
+            - codecov/upload:
+                file: './coverage/clover.xml'
+                token: 3774184d-522e-4396-994e-4c94aaa21336
 workflows:
     version: 2
     react-native_showcase-demo:
