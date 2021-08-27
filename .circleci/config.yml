@@ -57,9 +57,9 @@ workflows:
         jobs:
             - build_showcase
             - coverage_report:
-                requires:
-            - build_showcase
-          filters:
-              branches:
-                  only:
-                      - master
+                    requires:
+                        - build_showcase
+                    filters:
+                        branches:
+                            only:
+                            - master
