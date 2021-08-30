@@ -13,14 +13,15 @@
         "build": "react-native bundle --entry-file=index.tsx --bundle-output=build.bundle",
         "prettier:check": "prettier \"**/**.{ts,tsx,js,jsx,json,css,scss,html}\" --check",
         "rnlink": "npx react-native link",
-        "precommit": "yarn prettier && yarn lint && yarn build"
+        "precommit": "yarn prettier && yarn lint && yarn build",
+        "coverage": "yarn test --coverage --watchAll=false"
     },
     "dependencies": {
         "@pxblue/colors": "^3.0.0",
         "@pxblue/icons-svg": "^1.2.0",
-        "@pxblue/react-native-components": "^6.0.0-alpha.0",
+        "@pxblue/react-native-components": "6.0.0-alpha.3",
         "@pxblue/react-native-progress-icons": "^1.0.2",
-        "@pxblue/react-native-themes": "5.1.0",
+        "@pxblue/react-native-themes": "6.0.0-alpha.1",
         "@pxblue/react-native-vector-icons": "^1.0.0",
         "@react-native-community/masked-view": "^0.1.10",
         "@react-navigation/drawer": "^5.8.1",
@@ -46,6 +47,7 @@
         "@babel/runtime": "^7.12.5",
         "@pxblue/eslint-config": "^2.0.4",
         "@pxblue/prettier-config": "^1.0.2",
+        "@testing-library/react-native": "^7.2.0",
         "@types/color": "^3.0.1",
         "@types/jest": "^26.0.0",
         "@types/lodash.clonedeep": "^4.5.6",
@@ -55,6 +57,7 @@
         "@typescript-eslint/eslint-plugin": "^4.5.0",
         "@typescript-eslint/parser": "^4.5.0",
         "babel-jest": "^26.6.3",
+        "codecov": "^3.8.3",
         "eslint": "^7.14.0",
         "eslint-config-prettier": "^8.0.0",
         "eslint-plugin-react": "^7.0.0",
@@ -67,6 +70,8 @@
         "typescript": "^4.0.0"
     },
     "jest": {
+        "coverageDirectory": "./coverage/",
+        "collectCoverage": true,
         "preset": "react-native",
         "moduleFileExtensions": [
             "ts",
@@ -77,7 +82,7 @@
             "node"
         ],
         "transformIgnorePatterns": [
-            "node_modules/(@react-native/.*|react-native|react-clone-referenced-element|@react-native-community|react-navigation|@react-navigation/.*|native-base)"
+            "node_modules/(react-clone-referenced-element|@react-native-community|react-navigation|@react-navigation/.*|@unimodules/.*|native-base|react-native-code-push)',"
         ]
     },
     "prettier": "@pxblue/prettier-config"
