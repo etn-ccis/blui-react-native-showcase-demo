@@ -2202,7 +2202,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   "borderTopLeftRadius": 4,
                   "borderTopRightRadius": 4,
                 },
-                Object {},
+                Object {
+                  "backgroundColor": "#f7f8f8",
+                },
               ]
             }
           >
@@ -2327,6 +2329,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 onBlur={[Function]}
                 onChangeText={[Function]}
                 onFocus={[Function]}
+                outlineColor="rgba(161, 167, 170, 0.36)"
                 placeholder=""
                 placeholderTextColor="#727e84"
                 rejectResponderTermination={true}
@@ -3399,7 +3402,6 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                       "background": "#eef0f0",
                       "disabled": "rgba(66, 78, 84, 0.3)",
                       "disabledBackground": "rgba(161, 167, 170, 0.24)",
-                      "hover": "rgba(232, 234, 234, 0.1)",
                     },
                     "backdrop": "rgba(0, 0, 0, 0.5)",
                     "background": "#f7f8f8",
@@ -3413,9 +3415,29 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                     },
                     "notification": "#0088f2",
                     "onSurface": "#424e54",
+                    "opacity": Object {
+                      "actionOpacity": 1,
+                      "disabled": 0.3,
+                      "disabledBackground": 0.24,
+                      "divider": 0.36,
+                    },
+                    "overrides": Object {
+                      "bottomNavigation": Object {
+                        "inactive": "#80bde0",
+                      },
+                      "button": Object {
+                        "contained": Object {
+                          "text": Object {
+                            "disabled": "#80bde0",
+                          },
+                        },
+                      },
+                      "snackbar": Object {
+                        "accent": "#80bde0",
+                      },
+                    },
                     "placeholder": "#727e84",
                     "primary": "#007bc1",
-                    "primaryBase": "#007bc1",
                     "primaryPalette": Object {
                       "dark": "#0068b3",
                       "light": "#e0eff8",
@@ -3425,8 +3447,6 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                     "text": "#424e54",
                     "textPalette": Object {
                       "disabled": "rgba(66, 78, 84, 0.3)",
-                      "highlight": "#80bde0",
-                      "hint": "rgba(66, 78, 84, 0.3)",
                       "onPrimary": Object {
                         "dark": "#ffffff",
                         "light": "#424e54",
@@ -21544,6 +21564,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   "borderTopRightRadius": 4,
                 },
                 Object {
+                  "backgroundColor": "#f7f8f8",
                   "marginTop": 24,
                 },
               ]
@@ -21670,6 +21691,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 onBlur={[Function]}
                 onChangeText={[Function]}
                 onFocus={[Function]}
+                outlineColor="rgba(161, 167, 170, 0.36)"
                 placeholder=""
                 placeholderTextColor="#727e84"
                 rejectResponderTermination={true}
@@ -21732,7 +21754,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                     },
                     Object {
                       "backgroundColor": "#ffffff",
-                      "borderColor": "#727e84",
+                      "borderColor": "rgba(161, 167, 170, 0.36)",
                       "borderRadius": 4,
                       "borderWidth": 1,
                     },
@@ -21944,6 +21966,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   "borderTopRightRadius": 4,
                 },
                 Object {
+                  "backgroundColor": "#f7f8f8",
                   "marginTop": 24,
                 },
               ]
@@ -22070,6 +22093,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 onBlur={[Function]}
                 onChangeText={[Function]}
                 onFocus={[Function]}
+                outlineColor="rgba(161, 167, 170, 0.36)"
                 placeholder=""
                 placeholderTextColor="#727e84"
                 rejectResponderTermination={true}
@@ -22344,6 +22368,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   "borderTopRightRadius": 4,
                 },
                 Object {
+                  "backgroundColor": "#f7f8f8",
                   "marginTop": 24,
                 },
               ]
@@ -22470,6 +22495,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 onBlur={[Function]}
                 onChangeText={[Function]}
                 onFocus={[Function]}
+                outlineColor="rgba(161, 167, 170, 0.36)"
                 placeholder=""
                 placeholderTextColor="rgba(66, 78, 84, 0.3)"
                 rejectResponderTermination={true}
