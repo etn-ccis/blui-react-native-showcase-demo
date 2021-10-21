@@ -31,7 +31,7 @@ jobs:
             - run:
                   name: Tests
                   command: |
-                      yarn test --coverage --watchAll=false
+                      yarn test --maxWorkers=2 --coverage --watchAll=false
             - run:
                   name: Build Showcase
                   command: |
