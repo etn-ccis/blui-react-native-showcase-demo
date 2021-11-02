@@ -23,7 +23,7 @@ target 'reactNativeShowcaseDemo' do
   # you should disable these next few lines.
   use_flipper!()
 
-  pod 'RNPXBVectorIcons', :path => '../node_modules/@pxblue/react-native-vector-icons'
+  pod 'RNBLUIVectorIcons', :path => '../node_modules/@brightlayer-ui/react-native-vector-icons'
   
   post_install do |installer|
     react_native_post_install(installer)

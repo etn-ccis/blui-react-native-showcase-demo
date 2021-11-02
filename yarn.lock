@@ -1027,6 +1027,11 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@brightlayer-ui/react-native-vector-icons@^1.3.1-beta.0":
+  version "1.3.1-beta.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/react-native-vector-icons/-/react-native-vector-icons-1.3.1-beta.0.tgz#90e829cfe22c3c08268729848f2ca9db93c27927"
+  integrity sha512-7vfzbY1wYkPGCGKRSGuoWtlAj18UNsiLa3fdy3tx1ch6eXjIGZzLRzvA6QOvYdgi8XDvgWcy1Q9g4VBIf6jWaw==
+
 "@callstack/react-theme-provider@^3.0.6":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/@callstack/react-theme-provider/-/react-theme-provider-3.0.6.tgz#7dac483037e27e28676bdf1431ba87b88f21118f"
@@ -1559,11 +1564,6 @@
   dependencies:
     "@pxblue/colors" "^3.0.0"
     color "^3.1.3"
-
-"@pxblue/react-native-vector-icons@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@pxblue/react-native-vector-icons/-/react-native-vector-icons-1.0.0.tgz#518def2dabed0a13f567e408914200706cd8ee1f"
-  integrity sha512-iWm2FyoV5U++c/ACBAsWY1DvsQVVGN5+j2KJwMaPuQpBjAzVaQj+WjzPLZf4rWRnNH/+THXWQ38grFS0GP1p/g==
 
 "@pxblue/types@^2.0.0":
   version "2.0.0"
