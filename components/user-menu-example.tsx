@@ -1,7 +1,7 @@
 import { IconFamily, InfoListItemProps, UserMenu } from '@pxblue/react-native-components';
 import React from 'react';
 import { Avatar } from 'react-native-paper';
-import * as Colors from '@pxblue/colors';
+import * as Colors from '@brightlayer-ui/colors';
 
 const SwapIcon: IconFamily = { family: 'material', name: 'swap-horiz', direction: 'ltr' };
 const InvertColorsIcon: IconFamily = { family: 'material', name: 'invert-colors', direction: 'ltr' };
