@@ -326,8 +326,6 @@ PODS:
     - React
   - RNGestureHandler (1.10.3):
     - React-Core
-  - RNPXBVectorIcons (1.3.1):
-    - React
   - RNReanimated (2.2.4):
     - DoubleConversion
     - FBLazyVector
@@ -422,7 +420,6 @@ DEPENDENCIES:
   - "RNBLUIVectorIcons (from `../node_modules/@brightlayer-ui/react-native-vector-icons`)"
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
-  - "RNPXBVectorIcons (from `../node_modules/@pxblue/react-native-vector-icons`)"
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
@@ -509,8 +506,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/masked-view"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
-  RNPXBVectorIcons:
-    :path: "../node_modules/@pxblue/react-native-vector-icons"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
@@ -566,7 +561,6 @@ SPEC CHECKSUMS:
   RNBLUIVectorIcons: 66f47cfc9b2067c2a913d2dc881c23aab9ed9282
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
-  RNPXBVectorIcons: d4852961272583409c700a7a50d1d2fde01a3d4c
   RNReanimated: 024eff8202342abf4b24e11575a16afc441dabfe
   RNScreens: 4d79118be80f79fa1f4aa131909a1d6e86280af3
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f

@@ -1,4 +1,4 @@
-import { IconFamily, InfoListItemProps, UserMenu } from '@pxblue/react-native-components';
+import { IconFamily, InfoListItemProps, UserMenu } from '@brightlayer-ui/react-native-components';
 import React from 'react';
 import { Avatar } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
