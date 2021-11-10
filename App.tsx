@@ -17,8 +17,8 @@ import {
     InfoListItem,
     ListItemTag,
     ScoreCard,
-} from '@pxblue/react-native-components';
-import { ThemedButton } from '@pxblue/react-native-components/themed';
+} from '@brightlayer-ui/react-native-components';
+import { ThemedButton } from '@brightlayer-ui/react-native-components/themed';
 import { Card, useTheme } from 'react-native-paper';
 
 import MatIcon from 'react-native-vector-icons/MaterialIcons';
@@ -37,10 +37,10 @@ const Notifications: IconFamily = { family: 'material', name: 'notifications', d
 const Info: IconFamily = { family: 'material', name: 'info', direction: 'ltr' };
 const Clouds: IconFamily = { family: 'material', name: 'cloud', direction: 'ltr' };
 const ChartLineVariant: IconFamily = { family: 'material-community', name: 'chart-line-variant', direction: 'ltr' };
-const Battery: IconFamily = { family: 'pxblue', name: 'battery', direction: 'auto' };
-const A: IconFamily = { family: 'pxblue', name: 'grade_a', direction: 'ltr' };
-const Temp: IconFamily = { family: 'pxblue', name: 'temp', direction: 'ltr' };
-const Humidity: IconFamily = { family: 'pxblue', name: 'moisture', direction: 'ltr' };
+const Battery: IconFamily = { family: 'brightlayer-ui', name: 'battery', direction: 'auto' };
+const A: IconFamily = { family: 'brightlayer-ui', name: 'grade_a', direction: 'ltr' };
+const Temp: IconFamily = { family: 'brightlayer-ui', name: 'temp', direction: 'ltr' };
+const Humidity: IconFamily = { family: 'brightlayer-ui', name: 'moisture', direction: 'ltr' };
 const Pie: IconFamily = { family: 'material-community', name: 'chart-pie', direction: 'ltr' };
 const Clock: IconFamily = { family: 'material-community', name: 'clock-outline', direction: 'ltr' };
 const MailIcon: IconFamily = { family: 'material', name: 'mail', direction: 'ltr' };

@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { Body1, H5, Subtitle1 } from '@pxblue/react-native-components';
+import { Body1, H5, Subtitle1 } from '@brightlayer-ui/react-native-components';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import {
@@ -53,7 +53,7 @@ import {
     ThemedSwitch,
     ThemedTextInput,
     ThemedToggleButton,
-} from '@pxblue/react-native-components/themed';
+} from '@brightlayer-ui/react-native-components/themed';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
 const MusicRoute = (): JSX.Element => <Subtitle1>Music</Subtitle1>;
