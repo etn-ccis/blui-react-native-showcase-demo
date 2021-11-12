@@ -3,7 +3,7 @@ import React from 'react';
 import { MobileStepperExample } from '../components/mobile-stepper-example';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { ThemeContext } from '../contexts/ThemeContext';
-import { blue } from '@pxblue/react-native-themes';
+import { blue } from '@brightlayer-ui/react-native-themes';
 import { cleanup } from '@testing-library/react-native';
 import renderer from 'react-test-renderer';
 jest.useFakeTimers();
