@@ -402,7 +402,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 undefined,
               ]
             }
-            testID="pxb-dot"
+            testID="blui-dot"
           />
           <View
             style={
@@ -420,7 +420,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 Object {},
               ]
             }
-            testID="pxb-dot"
+            testID="blui-dot"
           />
           <View
             style={
@@ -438,7 +438,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 Object {},
               ]
             }
-            testID="pxb-dot"
+            testID="blui-dot"
           />
           <View
             style={
@@ -456,7 +456,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 Object {},
               ]
             }
-            testID="pxb-dot"
+            testID="blui-dot"
           />
           <View
             style={
@@ -474,7 +474,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 Object {},
               ]
             }
-            testID="pxb-dot"
+            testID="blui-dot"
           />
         </View>
         <View

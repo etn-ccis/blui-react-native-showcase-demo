@@ -8,7 +8,7 @@ import { MainRouter } from './router';
 import { Provider as PaperProvider } from 'react-native-paper';
 import React, { useState } from 'react';
 import { ThemeContext, ThemeType } from './contexts/ThemeContext';
-import { blue, blueDark } from '@pxblue/react-native-themes';
+import { blue, blueDark } from '@brightlayer-ui/react-native-themes';
 
 const wrapper = (): JSX.Element => {
     const [theme, setTheme] = useState<ThemeType>('light');

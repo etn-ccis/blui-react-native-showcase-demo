@@ -7,11 +7,11 @@ import {
     Subtitle1,
     DrawerFooter,
     IconFamily,
-} from '@pxblue/react-native-components';
+} from '@brightlayer-ui/react-native-components';
 import React, { useState, useCallback } from 'react';
 import { Image, View } from 'react-native';
 import { Divider, useTheme } from 'react-native-paper';
-import * as Colors from '@pxblue/colors';
+import * as Colors from '@brightlayer-ui/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
 
@@ -19,8 +19,8 @@ const headerBgImage = require('../assets/images/topology_40.png');
 const eatonLogo = require('../assets/images/eatonLogo.png');
 const eatonLogoWhite = require('../assets/images/eatonLogoWhite.png');
 
-const Battery: IconFamily = { family: 'pxblue', name: 'battery', direction: 'auto' };
-const Humidity: IconFamily = { family: 'pxblue', name: 'moisture', direction: 'ltr' };
+const Battery: IconFamily = { family: 'brightlayer-ui', name: 'battery', direction: 'auto' };
+const Humidity: IconFamily = { family: 'brightlayer-ui', name: 'moisture', direction: 'ltr' };
 const MenuIcon: IconFamily = { family: 'material', name: 'menu', direction: 'auto' };
 const Clock: IconFamily = { family: 'material-community', name: 'clock-outline', direction: 'ltr' };
 const MailIcon: IconFamily = { family: 'material', name: 'mail', direction: 'auto' };

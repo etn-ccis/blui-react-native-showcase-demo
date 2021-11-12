@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from 'react';
 import { View } from 'react-native';
-import { MobileStepper, DotStepperVariant, Body1 } from '@pxblue/react-native-components';
+import { MobileStepper, DotStepperVariant, Body1 } from '@brightlayer-ui/react-native-components';
 import { Card, Divider, useTheme } from 'react-native-paper';
-import * as Colors from '@pxblue/colors';
-import { ThemedButton } from '@pxblue/react-native-components/themed';
+import * as Colors from '@brightlayer-ui/colors';
+import { ThemedButton } from '@brightlayer-ui/react-native-components/themed';
 
 const PADDING = 10;
 
