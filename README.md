@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/circleci/project/github/brightlayer-ui/react-native-showcase-demo/master.svg?style=flat)](https://circleci.com/gh/brightlayer-ui/react-native-showcase-demo/tree/master)
 
-This applications is a demo applications that is used to demonstrate and test various PX Blue components, resources, etc.
+This applications is a demo applications that is used to demonstrate and test various Brightayer UI components, resources, etc.
 
 It is used as a git submodule for:
 
@@ -12,9 +12,9 @@ It can also be run as a standalone application or used as a starting point for y
 
 It includes:
 
--   PX Blue themes and typography
+-   Brightayer UI themes and typography
 -   React Native Paper UI components
--   PX Blue components
+-   Brightayer UI components
 -   Right-to-Left support
 
 ## To run the project
