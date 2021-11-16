@@ -1,6 +1,8 @@
-version: 2
+version: 2.1
+orbs:
+    codecov: codecov/codecov@1.1.3
 jobs:
-    # Builds the Showcase app using @pxblue/react-native-components persisted in /dist folder.
+    # Builds the Showcase app using @brightlayer-ui/react-native-components persisted in /dist folder.
     build_showcase:
         docker:
             - image: circleci/node:12.9.1-browsers
@@ -27,11 +29,37 @@ jobs:
                   command: |
                       yarn prettier:check
             - run:
+                  name: Tests
+                  command: |
+                      yarn test --maxWorkers=2 --coverage --watchAll=false
+            - run:
                   name: Build Showcase
                   command: |
                       yarn build
+            - persist_to_workspace:
+                  root: .
+                  paths:
+                    - ./coverage
+    coverage_report:
+        working_directory: ~/react-native-showcase-demo
+        docker:
+            - image: circleci/node:12.9.1-browsers
+        steps:
+            - checkout
+            - attach_workspace:
+                at: .
+            - codecov/upload:
+                file: './coverage/clover.xml'
+                token: 3774184d-522e-4396-994e-4c94aaa21336
 workflows:
     version: 2
     react-native_showcase-demo:
         jobs:
             - build_showcase
+            - coverage_report:
+                    requires:
+                        - build_showcase
+                    filters:
+                        branches:
+                            only:
+                            - master

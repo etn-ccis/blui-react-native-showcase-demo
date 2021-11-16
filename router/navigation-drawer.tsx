@@ -5,17 +5,13 @@ import {
     DrawerNavGroup,
     NavItem,
     Subtitle1,
-    wrapIcon,
     DrawerFooter,
-} from '@pxblue/react-native-components';
+    IconFamily,
+} from '@brightlayer-ui/react-native-components';
 import React, { useState, useCallback } from 'react';
-import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
-import _Humidity from '@pxblue/icons-svg/moisture.svg';
-import _Battery from '@pxblue/icons-svg/battery.svg';
-import { Image, View, I18nManager } from 'react-native';
+import { Image, View } from 'react-native';
 import { Divider, useTheme } from 'react-native-paper';
-import * as Colors from '@pxblue/colors';
+import * as Colors from '@brightlayer-ui/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
 
@@ -23,11 +19,11 @@ const headerBgImage = require('../assets/images/topology_40.png');
 const eatonLogo = require('../assets/images/eatonLogo.png');
 const eatonLogoWhite = require('../assets/images/eatonLogoWhite.png');
 
-const Battery = wrapIcon({ IconClass: _Battery, flip: I18nManager.isRTL });
-const Humidity = wrapIcon({ IconClass: _Humidity, flip: false });
-const MenuIcon = wrapIcon({ IconClass: MatIcon, name: 'menu', flip: I18nManager.isRTL });
-const Clock = wrapIcon({ IconClass: MaterialCommunityIcon, name: 'clock-outline', flip: false });
-const MailIcon = wrapIcon({ IconClass: MatIcon, name: 'mail', flip: I18nManager.isRTL });
+const Battery: IconFamily = { family: 'brightlayer-ui', name: 'battery', direction: 'auto' };
+const Humidity: IconFamily = { family: 'brightlayer-ui', name: 'moisture', direction: 'ltr' };
+const MenuIcon: IconFamily = { family: 'material', name: 'menu', direction: 'auto' };
+const Clock: IconFamily = { family: 'material-community', name: 'clock-outline', direction: 'ltr' };
+const MailIcon: IconFamily = { family: 'material', name: 'mail', direction: 'auto' };
 
 export const navGroupItems1: NavItem[] = [
     {
@@ -140,11 +136,9 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 subtitle={'Drawer Subtitle'}
                 backgroundImage={headerBgImage}
                 fontColor={Colors.white[50]}
-                icon={{
-                    icon: MenuIcon,
-                    onPress: (): void => {
-                        navigation.closeDrawer();
-                    },
+                icon={MenuIcon}
+                onIconPress={(): void => {
+                    navigation.closeDrawer();
                 }}
             />
             <DrawerBody>

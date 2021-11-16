@@ -1,11 +1,11 @@
-import { InfoListItemProps, UserMenu, wrapIcon } from '@pxblue/react-native-components';
+import { IconFamily, InfoListItemProps, UserMenu } from '@brightlayer-ui/react-native-components';
 import React from 'react';
 import { Avatar } from 'react-native-paper';
-import * as Colors from '@pxblue/colors';
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
-const SwapIcon = wrapIcon({ IconClass: MatIcon, name: 'swap-horiz', flip: false });
-const InvertColorsIcon = wrapIcon({ IconClass: MatIcon, name: 'invert-colors', flip: false });
-const CancelIcon = wrapIcon({ IconClass: MatIcon, name: 'cancel', flip: false });
+import * as Colors from '@brightlayer-ui/colors';
+
+const SwapIcon: IconFamily = { family: 'material', name: 'swap-horiz', direction: 'ltr' };
+const InvertColorsIcon: IconFamily = { family: 'material', name: 'invert-colors', direction: 'ltr' };
+const CancelIcon: IconFamily = { family: 'material', name: 'cancel', direction: 'ltr' };
 
 type UserMenuExampleProps = {
     onToggleRTL: () => void;
@@ -16,9 +16,9 @@ export const UserMenuExample: React.FC<UserMenuExampleProps> = (props) => {
     const { onToggleRTL, onToggleTheme } = props;
 
     const menuItems: InfoListItemProps[] = [
-        { title: 'Toggle RTL', IconClass: SwapIcon, onPress: (): void => onToggleRTL() },
-        { title: 'Toggle Theme', IconClass: InvertColorsIcon, onPress: (): void => onToggleTheme() },
-        { title: 'Cancel', IconClass: CancelIcon },
+        { title: 'Toggle RTL', icon: SwapIcon, onPress: (): void => onToggleRTL() },
+        { title: 'Toggle Theme', icon: InvertColorsIcon, onPress: (): void => onToggleTheme() },
+        { title: 'Cancel', icon: CancelIcon },
     ];
 
     return (
