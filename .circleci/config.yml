@@ -6,6 +6,7 @@ jobs:
     build_showcase:
         docker:
             - image: circleci/node:12.9.1-browsers
+        resource_class: large
         environment:
             - MASTER_BRANCH: master
         steps:
