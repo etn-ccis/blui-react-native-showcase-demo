@@ -6,6 +6,7 @@ jobs:
     build_showcase:
         docker:
             - image: circleci/node:12.9.1-browsers
+        resource_class: large
         environment:
             - MASTER_BRANCH: master
         steps:
@@ -40,6 +41,10 @@ jobs:
                   root: .
                   paths:
                     - ./coverage
+            - run:
+                  name: Memory Usage
+                  command: cat /sys/fs/cgroup/memory/memory.max_usage_in_bytes
+                  when: always
     coverage_report:
         working_directory: ~/react-native-showcase-demo
         docker:
