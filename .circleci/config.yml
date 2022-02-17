@@ -5,7 +5,8 @@ jobs:
     # Builds the Showcase app using @brightlayer-ui/react-native-components persisted in /dist folder.
     build_showcase:
         docker:
-            - image: circleci/node:12.9.1-browsers
+            - image: cimg/node:14.19.0-browsers
+        resource_class: large
         environment:
             - MASTER_BRANCH: master
         steps:
@@ -43,7 +44,7 @@ jobs:
     coverage_report:
         working_directory: ~/react-native-showcase-demo
         docker:
-            - image: circleci/node:12.9.1-browsers
+            - image: cimg/node:14.19.0-browsers
         steps:
             - checkout
             - attach_workspace:
