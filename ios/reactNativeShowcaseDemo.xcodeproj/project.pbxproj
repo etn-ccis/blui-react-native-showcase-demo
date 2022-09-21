@@ -18,6 +18,11 @@
 		5A0CEAFE28D8DC160058683A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CEAFD28D8DC160058683A /* AppDelegate.mm */; };
 		6A105E375D6D6F4F32A1378E /* libPods-reactNativeShowcaseDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2A81CFE4A0CD10C91FC603 /* libPods-reactNativeShowcaseDemo.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		93CE567F28DB83EF00A248E3 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1BB80F64D6A4DB0B3C3FF49 /* OpenSans-Bold.ttf */; };
+		93CE568028DB83EF00A248E3 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11459C2FB41C4150804BF18B /* OpenSans-ExtraBold.ttf */; };
+		93CE568128DB83EF00A248E3 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64630B278DEC4E5588C1BCAB /* OpenSans-Light.ttf */; };
+		93CE568228DB83EF00A248E3 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB229BE6C0674489A3B0DDC2 /* OpenSans-Regular.ttf */; };
+		93CE568328DB83EF00A248E3 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB3A0CAB2DDC4B3090660A53 /* OpenSans-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -375,6 +380,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CE567F28DB83EF00A248E3 /* OpenSans-Bold.ttf in Resources */,
+				93CE568028DB83EF00A248E3 /* OpenSans-ExtraBold.ttf in Resources */,
+				93CE568128DB83EF00A248E3 /* OpenSans-Light.ttf in Resources */,
+				93CE568228DB83EF00A248E3 /* OpenSans-Regular.ttf in Resources */,
+				93CE568328DB83EF00A248E3 /* OpenSans-SemiBold.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
