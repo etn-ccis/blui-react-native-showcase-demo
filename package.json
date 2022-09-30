@@ -22,7 +22,7 @@
         "@brightlayer-ui/react-native-components": "^6.0.3",
         "@brightlayer-ui/react-native-progress-icons": "^1.0.2",
         "@brightlayer-ui/react-native-themes": "^6.0.0",
-        "@brightlayer-ui/react-native-vector-icons": "file:/Users/e0580532/Dev/test/icons/rn-vector/brightlayer-ui-react-native-vector-icons-v1.8.0-beta.0.tgz",
+        "@brightlayer-ui/react-native-vector-icons": "^1.7.0",
         "@react-native-masked-view/masked-view": "^0.2.7",
         "@react-navigation/drawer": "^5.8.1",
         "@react-navigation/native": "^5.5.0",
