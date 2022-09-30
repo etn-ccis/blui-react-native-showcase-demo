@@ -18,8 +18,6 @@ import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
 import com.reactnativeshowcasedemo.BuildConfig;
-import com.reactnativeshowcasedemo.newarchitecture.components.MainComponentsRegistry;
-import com.reactnativeshowcasedemo.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

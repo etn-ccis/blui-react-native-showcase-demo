@@ -309,7 +309,7 @@ PODS:
     - React-jsi (= 0.70.0)
     - React-logger (= 0.70.0)
     - React-perflogger (= 0.70.0)
-  - RNBLUIVectorIcons (1.3.1):
+  - RNBLUIVectorIcons (1.8.0-beta.0):
     - React
   - RNCMaskedView (0.2.7):
     - React-Core
@@ -349,7 +349,7 @@ PODS:
     - React-RCTImage
   - RNSVG (12.1.1):
     - React
-  - RNVectorIcons (8.1.0):
+  - RNVectorIcons (9.2.0):
     - React-Core
   - Yoga (1.14.0)
 
@@ -531,13 +531,13 @@ SPEC CHECKSUMS:
   React-RCTVibration: 5499b77c0fd57f346a5f0b36bb79fdb020d17d3e
   React-runtimeexecutor: 80c195ffcafb190f531fdc849dc2d19cb4bb2b34
   ReactCommon: de55f940495d7bf87b5d7bf55b5b15cdd50d7d7b
-  RNBLUIVectorIcons: 66f47cfc9b2067c2a913d2dc881c23aab9ed9282
+  RNBLUIVectorIcons: 81d874e15bf48d232e4e939a41c075e9dbd40d66
   RNCMaskedView: cb9670ea9239998340eaab21df13fa12a1f9de15
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNReanimated: 1b1b442d84cba454bae467c91a0ac3274e4ca25d
   RNScreens: 4d79118be80f79fa1f4aa131909a1d6e86280af3
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
-  RNVectorIcons: 31cebfcf94e8cf8686eb5303ae0357da64d7a5a4
+  RNVectorIcons: fcc2f6cb32f5735b586e66d14103a74ce6ad61f8
   Yoga: 82c9e8f652789f67d98bed5aef9d6653f71b04a9
 
 PODFILE CHECKSUM: a03fa3abfb746f585c3579f66826af58d6f9ec75
