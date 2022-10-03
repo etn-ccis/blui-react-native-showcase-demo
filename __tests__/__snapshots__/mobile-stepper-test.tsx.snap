@@ -11,6 +11,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
   }
 >
   <View
+    collapsable={false}
     style={
       Object {
         "backgroundColor": "#ffffff",
@@ -31,6 +32,11 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
     }
   >
     <View
+      accessibilityState={
+        Object {
+          "disabled": true,
+        }
+      }
       accessible={true}
       focusable={false}
       onClick={[Function]}
@@ -48,6 +54,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
       }
     >
       <View
+        collapsable={false}
         index={0}
         siblings={
           Array [
@@ -79,7 +86,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
           accessibilityRole="button"
           accessibilityState={
             Object {
-              "disabled": undefined,
+              "disabled": false,
             }
           }
           accessible={true}
@@ -269,6 +276,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
                 "alignSelf": "flex-start",
@@ -279,6 +287,13 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 "borderWidth": 1,
                 "elevation": 0,
                 "minWidth": 64,
+                "shadowColor": "#000000",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 0,
+                },
+                "shadowOpacity": 0,
+                "shadowRadius": 0,
                 "width": 100,
               }
             }
@@ -485,6 +500,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
                 "alignSelf": "flex-end",
