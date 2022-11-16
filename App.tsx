@@ -4,7 +4,7 @@
  This code is licensed under the BSD-3 license found in the LICENSE file in the root directory of this source tree and at https://opensource.org/licenses/BSD-3-Clause.
  **/
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, View, I18nManager, Text } from 'react-native';
+import { SafeAreaView, ScrollView, View, I18nManager, Text, TouchableOpacity } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import RNRestart from 'react-native-restart';
 import {
@@ -30,6 +30,7 @@ import { MobileStepperExample } from './components/mobile-stepper-example';
 import { useThemeContext } from './contexts/ThemeContext';
 import { UserMenuExample } from './components/user-menu-example';
 import { KitchenSink } from './components/kitchen-sink';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const backgroundImage = require('./assets/images/farm.jpg');
 
@@ -99,35 +100,47 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                         <CollapsibleHeaderLayout
                             HeaderProps={{
                                 variant: 'dynamic',
-                                title: 'School of fine arts',
-                                subtitle: (
-                                    <View
-                                        style={{
-                                            paddingVertical: 15,
-                                            paddingHorizontal: 10,
-                                            flexDirection: 'row',
-                                            alignItems: 'center',
+                                title: (
+                                    <Text style={{ color: BLUIColors.gray[800], fontSize: 32 }}>
+                                        School of Fine Arts
+                                    </Text>
+                                ),
+                                fontColor: BLUIColors.gray[800],
+                                backgroundColor: 'white',
+                                info: (
+                                    <TouchableOpacity
+                                        onPress={(): void => {
+                                            setShowBottomSheet(true);
                                         }}
                                     >
-                                        <Text
+                                        <View
                                             style={{
-                                                fontSize: 16,
-                                                color: 'black',
+                                                display: 'flex',
+                                                flexDirection: 'row',
+                                                alignItems: 'center',
                                             }}
                                         >
-                                            Haus Deutch
-                                        </Text>
-                                        <MatIcon
-                                            name={'arrow-drop-down'}
-                                            onPress={(): void => {
-                                                setShowBottomSheet(true);
-                                            }}
-                                            size={24}
-                                            color="black"
-                                        />
-                                    </View>
+                                            <Text
+                                                style={{
+                                                    fontSize: 16,
+                                                    color: BLUIColors.gray[600],
+                                                }}
+                                            >
+                                                Haus Deutch
+                                            </Text>
+                                            <Icon
+                                                name={showBottomSheet ? 'arrow-drop-up' : 'arrow-drop-down'}
+                                                size={24}
+                                                color={BLUIColors.gray[600]}
+                                            />
+                                        </View>
+                                    </TouchableOpacity>
                                 ),
-                                info: 'location',
+                                subtitle: (
+                                    <Text style={{ fontSize: 14, color: BLUIColors.gray[300] }}>
+                                        123 Any Street, Maxvorstadt 45678
+                                    </Text>
+                                ),
                                 icon: { name: 'arrow-back' },
                                 onIconPress: () => {
                                     navigation.pop();
