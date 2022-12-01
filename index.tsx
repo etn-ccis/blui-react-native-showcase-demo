@@ -18,7 +18,7 @@ const wrapper = (): JSX.Element => {
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>
             <PaperProvider theme={theme === 'light' ? blue : blueDark}>
-                <FontScaleContext.Provider value={{ maxScaleFont: MAX_FONT_SCALE, disableFontScaling: false }}>
+                <FontScaleContext.Provider value={{ maxScale: MAX_FONT_SCALE, disableScaling: false }}>
                     <MainRouter />
                 </FontScaleContext.Provider>
             </PaperProvider>
