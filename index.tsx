@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 import { ThemeContext, ThemeType } from './contexts/ThemeContext';
 import { blue, blueDark } from '@brightlayer-ui/react-native-themes';
 import { FontScaleContext } from '@brightlayer-ui/react-native-components';
-import { MAX_FONT_SCALE } from './constants';
+import { DISABLE_FONT_SCALE, MAX_FONT_SCALE, MIN_FONT_SCALE } from './constants';
 
 const wrapper = (): JSX.Element => {
     const [theme, setTheme] = useState<ThemeType>('light');
@@ -18,7 +18,9 @@ const wrapper = (): JSX.Element => {
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>
             <PaperProvider theme={theme === 'light' ? blue : blueDark}>
-                <FontScaleContext.Provider value={{ maxScale: MAX_FONT_SCALE, disableScaling: false }}>
+                <FontScaleContext.Provider
+                    value={{ maxScale: MAX_FONT_SCALE, minScale: MIN_FONT_SCALE, disableScaling: DISABLE_FONT_SCALE }}
+                >
                     <MainRouter />
                 </FontScaleContext.Provider>
             </PaperProvider>

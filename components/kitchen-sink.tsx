@@ -54,6 +54,7 @@ import {
     ThemedTextInput,
     ThemedToggleButton,
 } from '@brightlayer-ui/react-native-components/themed';
+import { DISABLE_FONT_SCALE, MAX_FONT_SCALE, MIN_FONT_SCALE } from '../constants';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
 const MusicRoute = (): JSX.Element => <Subtitle1>Music</Subtitle1>;
@@ -111,7 +112,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const [errorNameInputText, setErrorNameInputText] = React.useState('');
     const [errorEmailInputText, setErrorEmailInputText] = React.useState('');
     const [index, setIndex] = React.useState(0);
-
     const onChangeHelperTextInputText = (text: string): void => setHelperTextInputText(text);
 
     const helperTextInputHasErrors = (): boolean => !helperTextInputText.includes('@');
@@ -504,11 +504,29 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             marginTop: 24,
                         }}
                     >
-                        <Badge size={24} visible></Badge>
-                        <Badge size={24} visible>
+                        <Badge
+                            size={24}
+                            visible
+                            allowFontScaling={!DISABLE_FONT_SCALE}
+                            maxFontSizeMultiplier={MAX_FONT_SCALE}
+                            minimumFontScale={MIN_FONT_SCALE}
+                        ></Badge>
+                        <Badge
+                            size={24}
+                            visible
+                            allowFontScaling={!DISABLE_FONT_SCALE}
+                            maxFontSizeMultiplier={MAX_FONT_SCALE}
+                            minimumFontScale={MIN_FONT_SCALE}
+                        >
                             3
                         </Badge>
-                        <Badge size={40} visible>
+                        <Badge
+                            size={40}
+                            visible
+                            allowFontScaling={!DISABLE_FONT_SCALE}
+                            maxFontSizeMultiplier={MAX_FONT_SCALE}
+                            minimumFontScale={MIN_FONT_SCALE}
+                        >
                             8
                         </Badge>
                         <ThemedBadge size={24} visible></ThemedBadge>
@@ -531,6 +549,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             navigationState={{ index, routes }}
                             onIndexChange={setIndex}
                             renderScene={renderScene}
+                            labelMaxFontSizeMultiplier={MAX_FONT_SCALE}
                         />
                         <ThemedBottomNavigation
                             navigationState={{ index, routes }}
@@ -1212,6 +1231,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             label="Name"
                             value={nameInputText}
                             onChangeText={(text: string): void => setNameInputText(text)}
+                            allowFontScaling={!DISABLE_FONT_SCALE}
+                            maxFontSizeMultiplier={MAX_FONT_SCALE}
                         />
                         <TextInput
                             label="Email"
@@ -1219,6 +1240,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             style={{ marginTop: 24 }}
                             value={emailInputText}
                             onChangeText={(text: string): void => setEmailInputText(text)}
+                            allowFontScaling={!DISABLE_FONT_SCALE}
+                            maxFontSizeMultiplier={MAX_FONT_SCALE}
                         />
                         <TextInput
                             label="Name Error"
@@ -1226,6 +1249,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             value={errorNameInputText}
                             onChangeText={(text: string): void => setErrorNameInputText(text)}
                             error
+                            allowFontScaling={!DISABLE_FONT_SCALE}
+                            maxFontSizeMultiplier={MAX_FONT_SCALE}
                         />
                         <TextInput
                             label="Email Error"
@@ -1234,14 +1259,25 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             value={errorEmailInputText}
                             onChangeText={(text: string): void => setErrorEmailInputText(text)}
                             error
+                            allowFontScaling={!DISABLE_FONT_SCALE}
+                            maxFontSizeMultiplier={MAX_FONT_SCALE}
                         />
-                        <TextInput label="Name Disabled" value="John Smith" style={{ marginTop: 24 }} disabled />
+                        <TextInput
+                            label="Name Disabled"
+                            value="John Smith"
+                            style={{ marginTop: 24 }}
+                            disabled
+                            allowFontScaling={!DISABLE_FONT_SCALE}
+                            maxFontSizeMultiplier={MAX_FONT_SCALE}
+                        />
                         <TextInput
                             label="Email Disabled"
                             mode="outlined"
                             value="j.smith@email.com"
                             style={{ marginTop: 24 }}
                             disabled
+                            allowFontScaling={!DISABLE_FONT_SCALE}
+                            maxFontSizeMultiplier={MAX_FONT_SCALE}
                         />
                         <Divider style={{ marginTop: 24, marginHorizontal: -24, backgroundColor: 'cyan' }} />
                         <ThemedTextInput
