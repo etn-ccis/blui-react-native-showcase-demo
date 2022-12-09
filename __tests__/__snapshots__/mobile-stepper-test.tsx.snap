@@ -190,9 +190,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={5}
       />
       <Text
-        allowFontScaling={true}
         index={2}
-        maxFontSizeMultiplier={100}
         siblings={
           Array [
             "withTheme(Divider)",
