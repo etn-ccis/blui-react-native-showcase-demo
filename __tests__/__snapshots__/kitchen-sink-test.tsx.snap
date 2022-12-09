@@ -11,6 +11,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
   }
 >
   <Text
+    allowFontScaling={true}
+    maxFontSizeMultiplier={100}
     style={
       Array [
         Object {
@@ -96,6 +98,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -540,6 +544,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -1236,6 +1242,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -2130,6 +2138,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -2332,6 +2342,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -2430,7 +2442,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               >
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={100}
                   numberOfLines={1}
                   onLayout={[Function]}
                   style={
@@ -2465,7 +2477,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={100}
                   numberOfLines={1}
                   style={
                     Object {
@@ -2499,8 +2511,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
               </View>
               <TextInput
+                allowFontScaling={true}
                 editable={true}
-                maxFontSizeMultiplier={1.5}
+                maxFontSizeMultiplier={100}
                 multiline={false}
                 onBlur={[Function]}
                 onChangeText={[Function]}
@@ -2636,6 +2649,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -3077,6 +3092,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -4167,6 +4184,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -4373,6 +4392,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -4575,6 +4596,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -4635,6 +4658,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -4681,6 +4706,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -4737,6 +4764,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -4783,6 +4812,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -4839,6 +4870,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -4885,6 +4918,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -4941,6 +4976,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -4987,6 +5024,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -5017,6 +5056,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
     </View>
   </View>
   <Text
+    allowFontScaling={true}
+    maxFontSizeMultiplier={100}
     style={
       Array [
         Object {
@@ -5102,6 +5143,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -5979,6 +6022,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -7720,6 +7765,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -8078,6 +8125,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -8112,7 +8161,10 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
           }
         >
           <Text
+            allowFontScaling={false}
             collapsable={false}
+            maxFontSizeMultiplier={1.3}
+            minimumFontScale={1}
             numberOfLines={1}
             style={
               Object {
@@ -8135,7 +8187,10 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           />
           <Text
+            allowFontScaling={false}
             collapsable={false}
+            maxFontSizeMultiplier={1.3}
+            minimumFontScale={1}
             numberOfLines={1}
             style={
               Object {
@@ -8160,7 +8215,10 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             3
           </Text>
           <Text
+            allowFontScaling={false}
             collapsable={false}
+            maxFontSizeMultiplier={1.3}
+            minimumFontScale={1}
             numberOfLines={1}
             style={
               Object {
@@ -8185,7 +8243,10 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             8
           </Text>
           <Text
+            allowFontScaling={true}
             collapsable={false}
+            maxFontSizeMultiplier={100}
+            minimumFontScale={0.01}
             numberOfLines={1}
             style={
               Object {
@@ -8208,7 +8269,10 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           />
           <Text
+            allowFontScaling={true}
             collapsable={false}
+            maxFontSizeMultiplier={100}
+            minimumFontScale={0.01}
             numberOfLines={1}
             style={
               Object {
@@ -8233,7 +8297,10 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             3
           </Text>
           <Text
+            allowFontScaling={true}
             collapsable={false}
+            maxFontSizeMultiplier={100}
+            minimumFontScale={0.01}
             numberOfLines={1}
             style={
               Object {
@@ -8321,6 +8388,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -8409,6 +8478,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   }
                 >
                   <Text
+                    allowFontScaling={true}
+                    maxFontSizeMultiplier={100}
                     style={
                       Array [
                         Object {
@@ -8699,7 +8770,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                           }
                         >
                           <Text
-                            maxFontSizeMultiplier={1}
+                            maxFontSizeMultiplier={1.3}
                             style={
                               Array [
                                 Object {
@@ -8741,7 +8812,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                           }
                         >
                           <Text
-                            maxFontSizeMultiplier={1}
+                            maxFontSizeMultiplier={1.3}
                             selectable={false}
                             style={
                               Array [
@@ -8987,7 +9058,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                           }
                         >
                           <Text
-                            maxFontSizeMultiplier={1}
+                            maxFontSizeMultiplier={1.3}
                             style={
                               Array [
                                 Object {
@@ -9029,7 +9100,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                           }
                         >
                           <Text
-                            maxFontSizeMultiplier={1}
+                            maxFontSizeMultiplier={1.3}
                             selectable={false}
                             style={
                               Array [
@@ -9273,7 +9344,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                           }
                         >
                           <Text
-                            maxFontSizeMultiplier={1}
+                            maxFontSizeMultiplier={1.3}
                             style={
                               Array [
                                 Object {
@@ -9315,7 +9386,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                           }
                         >
                           <Text
-                            maxFontSizeMultiplier={1}
+                            maxFontSizeMultiplier={1.3}
                             selectable={false}
                             style={
                               Array [
@@ -9416,6 +9487,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                     }
                   >
                     <Text
+                      allowFontScaling={true}
+                      maxFontSizeMultiplier={100}
                       style={
                         Array [
                           Object {
@@ -9706,7 +9779,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                             }
                           >
                             <Text
-                              maxFontSizeMultiplier={1}
+                              maxFontSizeMultiplier={100}
                               style={
                                 Array [
                                   Object {
@@ -9748,7 +9821,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                             }
                           >
                             <Text
-                              maxFontSizeMultiplier={1}
+                              maxFontSizeMultiplier={100}
                               selectable={false}
                               style={
                                 Array [
@@ -9994,7 +10067,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                             }
                           >
                             <Text
-                              maxFontSizeMultiplier={1}
+                              maxFontSizeMultiplier={100}
                               style={
                                 Array [
                                   Object {
@@ -10036,7 +10109,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                             }
                           >
                             <Text
-                              maxFontSizeMultiplier={1}
+                              maxFontSizeMultiplier={100}
                               selectable={false}
                               style={
                                 Array [
@@ -10280,7 +10353,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                             }
                           >
                             <Text
-                              maxFontSizeMultiplier={1}
+                              maxFontSizeMultiplier={100}
                               style={
                                 Array [
                                   Object {
@@ -10322,7 +10395,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                             }
                           >
                             <Text
-                              maxFontSizeMultiplier={1}
+                              maxFontSizeMultiplier={100}
                               selectable={false}
                               style={
                                 Array [
@@ -12447,6 +12520,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -12487,6 +12562,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -12745,6 +12822,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -13003,6 +13082,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -13261,6 +13342,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -13519,6 +13602,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -13831,6 +13916,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -13871,6 +13958,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -14057,6 +14146,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -14243,6 +14334,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -14429,6 +14522,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -14615,6 +14710,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -14855,6 +14952,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -16996,6 +17095,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -17027,6 +17128,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
           }
         >
           <Text
+            allowFontScaling={true}
+            maxFontSizeMultiplier={100}
             style={
               Array [
                 Object {
@@ -17063,6 +17166,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           />
           <Text
+            allowFontScaling={true}
+            maxFontSizeMultiplier={100}
             style={
               Array [
                 Object {
@@ -17099,6 +17204,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           />
           <Text
+            allowFontScaling={true}
+            maxFontSizeMultiplier={100}
             style={
               Array [
                 Object {
@@ -17135,6 +17242,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           />
           <Text
+            allowFontScaling={true}
+            maxFontSizeMultiplier={100}
             style={
               Array [
                 Object {
@@ -17173,6 +17282,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           />
           <Text
+            allowFontScaling={true}
+            maxFontSizeMultiplier={100}
             style={
               Array [
                 Object {
@@ -17211,6 +17322,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           />
           <Text
+            allowFontScaling={true}
+            maxFontSizeMultiplier={100}
             style={
               Array [
                 Object {
@@ -17313,6 +17426,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={2}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -18329,6 +18444,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -18650,6 +18767,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -18693,6 +18812,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -18807,6 +18928,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -18886,6 +19009,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -18969,6 +19094,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -19083,6 +19210,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -19162,6 +19291,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -19296,6 +19427,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -19339,6 +19472,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -19450,6 +19585,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -19561,6 +19698,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -19676,6 +19815,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -19787,6 +19928,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -19898,6 +20041,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               }
             >
               <Text
+                allowFontScaling={true}
+                maxFontSizeMultiplier={100}
                 style={
                   Array [
                     Object {
@@ -20064,6 +20209,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -20266,6 +20413,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -20468,6 +20617,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -20509,6 +20660,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -20592,6 +20745,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -20675,6 +20830,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -20760,6 +20917,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           >
             <Text
+              allowFontScaling={true}
+              maxFontSizeMultiplier={100}
               style={
                 Array [
                   Object {
@@ -20894,6 +21053,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
@@ -20990,7 +21151,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               >
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={1.3}
                   numberOfLines={1}
                   onLayout={[Function]}
                   style={
@@ -21025,7 +21186,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={1.3}
                   numberOfLines={1}
                   style={
                     Object {
@@ -21059,8 +21220,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
               </View>
               <TextInput
+                allowFontScaling={false}
                 editable={true}
-                maxFontSizeMultiplier={1.5}
+                maxFontSizeMultiplier={1.3}
                 multiline={false}
                 onBlur={[Function]}
                 onChangeText={[Function]}
@@ -21192,7 +21354,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   />
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={1.3}
                     numberOfLines={1}
                     style={
                       Object {
@@ -21230,7 +21392,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={1.3}
                     numberOfLines={1}
                     onLayout={[Function]}
                     style={
@@ -21264,7 +21426,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={1.3}
                     numberOfLines={1}
                     style={
                       Object {
@@ -21297,8 +21459,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                 </View>
                 <TextInput
+                  allowFontScaling={false}
                   editable={true}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={1.3}
                   multiline={false}
                   onBlur={[Function]}
                   onChangeText={[Function]}
@@ -21411,7 +21574,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               >
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={1.3}
                   numberOfLines={1}
                   onLayout={[Function]}
                   style={
@@ -21446,7 +21609,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={1.3}
                   numberOfLines={1}
                   style={
                     Object {
@@ -21480,8 +21643,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
               </View>
               <TextInput
+                allowFontScaling={false}
                 editable={true}
-                maxFontSizeMultiplier={1.5}
+                maxFontSizeMultiplier={1.3}
                 multiline={false}
                 onBlur={[Function]}
                 onChangeText={[Function]}
@@ -21613,7 +21777,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   />
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={1.3}
                     numberOfLines={1}
                     style={
                       Object {
@@ -21651,7 +21815,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={1.3}
                     numberOfLines={1}
                     onLayout={[Function]}
                     style={
@@ -21685,7 +21849,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={1.3}
                     numberOfLines={1}
                     style={
                       Object {
@@ -21718,8 +21882,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                 </View>
                 <TextInput
+                  allowFontScaling={false}
                   editable={true}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={1.3}
                   multiline={false}
                   onBlur={[Function]}
                   onChangeText={[Function]}
@@ -21832,7 +21997,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               >
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={1.3}
                   numberOfLines={1}
                   onLayout={[Function]}
                   style={
@@ -21867,7 +22032,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={1.3}
                   numberOfLines={1}
                   style={
                     Object {
@@ -21901,8 +22066,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
               </View>
               <TextInput
+                allowFontScaling={false}
                 editable={false}
-                maxFontSizeMultiplier={1.5}
+                maxFontSizeMultiplier={1.3}
                 multiline={false}
                 onBlur={[Function]}
                 onChangeText={[Function]}
@@ -22034,7 +22200,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   />
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={1.3}
                     numberOfLines={1}
                     style={
                       Object {
@@ -22072,7 +22238,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={1.3}
                     numberOfLines={1}
                     onLayout={[Function]}
                     style={
@@ -22106,7 +22272,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={1.3}
                     numberOfLines={1}
                     style={
                       Object {
@@ -22139,8 +22305,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                 </View>
                 <TextInput
+                  allowFontScaling={false}
                   editable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={1.3}
                   multiline={false}
                   onBlur={[Function]}
                   onChangeText={[Function]}
@@ -22270,7 +22437,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               >
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={100}
                   numberOfLines={1}
                   onLayout={[Function]}
                   style={
@@ -22305,7 +22472,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={100}
                   numberOfLines={1}
                   style={
                     Object {
@@ -22339,8 +22506,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
               </View>
               <TextInput
+                allowFontScaling={true}
                 editable={true}
-                maxFontSizeMultiplier={1.5}
+                maxFontSizeMultiplier={100}
                 multiline={false}
                 onBlur={[Function]}
                 onChangeText={[Function]}
@@ -22473,7 +22641,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   />
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={100}
                     numberOfLines={1}
                     style={
                       Object {
@@ -22511,7 +22679,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={100}
                     numberOfLines={1}
                     onLayout={[Function]}
                     style={
@@ -22545,7 +22713,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={100}
                     numberOfLines={1}
                     style={
                       Object {
@@ -22578,8 +22746,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                 </View>
                 <TextInput
+                  allowFontScaling={true}
                   editable={true}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={100}
                   multiline={false}
                   onBlur={[Function]}
                   onChangeText={[Function]}
@@ -22693,7 +22862,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               >
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={100}
                   numberOfLines={1}
                   onLayout={[Function]}
                   style={
@@ -22728,7 +22897,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={100}
                   numberOfLines={1}
                   style={
                     Object {
@@ -22762,8 +22931,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
               </View>
               <TextInput
+                allowFontScaling={true}
                 editable={true}
-                maxFontSizeMultiplier={1.5}
+                maxFontSizeMultiplier={100}
                 multiline={false}
                 onBlur={[Function]}
                 onChangeText={[Function]}
@@ -22896,7 +23066,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   />
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={100}
                     numberOfLines={1}
                     style={
                       Object {
@@ -22934,7 +23104,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={100}
                     numberOfLines={1}
                     onLayout={[Function]}
                     style={
@@ -22968,7 +23138,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={100}
                     numberOfLines={1}
                     style={
                       Object {
@@ -23001,8 +23171,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                 </View>
                 <TextInput
+                  allowFontScaling={true}
                   editable={true}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={100}
                   multiline={false}
                   onBlur={[Function]}
                   onChangeText={[Function]}
@@ -23116,7 +23287,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
               >
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={100}
                   numberOfLines={1}
                   onLayout={[Function]}
                   style={
@@ -23151,7 +23322,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
                 <Text
                   collapsable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={100}
                   numberOfLines={1}
                   style={
                     Object {
@@ -23185,8 +23356,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
               </View>
               <TextInput
+                allowFontScaling={true}
                 editable={false}
-                maxFontSizeMultiplier={1.5}
+                maxFontSizeMultiplier={100}
                 multiline={false}
                 onBlur={[Function]}
                 onChangeText={[Function]}
@@ -23319,7 +23491,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   />
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={100}
                     numberOfLines={1}
                     style={
                       Object {
@@ -23357,7 +23529,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={100}
                     numberOfLines={1}
                     onLayout={[Function]}
                     style={
@@ -23391,7 +23563,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                   <Text
                     collapsable={false}
-                    maxFontSizeMultiplier={1.5}
+                    maxFontSizeMultiplier={100}
                     numberOfLines={1}
                     style={
                       Object {
@@ -23424,8 +23596,9 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                 </View>
                 <TextInput
+                  allowFontScaling={true}
                   editable={false}
-                  maxFontSizeMultiplier={1.5}
+                  maxFontSizeMultiplier={100}
                   multiline={false}
                   onBlur={[Function]}
                   onChangeText={[Function]}
@@ -23534,6 +23707,8 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
         total={1}
       >
         <Text
+          allowFontScaling={true}
+          maxFontSizeMultiplier={100}
           style={
             Array [
               Object {
