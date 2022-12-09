@@ -8161,10 +8161,10 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
           }
         >
           <Text
-            allowFontScaling={false}
+            allowFontScaling={true}
             collapsable={false}
             maxFontSizeMultiplier={1.3}
-            minimumFontScale={1}
+            minimumFontScale={0.5}
             numberOfLines={1}
             style={
               Object {
@@ -8187,10 +8187,10 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           />
           <Text
-            allowFontScaling={false}
+            allowFontScaling={true}
             collapsable={false}
             maxFontSizeMultiplier={1.3}
-            minimumFontScale={1}
+            minimumFontScale={0.5}
             numberOfLines={1}
             style={
               Object {
@@ -8215,10 +8215,10 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             3
           </Text>
           <Text
-            allowFontScaling={false}
+            allowFontScaling={true}
             collapsable={false}
             maxFontSizeMultiplier={1.3}
-            minimumFontScale={1}
+            minimumFontScale={0.5}
             numberOfLines={1}
             style={
               Object {
@@ -21220,7 +21220,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
               </View>
               <TextInput
-                allowFontScaling={false}
+                allowFontScaling={true}
                 editable={true}
                 maxFontSizeMultiplier={1.3}
                 multiline={false}
@@ -21459,7 +21459,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                 </View>
                 <TextInput
-                  allowFontScaling={false}
+                  allowFontScaling={true}
                   editable={true}
                   maxFontSizeMultiplier={1.3}
                   multiline={false}
@@ -21643,7 +21643,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
               </View>
               <TextInput
-                allowFontScaling={false}
+                allowFontScaling={true}
                 editable={true}
                 maxFontSizeMultiplier={1.3}
                 multiline={false}
@@ -21882,7 +21882,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                 </View>
                 <TextInput
-                  allowFontScaling={false}
+                  allowFontScaling={true}
                   editable={true}
                   maxFontSizeMultiplier={1.3}
                   multiline={false}
@@ -22066,7 +22066,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                 </Text>
               </View>
               <TextInput
-                allowFontScaling={false}
+                allowFontScaling={true}
                 editable={false}
                 maxFontSizeMultiplier={1.3}
                 multiline={false}
@@ -22305,7 +22305,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
                   </Text>
                 </View>
                 <TextInput
-                  allowFontScaling={false}
+                  allowFontScaling={true}
                   editable={false}
                   maxFontSizeMultiplier={1.3}
                   multiline={false}
