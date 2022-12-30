@@ -29,6 +29,7 @@ import { MobileStepperExample } from './components/mobile-stepper-example';
 import { useThemeContext } from './contexts/ThemeContext';
 import { UserMenuExample } from './components/user-menu-example';
 import { KitchenSink } from './components/kitchen-sink';
+import { DISABLE_FONT_SCALE, MAX_FONT_SCALE, MIN_FONT_SCALE } from './constants';
 
 const backgroundImage = require('./assets/images/farm.jpg');
 
@@ -169,7 +170,16 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     hidePadding={true}
                     icon={Battery}
                     avatar
-                    rightComponent={<MatIcon name={'mail'} size={24} color={theme.colors.text} />}
+                    rightComponent={
+                        <MatIcon
+                            name={'mail'}
+                            size={24}
+                            color={theme.colors.text}
+                            allowFontScaling={!DISABLE_FONT_SCALE}
+                            maxFontSizeMultiplier={MAX_FONT_SCALE}
+                            minimumFontScale={MIN_FONT_SCALE}
+                        />
+                    }
                     divider={'partial'}
                     onPress={(): void => {
                         /* do nothing */
