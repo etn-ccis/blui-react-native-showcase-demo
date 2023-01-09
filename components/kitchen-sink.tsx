@@ -54,7 +54,7 @@ import {
     ThemedTextInput,
     ThemedToggleButton,
 } from '@brightlayer-ui/react-native-components/themed';
-import { DISABLE_FONT_SCALE, MAX_FONT_SCALE, MIN_FONT_SCALE } from '../constants';
+import { ADJUSTS_FONT_SIZE_TO_FIT, DISABLE_FONT_SCALE, MAX_FONT_SCALE, MIN_FONT_SCALE } from '../constants';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
 const MusicRoute = (): JSX.Element => <Subtitle1>Music</Subtitle1>;
@@ -508,6 +508,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             size={24}
                             visible
                             allowFontScaling={!DISABLE_FONT_SCALE}
+                            adjustsFontSizeToFit={ADJUSTS_FONT_SIZE_TO_FIT}
                             maxFontSizeMultiplier={MAX_FONT_SCALE}
                             minimumFontScale={MIN_FONT_SCALE}
                         ></Badge>
@@ -515,6 +516,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             size={24}
                             visible
                             allowFontScaling={!DISABLE_FONT_SCALE}
+                            adjustsFontSizeToFit={ADJUSTS_FONT_SIZE_TO_FIT}
                             maxFontSizeMultiplier={MAX_FONT_SCALE}
                             minimumFontScale={MIN_FONT_SCALE}
                         >
@@ -524,6 +526,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             size={40}
                             visible
                             allowFontScaling={!DISABLE_FONT_SCALE}
+                            adjustsFontSizeToFit={ADJUSTS_FONT_SIZE_TO_FIT}
                             maxFontSizeMultiplier={MAX_FONT_SCALE}
                             minimumFontScale={MIN_FONT_SCALE}
                         >
