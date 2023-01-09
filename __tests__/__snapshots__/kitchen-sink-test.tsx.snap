@@ -8112,6 +8112,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
           }
         >
           <Text
+            adjustsFontSizeToFit={true}
             allowFontScaling={true}
             collapsable={false}
             maxFontSizeMultiplier={100}
@@ -8138,6 +8139,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             }
           />
           <Text
+            adjustsFontSizeToFit={true}
             allowFontScaling={true}
             collapsable={false}
             maxFontSizeMultiplier={100}
@@ -8166,6 +8168,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
             3
           </Text>
           <Text
+            adjustsFontSizeToFit={true}
             allowFontScaling={true}
             collapsable={false}
             maxFontSizeMultiplier={100}
