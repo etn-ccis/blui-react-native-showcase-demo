@@ -7,6 +7,7 @@ This applications is a demo applications that is used to demonstrate and test va
 It is used as a git submodule for:
 
 -   [react-native-component-library](https://github.com/etn-ccis/blui-react-native-component-library)
+-   [react-native-themes](https://github.com/etn-ccis/blui-react-native-themes)
 
 It can also be run as a standalone application or used as a starting point for your own applications.
 
