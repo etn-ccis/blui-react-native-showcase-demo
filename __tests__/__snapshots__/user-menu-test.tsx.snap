@@ -91,7 +91,7 @@ exports[`Kitchen sink snapshot Renders correctly and snapShot matches 1`] = `
     scrollOffset={0}
     scrollOffsetMax={0}
     scrollTo={null}
-    statusBarTranslucent={false}
+    statusBarTranslucent={true}
     supportedOrientations={
       Array [
         "portrait",
