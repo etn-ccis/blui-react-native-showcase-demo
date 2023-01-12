@@ -19,7 +19,7 @@
     "dependencies": {
         "@brightlayer-ui/colors": "^3.1.1",
         "@brightlayer-ui/icons-svg": "^1.11.0",
-        "@brightlayer-ui/react-native-components": "^6.0.3",
+        "@brightlayer-ui/react-native-components": "^7.1.0-beta.0",
         "@brightlayer-ui/react-native-progress-icons": "^1.0.2",
         "@brightlayer-ui/react-native-themes": "^6.0.0",
         "@brightlayer-ui/react-native-vector-icons": "^2.0.0-beta.0",
