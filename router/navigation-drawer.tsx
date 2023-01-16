@@ -7,9 +7,10 @@ import {
     Subtitle1,
     DrawerFooter,
     IconFamily,
+    DrawerNavItem,
 } from '@brightlayer-ui/react-native-components';
 import React, { useState, useCallback } from 'react';
-import { Image, View } from 'react-native';
+import { Image, Text, View } from 'react-native';
 import { Divider, useTheme } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -142,6 +143,14 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 }}
             />
             <DrawerBody>
+                <DrawerNavItem
+                    title="Nav Item"
+                    itemID="navItem"
+                    InfoListItemProps={{
+                        subtitle: [<Text key="sub1">Sub1</Text>, <Text key="sub2">Sub 2</Text>],
+                        subtitleSeparator: '/',
+                    }}
+                />
                 <DrawerNavGroup items={navGroupItems1} title={'Group 1'} hidePadding={false} />
                 <DrawerNavGroup
                     items={navGroupItems2}
