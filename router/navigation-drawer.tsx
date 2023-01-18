@@ -137,7 +137,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 backgroundImage={headerBgImage}
                 fontColor={Colors.white[50]}
                 icon={MenuIcon}
-                onIconPress={(): void => {
+                onPress={(): void => {
                     navigation.closeDrawer();
                 }}
             />
