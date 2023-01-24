@@ -142,9 +142,15 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     <InfoListItem
                         divider={'full'}
                         icon={Sunny}
-                        title={'Title - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus nulla ut hendrerit'}
-                        subtitle={'Subtitle - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus nulla ut hendrerit'}
-                        info={'Info - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus nulla ut hendrerit'}
+                        title={
+                            'Title - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus nulla ut hendrerit'
+                        }
+                        subtitle={
+                            'Subtitle - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus nulla ut hendrerit'
+                        }
+                        info={
+                            'Info - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus nulla ut hendrerit'
+                        }
                         wrapTitle
                         wrapSubtitle
                         wrapInfo
