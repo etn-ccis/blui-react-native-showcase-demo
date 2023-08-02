@@ -19,11 +19,31 @@ const headerBgImage = require('../assets/images/topology_40.png');
 const eatonLogo = require('../assets/images/eatonLogo.png');
 const eatonLogoWhite = require('../assets/images/eatonLogoWhite.png');
 
-const Battery: IconFamily = { family: 'brightlayer-ui', name: 'battery', direction: 'auto' };
-const Humidity: IconFamily = { family: 'brightlayer-ui', name: 'moisture', direction: 'ltr' };
-const MenuIcon: IconFamily = { family: 'material', name: 'menu', direction: 'auto' };
-const Clock: IconFamily = { family: 'material-community', name: 'clock-outline', direction: 'ltr' };
-const MailIcon: IconFamily = { family: 'material', name: 'mail', direction: 'auto' };
+const Battery: IconFamily = {
+    family: 'brightlayer-ui',
+    name: 'battery',
+    direction: 'auto',
+};
+const Humidity: IconFamily = {
+    family: 'brightlayer-ui',
+    name: 'moisture',
+    direction: 'ltr',
+};
+const MenuIcon: IconFamily = {
+    family: 'material',
+    name: 'menu',
+    direction: 'auto',
+};
+const Clock: IconFamily = {
+    family: 'material-community',
+    name: 'clock-outline',
+    direction: 'ltr',
+};
+const MailIcon: IconFamily = {
+    family: 'material',
+    name: 'mail',
+    direction: 'auto',
+};
 
 export const navGroupItems1: NavItem[] = [
     {
@@ -118,7 +138,6 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
     const [selected, setSelected] = useState('');
     const selectItem = useCallback(
         (id: string) => {
-            // Expandable items do not require navigation or selection.
             if (id === 'g2i1i1' || id === 'g2i1' || id === 'g1i3i3' || id === 'g1i3') {
                 return;
             }
