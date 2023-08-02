@@ -12,7 +12,6 @@ import { SafeAreaView, ScrollView, StatusBar, /*StyleSheet, Text,*/ useColorSche
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { KitchenSink } from './components/kitchen-sink';
-import { Provider as ThemeProvider } from 'react-native-paper';
 
 /*type SectionProps = PropsWithChildren<{
     title: string;
@@ -54,25 +53,23 @@ function App(): JSX.Element {
     };
 
     return (
-        <ThemeProvider>
-            <SafeAreaProvider>
-                <SafeAreaView style={backgroundStyle}>
-                    <StatusBar
-                        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-                        backgroundColor={backgroundStyle.backgroundColor}
-                    />
-                    <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
-                        <View
-                            style={{
-                                backgroundColor: isDarkMode ? Colors.black : Colors.white,
-                            }}
-                        >
-                            <KitchenSink />
-                        </View>
-                    </ScrollView>
-                </SafeAreaView>
-            </SafeAreaProvider>
-        </ThemeProvider>
+        <SafeAreaProvider>
+            <SafeAreaView style={backgroundStyle}>
+                <StatusBar
+                    barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+                    backgroundColor={backgroundStyle.backgroundColor}
+                />
+                <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
+                    <View
+                        style={{
+                            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+                        }}
+                    >
+                        <KitchenSink />
+                    </View>
+                </ScrollView>
+            </SafeAreaView>
+        </SafeAreaProvider>
     );
 }
 
