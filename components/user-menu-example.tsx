@@ -3,9 +3,21 @@ import React from 'react';
 import { Avatar } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
 
-const SwapIcon: IconFamily = { family: 'material', name: 'swap-horiz', direction: 'ltr' };
-const InvertColorsIcon: IconFamily = { family: 'material', name: 'invert-colors', direction: 'ltr' };
-const CancelIcon: IconFamily = { family: 'material', name: 'cancel', direction: 'ltr' };
+const SwapIcon: IconFamily = {
+    family: 'material',
+    name: 'swap-horiz',
+    direction: 'ltr',
+};
+const InvertColorsIcon: IconFamily = {
+    family: 'material',
+    name: 'invert-colors',
+    direction: 'ltr',
+};
+const CancelIcon: IconFamily = {
+    family: 'material',
+    name: 'cancel',
+    direction: 'ltr',
+};
 
 type UserMenuExampleProps = {
     onToggleRTL: () => void;
@@ -17,7 +29,11 @@ export const UserMenuExample: React.FC<UserMenuExampleProps> = (props) => {
 
     const menuItems: InfoListItemProps[] = [
         { title: 'Toggle RTL', icon: SwapIcon, onPress: (): void => onToggleRTL() },
-        { title: 'Toggle Theme', icon: InvertColorsIcon, onPress: (): void => onToggleTheme() },
+        {
+            title: 'Toggle Theme',
+            icon: InvertColorsIcon,
+            onPress: (): void => onToggleTheme(),
+        },
         { title: 'Cancel', icon: CancelIcon },
     ];
 

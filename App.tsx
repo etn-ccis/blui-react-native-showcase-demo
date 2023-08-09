@@ -1,340 +1,95 @@
 /**
- Copyright (c) 2021-present, Eaton
- All rights reserved.
- This code is licensed under the BSD-3 license found in the LICENSE file in the root directory of this source tree and at https://opensource.org/licenses/BSD-3-Clause.
- **/
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ */
+
 import React from 'react';
-import { SafeAreaView, ScrollView, View, I18nManager } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import RNRestart from 'react-native-restart';
-import {
-    ChannelValue,
-    EmptyState,
-    Header,
-    Hero,
-    HeroBanner,
-    IconFamily,
-    InfoListItem,
-    ListItemTag,
-    ScoreCard,
-} from '@brightlayer-ui/react-native-components';
-import { ThemedButton } from '@brightlayer-ui/react-native-components/themed';
-import { Card, useTheme } from 'react-native-paper';
+//import type { PropsWithChildren } from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaView, ScrollView, StatusBar, /*StyleSheet, Text,*/ useColorScheme, View } from 'react-native';
 
-import MatIcon from 'react-native-vector-icons/MaterialIcons';
-import * as BLUIColors from '@brightlayer-ui/colors';
-
-import { RootStackParamList } from './router';
-import { MobileStepperExample } from './components/mobile-stepper-example';
-import { useThemeContext } from './contexts/ThemeContext';
-import { UserMenuExample } from './components/user-menu-example';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { KitchenSink } from './components/kitchen-sink';
-import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from './constants';
 
-const backgroundImage = require('./assets/images/farm.jpg');
+/*type SectionProps = PropsWithChildren<{
+    title: string;
+}>;
 
-const Sunny: IconFamily = { family: 'material', name: 'wb-sunny', direction: 'ltr' };
-const Notifications: IconFamily = { family: 'material', name: 'notifications', direction: 'ltr' };
-const Info: IconFamily = { family: 'material', name: 'info', direction: 'ltr' };
-const Clouds: IconFamily = { family: 'material', name: 'cloud', direction: 'ltr' };
-const ChartLineVariant: IconFamily = { family: 'material-community', name: 'chart-line-variant', direction: 'ltr' };
-const Battery: IconFamily = { family: 'brightlayer-ui', name: 'battery', direction: 'auto' };
-const A: IconFamily = { family: 'brightlayer-ui', name: 'grade_a', direction: 'ltr' };
-const Temp: IconFamily = { family: 'brightlayer-ui', name: 'temp', direction: 'ltr' };
-const Humidity: IconFamily = { family: 'brightlayer-ui', name: 'moisture', direction: 'ltr' };
-const Pie: IconFamily = { family: 'material-community', name: 'chart-pie', direction: 'ltr' };
-const Clock: IconFamily = { family: 'material-community', name: 'clock-outline', direction: 'ltr' };
-const MailIcon: IconFamily = { family: 'material', name: 'mail', direction: 'ltr' };
-const MenuIcon: IconFamily = { family: 'material', name: 'menu', direction: 'auto' };
-const MoreIcon: IconFamily = { family: 'material', name: 'more-vert', direction: 'ltr' };
-
-const PADDING = 10;
-
-export const toggleRTL = (): void => {
-    if (I18nManager.isRTL) {
-        I18nManager.allowRTL(false);
-        I18nManager.forceRTL(false);
-    } else {
-        I18nManager.forceRTL(true);
-    }
-    RNRestart.Restart();
-};
-
-type AppProps = {
-    navigation: StackNavigationProp<RootStackParamList, 'App'>;
-};
-
-export const App: React.FC<AppProps> = ({ navigation }) => {
-    const theme = useTheme();
-    const { theme: themeType, setTheme } = useThemeContext();
-
+function Section({ children, title }: SectionProps): JSX.Element {
+    const isDarkMode = useColorScheme() === 'dark';
     return (
-        <View style={{ flex: 1, backgroundColor: theme.colors.background }}>
-            <Header
-                expandable={true}
-                title={'South Tin Mill'}
-                subtitle={'Gary Steel Works'}
-                info={'Online'}
-                icon={MenuIcon}
-                onIconPress={(): void => {
-                    navigation.openDrawer();
-                }}
-                actionItems={[
+        <View style={styles.sectionContainer}>
+            <Text
+                style={[
+                    styles.sectionTitle,
                     {
-                        component: (
-                            <UserMenuExample
-                                onToggleRTL={toggleRTL}
-                                onToggleTheme={(): void => setTheme(themeType === 'light' ? 'dark' : 'light')}
-                            />
-                        ),
+                        color: isDarkMode ? Colors.white : Colors.black,
                     },
                 ]}
-                backgroundImage={backgroundImage}
-                searchableConfig={{ placeholder: 'Search', autoFocus: true }}
-            />
-            <ScrollView>
-                <Card style={{ padding: 0, margin: PADDING, marginBottom: 0 }}>
-                    <EmptyState
-                        title={'Nothing Found'}
-                        description={'Not a single thing'}
-                        icon={ChartLineVariant}
-                        actions={
-                            <ThemedButton mode={'outlined'} icon={'plus'}>
-                                Add a Device
-                            </ThemedButton>
-                        }
-                    />
-                </Card>
-                <Card style={{ padding: 0, margin: PADDING, marginBottom: PADDING }}>
-                    <HeroBanner>
-                        <Hero
-                            label={'Healthy'}
-                            value={96}
-                            units={'/100'}
-                            icon={A}
-                            fontSize={20}
-                            iconColor={theme.dark ? BLUIColors.green[200] : BLUIColors.green[500]}
-                        />
-                        <Hero
-                            label={'Battery'}
-                            value={'Full'}
-                            icon={Battery}
-                            iconColor={theme.dark ? BLUIColors.blue[200] : BLUIColors.blue[500]}
-                        />
-                        <Hero label={'Estimated'} icon={Clock} iconColor={BLUIColors.gray[500]}>
-                            <ChannelValue fontSize={20} value={1} units={'h'} />
-                            <ChannelValue fontSize={20} value={37} units={'m'} />
-                        </Hero>
-                        <Hero
-                            label={'Loaded'}
-                            icon={Pie}
-                            iconColor={theme.dark ? BLUIColors.blue[200] : BLUIColors.blue[500]}
-                        >
-                            <ChannelValue fontSize={20} value={65} units={'%'} icon={ChartLineVariant} />
-                        </Hero>
-                        <Hero
-                            label={'Not Shown'}
-                            value={'5th Item'}
-                            icon={Battery}
-                            iconColor={theme.dark ? BLUIColors.blue[200] : BLUIColors.blue[500]}
-                        />
-                    </HeroBanner>
-                    <InfoListItem
-                        divider={'full'}
-                        icon={Sunny}
-                        title={'Temperature'}
-                        rightComponent={<ChannelValue value={68} units={'°F'} />}
-                    />
-                    <InfoListItem
-                        divider={'full'}
-                        icon={Sunny}
-                        title={'Temperature'}
-                        rightComponent={<ChannelValue value={68} units={'°F'} />}
-                    />
-                    <InfoListItem
-                        divider={'full'}
-                        icon={Sunny}
-                        title={'Temperature'}
-                        rightComponent={
-                            <React.Fragment>
-                                <ChannelValue value={1} units={'h'} icon={Clock} />
-                                <ChannelValue value={24} units={'m'} />
-                            </React.Fragment>
-                        }
-                    />
-                </Card>
-                <InfoListItem
-                    title={'Emerson Field West'}
-                    subtitle={['DG 100', 'EDR 5000', 'Online']}
-                    statusColor={BLUIColors.green[500]}
-                    hidePadding={true}
-                    icon={Battery}
-                    avatar
-                    rightComponent={
-                        <MatIcon
-                            name={'mail'}
-                            size={24}
-                            color={theme.colors.text}
-                            allowFontScaling={!DISABLE_FONT_SCALE}
-                            maxFontSizeMultiplier={MAX_FONT_SCALE}
-                        />
-                    }
-                    divider={'partial'}
-                    onPress={(): void => {
-                        /* do nothing */
-                    }}
-                />
-                <InfoListItem
-                    title={'South Hills Farm'}
-                    subtitle={'Offline'}
-                    statusColor={BLUIColors.red[500]}
-                    divider={'full'}
-                    icon={Pie}
-                    iconAlign={'center'}
-                    hidePadding={false}
-                    fontColor={theme.dark ? BLUIColors.red[200] : BLUIColors.red[500]}
-                    rightComponent={<ChannelValue value={15} units={'A'} color={theme.colors.text} />}
-                    onPress={(): void => {
-                        /* do nothing */
-                    }}
-                />
-                <InfoListItem
-                    title={'Cherry East'}
-                    subtitle={['DG 100', 'EDR 5000', 'Online']}
-                    subtitleSeparator={'/'}
-                    hidePadding
-                    rightComponent={<ListItemTag label={'ACTIVE'} />}
-                    onPress={(): void => {
-                        /* do nothing */
-                    }}
-                />
-                <ScoreCard
-                    style={{ margin: PADDING }}
-                    headerTitle={'Portland Datacenter Long Name'}
-                    headerSubtitle={'6 UPS Devices'}
-                    headerInfo={'Attention Required'}
-                    headerBackgroundImage={backgroundImage}
-                    headerColor={BLUIColors.blue[500]}
-                    actionItems={[
-                        {
-                            icon: MoreIcon,
-                            onPress: (): void => {
-                                /* do nothing */
-                            },
-                        },
-                    ]}
-                    badgeOffset={-55}
-                    badge={
-                        <HeroBanner style={{ flex: 0, minWidth: 80, justifyContent: 'flex-end' }}>
-                            <Hero
-                                label={'Score'}
-                                iconSize={48}
-                                iconColor={theme.dark ? BLUIColors.green[200] : BLUIColors.green[500]}
-                                value={98}
-                                units={'/100'}
-                                icon={A}
-                            />
-                        </HeroBanner>
-                    }
-                    actionRow={
-                        <InfoListItem
-                            dense
-                            chevron
-                            hidePadding
-                            title={'View Location'}
-                            onPress={(): void => {
-                                /* do nothing */
-                            }}
-                        />
-                    }
-                >
-                    <View style={{ justifyContent: 'center', marginLeft: -16 }}>
-                        <InfoListItem
-                            dense
-                            icon={Notifications}
-                            iconColor={BLUIColors.red[500]}
-                            title={'1 Alarm'}
-                            fontColor={theme.dark ? BLUIColors.red[200] : BLUIColors.red[500]}
-                        />
-                        <InfoListItem
-                            dense
-                            icon={Info}
-                            iconColor={theme.dark ? BLUIColors.blue[200] : BLUIColors.blue[500]}
-                            title={'1 Event'}
-                        />
-                        <InfoListItem dense icon={Clouds} title={'Online'} />
-                    </View>
-                </ScoreCard>
-                <ScoreCard
-                    style={{ margin: PADDING, marginTop: 0 }}
-                    headerColor={BLUIColors.red[500]}
-                    headerTitle={'Substation 3'}
-                    headerSubtitle={'High Humidity Alarm'}
-                    headerInfo={'5 Devices'}
-                    headerBackgroundImage={backgroundImage}
-                    actionItems={[
-                        {
-                            icon: MailIcon,
-                            onPress: (): void => {
-                                /* do nothing */
-                            },
-                        },
-                        {
-                            icon: MoreIcon,
-                            onPress: (): void => {
-                                /* do nothing */
-                            },
-                        },
-                    ]}
-                    badge={
-                        <HeroBanner style={{ flex: 0, minWidth: 180, justifyContent: 'flex-end' }}>
-                            <Hero label={'Temperature'} iconSize={70} value={69} units={'°F'} icon={Temp} />
-                            <Hero
-                                label={'Humidity'}
-                                iconSize={70}
-                                iconColor={BLUIColors.blue[200]}
-                                value={78}
-                                units={'%'}
-                                icon={Humidity}
-                            />
-                        </HeroBanner>
-                    }
-                    actionRow={
-                        <InfoListItem
-                            dense
-                            chevron
-                            hidePadding
-                            title={'View Location'}
-                            onPress={(): void => {
-                                /* do nothing */
-                            }}
-                        />
-                    }
-                >
-                    <View style={{ justifyContent: 'center', marginLeft: -16 }}>
-                        <InfoListItem
-                            dense
-                            icon={Notifications}
-                            iconColor={BLUIColors.red[500]}
-                            title={'1 Alarm'}
-                            fontColor={theme.dark ? BLUIColors.red[200] : BLUIColors.red[500]}
-                        />
-                        <InfoListItem
-                            dense
-                            icon={Info}
-                            iconColor={theme.dark ? BLUIColors.blue[200] : BLUIColors.blue[500]}
-                            title={'1 Event'}
-                        />
-                        <InfoListItem dense icon={Clouds} title={'Online'} />
-                    </View>
-                </ScoreCard>
-
-                <MobileStepperExample />
-
-                <KitchenSink />
-
-                <SafeAreaView />
-            </ScrollView>
+            >
+                {title}
+            </Text>
+            <Text
+                style={[
+                    styles.sectionDescription,
+                    {
+                        color: isDarkMode ? Colors.light : Colors.dark,
+                    },
+                ]}
+            >
+                {children}
+            </Text>
         </View>
     );
-};
+}*/
+
+function App(): JSX.Element {
+    const isDarkMode = useColorScheme() === 'dark';
+
+    const backgroundStyle = {
+        backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    };
+
+    return (
+        <SafeAreaProvider>
+            <SafeAreaView style={backgroundStyle}>
+                <StatusBar
+                    barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+                    backgroundColor={backgroundStyle.backgroundColor}
+                />
+                <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
+                    <View
+                        style={{
+                            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+                        }}
+                    >
+                        <KitchenSink />
+                    </View>
+                </ScrollView>
+            </SafeAreaView>
+        </SafeAreaProvider>
+    );
+}
+
+/*const styles = StyleSheet.create({
+    sectionContainer: {
+        marginTop: 32,
+        paddingHorizontal: 24,
+    },
+    sectionTitle: {
+        fontSize: 24,
+        fontWeight: '600',
+    },
+    sectionDescription: {
+        marginTop: 8,
+        fontSize: 18,
+        fontWeight: '400',
+    },
+    highlight: {
+        fontWeight: '700',
+    },
+});*/
+
+export default App;

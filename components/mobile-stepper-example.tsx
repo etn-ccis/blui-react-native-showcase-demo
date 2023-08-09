@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from 'react';
-import { View } from 'react-native';
-import { MobileStepper, DotStepperVariant, Body1 } from '@brightlayer-ui/react-native-components';
-import { Card, Divider, useTheme } from 'react-native-paper';
+import { Text, View } from 'react-native';
+import { MobileStepper, DotStepperVariant } from '@brightlayer-ui/react-native-components';
+import { Button, Card, Divider, useTheme } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
-import { ThemedButton } from '@brightlayer-ui/react-native-components/themed';
+//import {Button} from '@brightlayer-ui/react-native-components/';
 
 const PADDING = 10;
 
@@ -36,37 +36,39 @@ export const MobileStepperExample: React.FC = () => {
 
     return (
         <Card style={{ padding: 0, margin: PADDING, marginBottom: PADDING }}>
-            <ThemedButton mode="contained" onPress={(): void => cycleStepperVariant()}>
+            <Button mode="contained" onPress={(): void => cycleStepperVariant()}>
                 Cycle Variant
-            </ThemedButton>
+            </Button>
             <Divider />
-            <Body1 style={{ margin: 32, textAlign: 'center', color: theme.colors.text }}>Step #{currentStep + 1}</Body1>
+            <Text style={{ margin: 32, textAlign: 'center', color: theme.colors.primary }}>
+                Step #{currentStep + 1}
+            </Text>
             <Divider />
             <MobileStepper
                 activeStep={currentStep}
                 steps={totalSteps}
                 leftButton={
                     <View style={{ flex: 1 }}>
-                        <ThemedButton
+                        <Button
                             style={{ width: 100, alignSelf: 'flex-start' }}
                             disabled={currentStep === 0}
                             onPress={(): void => updateStep(-1)}
                             mode="outlined"
                         >
                             Back
-                        </ThemedButton>
+                        </Button>
                     </View>
                 }
                 rightButton={
                     <View style={{ flex: 1 }}>
-                        <ThemedButton
+                        <Button
                             style={{ width: 100, alignSelf: 'flex-end' }}
                             disabled={currentStep === totalSteps - 1}
                             onPress={(): void => updateStep(1)}
                             mode="contained"
                         >
                             Next
-                        </ThemedButton>
+                        </Button>
                     </View>
                 }
                 variant={mobileStepperVariant}

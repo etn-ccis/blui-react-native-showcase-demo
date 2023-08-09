@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { Body1, H5, Subtitle1 } from '@brightlayer-ui/react-native-components';
+//import {Text} from '@brightlayer-ui/react-native-components';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import {
@@ -21,45 +21,43 @@ import {
     List,
     Menu,
     Modal,
-    Paragraph,
     Portal,
     RadioButton,
     Surface,
     Switch,
-    Title,
     ToggleButton,
     TextInput,
+    Text,
     useTheme,
     ProgressBar,
     Snackbar,
     ActivityIndicator,
 } from 'react-native-paper';
-
-// import { ThemedTextInput as TextInput } from './themed-text-input';
-import {
-    ThemedActivityIndicator,
-    ThemedAppbar,
-    ThemedAvatar,
-    ThemedBadge,
-    ThemedButton,
-    ThemedBottomNavigation,
-    ThemedCheckbox,
-    ThemedChip,
-    ThemedDivider,
-    ThemedFAB,
-    ThemedProgressBar,
-    ThemedRadioButton,
-    ThemedSnackbar,
-    ThemedSwitch,
-    ThemedTextInput,
-    ThemedToggleButton,
-} from '@brightlayer-ui/react-native-components/themed';
+// import { TextInput as TextInput } from './-text-input';
+/* import {
+  ActivityIndicator,
+  Appbar,
+  Avatar,
+  Badge,
+  Button,
+  BottomNavigation,
+  Checkbox,
+  Chip,
+  Divider,
+  FAB,
+  ProgressBar,
+  RadioButton,
+  Snackbar,
+  Switch,
+  TextInput,
+  ToggleButton,
+} from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
-const MusicRoute = (): JSX.Element => <Subtitle1>Music</Subtitle1>;
-const AlbumsRoute = (): JSX.Element => <Subtitle1>Albums</Subtitle1>;
-const RecentsRoute = (): JSX.Element => <Subtitle1>Recents</Subtitle1>;
+const MusicRoute = (): JSX.Element => <Text>Music</Text>;
+const AlbumsRoute = (): JSX.Element => <Text>Albums</Text>;
+const RecentsRoute = (): JSX.Element => <Text>Recents</Text>;
 
 const styles = StyleSheet.create({
     card: {
@@ -100,7 +98,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const [accordionOneExpanded, setAccordionOneExpanded] = React.useState(false);
     const [accordionTwoExpanded, setAccordionTwoExpanded] = React.useState(false);
     const [menuVisible, setMenuVisible] = React.useState(false);
-    const [modalVisible, setModalVisible] = React.useState(false);
     const [radioButtonAndroidValue, setRadioButtonAndroidValue] = React.useState('first');
     const [radioButtonIOSValue, setRadioButtonIOSValue] = React.useState('first');
     const [snackbarVisible, setSnackbarVisible] = React.useState(false);
@@ -111,6 +108,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const [emailInputText, setEmailInputText] = React.useState('');
     const [errorNameInputText, setErrorNameInputText] = React.useState('');
     const [errorEmailInputText, setErrorEmailInputText] = React.useState('');
+    const [visible, setVisible] = React.useState(false);
     const [index, setIndex] = React.useState(0);
     const onChangeHelperTextInputText = (text: string): void => setHelperTextInputText(text);
 
@@ -118,7 +116,13 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
     const [routes] = React.useState([
         { key: 'music', title: 'Music', icon: 'music', color: 'red', badge: true },
-        { key: 'albums', title: 'Albums', icon: 'album', color: 'orange', badge: '1' },
+        {
+            key: 'albums',
+            title: 'Albums',
+            icon: 'album',
+            color: 'orange',
+            badge: '1',
+        },
         { key: 'recents', title: 'Recents', icon: 'history', color: 'yellow' },
     ]);
 
@@ -134,132 +138,203 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
     const { open } = state;
 
+    const [page, setPage] = React.useState<number>(0);
+    const [numberOfItemsPerPageList] = React.useState([2, 3, 4]);
+    const [itemsPerPage, onItemsPerPageChange] = React.useState(numberOfItemsPerPageList[0]);
+
+    const [items] = React.useState([
+        {
+            key: 1,
+            name: 'Cupcake',
+            calories: 356,
+            fat: 16,
+        },
+        {
+            key: 2,
+            name: 'Eclair',
+            calories: 262,
+            fat: 16,
+        },
+        {
+            key: 3,
+            name: 'Frozen yogurt',
+            calories: 159,
+            fat: 6,
+        },
+        {
+            key: 4,
+            name: 'Gingerbread',
+            calories: 305,
+            fat: 3.7,
+        },
+    ]);
+
+    const from = page * itemsPerPage;
+    const to = Math.min((page + 1) * itemsPerPage, items.length);
+
+    React.useEffect(() => {
+        setPage(0);
+    }, [itemsPerPage]);
+
+    const showDialog = (): void => setDialogVisible(true);
+    const hideDialog = (): void => setDialogVisible(false);
+
+    const showModal = (): void => setVisible(true);
+    const hideModal = (): void => setVisible(false);
+
     return (
         <>
-            <H5 style={{ marginVertical: 48 }}>Default Components</H5>
+            <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Banner</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Banner</Text>
                     <View style={{ marginTop: 24 }}>
                         <Banner
                             visible={bannerVisible}
                             actions={[
                                 {
                                     label: 'Fix it',
-                                    onPress: (): void => setBannerVisible(false),
+                                    onPress: () => setBannerVisible(false),
                                 },
                                 {
                                     label: 'Learn more',
-                                    onPress: (): void => setBannerVisible(false),
+                                    onPress: () => setBannerVisible(false),
                                 },
                             ]}
-                            icon="account-circle"
+                            icon={(props) => <Avatar.Icon {...props} icon="account-circle" />}
                         >
                             There was a problem processing a transaction on your credit card.
                         </Banner>
                         {!bannerVisible && (
-                            <ThemedButton
+                            <Button
                                 mode={'contained'}
                                 onPress={(): void => {
                                     setBannerVisible(true);
                                 }}
                             >
                                 Show Banner
-                            </ThemedButton>
+                            </Button>
                         )}
                     </View>
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Card</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Card</Text>
                     <View style={{ marginTop: 24 }}>
-                        <Card style={{ elevation: 4 }}>
+                        <Card>
                             <Card.Title
                                 title="Card Title"
                                 subtitle="Card Subtitle"
-                                left={(): JSX.Element => <ThemedAvatar.Icon icon="account-circle" size={40} />}
+                                left={(props) => <Avatar.Icon {...props} icon="folder" />}
                             />
                             <Card.Content>
-                                <Title>Card title</Title>
-                                <Paragraph>Card content</Paragraph>
+                                <Text variant="titleLarge">Card title</Text>
+                                <Text variant="bodyMedium">Card conteent</Text>
                             </Card.Content>
                             <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
-                            <Card.Actions style={{ justifyContent: 'flex-end' }}>
-                                <ThemedButton>Cancel</ThemedButton>
-                                <ThemedButton>Ok</ThemedButton>
+                            <Card.Actions>
+                                <Button>Cancel</Button>
+                                <Button>Ok</Button>
                             </Card.Actions>
                         </Card>
                     </View>
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Data Table</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Data Table</Text>
                     <View style={{ marginTop: 24 }}>
                         <DataTable>
                             <DataTable.Header>
                                 <DataTable.Title>Dessert</DataTable.Title>
                                 <DataTable.Title numeric>Calories</DataTable.Title>
-                                <DataTable.Title numeric>Fat (g)</DataTable.Title>
+                                <DataTable.Title numeric>Fat</DataTable.Title>
                             </DataTable.Header>
-                            <DataTable.Row>
-                                <DataTable.Cell>Ice Cream</DataTable.Cell>
-                                <DataTable.Cell numeric>137</DataTable.Cell>
-                                <DataTable.Cell numeric>7</DataTable.Cell>
-                            </DataTable.Row>
-                            <DataTable.Row>
-                                <DataTable.Cell>Chocolate Chip Cookie</DataTable.Cell>
-                                <DataTable.Cell numeric>78</DataTable.Cell>
-                                <DataTable.Cell numeric>4.5</DataTable.Cell>
-                            </DataTable.Row>
-                            <DataTable.Row>
-                                <DataTable.Cell>Angel Food Cake</DataTable.Cell>
-                                <DataTable.Cell numeric>129</DataTable.Cell>
-                                <DataTable.Cell numeric>0.2</DataTable.Cell>
-                            </DataTable.Row>
+
+                            {items.slice(from, to).map((item) => (
+                                <DataTable.Row key={item.key}>
+                                    <DataTable.Cell>{item.name}</DataTable.Cell>
+                                    <DataTable.Cell numeric>{item.calories}</DataTable.Cell>
+                                    <DataTable.Cell numeric>{item.fat}</DataTable.Cell>
+                                </DataTable.Row>
+                            ))}
+
+                            <DataTable.Pagination
+                                page={page}
+                                numberOfPages={Math.ceil(items.length / itemsPerPage)}
+                                // eslint-disable-next-line @typescript-eslint/no-shadow
+                                onPageChange={(page): void => setPage(page)}
+                                label={`${from + 1}-${to} of ${items.length}`}
+                                numberOfItemsPerPageList={numberOfItemsPerPageList}
+                                numberOfItemsPerPage={itemsPerPage}
+                                onItemsPerPageChange={onItemsPerPageChange}
+                                showFastPaginationControls
+                                selectPageDropdownLabel={'Rows per page'}
+                            />
                         </DataTable>
                     </View>
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Dialog</H5>
-                    <View style={{ marginTop: 24 }}>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Dialog</Text>
+                    <View style={{ marginTop: 36 }}>
+                        <Button mode={'contained'} onPress={showDialog}>
+                            Show Dialog
+                        </Button>
                         <Portal>
-                            <Dialog visible={dialogVisible} onDismiss={(): void => setDialogVisible(false)}>
-                                <Dialog.Title>This is a title</Dialog.Title>
+                            <Dialog visible={dialogVisible} onDismiss={hideDialog}>
+                                <Dialog.Title>Alert</Dialog.Title>
                                 <Dialog.Content>
-                                    <Paragraph>This is simple dialog</Paragraph>
+                                    <Text variant="bodyMedium">This is simple dialog</Text>
                                 </Dialog.Content>
                                 <Dialog.Actions>
-                                    <ThemedButton onPress={(): void => setDialogVisible(false)}>Cancel</ThemedButton>
-                                    <ThemedButton onPress={(): void => setDialogVisible(false)}>Ok</ThemedButton>
+                                    <Button onPress={hideDialog}>Done</Button>
                                 </Dialog.Actions>
                             </Dialog>
                         </Portal>
-                        {!dialogVisible && (
-                            <ThemedButton
-                                mode={'contained'}
-                                onPress={(): void => {
-                                    setDialogVisible(true);
-                                }}
-                            >
-                                Show Dialog
-                            </ThemedButton>
-                        )}
                     </View>
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Helper Text</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Helper Text</Text>
                     <View style={{ marginTop: 24 }}>
-                        <ThemedTextInput
+                        <TextInput
                             label="Email"
                             value={helperTextInputText}
                             onChangeText={onChangeHelperTextInputText}
-                            error={helperTextInputHasErrors()}
                         />
                         <HelperText type="error" visible={helperTextInputHasErrors()}>
                             Email address is invalid!
@@ -268,10 +343,21 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Icon Button</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Icon Button</Text>
                     <View
-                        style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 24 }}
+                        style={{
+                            flexDirection: 'row',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            marginTop: 24,
+                        }}
                     >
                         <IconButton icon="fire" size={24} onPress={(): void => console.log('Icon Button Pressed')} />
                         <IconButton icon="fire" size={40} onPress={(): void => console.log('Icon Button Pressed')} />
@@ -281,8 +367,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>List</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>List</Text>
                     <View style={{ marginTop: 24 }}>
                         <View>
                             <List.Item
@@ -327,21 +419,27 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Menu</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Menu</Text>
                     <View style={{ marginTop: 24 }}>
                         <Menu
                             visible={menuVisible}
                             onDismiss={(): void => setMenuVisible(false)}
                             anchor={
-                                <ThemedButton mode={'contained'} onPress={(): void => setMenuVisible(true)}>
+                                <Button mode={'contained'} onPress={(): void => setMenuVisible(true)}>
                                     Show menu
-                                </ThemedButton>
+                                </Button>
                             }
                         >
                             <Menu.Item onPress={(): void => setMenuVisible(false)} title="Item 1" />
                             <Menu.Item onPress={(): void => setMenuVisible(false)} title="Item 2" />
-                            <ThemedDivider />
+                            <Divider />
                             <Menu.Item onPress={(): void => setMenuVisible(false)} title="Item 3" />
                             <Menu.Item onPress={(): void => setMenuVisible(false)} title="Item 4" />
                         </Menu>
@@ -349,13 +447,19 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Modal</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Modal</Text>
                     <View style={{ marginTop: 24 }}>
-                        <Portal theme={theme}>
+                        <Portal>
                             <Modal
-                                visible={modalVisible}
-                                onDismiss={(): void => setModalVisible(false)}
+                                visible={visible}
+                                onDismiss={hideModal}
                                 contentContainerStyle={{
                                     backgroundColor: theme.colors.surface,
                                     padding: 24,
@@ -363,54 +467,73 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     marginHorizontal: 24,
                                 }}
                             >
-                                <Body1>Example Modal. Click outside this area to dismiss.</Body1>
+                                <Text>Example Modal. Click outside this area to dismiss.</Text>
                             </Modal>
                         </Portal>
-                        <ThemedButton
-                            mode={'contained'}
-                            onPress={(): void => {
-                                setModalVisible(true);
-                            }}
-                        >
+                        <Button mode={'contained'} style={{ marginTop: 30 }} onPress={showModal}>
                             Show Modal
-                        </ThemedButton>
+                        </Button>
                     </View>
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Surface</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Surface</Text>
                     <View style={{ marginTop: 24 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
                             <Surface style={[styles.surface, { elevation: 1 }]}>
-                                <Body1>Surface 1</Body1>
+                                <Text>Surface 1</Text>
                             </Surface>
                             <Surface style={[styles.surface, { elevation: 2 }]}>
-                                <Body1>Surface 2</Body1>
+                                <Text>Surface 2</Text>
                             </Surface>
                         </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 24 }}>
+                        <View
+                            style={{
+                                flexDirection: 'row',
+                                justifyContent: 'space-evenly',
+                                marginTop: 24,
+                            }}
+                        >
                             <Surface style={[styles.surface, { elevation: 3 }]}>
-                                <Body1>Surface 3</Body1>
+                                <Text>Surface 3</Text>
                             </Surface>
                             <Surface style={[styles.surface, { elevation: 4 }]}>
-                                <Body1>Surface 4</Body1>
+                                <Text>Surface 4</Text>
                             </Surface>
                         </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 24 }}>
+                        <View
+                            style={{
+                                flexDirection: 'row',
+                                justifyContent: 'space-evenly',
+                                marginTop: 24,
+                            }}
+                        >
                             <Surface style={[styles.surface, { elevation: 5 }]}>
-                                <Body1>Surface 5</Body1>
+                                <Text>Surface 5</Text>
                             </Surface>
                             <Surface style={[styles.surface, { elevation: 6 }]}>
-                                <Body1>Surface 6</Body1>
+                                <Text>Surface 6</Text>
                             </Surface>
                         </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 24 }}>
+                        <View
+                            style={{
+                                flexDirection: 'row',
+                                justifyContent: 'space-evenly',
+                                marginTop: 24,
+                            }}
+                        >
                             <Surface style={[styles.surface, { elevation: 7 }]}>
-                                <Body1>Surface 7</Body1>
+                                <Text>Surface 7</Text>
                             </Surface>
                             <Surface style={[styles.surface, { elevation: 8 }]}>
-                                <Body1>Surface 8</Body1>
+                                <Text>Surface 8</Text>
                             </Surface>
                         </View>
                     </View>
@@ -418,14 +541,20 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             </Card>
 
             {/**
-             * BEGIN THEMED WRAPPER COMPONENT SECTION
+             * BEGIN  WRAPPER COMPONENT SECTION
              *  */}
 
-            <H5 style={{ marginVertical: 48 }}>Themed (Wrapper) Components</H5>
+            <Text style={{ marginVertical: 48 }}> (Wrapper) Components</Text>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Activity Indicator</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Activity Indicator</Text>
                     <View
                         style={{
                             flexDirection: 'row',
@@ -436,45 +565,63 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     >
                         <ActivityIndicator animating={true} size={'small'} />
                         <ActivityIndicator animating={true} size={'large'} />
-                        <ThemedActivityIndicator animating={true} size={'small'} />
-                        <ThemedActivityIndicator animating={true} size={'large'} />
+                        <ActivityIndicator animating={true} size={'small'} />
+                        <ActivityIndicator animating={true} size={'large'} />
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Appbar</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Appbar</Text>
                     <View style={{ marginTop: 24 }}>
+                        <Appbar.Header style={{ marginBottom: 16 }}>
+                            <Appbar.BackAction onPress={(): void => console.log('Went Back')} />
+                            <Appbar.Content title="Title" />
+                            <Appbar.Action icon="magnify" onPress={(): void => console.log('Searching')} />
+                            <Appbar.Action icon="dots-vertical" onPress={(): void => console.log('Shown more')} />
+                        </Appbar.Header>
                         <Appbar style={{ marginBottom: 16 }}>
-                            <Appbar.Content title="Title" subtitle="Subtitle" />
+                            <Appbar.Content title="Title" />
                             <Appbar.Action icon="magnify" />
                             <Appbar.Action icon="dots-vertical" />
                         </Appbar>
                         <Appbar style={{ marginBottom: 16 }}>
                             <Appbar.BackAction />
-                            <Appbar.Content title="Title" subtitle="Subtitle" />
+                            <Appbar.Content title="Title" />
                             <Appbar.Action icon="magnify" />
                             <Appbar.Action icon="dots-vertical" />
                         </Appbar>
-                        <ThemedAppbar style={{ marginBottom: 16 }}>
-                            <Appbar.Content title="Title" subtitle="Subtitle" />
+                        <Appbar style={{ marginBottom: 16 }}>
+                            <Appbar.Content title="Title" />
                             <Appbar.Action icon="magnify" />
                             <Appbar.Action icon="dots-vertical" />
-                        </ThemedAppbar>
-                        <ThemedAppbar>
+                        </Appbar>
+                        <Appbar>
                             <Appbar.BackAction />
-                            <Appbar.Content title="Title" subtitle="Subtitle" />
+                            <Appbar.Content title="Title" />
                             <Appbar.Action icon="magnify" />
                             <Appbar.Action icon="dots-vertical" />
-                        </ThemedAppbar>
+                        </Appbar>
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Avatar</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Avatar</Text>
                     <View
                         style={{
                             flexDirection: 'row',
@@ -486,16 +633,22 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <Avatar.Icon size={40} icon="account-circle" />
                         <Avatar.Image size={40} source={AvatarTestImage} />
                         <Avatar.Text size={40} label="PX" />
-                        <ThemedAvatar.Icon size={40} icon="account-circle" />
-                        <ThemedAvatar.Image size={40} source={AvatarTestImage} />
-                        <ThemedAvatar.Text size={40} label="PX" />
+                        <Avatar.Icon size={40} icon="account-circle" />
+                        <Avatar.Image size={40} source={AvatarTestImage} />
+                        <Avatar.Text size={40} label="PX" />
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Badge</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Badge</Text>
                     <View
                         style={{
                             flexDirection: 'row',
@@ -526,20 +679,26 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         >
                             8
                         </Badge>
-                        <ThemedBadge size={24} visible></ThemedBadge>
-                        <ThemedBadge size={24} visible>
+                        <Badge size={24} visible></Badge>
+                        <Badge size={24} visible>
                             3
-                        </ThemedBadge>
-                        <ThemedBadge size={40} visible>
+                        </Badge>
+                        <Badge size={40} visible>
                             8
-                        </ThemedBadge>
+                        </Badge>
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>BottomNavigation</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>BottomNavigation</Text>
                     <View style={{ marginTop: 24 }}>
                         <BottomNavigation
                             style={{ marginBottom: 16 }}
@@ -548,7 +707,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             renderScene={renderScene}
                             labelMaxFontSizeMultiplier={MAX_FONT_SCALE}
                         />
-                        <ThemedBottomNavigation
+                        <BottomNavigation
                             navigationState={{ index, routes }}
                             onIndexChange={setIndex}
                             renderScene={renderScene}
@@ -558,6 +717,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             </Card>
 
             <Card style={{ padding: 20, margin: 20, marginBottom: 0 }}>
+                <Text>Button</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         icon="download"
@@ -567,14 +727,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     >
                         Press me
                     </Button>
-                    <ThemedButton
+                    <Button
                         icon="download"
                         mode="text"
                         onPress={(): void => console.log('Pressed Text Button')}
                         style={{ width: 150 }}
                     >
                         Press me
-                    </ThemedButton>
+                    </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
@@ -585,14 +745,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     >
                         Press me
                     </Button>
-                    <ThemedButton
+                    <Button
                         icon="download"
                         mode="outlined"
                         onPress={(): void => console.log('Pressed Outlined Button')}
                         style={{ marginTop: 24, width: 150 }}
                     >
                         Press me
-                    </ThemedButton>
+                    </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
@@ -603,17 +763,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     >
                         Press me
                     </Button>
-                    <ThemedButton
+                    <Button
                         icon="download"
                         mode="contained"
                         onPress={(): void => console.log('Pressed Contained Button')}
                         style={{ marginTop: 24, width: 150 }}
                     >
                         Press me
-                    </ThemedButton>
+                    </Button>
                 </View>
             </Card>
             <Card style={{ padding: 20, margin: 20, marginBottom: 0 }}>
+                <Text>Button(Disabled)</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         icon="download"
@@ -624,7 +785,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     >
                         Press me
                     </Button>
-                    <ThemedButton
+                    <Button
                         icon="download"
                         mode="text"
                         onPress={(): void => console.log('Pressed Text Button')}
@@ -632,7 +793,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         disabled
                     >
                         Press me
-                    </ThemedButton>
+                    </Button>
                 </View>
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -645,7 +806,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     >
                         Press me
                     </Button>
-                    <ThemedButton
+                    <Button
                         icon="download"
                         mode="outlined"
                         onPress={(): void => console.log('Pressed Outlined Button')}
@@ -653,7 +814,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         disabled
                     >
                         Press me
-                    </ThemedButton>
+                    </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
@@ -665,7 +826,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     >
                         Press me
                     </Button>
-                    <ThemedButton
+                    <Button
                         icon="download"
                         mode="contained"
                         onPress={(): void => console.log('Pressed Contained Button')}
@@ -673,16 +834,22 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         disabled
                     >
                         Press me
-                    </ThemedButton>
+                    </Button>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Checkbox (Android)</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Checkbox (Android)</Text>
                     <View style={{ marginTop: 24 }}>
                         <View style={styles.row}>
-                            <Body1 style={{ flex: 1 }}>Init Unchecked</Body1>
+                            <Text style={{ flex: 1 }}>Init Unchecked</Text>
                             <Checkbox.Android
                                 status={checkboxAndroidOne}
                                 onPress={(): void =>
@@ -691,7 +858,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         : setCheckboxAndroidOne('unchecked')
                                 }
                             />
-                            <ThemedCheckbox.Android
+                            <Checkbox.Android
                                 status={checkboxAndroidOne}
                                 onPress={(): void =>
                                     checkboxAndroidOne === 'unchecked'
@@ -701,7 +868,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             />
                         </View>
                         <View style={styles.row}>
-                            <Body1 style={{ flex: 1 }}>Init Checked</Body1>
+                            <Text style={{ flex: 1 }}>Init Checked</Text>
                             <Checkbox.Android
                                 status={checkboxAndroidTwo}
                                 onPress={(): void =>
@@ -710,7 +877,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         : setCheckboxAndroidTwo('unchecked')
                                 }
                             />
-                            <ThemedCheckbox.Android
+                            <Checkbox.Android
                                 status={checkboxAndroidTwo}
                                 onPress={(): void =>
                                     checkboxAndroidTwo === 'unchecked'
@@ -720,30 +887,36 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             />
                         </View>
                         <View style={styles.row}>
-                            <Body1 style={{ flex: 1 }}>Indeterminate</Body1>
+                            <Text style={{ flex: 1 }}>Indeterminate</Text>
                             <Checkbox.Android status={'indeterminate'} />
-                            <ThemedCheckbox.Android status={'indeterminate'} />
+                            <Checkbox.Android status={'indeterminate'} />
                         </View>
                         <View style={styles.row}>
-                            <Body1 style={{ flex: 1 }}>Disabled Checked</Body1>
+                            <Text style={{ flex: 1 }}>Disabled Checked</Text>
                             <Checkbox.Android status={'checked'} disabled={true} />
-                            <ThemedCheckbox.Android status={'checked'} disabled={true} />
+                            <Checkbox.Android status={'checked'} disabled={true} />
                         </View>
                         <View style={styles.row}>
-                            <Body1 style={{ flex: 1 }}>Disabled Unchecked</Body1>
+                            <Text style={{ flex: 1 }}>Disabled Unchecked</Text>
                             <Checkbox.Android status={'unchecked'} disabled={true} />
-                            <ThemedCheckbox.Android status={'unchecked'} disabled={true} />
+                            <Checkbox.Android status={'unchecked'} disabled={true} />
                         </View>
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Checkbox (iOS)</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Checkbox (iOS)</Text>
                     <View style={{ marginTop: 24 }}>
                         <View style={styles.row}>
-                            <Body1 style={{ flex: 1 }}>Init Unchecked</Body1>
+                            <Text style={{ flex: 1 }}>Init Unchecked</Text>
                             <Checkbox.IOS
                                 status={checkboxIOSOne}
                                 onPress={(): void =>
@@ -752,7 +925,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         : setCheckboxIOSOne('unchecked')
                                 }
                             />
-                            <ThemedCheckbox.IOS
+                            <Checkbox.IOS
                                 status={checkboxIOSOne}
                                 onPress={(): void =>
                                     checkboxIOSOne === 'unchecked'
@@ -762,7 +935,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             />
                         </View>
                         <View style={styles.row}>
-                            <Body1 style={{ flex: 1 }}>Init Checked</Body1>
+                            <Text style={{ flex: 1 }}>Init Checked</Text>
                             <Checkbox.IOS
                                 status={checkboxIOSTwo}
                                 onPress={(): void =>
@@ -771,7 +944,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         : setCheckboxIOSTwo('unchecked')
                                 }
                             />
-                            <ThemedCheckbox.IOS
+                            <Checkbox.IOS
                                 status={checkboxIOSTwo}
                                 onPress={(): void =>
                                     checkboxIOSTwo === 'unchecked'
@@ -781,26 +954,32 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             />
                         </View>
                         <View style={styles.row}>
-                            <Body1 style={{ flex: 1 }}>Indeterminate</Body1>
+                            <Text style={{ flex: 1 }}>Indeterminate</Text>
                             <Checkbox.IOS status={'indeterminate'} />
-                            <ThemedCheckbox.IOS status={'indeterminate'} />
+                            <Checkbox.IOS status={'indeterminate'} />
                         </View>
                         <View style={styles.row}>
-                            <Body1 style={{ flex: 1 }}>Disabled Checked</Body1>
+                            <Text style={{ flex: 1 }}>Disabled Checked</Text>
                             <Checkbox.IOS status={'checked'} disabled={true} />
-                            <ThemedCheckbox.IOS status={'checked'} disabled={true} />
+                            <Checkbox.IOS status={'checked'} disabled={true} />
                         </View>
                         <View style={styles.row}>
-                            <Body1 style={{ flex: 1 }}>Disabled Unchecked</Body1>
+                            <Text style={{ flex: 1 }}>Disabled Unchecked</Text>
                             <Checkbox.IOS status={'unchecked'} disabled={true} />
-                            <ThemedCheckbox.IOS status={'unchecked'} disabled={true} />
+                            <Checkbox.IOS status={'unchecked'} disabled={true} />
                         </View>
                     </View>
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Chip</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Chip</Text>
                     <View style={{ alignItems: 'center', marginTop: 24 }}>
                         <Chip
                             icon="information"
@@ -852,8 +1031,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         >
                             Disabled Outlined Chip
                         </Chip>
-                        <ThemedDivider style={{ width: '100%', marginTop: 24 }} />
-                        <ThemedChip
+                        <Divider style={{ width: '100%', marginTop: 24 }} />
+                        <Chip
                             icon="information"
                             style={{
                                 width: 250,
@@ -862,8 +1041,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             onClose={(): void => {}}
                         >
                             Unselected Flat Chip
-                        </ThemedChip>
-                        <ThemedChip
+                        </Chip>
+                        <Chip
                             icon="information"
                             selected={true}
                             style={{
@@ -873,8 +1052,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             onClose={(): void => {}}
                         >
                             Selected Flat Chip
-                        </ThemedChip>
-                        <ThemedChip
+                        </Chip>
+                        <Chip
                             icon="information"
                             disabled={true}
                             style={{
@@ -884,11 +1063,11 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             onClose={(): void => {}}
                         >
                             Disabled Flat Chip
-                        </ThemedChip>
-                        <ThemedChip icon="information" mode={'outlined'} style={{ marginTop: 24, width: 250 }}>
+                        </Chip>
+                        <Chip icon="information" mode={'outlined'} style={{ marginTop: 24, width: 250 }}>
                             Unselected Outlined Chip
-                        </ThemedChip>
-                        <ThemedChip
+                        </Chip>
+                        <Chip
                             icon="information"
                             mode={'outlined'}
                             selected={true}
@@ -898,8 +1077,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             }}
                         >
                             Selected Outlined Chip
-                        </ThemedChip>
-                        <ThemedChip
+                        </Chip>
+                        <Chip
                             icon="information"
                             mode={'outlined'}
                             disabled={true}
@@ -907,37 +1086,49 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             style={{ marginTop: 24, width: 250 }}
                         >
                             Disabled Outlined Chip
-                        </ThemedChip>
+                        </Chip>
                     </View>
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Divider</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Divider</Text>
                     <View style={{ marginTop: 24 }}>
-                        <Body1>Item 1</Body1>
+                        <Text>Item 1</Text>
                         <Divider />
-                        <Body1>Item 2</Body1>
+                        <Text>Item 2</Text>
                         <Divider />
-                        <Body1>Item 3</Body1>
+                        <Text>Item 3</Text>
                         <Divider />
-                        <Body1>Item 1</Body1>
-                        <ThemedDivider />
-                        <Body1>Item 2</Body1>
-                        <ThemedDivider />
-                        <Body1>Item 3</Body1>
-                        <ThemedDivider />
+                        <Text>Item 1</Text>
+                        <Divider />
+                        <Text>Item 2</Text>
+                        <Divider />
+                        <Text>Item 3</Text>
+                        <Divider />
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Fab</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Fab</Text>
                     <View style={{ marginTop: 24, alignItems: 'center' }}>
                         <FAB
                             style={{ margin: 16, width: 40 }}
-                            small
+                            size="small"
                             icon="plus"
                             onPress={(): void => console.log('Pressed Small Fab')}
                         />
@@ -954,18 +1145,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         />
                     </View>
                     <View style={{ marginTop: 24, alignItems: 'center' }}>
-                        <ThemedFAB
+                        <FAB
                             style={{ margin: 16, width: 40 }}
-                            small
+                            size="small"
                             icon="plus"
                             onPress={(): void => console.log('Pressed Small Fab')}
                         />
-                        <ThemedFAB
+                        <FAB
                             style={{ margin: 16, width: 56 }}
                             icon="plus"
                             onPress={(): void => console.log('Pressed Default Fab')}
                         />
-                        <ThemedFAB
+                        <FAB
                             style={{ margin: 16 }}
                             label={'Extended Fab'}
                             icon="check"
@@ -974,7 +1165,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     </View>
                 </View>
                 <Portal>
-                    <ThemedFAB.Group
+                    <FAB.Group
                         visible
                         open={open}
                         icon={open ? 'calendar-today' : 'plus'}
@@ -994,7 +1185,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 icon: 'bell',
                                 label: 'Remind',
                                 onPress: (): void => console.log('Pressed notifications'),
-                                small: false,
                             },
                         ]}
                         onStateChange={onStateChange}
@@ -1008,108 +1198,132 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Progress Bar</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Progress Bar</Text>
                     <View style={{ marginTop: 24 }}>
                         <ProgressBar progress={0} />
                         <ProgressBar progress={0.5} style={{ marginTop: 24 }} />
                         <ProgressBar progress={1.0} style={{ marginTop: 24 }} />
                         <ProgressBar indeterminate style={{ marginTop: 24 }} />
-                        <ThemedProgressBar progress={0} style={{ marginTop: 24 }} />
-                        <ThemedProgressBar progress={0.5} style={{ marginTop: 24 }} />
-                        <ThemedProgressBar progress={1.0} style={{ marginTop: 24 }} />
-                        <ThemedProgressBar indeterminate style={{ marginTop: 24 }} />
+                        <ProgressBar progress={0} style={{ marginTop: 24 }} />
+                        <ProgressBar progress={0.5} style={{ marginTop: 24 }} />
+                        <ProgressBar progress={1.0} style={{ marginTop: 24 }} />
+                        <ProgressBar indeterminate style={{ marginTop: 24 }} />
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Radio Button (Android)</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Radio Button (Android)</Text>
                     <View style={{ marginTop: 24 }}>
                         <RadioButton.Group
                             onValueChange={(value: string): void => setRadioButtonAndroidValue(value)}
                             value={radioButtonAndroidValue}
                         >
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>First Item</Body1>
+                                <Text style={{ flex: 1 }}>First Item</Text>
                                 <RadioButton.Android value="first" />
                             </View>
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>Second Item</Body1>
+                                <Text style={{ flex: 1 }}>Second Item</Text>
                                 <RadioButton.Android value="second" />
                             </View>
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>Third Item</Body1>
+                                <Text style={{ flex: 1 }}>Third Item</Text>
                                 <RadioButton.Android value="third" />
                             </View>
                         </RadioButton.Group>
-                        <ThemedRadioButton.Group
+                        <RadioButton.Group
                             onValueChange={(value: string): void => setRadioButtonAndroidValue(value)}
                             value={radioButtonAndroidValue}
                         >
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>First Item</Body1>
-                                <ThemedRadioButton.Android value="first" />
+                                <Text style={{ flex: 1 }}>First Item</Text>
+                                <RadioButton.Android value="first" />
                             </View>
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>Second Item</Body1>
-                                <ThemedRadioButton.Android value="second" />
+                                <Text style={{ flex: 1 }}>Second Item</Text>
+                                <RadioButton.Android value="second" />
                             </View>
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>Third Item</Body1>
-                                <ThemedRadioButton.Android value="third" />
+                                <Text style={{ flex: 1 }}>Third Item</Text>
+                                <RadioButton.Android value="third" />
                             </View>
-                        </ThemedRadioButton.Group>
+                        </RadioButton.Group>
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Radio Button (iOS)</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Radio Button (iOS)</Text>
                     <View style={{ marginTop: 24 }}>
                         <RadioButton.Group
                             onValueChange={(value: string): void => setRadioButtonIOSValue(value)}
                             value={radioButtonIOSValue}
                         >
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>First Item</Body1>
+                                <Text style={{ flex: 1 }}>First Item</Text>
                                 <RadioButton.IOS value="first" />
                             </View>
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>Second Item</Body1>
+                                <Text style={{ flex: 1 }}>Second Item</Text>
                                 <RadioButton.IOS value="second" />
                             </View>
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>Third Item</Body1>
+                                <Text style={{ flex: 1 }}>Third Item</Text>
                                 <RadioButton.IOS value="third" />
                             </View>
                         </RadioButton.Group>
-                        <ThemedRadioButton.Group
+                        <RadioButton.Group
                             onValueChange={(value: string): void => setRadioButtonIOSValue(value)}
                             value={radioButtonIOSValue}
                         >
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>First Item</Body1>
-                                <ThemedRadioButton.IOS value="first" />
+                                <Text style={{ flex: 1 }}>First Item</Text>
+                                <RadioButton.IOS value="first" />
                             </View>
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>Second Item</Body1>
-                                <ThemedRadioButton.IOS value="second" />
+                                <Text style={{ flex: 1 }}>Second Item</Text>
+                                <RadioButton.IOS value="second" />
                             </View>
                             <View style={styles.row}>
-                                <Body1 style={{ flex: 1 }}>Third Item</Body1>
-                                <ThemedRadioButton.IOS value="third" />
+                                <Text style={{ flex: 1 }}>Third Item</Text>
+                                <RadioButton.IOS value="third" />
                             </View>
-                        </ThemedRadioButton.Group>
+                        </RadioButton.Group>
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Snackbar</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Snackbar</Text>
                     <View style={{ marginTop: 24 }}>
                         <Portal>
                             <Snackbar
@@ -1125,50 +1339,62 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 Hey there! I&apos;m a Snackbar.
                             </Snackbar>
                         </Portal>
-                        <ThemedButton mode={'contained'} onPress={(): void => setSnackbarVisible(!snackbarVisible)}>
+                        <Button mode={'contained'} onPress={(): void => setSnackbarVisible(!snackbarVisible)}>
                             {snackbarVisible ? 'Hide Snackbar' : 'Show Snackbar'}
-                        </ThemedButton>
+                        </Button>
                     </View>
                 </View>
             </Card>
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Snackbar</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Snackbar</Text>
                     <View style={{ marginTop: 24 }}>
                         <Portal>
-                            <ThemedSnackbar
+                            <Snackbar
                                 visible={snackbarTwoVisible}
                                 onDismiss={(): void => setSnackbarTwoVisible(false)}
                                 action={{
-                                    label: 'Dismissy',
+                                    label: 'Dismiss',
                                     onPress: (): void => {
                                         setSnackbarTwoVisible(false);
                                     },
                                 }}
                             >
                                 Hey there! I&apos;m a Snackbar.
-                            </ThemedSnackbar>
+                            </Snackbar>
                         </Portal>
-                        <ThemedButton mode={'contained'} onPress={(): void => setSnackbarTwoVisible(!snackbarVisible)}>
+                        <Button mode={'contained'} onPress={(): void => setSnackbarTwoVisible(!snackbarTwoVisible)}>
                             {snackbarTwoVisible ? 'Hide Snackbar' : 'Show Snackbar'}
-                        </ThemedButton>
+                        </Button>
                     </View>
                 </View>
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Switch</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Switch</Text>
                     <View style={{ marginTop: 24, alignItems: 'center' }}>
                         <View style={styles.row}>
-                            <Body1 style={{ flex: 1 }}>Enabled - On</Body1>
+                            <Text style={{ flex: 1 }}>Enabled - On</Text>
                             <Switch
                                 value={true}
                                 onValueChange={(): void => {
                                     setIsSwitchOn(!isSwitchOn);
                                 }}
                             />
-                            <ThemedSwitch
+                            <Switch
                                 value={true}
                                 onValueChange={(): void => {
                                     setIsSwitchOn(!isSwitchOn);
@@ -1177,14 +1403,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             />
                         </View>
                         <View style={[styles.row, { marginTop: 24 }]}>
-                            <Body1 style={{ flex: 1 }}>Enabled - Off</Body1>
+                            <Text style={{ flex: 1 }}>Enabled - Off</Text>
                             <Switch
                                 value={false}
                                 onValueChange={(): void => {
                                     setIsSwitchOn(!isSwitchOn);
                                 }}
                             />
-                            <ThemedSwitch
+                            <Switch
                                 value={false}
                                 onValueChange={(): void => {
                                     setIsSwitchOn(!isSwitchOn);
@@ -1193,9 +1419,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             />
                         </View>
                         <View style={[styles.row, { marginTop: 24 }]}>
-                            <Body1 style={{ flex: 1 }}>Disabled - On</Body1>
+                            <Text style={{ flex: 1 }}>Disabled - On</Text>
                             <Switch disabled value={true} />
-                            <ThemedSwitch
+                            <Switch
                                 value={true}
                                 onValueChange={(): void => {
                                     setIsSwitchOn(!isSwitchOn);
@@ -1205,9 +1431,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             />
                         </View>
                         <View style={[styles.row, { marginTop: 24 }]}>
-                            <Body1 style={{ flex: 1 }}>Disabled - Off</Body1>
+                            <Text style={{ flex: 1 }}>Disabled - Off</Text>
                             <Switch disabled value={false} />
-                            <ThemedSwitch
+                            <Switch
                                 value={false}
                                 onValueChange={(): void => {
                                     setIsSwitchOn(!isSwitchOn);
@@ -1221,8 +1447,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Text Input</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Text Input</Text>
                     <View style={{ marginTop: 24 }}>
                         <TextInput
                             label="Name"
@@ -1276,28 +1508,34 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             allowFontScaling={!DISABLE_FONT_SCALE}
                             maxFontSizeMultiplier={MAX_FONT_SCALE}
                         />
-                        <Divider style={{ marginTop: 24, marginHorizontal: -24, backgroundColor: 'cyan' }} />
-                        <ThemedTextInput
+                        <Divider
+                            style={{
+                                marginTop: 24,
+                                marginHorizontal: -24,
+                                backgroundColor: 'cyan',
+                            }}
+                        />
+                        <TextInput
                             label="Name"
                             style={{ marginTop: 24 }}
                             value={nameInputText}
                             onChangeText={(text: string): void => setNameInputText(text)}
                         />
-                        <ThemedTextInput
+                        <TextInput
                             label="Email"
                             mode="outlined"
                             style={{ marginTop: 24 }}
                             value={emailInputText}
                             onChangeText={(text: string): void => setEmailInputText(text)}
                         />
-                        <ThemedTextInput
+                        <TextInput
                             label="Name Error"
                             style={{ marginTop: 24 }}
                             value={errorNameInputText}
                             onChangeText={(text: string): void => setErrorNameInputText(text)}
                             error
                         />
-                        <ThemedTextInput
+                        <TextInput
                             label="Email Error"
                             mode="outlined"
                             style={{ marginTop: 24 }}
@@ -1305,8 +1543,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             onChangeText={(text: string): void => setErrorEmailInputText(text)}
                             error
                         />
-                        <ThemedTextInput label="Name Disabled" value="John Smith" style={{ marginTop: 24 }} disabled />
-                        <ThemedTextInput
+                        <TextInput label="Name Disabled" value="John Smith" style={{ marginTop: 24 }} disabled />
+                        <TextInput
                             label="Email Disabled"
                             mode="outlined"
                             value="j.smith@email.com"
@@ -1318,8 +1556,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             </Card>
 
             <Card style={styles.card}>
-                <View style={{ justifyContent: 'center', marginHorizontal: 24, marginVertical: 24 }}>
-                    <H5>Toggle Button</H5>
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginVertical: 24,
+                    }}
+                >
+                    <Text>Toggle Button</Text>
                     <View style={{ marginTop: 24, alignItems: 'center' }}>
                         <ToggleButton.Row
                             onValueChange={(value: string): void => setToggleButtonValue(value)}
@@ -1329,14 +1573,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             <ToggleButton icon="format-align-center" value="center" />
                             <ToggleButton icon="format-align-right" value="right" />
                         </ToggleButton.Row>
-                        <ThemedToggleButton.Row
+                        <ToggleButton.Row
                             onValueChange={(value: string): void => setToggleButtonValue(value)}
                             value={toggleButtonValue}
                         >
-                            <ThemedToggleButton icon="format-align-left" value="left" />
-                            <ThemedToggleButton icon="format-align-center" value="center" />
-                            <ThemedToggleButton icon="format-align-right" value="right" />
-                        </ThemedToggleButton.Row>
+                            <ToggleButton icon="format-align-left" value="left" />
+                            <ToggleButton icon="format-align-center" value="center" />
+                            <ToggleButton icon="format-align-right" value="right" />
+                        </ToggleButton.Row>
                     </View>
                 </View>
             </Card>

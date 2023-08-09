@@ -5,7 +5,7 @@ jobs:
     # Builds the Showcase app using @brightlayer-ui/react-native-components persisted in /dist folder.
     build_showcase:
         docker:
-            - image: cimg/node:14.19.0-browsers
+            - image: cimg/node:16.19.1-browsers
         resource_class: large
         environment:
             - MASTER_BRANCH: master
@@ -40,7 +40,7 @@ jobs:
             - persist_to_workspace:
                   root: .
                   paths:
-                    - ./coverage
+                      - ./coverage
             - run:
                   name: Memory Usage
                   command: cat /sys/fs/cgroup/memory/memory.max_usage_in_bytes
@@ -48,23 +48,23 @@ jobs:
     coverage_report:
         working_directory: ~/react-native-showcase-demo
         docker:
-            - image: cimg/node:14.19.0-browsers
+            - image: cimg/node:16.19.1-browsers
         steps:
             - checkout
             - attach_workspace:
-                at: .
+                  at: .
             - codecov/upload:
-                file: './coverage/clover.xml'
-                token: CODECOV_TOKEN
+                  file: './coverage/clover.xml'
+                  token: CODECOV_TOKEN
 workflows:
     version: 2
     react-native_showcase-demo:
         jobs:
             - build_showcase
             - coverage_report:
-                    requires:
-                        - build_showcase
-                    filters:
-                        branches:
-                            only:
-                            - master
+                  requires:
+                      - build_showcase
+                  filters:
+                      branches:
+                          only:
+                              - master
