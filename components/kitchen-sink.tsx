@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable no-console */
 //import {Text} from '@brightlayer-ui/react-native-components';
 import React, { useState } from 'react';
@@ -53,6 +54,8 @@ import {
   ToggleButton,
 } from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
+import { ChannelValue } from '@brightlayer-ui/react-native-components';
+import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
 const MusicRoute = (): JSX.Element => <Text>Music</Text>;
@@ -184,6 +187,42 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
     return (
         <>
+            <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
+            <Card style={styles.card}>
+                <Card.Title title="Icon (Icon Button)" />
+                <Card.Content>
+                    <IconButton icon={(iconProps) => <BLUIIcon name="broccoli" {...iconProps} />} onPress={() => {}} />
+                    <IconButton icon="chart-pie" onPress={() => {}} />
+                </Card.Content>
+            </Card>
+            <Card style={styles.card}>
+                <Card.Title title="ChannelValue" />
+                <Card.Content>
+                    <ChannelValue
+                        value="2"
+                        units="tb"
+                        icon={{ family: 'brightlayer-ui', name: 'device' }}
+                        iconColor="green"
+                    />
+                    <ChannelValue
+                        value="50"
+                        units="%"
+                        icon={{ family: 'material-community', name: 'chart-pie' }}
+                        iconColor="red"
+                        style={{ marginTop: 12 }}
+                    />
+                    <ChannelValue value="2.5:1" icon={{ name: 'settings' }} style={{ marginTop: 12 }} />
+                    <ChannelValue value="Concord" icon={'🍇'} style={{ marginTop: 12 }} />
+                    <ChannelValue value="1" icon={'A'} iconColor="blue" style={{ marginTop: 12 }} />
+                    <ChannelValue
+                        value="1"
+                        icon={{
+                            uri: 'https://raw.githubusercontent.com/etn-ccis/blui-icons/dev/packages/png/png48/account_settings_black500_48dp.png',
+                        }}
+                        style={{ marginTop: 12 }}
+                    />
+                </Card.Content>
+            </Card>
             <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
             <Card style={styles.card}>
                 <View
