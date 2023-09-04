@@ -54,7 +54,7 @@ import {
   ToggleButton,
 } from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue } from '@brightlayer-ui/react-native-components';
+import { ChannelValue, ListItemTag } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
@@ -221,6 +221,13 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         }}
                         style={{ marginTop: 12 }}
                     />
+                </Card.Content>
+            </Card>
+            <Card style={styles.card}>
+                <Card.Title title="ChannelValue" />
+                <Card.Content>
+                    <ListItemTag label={'IN PROGRESS'} />
+                    <ListItemTag label={'Foo Bar'} backgroundColor={'red'} fontColor={'black'} />
                 </Card.Content>
             </Card>
             <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
