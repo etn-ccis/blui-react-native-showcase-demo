@@ -230,10 +230,15 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
-                <Card.Title title="ListItemTag"/>
-                <Card.Content style={{alignItems: 'center'}}>
+                <Card.Title title="ListItemTag" />
+                <Card.Content style={{ alignItems: 'center' }}>
                     <ListItemTag label={'IN PROGRESS'} />
-                    <ListItemTag label={'Foo Bar'} backgroundColor={'red'} fontColor={'black'} style={{ marginTop: 12 }}/>
+                    <ListItemTag
+                        label={'Foo Bar'}
+                        backgroundColor={'red'}
+                        fontColor={'black'}
+                        style={{ marginTop: 12 }}
+                    />
                 </Card.Content>
             </Card>
             <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
