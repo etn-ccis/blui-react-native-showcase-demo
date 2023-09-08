@@ -54,7 +54,7 @@ import {
   ToggleButton,
 } from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue } from '@brightlayer-ui/react-native-components';
+import { ChannelValue, Overline } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
@@ -188,6 +188,12 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     return (
         <>
             <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
+            <Card style={styles.card}>
+                <Card.Title title="Overline" />
+                <Card.Content>
+                    <Overline>Overline</Overline>
+                </Card.Content>
+            </Card>
             <Card style={styles.card}>
                 <Card.Title title="Icon (Icon Button)" />
                 <Card.Content>
