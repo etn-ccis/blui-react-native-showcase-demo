@@ -227,7 +227,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Card.Title title="ListItemTag" style={{alignItems: 'center'}}/>
                 <Card.Content>
                     <ListItemTag label={'IN PROGRESS'} />
-                    <ListItemTag label={'Foo Bar'} backgroundColor={'red'} fontColor={'black'} />
+                    <ListItemTag label={'Foo Bar'} backgroundColor={'red'} fontColor={'black'} style={{ marginTop: 12 }}/>
                 </Card.Content>
             </Card>
             <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
