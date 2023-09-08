@@ -54,7 +54,7 @@ import {
   ToggleButton,
 } from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag } from '@brightlayer-ui/react-native-components';
+import { ChannelValue, ListItemTag, Overline } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 const AvatarTestImage = require('../assets/images/test-avatar.png');
 
@@ -189,6 +189,12 @@ export const KitchenSink: React.FC = (): JSX.Element => {
         <>
             <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
             <Card style={styles.card}>
+                <Card.Title title="Overline" />
+                <Card.Content>
+                    <Overline>Overline</Overline>
+                </Card.Content>
+            </Card>
+            <Card style={styles.card}>
                 <Card.Title title="Icon (Icon Button)" />
                 <Card.Content>
                     <IconButton icon={(iconProps) => <BLUIIcon name="broccoli" {...iconProps} />} onPress={() => {}} />
@@ -224,10 +230,15 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
-                <Card.Title title="ListItemTag"/>
-                <Card.Content style={{alignItems: 'center'}}>
+                <Card.Title title="ListItemTag" />
+                <Card.Content style={{ alignItems: 'center' }}>
                     <ListItemTag label={'IN PROGRESS'} />
-                    <ListItemTag label={'Foo Bar'} backgroundColor={'red'} fontColor={'black'} style={{ marginTop: 12 }}/>
+                    <ListItemTag
+                        label={'Foo Bar'}
+                        backgroundColor={'red'}
+                        fontColor={'black'}
+                        style={{ marginTop: 12 }}
+                    />
                 </Card.Content>
             </Card>
             <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
