@@ -220,13 +220,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <ChannelValue value="2.5:1" icon={{ name: 'settings' }} style={{ marginTop: 12 }} />
                     <ChannelValue value="Concord" icon={'🍇'} style={{ marginTop: 12 }} />
                     <ChannelValue value="1" icon={'A'} iconColor="blue" style={{ marginTop: 12 }} />
-                    <ChannelValue
-                        value="1"
-                        icon={{
-                            uri: 'https://raw.githubusercontent.com/etn-ccis/blui-icons/dev/packages/png/png48/account_settings_black500_48dp.png',
-                        }}
-                        style={{ marginTop: 12 }}
-                    />
+                    <ChannelValue value="1" icon={AvatarTestImage} style={{ marginTop: 12 }} />
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
