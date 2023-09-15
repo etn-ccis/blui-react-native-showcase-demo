@@ -56,7 +56,7 @@ import {
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
 import { ChannelValue, ListItemTag, Overline } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
-const AvatarTestImage = require('../assets/images/test-avatar.png');
+const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
 const MusicRoute = (): JSX.Element => <Text>Music</Text>;
 const AlbumsRoute = (): JSX.Element => <Text>Albums</Text>;
@@ -220,7 +220,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <ChannelValue value="2.5:1" icon={{ name: 'settings' }} style={{ marginTop: 12 }} />
                     <ChannelValue value="Concord" icon={'🍇'} style={{ marginTop: 12 }} />
                     <ChannelValue value="1" icon={'A'} iconColor="blue" style={{ marginTop: 12 }} />
-                    <ChannelValue value="1" icon={AvatarTestImage} style={{ marginTop: 12 }} />
+                    <ChannelValue value="1" icon={PublicDomainAlice} style={{ marginTop: 12 }} />
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
@@ -682,10 +682,10 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         }}
                     >
                         <Avatar.Icon size={40} icon="account-circle" />
-                        <Avatar.Image size={40} source={AvatarTestImage} />
+                        <Avatar.Image size={40} source={PublicDomainAlice} />
                         <Avatar.Text size={40} label="PX" />
                         <Avatar.Icon size={40} icon="account-circle" />
-                        <Avatar.Image size={40} source={AvatarTestImage} />
+                        <Avatar.Image size={40} source={PublicDomainAlice} />
                         <Avatar.Text size={40} label="PX" />
                     </View>
                 </View>
