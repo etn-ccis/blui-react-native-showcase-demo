@@ -54,8 +54,9 @@ import {
   ToggleButton,
 } from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag, Overline, EmptyState } from '@brightlayer-ui/react-native-components';
+import { ChannelValue, ListItemTag, Overline, EmptyState, InfoListItem} from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
+import { BLUIColors } from '@brightlayer-ui/colors';
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
 const MusicRoute = (): JSX.Element => <Text>Music</Text>;
@@ -243,6 +244,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         description={'Not a single thing'}
                         icon={{ family: 'brightlayer-ui', name: 'battery' }}
                     />
+                </Card.Content>
+            </Card>
+            <Card style={styles.card}>
+                <Card.Title title="InfolistItem" />
+                <Card.Content style={{ alignItems: 'center' }}>
+                <InfoListItem
+                    title={'Title'}
+                    icon={{ family: 'brightlayer-ui', name: 'leaf' }}
+                    subtitle={'A subtitle'}
+                    statusColor={BLUIColors.red[500]}
+                    backgroundColor={BLUIColors.blue[50]}
+                />
                 </Card.Content>
             </Card>
             <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
