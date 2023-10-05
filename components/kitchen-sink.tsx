@@ -54,7 +54,7 @@ import {
   ToggleButton,
 } from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag, Overline, EmptyState } from '@brightlayer-ui/react-native-components';
+import { ChannelValue, ListItemTag, Overline, EmptyState, Hero } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -233,6 +233,16 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         fontColor={'black'}
                         style={{ marginTop: 12 }}
                     />
+                </Card.Content>
+            </Card>
+            <Card style={styles.card}>
+                <Card.Title title="Hero" />
+                <Card.Content style={{ alignItems: 'center' }}>
+                <Hero
+                    label={'Charged'}
+                    icon={{ family: 'brightlayer-ui', name: 'battery' }}
+                    ChannelValueProps={{ value: 100, units: '%' }}
+                />
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
