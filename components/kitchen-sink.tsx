@@ -54,10 +54,11 @@ import {
   ToggleButton,
 } from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag, Overline, EmptyState, InfoListItem} from '@brightlayer-ui/react-native-components';
+import { ChannelValue, ListItemTag, Overline, EmptyState, InfoListItem } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { BLUIColors } from '@brightlayer-ui/colors';
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
+import { Battery } from '@brightlayer-ui/react-native-progress-icons';
 
 const MusicRoute = (): JSX.Element => <Text>Music</Text>;
 const AlbumsRoute = (): JSX.Element => <Text>Albums</Text>;
@@ -247,15 +248,45 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
-                <Card.Title title="InfolistItem" />
+                <Card.Title title="InfoListItem" />
                 <Card.Content style={{ alignItems: 'center' }}>
-                <InfoListItem
-                    title={'Title'}
-                    icon={{ family: 'brightlayer-ui', name: 'leaf' }}
-                    subtitle={'A subtitle'}
-                    statusColor={BLUIColors.red[500]}
-                    backgroundColor={BLUIColors.blue[50]}
-                />
+                    {/* With Info prop */}
+                    <InfoListItem
+                        title={'Title'}
+                        subtitle={'A subtitle'}
+                        info={'Info'}
+                        hidePadding
+                        divider='partial'
+                    />
+                    {/* Indicating Status with Avatar */}
+                    <InfoListItem
+                        title={'Title'}
+                        icon={{ family: 'brightlayer-ui', name: 'leaf' }}
+                        subtitle={'A subtitle'}
+                        statusColor={BLUIColors.red[500]}
+                        backgroundColor={BLUIColors.blue[50]}
+                        avatar
+                    />
+                    {/* with Icon */}
+                    <InfoListItem
+                        title="Info List Item Title"
+                        subtitle="Info List Item Subtitle"
+                        // icon={<Battery color='gray' />}
+                        icon={{ name: 'settings' }}
+                        avatar
+                    />
+                    {/* Advance example*/}
+                    <InfoListItem title={'Hillman Field East'} subtitle={['PXM 2000', 'DT 1150', '113.4 GPM']} subtitleSeparator={'/'} />
+                    {/* Adding Additional Content */}
+                    <InfoListItem
+                        title="Battery Fully Charged"
+                        subtitle="Your device is ready to use"
+                        icon={{ name: 'settings' }}
+                        leftComponent={
+                            <View><Text variant='titleSmall'>{'8:32 AM'}</Text><Text variant='bodySmall'>{'11/21/21'}</Text></View>
+                        }
+                        rightComponent={<ChannelValue value={'15'} units={'A'} />}
+                    />
                 </Card.Content>
             </Card>
             <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
