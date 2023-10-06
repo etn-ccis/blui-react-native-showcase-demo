@@ -201,24 +201,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     ]}
     backgroundImage={require('../assets/images/farm.jpg')}
     searchableConfig={{onChangeText: ()=>{}}}
-    collapsedHeight={5}
+    expandable={true}
 />
-<Text style={{ marginVertical: 48 }}>collapsed Header</Text>
 
-<Header
-    title={'Valley Forge'}
-    subtitle={'The Last Stand'}
-    icon={{ name: 'menu' }}
-    onIconPress={() => {}}
-    actionItems={[
-        {
-            icon: { name: 'more-vert' },
-            onPress: () => {},
-        },
-    ]}
-    backgroundImage={require('../assets/images/farm.jpg')}
-    searchableConfig={{onChangeText: ()=>{}}}
-/>
             <Card style={styles.card}>
                 <Card.Title title="Overline" />
                 <Card.Content>
