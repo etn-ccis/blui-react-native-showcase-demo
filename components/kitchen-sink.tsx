@@ -243,6 +243,20 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     icon={{ family: 'brightlayer-ui', name: 'battery' }}
                     ChannelValueProps={{ value: 100, units: '%' }}
                 />
+                <Hero
+                    label={'Chart'}
+                    icon={{family: 'material-community', name: 'chart-pie'}}
+                    ChannelValueProps={{ value: '50:25:25' }}
+                    iconBackgroundColor='yellow'
+                    iconSize={20}
+                    onPress={()=>{}}
+                />
+                <Hero
+                    label={'Setting'}
+                    icon={{name: 'settings'}}
+                    iconColor='red'
+                    ChannelValueProps={{ value: '50.2.1', units: '' }}
+                />
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
