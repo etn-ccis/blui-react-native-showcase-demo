@@ -54,7 +54,7 @@ import {
   ToggleButton,
 } from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag, Overline, EmptyState } from '@brightlayer-ui/react-native-components';
+import { ChannelValue, ListItemTag, Overline, EmptyState, Header } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -188,6 +188,37 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     return (
         <>
             <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
+            <Header
+    title={'Valley Forge'}
+    subtitle={'The Last Stand'}
+    icon={{ name: 'menu' }}
+    onIconPress={() => {}}
+    actionItems={[
+        {
+            icon: { name: 'more-vert' },
+            onPress: () => {},
+        },
+    ]}
+    backgroundImage={require('../assets/images/farm.jpg')}
+    searchableConfig={{onChangeText: ()=>{}}}
+    collapsedHeight={5}
+/>
+<Text style={{ marginVertical: 48 }}>collapsed Header</Text>
+
+<Header
+    title={'Valley Forge'}
+    subtitle={'The Last Stand'}
+    icon={{ name: 'menu' }}
+    onIconPress={() => {}}
+    actionItems={[
+        {
+            icon: { name: 'more-vert' },
+            onPress: () => {},
+        },
+    ]}
+    backgroundImage={require('../assets/images/farm.jpg')}
+    searchableConfig={{onChangeText: ()=>{}}}
+/>
             <Card style={styles.card}>
                 <Card.Title title="Overline" />
                 <Card.Content>
