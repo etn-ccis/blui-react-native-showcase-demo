@@ -12,8 +12,13 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		140CA10202D3450383E4DB46 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C677A3161204A149C4CFBCF /* OpenSans-SemiBold.ttf */; };
+		1A743597396F40D69620EFCA /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21A9BF90E30145C5AC2632B8 /* OpenSans-Light.ttf */; };
+		1AE3AA9BD2FE4CA783CE325E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D3BAB88CFFC4D4091B867F0 /* OpenSans-Regular.ttf */; };
+		4553E79D1ED24DD495D39407 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDA4268F95B44A16A529CE23 /* OpenSans-ExtraBold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D6A064E2C4064978AA680225 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2A07CE137E84BDABCAFF040 /* OpenSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +42,18 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BluiReactNativeShowcaseDemo/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BluiReactNativeShowcaseDemo/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A9BF90E30145C5AC2632B8 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Light.ttf"; path = "../assets/fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-BluiReactNativeShowcaseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluiReactNativeShowcaseDemo.debug.xcconfig"; path = "Target Support Files/Pods-BluiReactNativeShowcaseDemo/Pods-BluiReactNativeShowcaseDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		4D3BAB88CFFC4D4091B867F0 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-BluiReactNativeShowcaseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluiReactNativeShowcaseDemo.release.xcconfig"; path = "Target Support Files/Pods-BluiReactNativeShowcaseDemo/Pods-BluiReactNativeShowcaseDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests/Pods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-BluiReactNativeShowcaseDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BluiReactNativeShowcaseDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C677A3161204A149C4CFBCF /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-SemiBold.ttf"; path = "../assets/fonts/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BluiReactNativeShowcaseDemo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests.release.xcconfig"; path = "Target Support Files/Pods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests/Pods-BluiReactNativeShowcaseDemo-BluiReactNativeShowcaseDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2A07CE137E84BDABCAFF040 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Bold.ttf"; path = "../assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FDA4268F95B44A16A529CE23 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-ExtraBold.ttf"; path = "../assets/fonts/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6D9230A8613049C4BE973A5F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A2A07CE137E84BDABCAFF040 /* OpenSans-Bold.ttf */,
+				FDA4268F95B44A16A529CE23 /* OpenSans-ExtraBold.ttf */,
+				21A9BF90E30145C5AC2632B8 /* OpenSans-Light.ttf */,
+				4D3BAB88CFFC4D4091B867F0 /* OpenSans-Regular.ttf */,
+				6C677A3161204A149C4CFBCF /* OpenSans-SemiBold.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +145,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				6D9230A8613049C4BE973A5F /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -244,6 +268,11 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D6A064E2C4064978AA680225 /* OpenSans-Bold.ttf in Resources */,
+				4553E79D1ED24DD495D39407 /* OpenSans-ExtraBold.ttf in Resources */,
+				1A743597396F40D69620EFCA /* OpenSans-Light.ttf in Resources */,
+				1AE3AA9BD2FE4CA783CE325E /* OpenSans-Regular.ttf in Resources */,
+				140CA10202D3450383E4DB46 /* OpenSans-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
