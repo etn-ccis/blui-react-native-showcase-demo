@@ -1,6 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable no-console */
-//import {Text} from '@brightlayer-ui/react-native-components';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import {
@@ -34,28 +33,16 @@ import {
     Snackbar,
     ActivityIndicator,
 } from 'react-native-paper';
-// import { TextInput as TextInput } from './-text-input';
-/* import {
-  ActivityIndicator,
-  Appbar,
-  Avatar,
-  Badge,
-  Button,
-  BottomNavigation,
-  Checkbox,
-  Chip,
-  Divider,
-  FAB,
-  ProgressBar,
-  RadioButton,
-  Snackbar,
-  Switch,
-  TextInput,
-  ToggleButton,
-} from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag, Overline, EmptyState } from '@brightlayer-ui/react-native-components';
+import {
+    ChannelValue,
+    ListItemTag,
+    Overline,
+    EmptyState,
+    MobileStepper,
+} from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
+import { MobileStepperExample } from './MobileStepperExample';
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
 const MusicRoute = (): JSX.Element => <Text>Music</Text>;
@@ -188,6 +175,10 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     return (
         <>
             <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
+            <Card style={styles.card}>
+                <Card.Title title="Mobile Stepper" />
+                <MobileStepperExample />
+            </Card>
             <Card style={styles.card}>
                 <Card.Title title="Overline" />
                 <Card.Content>
