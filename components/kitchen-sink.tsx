@@ -246,10 +246,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Hero
                     label={'Chart'}
                     icon={{family: 'material-community', name: 'chart-pie'}}
-                    ChannelValueProps={{ value: '50:25:25' }}
-                    iconBackgroundColor='yellow'
-                    iconSize={20}
-                    onPress={()=>{}}
                 />
                 <Hero
                     label={'Setting'}
