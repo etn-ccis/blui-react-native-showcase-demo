@@ -187,8 +187,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
     return (
         <>
-            <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
-            <Header
+         <Header
     title={'Valley Forge'}
     subtitle={'The Last Stand'}
     icon={{ name: 'menu' }}
@@ -199,10 +198,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             onPress: () => {},
         },
     ]}
+    variant='static'
     backgroundImage={require('../assets/images/farm.jpg')}
     searchableConfig={{onChangeText: ()=>{}}}
     expandable={true}
-/>
+    collapsedHeight={56}
+/>   
+            <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
+           
 
             <Card style={styles.card}>
                 <Card.Title title="Overline" />
