@@ -40,6 +40,7 @@ import {
     Overline,
     EmptyState,
     MobileStepper,
+    Hero
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { MobileStepperExample } from './MobileStepperExample';
@@ -224,6 +225,26 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         fontColor={'black'}
                         style={{ marginTop: 12 }}
                     />
+                </Card.Content>
+            </Card>
+            <Card style={styles.card}>
+                <Card.Title title="Hero" />
+                <Card.Content style={{ alignItems: 'center' }}>
+                <Hero
+                    label={'Charged'}
+                    icon={{ family: 'brightlayer-ui', name: 'battery' }}
+                    ChannelValueProps={{ value: 100, units: '%' }}
+                />
+                <Hero
+                    label={'Chart'}
+                    icon={{family: 'material-community', name: 'chart-pie'}}
+                />
+                <Hero
+                    label={'Setting'}
+                    icon={{name: 'settings'}}
+                    iconColor='red'
+                    ChannelValueProps={{ value: '50.2.1', units: '' }}
+                />
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
