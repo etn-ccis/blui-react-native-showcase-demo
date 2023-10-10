@@ -187,25 +187,24 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
     return (
         <>
-         <Header
-    title={'Valley Forge'}
-    subtitle={'The Last Stand'}
-    icon={{ name: 'menu' }}
-    onIconPress={() => {}}
-    actionItems={[
-        {
-            icon: { name: 'more-vert' },
-            onPress: () => {},
-        },
-    ]}
-    variant='static'
-    backgroundImage={require('../assets/images/farm.jpg')}
-    searchableConfig={{onChangeText: ()=>{}}}
-    expandable={true}
-    collapsedHeight={56}
-/>   
+            <Header
+                title={'Valley Forge'}
+                subtitle={'The Last Stand'}
+                icon={{ name: 'menu' }}
+                onIconPress={() => {}}
+                actionItems={[
+                    {
+                        icon: { name: 'more-vert' },
+                        onPress: () => {},
+                    },
+                ]}
+                variant="static"
+                backgroundImage={require('../assets/images/farm.jpg')}
+                searchableConfig={{ onChangeText: () => {} }}
+                expandable={true}
+                collapsedHeight={56}
+            />
             <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
-           
 
             <Card style={styles.card}>
                 <Card.Title title="Overline" />
@@ -257,21 +256,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={styles.card}>
                 <Card.Title title="Hero" />
                 <Card.Content style={{ alignItems: 'center' }}>
-                <Hero
-                    label={'Charged'}
-                    icon={{ family: 'brightlayer-ui', name: 'battery' }}
-                    ChannelValueProps={{ value: 100, units: '%' }}
-                />
-                <Hero
-                    label={'Chart'}
-                    icon={{family: 'material-community', name: 'chart-pie'}}
-                />
-                <Hero
-                    label={'Setting'}
-                    icon={{name: 'settings'}}
-                    iconColor='red'
-                    ChannelValueProps={{ value: '50.2.1', units: '' }}
-                />
+                    <Hero
+                        label={'Charged'}
+                        icon={{ family: 'brightlayer-ui', name: 'battery' }}
+                        ChannelValueProps={{ value: 100, units: '%' }}
+                    />
+                    <Hero label={'Chart'} icon={{ family: 'material-community', name: 'chart-pie' }} />
+                    <Hero
+                        label={'Setting'}
+                        icon={{ name: 'settings' }}
+                        iconColor="red"
+                        ChannelValueProps={{ value: '50.2.1', units: '' }}
+                    />
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
