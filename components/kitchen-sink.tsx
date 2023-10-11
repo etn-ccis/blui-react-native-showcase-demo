@@ -1,8 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
-/* eslint-disable no-console */
+
 //import {Text} from '@brightlayer-ui/react-native-components';
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { I18nManager, StyleSheet, View } from 'react-native';
 import {
     Appbar,
     Avatar,
@@ -54,7 +54,14 @@ import {
   ToggleButton,
 } from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag, Overline, EmptyState,Hero, InfoListItem } from '@brightlayer-ui/react-native-components';
+import {
+    ChannelValue,
+    ListItemTag,
+    Overline,
+    EmptyState,
+    Hero,
+    InfoListItem,
+} from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { BLUIColors } from '@brightlayer-ui/colors';
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
@@ -239,21 +246,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={styles.card}>
                 <Card.Title title="Hero" />
                 <Card.Content style={{ alignItems: 'center' }}>
-                <Hero
-                    label={'Charged'}
-                    icon={{ family: 'brightlayer-ui', name: 'battery' }}
-                    ChannelValueProps={{ value: 100, units: '%' }}
-                />
-                <Hero
-                    label={'Chart'}
-                    icon={{family: 'material-community', name: 'chart-pie'}}
-                />
-                <Hero
-                    label={'Setting'}
-                    icon={{name: 'settings'}}
-                    iconColor='red'
-                    ChannelValueProps={{ value: '50.2.1', units: '' }}
-                />
+                    <Hero
+                        label={'Charged'}
+                        icon={{ family: 'brightlayer-ui', name: 'battery' }}
+                        ChannelValueProps={{ value: 100, units: '%' }}
+                    />
+                    <Hero label={'Chart'} icon={{ family: 'material-community', name: 'chart-pie' }} />
+                    <Hero
+                        label={'Setting'}
+                        icon={{ name: 'settings' }}
+                        iconColor="red"
+                        ChannelValueProps={{ value: '50.2.1', units: '' }}
+                    />
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
@@ -270,41 +274,47 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Card.Title title="InfoListItem" />
                 <Card.Content style={{ alignItems: 'center' }}>
                     {/* With Info prop */}
-                    <InfoListItem
-                        title={'Title'}
-                        subtitle={'A subtitle'}
-                        info={'Info'}
-                        hidePadding
-                        divider='partial'
-                    />
+                    <InfoListItem title={'Title'} subtitle={'Subtitle'} info={'Info'} hidePadding />
                     {/* Indicating Status with Avatar */}
                     <InfoListItem
                         title={'Title'}
                         icon={{ family: 'brightlayer-ui', name: 'leaf' }}
-                        subtitle={'A subtitle'}
+                        subtitle={'Subtitle'}
                         statusColor={BLUIColors.red[500]}
                         backgroundColor={BLUIColors.blue[50]}
                         avatar
+                        divider={'partial'}
+                        chevron
+                        style={{ marginBottom: 20 }}
                     />
                     {/* with Icon */}
                     <InfoListItem
                         title="Info List Item Title"
                         subtitle="Info List Item Subtitle"
-                        // icon={<Battery color='gray' />}
                         icon={{ name: 'settings' }}
                         avatar
                     />
                     {/* Advance example*/}
-                    <InfoListItem title={'Hillman Field East'} subtitle={['PXM 2000', 'DT 1150', '113.4 GPM']} subtitleSeparator={'/'} />
+                    <InfoListItem
+                        title={'Hillman Field East'}
+                        subtitle={['PXM 2000', 'DT 1150', '113.4 GPM']}
+                        subtitleSeparator={'/'}
+                    />
                     {/* Adding Additional Content */}
                     <InfoListItem
                         title="Battery Fully Charged"
                         subtitle="Your device is ready to use"
                         icon={{ name: 'settings' }}
+                        iconAlign="center"
                         leftComponent={
-                            <View><Text variant='titleSmall'>{'8:32 AM'}</Text><Text variant='bodySmall'>{'11/21/21'}</Text></View>
+                            <View>
+                                <Text variant="titleSmall">{'8:32 AM'}</Text>
+                                <Text variant="bodySmall">{'11/21/21'}</Text>
+                            </View>
                         }
                         rightComponent={<ChannelValue value={'15'} units={'A'} />}
+                        divider={'full'}
+                        chevron
                     />
                 </Card.Content>
             </Card>
@@ -786,7 +796,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             visible
                             allowFontScaling={!DISABLE_FONT_SCALE}
                             maxFontSizeMultiplier={MAX_FONT_SCALE}
-                        ></Badge>
+                        />
                         <Badge
                             size={24}
                             visible
@@ -803,7 +813,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         >
                             8
                         </Badge>
-                        <Badge size={24} visible></Badge>
+                        <Badge size={24} visible />
                         <Badge size={24} visible>
                             3
                         </Badge>
