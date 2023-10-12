@@ -34,14 +34,7 @@ import {
     ActivityIndicator,
 } from 'react-native-paper';
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import {
-    ChannelValue,
-    ListItemTag,
-    Overline,
-    EmptyState,
-    MobileStepper,
-    Hero
-} from '@brightlayer-ui/react-native-components';
+import { ChannelValue, ListItemTag, Overline, EmptyState, Hero, Header, MobileStepper } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { MobileStepperExample } from './MobileStepperExample';
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
@@ -175,7 +168,25 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
     return (
         <>
+            <Header
+                title={'Valley Forge'}
+                subtitle={'The Last Stand'}
+                icon={{ name: 'menu' }}
+                onIconPress={() => {}}
+                actionItems={[
+                    {
+                        icon: { name: 'more-vert' },
+                        onPress: () => {},
+                    },
+                ]}
+                variant="static"
+                backgroundImage={require('../assets/images/farm.jpg')}
+                searchableConfig={{ onChangeText: () => {} }}
+                expandable={true}
+                collapsedHeight={56}
+            />
             <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
+
             <Card style={styles.card}>
                 <Card.Title title="Mobile Stepper" />
                 <MobileStepperExample />
@@ -230,21 +241,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={styles.card}>
                 <Card.Title title="Hero" />
                 <Card.Content style={{ alignItems: 'center' }}>
-                <Hero
-                    label={'Charged'}
-                    icon={{ family: 'brightlayer-ui', name: 'battery' }}
-                    ChannelValueProps={{ value: 100, units: '%' }}
-                />
-                <Hero
-                    label={'Chart'}
-                    icon={{family: 'material-community', name: 'chart-pie'}}
-                />
-                <Hero
-                    label={'Setting'}
-                    icon={{name: 'settings'}}
-                    iconColor='red'
-                    ChannelValueProps={{ value: '50.2.1', units: '' }}
-                />
+                    <Hero
+                        label={'Charged'}
+                        icon={{ family: 'brightlayer-ui', name: 'battery' }}
+                        ChannelValueProps={{ value: 100, units: '%' }}
+                    />
+                    <Hero label={'Chart'} icon={{ family: 'material-community', name: 'chart-pie' }} />
+                    <Hero
+                        label={'Setting'}
+                        icon={{ name: 'settings' }}
+                        iconColor="red"
+                        ChannelValueProps={{ value: '50.2.1', units: '' }}
+                    />
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
