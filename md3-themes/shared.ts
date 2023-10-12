@@ -40,13 +40,13 @@ export const fontConfig = {
         fontFamily: 'OpenSans-Regular',
     },
     labelSmall: {
-        fontFamily: 'OpenSans-Regular',
+        fontFamily: 'OpenSans-SemiBold',
     },
     labelMedium: {
-        fontFamily: 'OpenSans-Regular',
+        fontFamily: 'OpenSans-SemiBold',
     },
     labelLarge: {
-        fontFamily: 'OpenSans-Regular',
+        fontFamily: 'OpenSans-SemiBold',
     },
     bodySmall: {
         fontFamily: 'OpenSans-Regular',
