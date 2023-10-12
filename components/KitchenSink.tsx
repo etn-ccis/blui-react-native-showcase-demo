@@ -56,6 +56,7 @@ import {
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
 import { ChannelValue, ListItemTag, Overline, EmptyState, Hero, Header } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
+import { ScoreCardExample } from './ScoreCardExample';
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
 const MusicRoute = (): JSX.Element => <Text>Music</Text>;
@@ -206,6 +207,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             />
             <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
 
+            <Card style={styles.card}>
+                <Card.Title title="Score Card" />
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        marginHorizontal: 24,
+                        marginBottom: 24,
+                    }}
+                >
+                    <ScoreCardExample />
+                </View>
+            </Card>
             <Card style={styles.card}>
                 <Card.Title title="Overline" />
                 <Card.Content>
