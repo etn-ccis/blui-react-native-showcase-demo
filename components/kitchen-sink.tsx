@@ -293,6 +293,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         subtitle="Info List Item Subtitle"
                         icon={{ name: 'settings' }}
                         avatar
+                        divider={'full'}
                     />
                     {/* Advance example*/}
                     <InfoListItem
@@ -313,7 +314,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             </View>
                         }
                         rightComponent={<ChannelValue value={'15'} units={'A'} />}
-                        divider={'full'}
                         chevron
                     />
                 </Card.Content>
