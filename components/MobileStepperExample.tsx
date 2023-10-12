@@ -70,7 +70,7 @@ export const MobileStepperExample: React.FC = () => {
                 }
                 variant={mobileStepperVariant}
                 activeColor={Colors.blue[500]}
-            ></MobileStepper>
+            />
         </Card>
     );
 };

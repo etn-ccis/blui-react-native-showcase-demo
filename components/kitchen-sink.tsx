@@ -34,7 +34,7 @@ import {
     ActivityIndicator,
 } from 'react-native-paper';
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag, Overline, EmptyState, Hero, Header, MobileStepper } from '@brightlayer-ui/react-native-components';
+import { ChannelValue, ListItemTag, Overline, EmptyState, Hero, Header } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { MobileStepperExample } from './MobileStepperExample';
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
@@ -743,7 +743,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             visible
                             allowFontScaling={!DISABLE_FONT_SCALE}
                             maxFontSizeMultiplier={MAX_FONT_SCALE}
-                        ></Badge>
+                        />
                         <Badge
                             size={24}
                             visible
@@ -760,7 +760,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         >
                             8
                         </Badge>
-                        <Badge size={24} visible></Badge>
+                        <Badge size={24} visible />
                         <Badge size={24} visible>
                             3
                         </Badge>
