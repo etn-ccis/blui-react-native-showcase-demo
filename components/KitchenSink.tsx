@@ -266,6 +266,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Card.Title title="Hero" />
                 <Card.Content style={{ alignItems: 'center' }}>
                     <Hero
+                        iconSize={48}
                         label={'Charged'}
                         icon={{ family: 'brightlayer-ui', name: 'battery' }}
                         ChannelValueProps={{ value: 100, units: '%' }}
