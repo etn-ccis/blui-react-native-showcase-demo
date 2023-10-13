@@ -2,7 +2,7 @@
 
 //import {Text} from '@brightlayer-ui/react-native-components';
 import React, { useState } from 'react';
-import { I18nManager, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import {
     Appbar,
     Avatar,
@@ -54,14 +54,7 @@ import {
   ToggleButton,
 } from '@brightlayer-ui/react-native-components/'; */
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import {
-    ChannelValue,
-    ListItemTag,
-    Overline,
-    EmptyState,
-    Hero,
-    InfoListItem,
-} from '@brightlayer-ui/react-native-components';
+import { ChannelValue, ListItemTag, Overline, EmptyState, Hero, Header, InfoListItem } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { BLUIColors } from '@brightlayer-ui/colors';
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
@@ -195,7 +188,25 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
     return (
         <>
+            <Header
+                title={'Valley Forge'}
+                subtitle={'The Last Stand'}
+                icon={{ name: 'menu' }}
+                onIconPress={() => {}}
+                actionItems={[
+                    {
+                        icon: { name: 'more-vert' },
+                        onPress: () => {},
+                    },
+                ]}
+                variant="static"
+                backgroundImage={require('../assets/images/farm.jpg')}
+                searchableConfig={{ onChangeText: () => {} }}
+                expandable={true}
+                collapsedHeight={56}
+            />
             <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
+
             <Card style={styles.card}>
                 <Card.Title title="Overline" />
                 <Card.Content>
