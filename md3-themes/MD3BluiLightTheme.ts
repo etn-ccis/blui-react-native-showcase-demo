@@ -48,6 +48,11 @@ export const MD3BluiLightTheme = {
         onSurfaceDisabled: 'rgba(26, 27, 30, 0.38)',
         backdrop: 'rgba(45, 48, 56, 0.4)',
         disabled: '#192024',
+        // @TODO verify neutral30
+        neutralVariant: {
+            neutral30: '#414E54',
+            neutral100: '#FFFFFF',
+        },
         // warning: '#6C5E00',
         // warningNonText: '#A59116',
         // onWarning: '#FFFFFF',
