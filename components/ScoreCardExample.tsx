@@ -1,18 +1,20 @@
 import React from 'react';
-import { Hero, ScoreCard } from '@brightlayer-ui/react-native-components';
+import { Hero, InfoListItem, ScoreCard } from '@brightlayer-ui/react-native-components';
 import { BLUIColors } from '@brightlayer-ui/colors';
 
 export const ScoreCardExample: React.FC = () => {
     return (
         <ScoreCard
-            headerTitle={'Portland Datacenter Long Name'}
-            headerSubtitle={'6 UPS Devices'}
-            actionItems={[{ icon: { name: 'more-vert' }, onPress: () => {} }]}
+            headerTitle={'Substation 42'}
+            headerSubtitle={'Normal'}
+            headerInfo={'42 Devices'}
+            actionItems={[{ icon: { name: 'star-outline' } }, { icon: { name: 'more-vert' }, onPress: () => {} }]}
             badgeOffset={-55}
             badge={
+                // <HeroBanner style={{ flex: 0, minWidth: 80, justifyContent: 'flex-end' }}>
                 <Hero
                     label={'Score'}
-                    iconSize={30}
+                    iconSize={48}
                     iconColor={BLUIColors.green[500]}
                     ChannelValueProps={{
                         value: 98,
@@ -20,8 +22,9 @@ export const ScoreCardExample: React.FC = () => {
                     }}
                     icon={{ family: 'brightlayer-ui', name: 'grade_a' }}
                 />
+                // </HeroBanner>
             }
-            // actionRow={<InfoListItem chevron title={'View More'} onPress={() => {}} />}
+            actionRow={<InfoListItem chevron title={'View More'} hidePadding />}
         />
     );
 };
