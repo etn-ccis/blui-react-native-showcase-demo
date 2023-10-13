@@ -3,9 +3,6 @@ import { Text, View } from 'react-native';
 import { MobileStepper, DotStepperVariant } from '@brightlayer-ui/react-native-components';
 import { Button, Card, Divider, useTheme } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
-//import {Button} from '@brightlayer-ui/react-native-components/';
-
-const PADDING = 10;
 
 export const MobileStepperExample: React.FC = () => {
     const theme = useTheme();
@@ -35,7 +32,7 @@ export const MobileStepperExample: React.FC = () => {
     };
 
     return (
-        <Card style={{ padding: 0, margin: PADDING, marginBottom: PADDING }}>
+        <Card style={{ padding: 0, marginTop: 0, marginHorizontal: 10, marginBottom: 10 }}>
             <Button mode="contained" onPress={(): void => cycleStepperVariant()}>
                 Cycle Variant
             </Button>
@@ -73,7 +70,7 @@ export const MobileStepperExample: React.FC = () => {
                 }
                 variant={mobileStepperVariant}
                 activeColor={Colors.blue[500]}
-            ></MobileStepper>
+            />
         </Card>
     );
 };
