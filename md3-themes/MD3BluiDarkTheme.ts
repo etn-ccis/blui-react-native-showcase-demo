@@ -47,6 +47,8 @@ export const MD3BluiDarkTheme = {
         surfaceDisabled: 'rgba(26, 27, 30, 0.12)',
         onSurfaceDisabled: 'rgba(26, 27, 30, 0.38)',
         backdrop: 'rgba(45, 48, 56, 0.4)',
+        // @TODO verify disabled color for dark theme
+        disabled: '#192024',
         // warning: '#FBE365',
         // warningNonText: '#DDC437',
         // onWarning: '#383000',
