@@ -1,5 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable no-console */
+
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import {
@@ -34,9 +35,11 @@ import {
     ActivityIndicator,
 } from 'react-native-paper';
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag, Overline, EmptyState, Hero, Header } from '@brightlayer-ui/react-native-components';
+import { ChannelValue, ListItemTag, Overline, EmptyState, Hero, Header, InfoListItem } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { MobileStepperExample } from './MobileStepperExample';
+import { BLUIColors } from '@brightlayer-ui/colors';
+  
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
 const MusicRoute = (): JSX.Element => <Text>Music</Text>;
@@ -262,6 +265,54 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         title={'Nothing Found'}
                         description={'Not a single thing'}
                         icon={{ family: 'brightlayer-ui', name: 'battery' }}
+                    />
+                </Card.Content>
+            </Card>
+            <Card style={styles.card}>
+                <Card.Title title="InfoListItem" />
+                <Card.Content style={{ alignItems: 'center' }}>
+                    {/* With Info prop */}
+                    <InfoListItem title={'Title'} subtitle={'Subtitle'} info={'Info'} hidePadding />
+                    {/* Indicating Status with Avatar */}
+                    <InfoListItem
+                        title={'Title'}
+                        icon={{ family: 'brightlayer-ui', name: 'leaf' }}
+                        subtitle={'Subtitle'}
+                        statusColor={BLUIColors.red[500]}
+                        backgroundColor={BLUIColors.blue[50]}
+                        avatar
+                        divider={'partial'}
+                        chevron
+                        style={{ marginBottom: 20 }}
+                    />
+                    {/* with Icon */}
+                    <InfoListItem
+                        title="Info List Item Title"
+                        subtitle="Info List Item Subtitle"
+                        icon={{ name: 'settings' }}
+                        avatar
+                        divider={'full'}
+                    />
+                    {/* Advance example*/}
+                    <InfoListItem
+                        title={'Hillman Field East'}
+                        subtitle={['PXM 2000', 'DT 1150', '113.4 GPM']}
+                        subtitleSeparator={'/'}
+                    />
+                    {/* Adding Additional Content */}
+                    <InfoListItem
+                        title="Battery Fully Charged"
+                        subtitle="Your device is ready to use"
+                        icon={{ name: 'settings' }}
+                        iconAlign="center"
+                        leftComponent={
+                            <View>
+                                <Text variant="titleSmall">{'8:32 AM'}</Text>
+                                <Text variant="bodySmall">{'11/21/21'}</Text>
+                            </View>
+                        }
+                        rightComponent={<ChannelValue value={'15'} units={'A'} />}
+                        chevron
                     />
                 </Card.Content>
             </Card>
