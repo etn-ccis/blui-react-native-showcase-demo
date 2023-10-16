@@ -49,6 +49,11 @@ export const MD3BluiDarkTheme = {
         backdrop: 'rgba(45, 48, 56, 0.4)',
         // @TODO verify disabled color for dark theme
         disabled: '#192024',
+        // @TODO verify neutral30
+        neutralVariant: {
+            neutral30: '#414E54',
+            neutral100: '#FFFFFF',
+        },
         // warning: '#FBE365',
         // warningNonText: '#DDC437',
         // onWarning: '#383000',
