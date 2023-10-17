@@ -35,7 +35,7 @@ import {
     ActivityIndicator,
 } from 'react-native-paper';
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag, Overline, EmptyState, Hero, Header, InfoListItem } from '@brightlayer-ui/react-native-components';
+import { ChannelValue, ListItemTag, Overline, EmptyState, Hero, Header, InfoListItem, Drawer, DrawerHeader } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { MobileStepperExample } from './MobileStepperExample';
 import { BLUIColors } from '@brightlayer-ui/colors';
@@ -239,6 +239,19 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         fontColor={'black'}
                         style={{ marginTop: 12 }}
                     />
+                </Card.Content>
+            </Card>
+            <Card style={styles.card}>
+                <Card.Title title="Drawer" />
+                <Card.Content>
+                <Drawer
+    // activeItem={selectedItem}
+    // onItemSelect={(id) => {
+    //     /* updateSelectedItem */
+    // }}
+>
+<DrawerHeader title={'Drawer Title'} subtitle={'Drawer Subtitle'} icon={{ name: 'menu' }} />
+</Drawer>
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
