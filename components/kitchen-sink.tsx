@@ -35,11 +35,20 @@ import {
     ActivityIndicator,
 } from 'react-native-paper';
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag, Overline, EmptyState, Hero, Header, InfoListItem } from '@brightlayer-ui/react-native-components';
+import {
+    ChannelValue,
+    ListItemTag,
+    Overline,
+    EmptyState,
+    Hero,
+    Header,
+    InfoListItem,
+    UserMenu,
+} from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { MobileStepperExample } from './MobileStepperExample';
 import { BLUIColors } from '@brightlayer-ui/colors';
-  
+
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
 const MusicRoute = (): JSX.Element => <Text>Music</Text>;
@@ -189,7 +198,40 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 collapsedHeight={56}
             />
             <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
-
+            <Card style={styles.card}>
+                <Card.Title title="User Menu" />
+                <View style={{ display: 'flex' }}>
+                    <View style={{ alignItems: 'center', marginBottom: 8 }}>
+                        <UserMenu
+                            menuTitle={'John Smith'}
+                            menuSubtitle={'j.smith@example.com'}
+                            menuItems={[
+                                {
+                                    title: 'Change Password',
+                                    icon: {
+                                        name: 'vpn-key',
+                                    },
+                                },
+                                {
+                                    title: 'Preferences',
+                                    icon: {
+                                        name: 'settings',
+                                    },
+                                },
+                                { title: 'Log Out', icon: { name: 'exit-to-app' } },
+                            ]}
+                            avatar={
+                                <Avatar.Text
+                                    label="JS"
+                                    size={40}
+                                    color={BLUIColors.blue[500]}
+                                    style={{ backgroundColor: BLUIColors.blue[50] }}
+                                />
+                            }
+                        />
+                    </View>
+                </View>
+            </Card>
             <Card style={styles.card}>
                 <Card.Title title="Mobile Stepper" />
                 <MobileStepperExample />
@@ -302,15 +344,15 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     {/* Adding Additional Content */}
                     <InfoListItem
                         title="Battery Fully Charged"
-                        subtitle="Your device is ready to use"
+                        // subtitle="Your device is ready to use"
                         icon={{ name: 'settings' }}
                         iconAlign="center"
-                        leftComponent={
-                            <View>
-                                <Text variant="titleSmall">{'8:32 AM'}</Text>
-                                <Text variant="bodySmall">{'11/21/21'}</Text>
-                            </View>
-                        }
+                        // leftComponent={
+                        //     <View>
+                        //         <Text variant="titleSmall">{'8:32 AM'}</Text>
+                        //         <Text variant="bodySmall">{'11/21/21'}</Text>
+                        //     </View>
+                        // }
                         rightComponent={<ChannelValue value={'15'} units={'A'} />}
                         chevron
                     />
