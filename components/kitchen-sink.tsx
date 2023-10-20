@@ -35,11 +35,26 @@ import {
     ActivityIndicator,
 } from 'react-native-paper';
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
-import { ChannelValue, ListItemTag, Overline, EmptyState, Hero, Header, InfoListItem, Drawer, DrawerHeader } from '@brightlayer-ui/react-native-components';
+import {
+    ChannelValue,
+    ListItemTag,
+    Overline,
+    EmptyState,
+    Hero,
+    Header,
+    InfoListItem,
+    Drawer,
+    DrawerHeader,
+    DrawerBody,
+    DrawerNavGroup,
+    DrawerNavItem,
+    DrawerSubheader,
+    DrawerFooter,
+} from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { MobileStepperExample } from './MobileStepperExample';
 import { BLUIColors } from '@brightlayer-ui/colors';
-  
+
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
 const MusicRoute = (): JSX.Element => <Text>Music</Text>;
@@ -244,14 +259,34 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={styles.card}>
                 <Card.Title title="Drawer" />
                 <Card.Content>
-                <Drawer
-    // activeItem={selectedItem}
-    // onItemSelect={(id) => {
-    //     /* updateSelectedItem */
-    // }}
->
-<DrawerHeader title={'Drawer Title'} subtitle={'Drawer Subtitle'} icon={{ name: 'menu' }} />
-</Drawer>
+                    <Drawer>
+                        <DrawerHeader title={'Drawer Title'} subtitle={'Drawer Subtitle'} icon={{ name: 'menu' }} />
+                        <DrawerSubheader>
+                            <Text>SubHeader</Text>
+                        </DrawerSubheader>
+                        <DrawerBody>
+                            {/* Using 'items' prop */}
+                            <DrawerNavGroup
+                                title={'Navigation Group'}
+                                items={[
+                                    {
+                                        title: 'Identity Management',
+                                        itemID: 'g1i1',
+                                    },
+                                ]}
+                            />
+                            {/* Using children */}
+                            <DrawerNavGroup title={'Navigation Group'}>
+                                <DrawerNavItem itemID={'item1'} title={'Item 1'} />
+                                <DrawerNavItem itemID={'item2'} title={'Item 2'}>
+                                    <DrawerNavItem itemID={'item3'} title={'Item 3'} />
+                                </DrawerNavItem>
+                            </DrawerNavGroup>
+                        </DrawerBody>
+                        <DrawerFooter>
+                            <Text>Hello</Text>
+                        </DrawerFooter>
+                    </Drawer>
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
