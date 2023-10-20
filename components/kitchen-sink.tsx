@@ -33,6 +33,7 @@ import {
     ProgressBar,
     Snackbar,
     ActivityIndicator,
+    // ThemeProvider,
 } from 'react-native-paper';
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
 import {
@@ -48,12 +49,11 @@ import {
     DrawerBody,
     DrawerNavGroup,
     DrawerNavItem,
-    DrawerSubheader,
-    DrawerFooter,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { MobileStepperExample } from './MobileStepperExample';
 import { BLUIColors } from '@brightlayer-ui/colors';
+// import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
 
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -205,6 +205,66 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             />
             <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
 
+            {/* <ThemeProvider theme={BLUIThemes.blue}> */}
+            <Card style={styles.card}>
+                <Card.Title title="Drawer" />
+                <Card.Content>
+                    <Drawer activeItem="item1">
+                        <DrawerHeader title={'Drawer Title'} subtitle={'Drawer Subtitle'} icon={{ name: 'menu' }} />
+                        <DrawerBody>
+                            {/* Using children */}
+                            <DrawerNavGroup title={'Navigation Group'}>
+                                <DrawerNavItem
+                                    itemID={'item1'}
+                                    title={'Account'}
+                                    icon={{ family: 'material-community', name: 'account' }}
+                                    // activeItemBackgroundShape={'round'}
+                                    InfoListItemProps={{
+                                        iconAlign: 'center',
+                                    }}
+                                />
+                                <DrawerNavItem
+                                    itemID={'item2'}
+                                    title={'Notification'}
+                                    icon={{ family: 'material-community', name: 'bell' }}
+                                    activeItemBackgroundShape={'round'}
+                                >
+                                    <DrawerNavItem
+                                        itemID={'item3'}
+                                        title={'Item 3'}
+                                        activeItemBackgroundShape={'round'}
+                                    />
+                                </DrawerNavItem>
+                                <DrawerNavItem
+                                    itemID={'item4'}
+                                    title={'Localization'}
+                                    icon={{ family: 'material-community', name: 'circle' }}
+                                    activeItemBackgroundShape={'round'}
+                                />
+                            </DrawerNavGroup>
+                            {/* Using 'items' prop */}
+                            <DrawerNavGroup
+                                title={'Navigation Group'}
+                                items={[
+                                    {
+                                        title: 'Sensors',
+                                        itemID: 'id1',
+                                    },
+                                    {
+                                        title: 'Devices',
+                                        itemID: 'id2',
+                                    },
+                                    {
+                                        title: 'Communication',
+                                        itemID: 'id3',
+                                    },
+                                ]}
+                            />
+                        </DrawerBody>
+                    </Drawer>
+                </Card.Content>
+            </Card>
+            {/* </ThemeProvider> */}
             <Card style={styles.card}>
                 <Card.Title title="Mobile Stepper" />
                 <MobileStepperExample />
@@ -254,39 +314,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         fontColor={'black'}
                         style={{ marginTop: 12 }}
                     />
-                </Card.Content>
-            </Card>
-            <Card style={styles.card}>
-                <Card.Title title="Drawer" />
-                <Card.Content>
-                    <Drawer>
-                        <DrawerHeader title={'Drawer Title'} subtitle={'Drawer Subtitle'} icon={{ name: 'menu' }} />
-                        <DrawerSubheader>
-                            <Text>SubHeader</Text>
-                        </DrawerSubheader>
-                        <DrawerBody>
-                            {/* Using 'items' prop */}
-                            <DrawerNavGroup
-                                title={'Navigation Group'}
-                                items={[
-                                    {
-                                        title: 'Identity Management',
-                                        itemID: 'g1i1',
-                                    },
-                                ]}
-                            />
-                            {/* Using children */}
-                            <DrawerNavGroup title={'Navigation Group'}>
-                                <DrawerNavItem itemID={'item1'} title={'Item 1'} />
-                                <DrawerNavItem itemID={'item2'} title={'Item 2'}>
-                                    <DrawerNavItem itemID={'item3'} title={'Item 3'} />
-                                </DrawerNavItem>
-                            </DrawerNavGroup>
-                        </DrawerBody>
-                        <DrawerFooter>
-                            <Text>Hello</Text>
-                        </DrawerFooter>
-                    </Drawer>
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
