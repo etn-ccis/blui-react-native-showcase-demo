@@ -45,6 +45,7 @@ import {
     CollapsibleHeaderLayout,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
+import { ScoreCardExample } from './ScoreCardExample';
 import { MobileStepperExample } from './MobileStepperExample';
 import { BLUIColors } from '@brightlayer-ui/colors';
 
@@ -214,6 +215,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 />
                 <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
 
+                <Card style={styles.card}>
+                    <Card.Title title="Score Card" />
+                    <View
+                        style={{
+                            justifyContent: 'center',
+                            marginHorizontal: 24,
+                            marginBottom: 24,
+                        }}
+                    >
+                        <ScoreCardExample />
+                    </View>
+                </Card>
                 <Card style={styles.card}>
                     <Card.Title title="Mobile Stepper" />
                     <MobileStepperExample />
