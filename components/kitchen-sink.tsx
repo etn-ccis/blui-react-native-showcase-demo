@@ -228,18 +228,22 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     title={'Notification'}
                                     icon={{ family: 'material-community', name: 'bell' }}
                                     activeItemBackgroundShape={'round'}
+                                    InfoListItemProps={{
+                                        iconAlign: 'center',
+                                    }}
                                 >
-                                    <DrawerNavItem
-                                        itemID={'item3'}
-                                        title={'Item 3'}
-                                        activeItemBackgroundShape={'round'}
-                                    />
+                                    <DrawerNavItem itemID={'item3'} title={'item3'}>
+                                        <DrawerNavItem itemID={'item31'} title={'Item31'} />
+                                    </DrawerNavItem>
                                 </DrawerNavItem>
                                 <DrawerNavItem
                                     itemID={'item4'}
                                     title={'Localization'}
                                     icon={{ family: 'material-community', name: 'circle' }}
                                     activeItemBackgroundShape={'round'}
+                                    InfoListItemProps={{
+                                        iconAlign: 'center',
+                                    }}
                                 />
                             </DrawerNavGroup>
                             {/* Using 'items' prop */}
