@@ -45,24 +45,28 @@ export const MobileStepperExample: React.FC = () => {
                 activeStep={currentStep}
                 steps={totalSteps}
                 leftButton={
-                    <Button
-                        style={{ width: 100, alignSelf: 'flex-start' }}
-                        disabled={currentStep === 0}
-                        onPress={(): void => updateStep(-1)}
-                        mode="outlined"
-                    >
-                        Back
-                    </Button>
+                    <View style={{ flex: 1 }}>
+                        <Button
+                            style={{ width: 100, alignSelf: 'flex-start' }}
+                            disabled={currentStep === 0}
+                            onPress={(): void => updateStep(-1)}
+                            mode="outlined"
+                        >
+                            Back
+                        </Button>
+                    </View>
                 }
                 rightButton={
-                    <Button
-                        style={{ width: 100, alignSelf: 'flex-end' }}
-                        disabled={currentStep === totalSteps - 1}
-                        onPress={(): void => updateStep(1)}
-                        mode="contained"
-                    >
-                        Next
-                    </Button>
+                    <View style={{ flex: 1 }}>
+                        <Button
+                            style={{ width: 100, alignSelf: 'flex-end' }}
+                            disabled={currentStep === totalSteps - 1}
+                            onPress={(): void => updateStep(1)}
+                            mode="contained"
+                        >
+                            Next
+                        </Button>
+                    </View>
                 }
                 variant={mobileStepperVariant}
                 activeColor={Colors.blue[500]}
