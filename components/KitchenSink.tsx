@@ -300,7 +300,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     </Card.Content>
                 </Card>
                 <Card style={styles.card}>
-                    <Card.Title title="Hero Banner1" />
+                    <Card.Title title="Hero Banner" />
                     <Card.Content style={{ alignItems: 'center' }}>
                         <HeroBanner divider>
                             <Hero
@@ -308,24 +308,17 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 icon={{ family: 'brightlayer-ui', name: 'battery' }}
                                 ChannelValueProps={{ value: 100, units: '%' }}
                             />
-                            <Hero label={'Chart'} icon={{ family: 'material-community', name: 'chart-pie' }} />
+                            <Hero
+                                label={'Charged'}
+                                icon={{ family: 'brightlayer-ui', name: 'ups_outline' }}
+                                ChannelValueProps={{ value: 100, units: '%' }}
+                            />
                             <Hero
                                 label={'Setting'}
                                 icon={{ name: 'settings' }}
                                 iconColor="red"
                                 ChannelValueProps={{ value: '50.2.1', units: '' }}
                             />
-                        </HeroBanner>
-                    </Card.Content>
-                </Card>
-                <Card style={styles.card}>
-                    <Card.Title title="Hero Banner2" />
-                    <Card.Content style={{ alignItems: 'center' }}>
-                        <HeroBanner divider>
-                            <Hero label={'Hero One'} icon={{ family: 'material-community', name: 'chart-pie' }} iconColor="red" />
-                            <Hero label={'Hero Two'} icon={{ family: 'brightlayer-ui', name: 'battery' }} />
-                            <Hero label={'Hero Three'} icon={{ name: 'settings' }} />
-                            <Hero label={'Hero Four'} icon={{ family: 'brightlayer-ui', name: 'battery' }} />
                         </HeroBanner>
                     </Card.Content>
                 </Card>
