@@ -190,8 +190,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     info: 'hello',
                     expandable: true,
                     backgroundImage: require('../assets/images/farm.jpg'),
-                    onIconPress: () => { },
-                    actionItems: [{ icon: { name: 'more' }, onPress: () => { } }],
+                    onIconPress: () => {},
+                    actionItems: [{ icon: { name: 'more' }, onPress: () => {} }],
                 }}
             >
                 <Card style={styles.card}>
@@ -201,16 +201,16 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     title={'Valley Forge'}
                     subtitle={'The Last Stand'}
                     icon={{ name: 'menu' }}
-                    onIconPress={() => { }}
+                    onIconPress={() => {}}
                     actionItems={[
                         {
                             icon: { name: 'more-vert' },
-                            onPress: () => { },
+                            onPress: () => {},
                         },
                     ]}
                     variant="static"
                     backgroundImage={require('../assets/images/farm.jpg')}
-                    searchableConfig={{ onChangeText: () => { } }}
+                    searchableConfig={{ onChangeText: () => {} }}
                     expandable={true}
                     collapsedHeight={56}
                 />
@@ -243,9 +243,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Card.Content>
                         <IconButton
                             icon={(iconProps) => <BLUIIcon name="broccoli" {...iconProps} />}
-                            onPress={() => { }}
+                            onPress={() => {}}
                         />
-                        <IconButton icon="chart-pie" onPress={() => { }} />
+                        <IconButton icon="chart-pie" onPress={() => {}} />
                     </Card.Content>
                 </Card>
                 <Card style={styles.card}>
@@ -1240,7 +1240,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     width: 250,
                                     marginTop: 24,
                                 }}
-                                onClose={(): void => { }}
+                                onClose={(): void => {}}
                             >
                                 Unselected Flat Chip
                             </Chip>
@@ -1251,7 +1251,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     marginTop: 24,
                                     width: 250,
                                 }}
-                                onClose={(): void => { }}
+                                onClose={(): void => {}}
                             >
                                 Selected Flat Chip
                             </Chip>
@@ -1262,7 +1262,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     marginTop: 24,
                                     width: 250,
                                 }}
-                                onClose={(): void => { }}
+                                onClose={(): void => {}}
                             >
                                 Disabled Flat Chip
                             </Chip>
