@@ -46,6 +46,7 @@ import {
     CollapsibleHeaderLayout,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
+import { ScoreCardExample } from './ScoreCardExample';
 import { MobileStepperExample } from './MobileStepperExample';
 import { BLUIColors } from '@brightlayer-ui/colors';
 
@@ -284,6 +285,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 avatar={<Avatar.Image source={PublicDomainAlice} size={40} />}
                             />
                         </View>
+                    </View>
+                </Card>
+                <Card style={styles.card}>
+                    <Card.Title title="Score Card" />
+                    <View
+                        style={{
+                            justifyContent: 'center',
+                            marginHorizontal: 24,
+                            marginBottom: 24,
+                        }}
+                    >
+                        <ScoreCardExample />
                     </View>
                 </Card>
                 <Card style={styles.card}>
