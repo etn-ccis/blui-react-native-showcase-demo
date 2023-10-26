@@ -219,35 +219,34 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
                 <Card style={styles.card}>
                     <Card.Title title="Spacer" />
-                    <View
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            width: '100%',
-                            marginLeft: 20,
-                            marginRight: 20,
-                            marginBottom: 20,
-                        }}
-                    >
-                        <View style={{ height: 50, width: 70, backgroundColor: '#4682B4' }} />
-                        <Spacer flex={0} height={10} width={10} />
-                        <View style={{ height: 50, width: 155, backgroundColor: '#FFD700' }} />
-                        <Spacer flex={0} height={10} width={10} />
-                        <View style={{ height: 50, width: 70, backgroundColor: '#FF6347' }} />
+                    <View style={{ marginLeft: 20, marginRight: 20, marginBottom: 20 }}>
+                        <Text>Horizontal</Text>
+                        <View
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                            }}
+                        >
+                            <View style={{ height: 50, width: 70, backgroundColor: '#4682B4' }} />
+                            <Spacer flex={0} height={10} width={10} />
+                            <View style={{ height: 50, width: 155, backgroundColor: '#FFD700' }} />
+                            <Spacer flex={0} height={10} width={10} />
+                            <View style={{ height: 50, width: 70, backgroundColor: '#FF6347' }} />
+                        </View>
                     </View>
-                    <View
-                        style={{
-                            display: 'flex',
-                            marginLeft: 20,
-                            marginRight: 20,
-                            marginBottom: 20,
-                        }}
-                    >
-                        <View style={{ height: 50, width: 315, backgroundColor: '#4682B4' }} />
-                        <Spacer flex={0} height={10} width={10} />
-                        <View style={{ height: 50, width: 315, backgroundColor: '#FFD700' }} />
-                        <Spacer flex={0} height={10} width={10} />
-                        <View style={{ height: 50, width: 315, backgroundColor: '#FF6347' }} />
+                    <View style={{ marginLeft: 20, marginRight: 20, marginBottom: 20 }}>
+                        <Text>Vertical</Text>
+                        <View
+                            style={{
+                                display: 'flex',
+                            }}
+                        >
+                            <View style={{ height: 50, width: 315, backgroundColor: '#4682B4' }} />
+                            <Spacer flex={0} height={10} width={10} />
+                            <View style={{ height: 50, width: 315, backgroundColor: '#FFD700' }} />
+                            <Spacer flex={0} height={10} width={10} />
+                            <View style={{ height: 50, width: 315, backgroundColor: '#FF6347' }} />
+                        </View>
                     </View>
                 </Card>
                 <Card style={styles.card}>
