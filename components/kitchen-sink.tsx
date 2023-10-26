@@ -33,7 +33,6 @@ import {
     ProgressBar,
     Snackbar,
     ActivityIndicator,
-    // ThemeProvider,
 } from 'react-native-paper';
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
 import {
@@ -53,7 +52,6 @@ import {
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { MobileStepperExample } from './MobileStepperExample';
 import { BLUIColors } from '@brightlayer-ui/colors';
-// import * as BLUIThemes from '@brightlayer-ui/react-native-themes';
 
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -205,7 +203,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             />
             <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
 
-            {/* <ThemeProvider theme={BLUIThemes.blue}> */}
             <Card style={styles.card}>
                 <Card.Title title="Drawer" />
                 <Card.Content>
@@ -268,7 +265,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     </Drawer>
                 </Card.Content>
             </Card>
-            {/* </ThemeProvider> */}
             <Card style={styles.card}>
                 <Card.Title title="Mobile Stepper" />
                 <MobileStepperExample />

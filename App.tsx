@@ -11,7 +11,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { SafeAreaView, ScrollView, StatusBar, /*StyleSheet, Text,*/ useColorScheme, View } from 'react-native';
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { KitchenSink } from './components/kitchen-sink';
+import { KitchenSink } from './components/KitchenSink';
 
 /*type SectionProps = PropsWithChildren<{
     title: string;
