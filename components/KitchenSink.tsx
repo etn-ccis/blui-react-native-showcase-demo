@@ -42,6 +42,7 @@ import {
     Hero,
     Header,
     InfoListItem,
+    UserMenu,
     CollapsibleHeaderLayout,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
@@ -214,7 +215,78 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     collapsedHeight={56}
                 />
                 <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
-
+                <Card style={styles.card}>
+                    <Card.Title title="User Menu Examples" />
+                    <View style={{ display: 'flex' }}>
+                        <View style={{ alignItems: 'center', marginBottom: 8 }}>
+                            <Card.Title title="User Menu With Text Avatar" />
+                            <UserMenu
+                                menuTitle={'John Smith'}
+                                menuSubtitle={'j.smith@example.com'}
+                                menuItems={[
+                                    {
+                                        title: 'Change Password',
+                                        icon: {
+                                            name: 'vpn-key',
+                                        },
+                                    },
+                                    {
+                                        title: 'Preferences',
+                                        icon: {
+                                            name: 'settings',
+                                        },
+                                    },
+                                    { title: 'Log Out', icon: { name: 'exit-to-app' } },
+                                ]}
+                                avatar={
+                                    <Avatar.Text
+                                        label="JS"
+                                        size={40}
+                                        color={BLUIColors.blue[500]}
+                                        style={{ backgroundColor: BLUIColors.blue[50] }}
+                                    />
+                                }
+                            />
+                        </View>
+                        <View style={{ alignItems: 'center', marginBottom: 8 }}>
+                            <Card.Title title="User Menu With Icon" />
+                            <UserMenu
+                                menuTitle={'John Smith'}
+                                menuSubtitle={'j.smith@example.com'}
+                                menuItems={[
+                                    {
+                                        title: 'Change Password',
+                                        icon: {
+                                            name: 'vpn-key',
+                                        },
+                                    },
+                                    {
+                                        title: 'Preferences',
+                                        icon: {
+                                            name: 'settings',
+                                        },
+                                    },
+                                    { title: 'Log Out', icon: { name: 'exit-to-app' } },
+                                ]}
+                                avatar={<Avatar.Icon size={40} icon="account-circle" />}
+                            />
+                        </View>
+                        <View style={{ alignItems: 'center', marginBottom: 8 }}>
+                            <Card.Title title="User Menu With Image Avatar" />
+                            <UserMenu
+                                menuTitle={'John Smith'}
+                                menuSubtitle={'j.smith@example.com'}
+                                menuItems={[
+                                    {
+                                        title: 'My Account',
+                                    },
+                                    { title: 'Log Out' },
+                                ]}
+                                avatar={<Avatar.Image source={PublicDomainAlice} size={40} />}
+                            />
+                        </View>
+                    </View>
+                </Card>
                 <Card style={styles.card}>
                     <Card.Title title="Score Card" />
                     <View
