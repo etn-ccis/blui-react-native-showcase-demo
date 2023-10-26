@@ -40,6 +40,7 @@ import {
     Overline,
     EmptyState,
     Hero,
+    HeroBanner,
     Header,
     InfoListItem,
     CollapsibleHeaderLayout,
@@ -189,8 +190,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     info: 'hello',
                     expandable: true,
                     backgroundImage: require('../assets/images/farm.jpg'),
-                    onIconPress: () => {},
-                    actionItems: [{ icon: { name: 'more' }, onPress: () => {} }],
+                    onIconPress: () => { },
+                    actionItems: [{ icon: { name: 'more' }, onPress: () => { } }],
                 }}
             >
                 <Card style={styles.card}>
@@ -200,16 +201,16 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     title={'Valley Forge'}
                     subtitle={'The Last Stand'}
                     icon={{ name: 'menu' }}
-                    onIconPress={() => {}}
+                    onIconPress={() => { }}
                     actionItems={[
                         {
                             icon: { name: 'more-vert' },
-                            onPress: () => {},
+                            onPress: () => { },
                         },
                     ]}
                     variant="static"
                     backgroundImage={require('../assets/images/farm.jpg')}
-                    searchableConfig={{ onChangeText: () => {} }}
+                    searchableConfig={{ onChangeText: () => { } }}
                     expandable={true}
                     collapsedHeight={56}
                 />
@@ -242,9 +243,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Card.Content>
                         <IconButton
                             icon={(iconProps) => <BLUIIcon name="broccoli" {...iconProps} />}
-                            onPress={() => {}}
+                            onPress={() => { }}
                         />
-                        <IconButton icon="chart-pie" onPress={() => {}} />
+                        <IconButton icon="chart-pie" onPress={() => { }} />
                     </Card.Content>
                 </Card>
                 <Card style={styles.card}>
@@ -296,6 +297,36 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             iconColor="red"
                             ChannelValueProps={{ value: '50.2.1', units: '' }}
                         />
+                    </Card.Content>
+                </Card>
+                <Card style={styles.card}>
+                    <Card.Title title="Hero Banner1" />
+                    <Card.Content style={{ alignItems: 'center' }}>
+                        <HeroBanner divider>
+                            <Hero
+                                label={'Charged'}
+                                icon={{ family: 'brightlayer-ui', name: 'battery' }}
+                                ChannelValueProps={{ value: 100, units: '%' }}
+                            />
+                            <Hero label={'Chart'} icon={{ family: 'material-community', name: 'chart-pie' }} />
+                            <Hero
+                                label={'Setting'}
+                                icon={{ name: 'settings' }}
+                                iconColor="red"
+                                ChannelValueProps={{ value: '50.2.1', units: '' }}
+                            />
+                        </HeroBanner>
+                    </Card.Content>
+                </Card>
+                <Card style={styles.card}>
+                    <Card.Title title="Hero Banner2" />
+                    <Card.Content style={{ alignItems: 'center' }}>
+                        <HeroBanner divider>
+                            <Hero label={'Hero One'} icon={{ family: 'material-community', name: 'chart-pie' }} iconColor="red" />
+                            <Hero label={'Hero Two'} icon={{ family: 'brightlayer-ui', name: 'battery' }} />
+                            <Hero label={'Hero Three'} icon={{ name: 'settings' }} />
+                            <Hero label={'Hero Four'} icon={{ family: 'brightlayer-ui', name: 'battery' }} />
+                        </HeroBanner>
                     </Card.Content>
                 </Card>
                 <Card style={styles.card}>
@@ -1216,7 +1247,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     width: 250,
                                     marginTop: 24,
                                 }}
-                                onClose={(): void => {}}
+                                onClose={(): void => { }}
                             >
                                 Unselected Flat Chip
                             </Chip>
@@ -1227,7 +1258,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     marginTop: 24,
                                     width: 250,
                                 }}
-                                onClose={(): void => {}}
+                                onClose={(): void => { }}
                             >
                                 Selected Flat Chip
                             </Chip>
@@ -1238,7 +1269,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     marginTop: 24,
                                     width: 250,
                                 }}
-                                onClose={(): void => {}}
+                                onClose={(): void => { }}
                             >
                                 Disabled Flat Chip
                             </Chip>
