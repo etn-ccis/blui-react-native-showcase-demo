@@ -50,8 +50,10 @@ export const MD3BluiDarkTheme = {
         // @TODO verify disabled color for dark theme
         disabled: '#192024',
         // @TODO verify neutral30
+        // @TODO verify neutral80
         neutralVariant: {
             neutral30: '#414E54',
+            neutral80: '#BDCAD1',
             neutral100: '#FFFFFF',
         },
         // warning: '#FBE365',
