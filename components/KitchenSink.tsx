@@ -40,6 +40,7 @@ import {
     Overline,
     EmptyState,
     Hero,
+    HeroBanner,
     Header,
     InfoListItem,
     UserMenu,
@@ -470,6 +471,29 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             iconColor="red"
                             ChannelValueProps={{ value: '50.2.1', units: '' }}
                         />
+                    </Card.Content>
+                </Card>
+                <Card style={styles.card}>
+                    <Card.Title title="Hero Banner" />
+                    <Card.Content style={{ alignItems: 'center' }}>
+                        <HeroBanner divider>
+                            <Hero
+                                label={'Charged'}
+                                icon={{ family: 'brightlayer-ui', name: 'battery' }}
+                                ChannelValueProps={{ value: 100, units: '%' }}
+                            />
+                            <Hero
+                                label={'Charged'}
+                                icon={{ family: 'brightlayer-ui', name: 'ups_outline' }}
+                                ChannelValueProps={{ value: 100, units: '%' }}
+                            />
+                            <Hero
+                                label={'Setting'}
+                                icon={{ name: 'settings' }}
+                                iconColor="red"
+                                ChannelValueProps={{ value: '50.2.1', units: '' }}
+                            />
+                        </HeroBanner>
                     </Card.Content>
                 </Card>
                 <Card style={styles.card}>
