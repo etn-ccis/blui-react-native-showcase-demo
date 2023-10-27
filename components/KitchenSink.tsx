@@ -43,6 +43,11 @@ import {
     Header,
     InfoListItem,
     CollapsibleHeaderLayout,
+    Drawer,
+    DrawerHeader,
+    DrawerBody,
+    DrawerNavGroup,
+    DrawerNavItem,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -180,19 +185,68 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
     return (
         <>
-            <CollapsibleHeaderLayout
-                HeaderProps={{
-                    variant: 'dynamic',
-                    title: 'Valley Forge',
-                    subtitle: 'The Last Stand',
-                    icon: { name: 'menu' },
-                    info: 'hello',
-                    expandable: true,
-                    backgroundImage: require('../assets/images/farm.jpg'),
-                    onIconPress: () => {},
-                    actionItems: [{ icon: { name: 'more' }, onPress: () => {} }],
-                }}
-            >
+            <Card style={styles.card}>
+                <Card.Title title="Drawer" />
+                <Card.Content>
+                    <Drawer activeItem="item1">
+                        <DrawerHeader title={'Drawer Title'} subtitle={'Drawer Subtitle'} icon={{ name: 'menu' }} />
+                        <DrawerBody>
+                            {/* Using children */}
+                            <DrawerNavGroup title={'Navigation Group'}>
+                                <DrawerNavItem
+                                    itemID={'item1'}
+                                    title={'Account'}
+                                    icon={{ family: 'material-community', name: 'account' }}
+                                    // activeItemBackgroundShape={'round'}
+                                    InfoListItemProps={{
+                                        iconAlign: 'center',
+                                    }}
+                                />
+                                <DrawerNavItem
+                                    itemID={'item2'}
+                                    title={'Notification'}
+                                    icon={{ family: 'material-community', name: 'bell' }}
+                                    activeItemBackgroundShape={'round'}
+                                    InfoListItemProps={{
+                                        iconAlign: 'center',
+                                    }}
+                                >
+                                    <DrawerNavItem itemID={'item3'} title={'item3'}>
+                                        <DrawerNavItem itemID={'item31'} title={'Item31'} />
+                                    </DrawerNavItem>
+                                </DrawerNavItem>
+                                <DrawerNavItem
+                                    itemID={'item4'}
+                                    title={'Localization'}
+                                    icon={{ family: 'material-community', name: 'circle' }}
+                                    activeItemBackgroundShape={'round'}
+                                    InfoListItemProps={{
+                                        iconAlign: 'center',
+                                    }}
+                                />
+                            </DrawerNavGroup>
+                            {/* Using 'items' prop */}
+                            <DrawerNavGroup
+                                title={'Navigation Group'}
+                                items={[
+                                    {
+                                        title: 'Sensors',
+                                        itemID: 'id1',
+                                    },
+                                    {
+                                        title: 'Devices',
+                                        itemID: 'id2',
+                                    },
+                                    {
+                                        title: 'Communication',
+                                        itemID: 'id3',
+                                    },
+                                ]}
+                            />
+                        </DrawerBody>
+                    </Drawer>
+                </Card.Content>
+            </Card>
                 <Card style={styles.card}>
                     <Card.Title title="Header" />
                 </Card>
@@ -214,7 +268,24 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     collapsedHeight={56}
                 />
                 <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
-
+                <Card style={styles.card}>
+                    <Card.Title title="Score Card" />
+                    <Card.Content>
+                    <CollapsibleHeaderLayout
+                HeaderProps={{
+                    variant: 'dynamic',
+                    title: 'Valley Forge',
+                    subtitle: 'The Last Stand',
+                    icon: { name: 'menu' },
+                    info: 'hello',
+                    expandable: true,
+                    backgroundImage: require('../assets/images/farm.jpg'),
+                    onIconPress: () => {},
+                    actionItems: [{ icon: { name: 'more' }, onPress: () => {} }],
+                }}
+            ></CollapsibleHeaderLayout>
+                    </Card.Content>
+                    </Card>
                 <Card style={styles.card}>
                     <Card.Title title="Score Card" />
                     <View
@@ -1754,7 +1825,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         </View>
                     </View>
                 </Card>
-            </CollapsibleHeaderLayout>
         </>
     );
 };
