@@ -48,7 +48,7 @@ export const MD3BluiDarkTheme = {
         onSurfaceDisabled: 'rgba(26, 27, 30, 0.38)',
         backdrop: 'rgba(45, 48, 56, 0.4)',
         // @TODO verify disabled color for dark theme
-        disabled: '#192024',
+        disabled: '#EBF1F4',
         // @TODO verify neutral30
         // @TODO verify neutral80
         neutralVariant: {
