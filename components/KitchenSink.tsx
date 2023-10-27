@@ -44,6 +44,7 @@ import {
     InfoListItem,
     UserMenu,
     CollapsibleHeaderLayout,
+    Spacer,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -215,6 +216,39 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     collapsedHeight={56}
                 />
                 <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
+
+                <Card style={styles.card}>
+                    <Card.Title title="Spacer" />
+                    <View style={{ marginLeft: 20, marginRight: 20, marginBottom: 20 }}>
+                        <Text>Horizontal</Text>
+                        <View
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                            }}
+                        >
+                            <View style={{ height: 50, width: 70, backgroundColor: '#4682B4' }} />
+                            <Spacer flex={0} height={10} width={10} />
+                            <View style={{ height: 50, width: 155, backgroundColor: '#FFD700' }} />
+                            <Spacer flex={0} height={10} width={10} />
+                            <View style={{ height: 50, width: 70, backgroundColor: '#FF6347' }} />
+                        </View>
+                    </View>
+                    <View style={{ marginLeft: 20, marginRight: 20, marginBottom: 20 }}>
+                        <Text>Vertical</Text>
+                        <View
+                            style={{
+                                display: 'flex',
+                            }}
+                        >
+                            <View style={{ height: 50, width: 315, backgroundColor: '#4682B4' }} />
+                            <Spacer flex={0} height={10} width={10} />
+                            <View style={{ height: 50, width: 315, backgroundColor: '#FFD700' }} />
+                            <Spacer flex={0} height={10} width={10} />
+                            <View style={{ height: 50, width: 315, backgroundColor: '#FF6347' }} />
+                        </View>
+                    </View>
+                </Card>
                 <Card style={styles.card}>
                     <Card.Title title="User Menu Examples" />
                     <View style={{ display: 'flex' }}>
