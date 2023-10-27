@@ -53,12 +53,10 @@ export const MD3BluiLightTheme = {
 
         // @TODO verify neutral30
         neutralVariant: {
+            neutral10: '#181C22',
             neutral30: '#414E54',
             neutral100: '#FFFFFF',
         },
-        darkBlackVariant:{
-            darkBlack100: '182022',
-        }
         // warning: '#6C5E00',
         // warningNonText: '#A59116',
         // onWarning: '#FFFFFF',

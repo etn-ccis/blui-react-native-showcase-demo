@@ -51,11 +51,9 @@ export const MD3BluiDarkTheme = {
         disabled: '#192024',
         // @TODO verify neutral30
         neutralVariant: {
+            neutral10: '#181C22',
             neutral30: '#414E54',
             neutral100: '#FFFFFF',
-        },
-        darkBlackVariant:{
-            darkBlack100: '182022',
         },
         // warning: '#FBE365',
         // warningNonText: '#DDC437',
