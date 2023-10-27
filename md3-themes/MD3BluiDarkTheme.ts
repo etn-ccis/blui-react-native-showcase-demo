@@ -54,6 +54,9 @@ export const MD3BluiDarkTheme = {
             neutral30: '#414E54',
             neutral100: '#FFFFFF',
         },
+        darkBlackVariant:{
+            darkBlack100: '182022',
+        },
         // warning: '#FBE365',
         // warningNonText: '#DDC437',
         // onWarning: '#383000',
