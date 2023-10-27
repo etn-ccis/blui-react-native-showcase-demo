@@ -14,62 +14,62 @@ export const fontConfig = {
     },
     displaySmall: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
     displayMedium: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
     displayLarge: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
     headlineSmall: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
     headlineMedium: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
     headlineLarge: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
     titleSmall: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
     titleMedium: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
     titleLarge: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
     labelSmall: {
         fontFamily: 'OpenSans-SemiBold',
-        fontWeight: 500
+        fontWeight: 500,
     },
     labelMedium: {
         fontFamily: 'OpenSans-SemiBold',
-        fontWeight: 500
+        fontWeight: 500,
     },
     labelLarge: {
         fontFamily: 'OpenSans-SemiBold',
-        fontWeight: 500
+        fontWeight: 500,
     },
     bodySmall: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
     bodyMedium: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
     bodyLarge: {
         fontFamily: 'OpenSans-Regular',
-        fontWeight: 400
+        fontWeight: 400,
     },
 };
