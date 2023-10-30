@@ -48,7 +48,6 @@ export const MD3BluiLightTheme = {
         onSurfaceDisabled: 'rgba(26, 27, 30, 0.38)',
         backdrop: 'rgba(45, 48, 56, 0.4)',
         disabled: '#192024',
-        surfaceContainer: '#E5ECF0',
         surfaceContainerLow: '#F2F6F8',
 
         // @TODO verify neutral30

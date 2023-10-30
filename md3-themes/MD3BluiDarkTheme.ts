@@ -47,8 +47,7 @@ export const MD3BluiDarkTheme = {
         surfaceDisabled: 'rgba(26, 27, 30, 0.12)',
         onSurfaceDisabled: 'rgba(26, 27, 30, 0.38)',
         backdrop: 'rgba(45, 48, 56, 0.4)',
-        // @TODO verify disabled color for dark theme
-        disabled: '#EBF1F4',
+        disabled: '#D7E0E5',
         // @TODO verify neutral30
         // @TODO verify neutral80
         neutralVariant: {
@@ -78,10 +77,10 @@ export const MD3BluiDarkTheme = {
         // purpleContainer: '#6700B5',
         // onPurpleContainer: '#F0DBFF',
         primaryNonText: '#4D9FEC',
-        surfaceContainerLowest: '#192024',
-        surfaceContainerLower: '#1E262A',
-        surfaceContainer: '#293338',
-        surfaceContainerHigh: '#29363D',
-        surfaceContainerHighest: '#2C3941',
+        surfaceContainerLowest: '#0D1317',
+        surfaceContainerLower: '#192024',
+        surfaceContainer: '#1E262A',
+        surfaceContainerHigh: '#293338',
+        surfaceContainerHighest: '#333F48',
     },
 };
