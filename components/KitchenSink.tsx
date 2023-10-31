@@ -51,6 +51,7 @@ import {
     DrawerBody,
     DrawerNavGroup,
     DrawerNavItem,
+    Grades
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -201,6 +202,19 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     actionItems: [{ icon: { name: 'more' }, onPress: () => {} }],
                 }}
             >
+                 <Card style={styles.card}>
+                <Card.Title title="Grades" />
+                <Card.Content>
+                    {/* <Avatar.Text label='A+' 
+                    style={{backgroundColor:'#f00'}} 
+                    color='#fff' 
+                    labelStyle={{fontFamily:'OpenSans-Bold',fontWeight:'700'}}/> */}
+                    <Grades.APlus/>
+                    <Grades.A/>
+                    <Grades.ANeg/>
+                    <Grades.B/>
+                </Card.Content>
+                </Card>
                 <Card style={styles.card}>
                 <Card.Title title="Drawer" />
                 <Card.Content>
