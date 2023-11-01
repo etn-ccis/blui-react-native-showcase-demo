@@ -51,7 +51,7 @@ import {
     DrawerBody,
     DrawerNavGroup,
     DrawerNavItem,
-    Grades
+    Grades,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -202,96 +202,103 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     actionItems: [{ icon: { name: 'more' }, onPress: () => {} }],
                 }}
             >
-                 <Card style={styles.card}>
-                <Card.Title title="Grades" />
-                <Card.Content>
-                    <Grades.aPlus/>
-                    <View style={{padding:5}}/>
-                    <Grades.a/>
-                    <View style={{padding:5}}/>
-                    <Grades.aMinus/>
-                    <View style={{padding:5}}/>
-                    <Grades.bPlus/>
-                    <View style={{padding:5}}/>
-                    <Grades.b/>
-                    <View style={{padding:5}}/>
-                    <Grades.bMinus/>
-                    <View style={{padding:5}}/>
-                    <Grades.c/>
-                    <View style={{padding:5}}/>
-                    <Grades.d/>
-                    <View style={{padding:5}}/>
-                    <Grades.f/>
-                    <View style={{padding:5}}/>
-                    <Grades.custom label='CS' size={40} color='#fff' backgroundColor='#000'/>
-                    <View style={{padding:5}}/>
-                    <Grades.f label='E'/>
-
-                </Card.Content>
+                <Card style={styles.card}>
+                    <Card.Title title="Grades" />
+                    <Card.Content>
+                        <Grades.aPlus />
+                        <View style={{ padding: 5 }} />
+                        <Grades.a />
+                        <View style={{ padding: 5 }} />
+                        <Grades.aMinus />
+                        <View style={{ padding: 5 }} />
+                        <Grades.bPlus />
+                        <View style={{ padding: 5 }} />
+                        <Grades.b />
+                        <View style={{ padding: 5 }} />
+                        <Grades.bMinus />
+                        <View style={{ padding: 5 }} />
+                        <Grades.cPlus />
+                        <View style={{ padding: 5 }} />
+                        <Grades.c />
+                        <View style={{ padding: 5 }} />
+                        <Grades.cMinus />
+                        <View style={{ padding: 5 }} />
+                        <Grades.dPlus />
+                        <View style={{ padding: 5 }} />
+                        <Grades.d />
+                        <View style={{ padding: 5 }} />
+                        <Grades.dMinus />
+                        <View style={{ padding: 5 }} />
+                        <Grades.f />
+                        <View style={{ padding: 5 }} />
+                        <Grades.custom label="CS" size={40} color="#fff" backgroundColor="#000" />
+                        <View style={{ padding: 5 }} />
+                        <Grades.f label="E" />
+                    </Card.Content>
                 </Card>
                 <Card style={styles.card}>
-                <Card.Title title="Drawer" />
-                <Card.Content>
-                    <Drawer activeItem="item1">
-                        <DrawerHeader title={'Drawer Title'} subtitle={'Drawer Subtitle'} icon={{ name: 'menu' }} />
-                        <DrawerBody>
-                            {/* Using children */}
-                            <DrawerNavGroup title={'Navigation Group'}>
-                                <DrawerNavItem
-                                    itemID={'item1'}
-                                    title={'Account'}
-                                    icon={{ family: 'material-community', name: 'account' }}
-                                    // activeItemBackgroundShape={'round'}
-                                    InfoListItemProps={{
-                                        iconAlign: 'center',
-                                    }}
-                                />
-                                <DrawerNavItem
-                                    itemID={'item2'}
-                                    title={'Notification'}
-                                    icon={{ family: 'material-community', name: 'bell' }}
-                                    activeItemBackgroundShape={'round'}
-                                    InfoListItemProps={{
-                                        iconAlign: 'center',
-                                    }}
-                                >
-                                    <DrawerNavItem itemID={'item3'} title={'item3'}>
-                                        <DrawerNavItem itemID={'item31'} title={'Item31'} />
-                                        <DrawerNavItem itemID={'item32'} title={'Item32'} />
+                    <Card.Title title="Drawer" />
+                    <Card.Content>
+                        <Drawer activeItem="item1">
+                            <DrawerHeader title={'Drawer Title'} subtitle={'Drawer Subtitle'} icon={{ name: 'menu' }} />
+                            <DrawerBody>
+                                {/* Using children */}
+                                <DrawerNavGroup title={'Navigation Group'}>
+                                    <DrawerNavItem
+                                        itemID={'item1'}
+                                        title={'Account'}
+                                        icon={{ family: 'material-community', name: 'account' }}
+                                        // activeItemBackgroundShape={'round'}
+                                        InfoListItemProps={{
+                                            iconAlign: 'center',
+                                        }}
+                                    />
+                                    <DrawerNavItem
+                                        itemID={'item2'}
+                                        title={'Notification'}
+                                        icon={{ family: 'material-community', name: 'bell' }}
+                                        activeItemBackgroundShape={'round'}
+                                        InfoListItemProps={{
+                                            iconAlign: 'center',
+                                        }}
+                                    >
+                                        <DrawerNavItem itemID={'item3'} title={'item3'}>
+                                            <DrawerNavItem itemID={'item31'} title={'Item31'} />
+                                            <DrawerNavItem itemID={'item32'} title={'Item32'} />
+                                        </DrawerNavItem>
                                     </DrawerNavItem>
-                                </DrawerNavItem>
-                                <DrawerNavItem
-                                    itemID={'item4'}
-                                    title={'Localization'}
-                                    icon={{ family: 'material-community', name: 'circle' }}
-                                    activeItemBackgroundShape={'round'}
-                                    InfoListItemProps={{
-                                        iconAlign: 'center',
-                                    }}
+                                    <DrawerNavItem
+                                        itemID={'item4'}
+                                        title={'Localization'}
+                                        icon={{ family: 'material-community', name: 'circle' }}
+                                        activeItemBackgroundShape={'round'}
+                                        InfoListItemProps={{
+                                            iconAlign: 'center',
+                                        }}
+                                    />
+                                </DrawerNavGroup>
+                                {/* Using 'items' prop */}
+                                <DrawerNavGroup
+                                    title={'Navigation Group'}
+                                    items={[
+                                        {
+                                            title: 'Sensors',
+                                            itemID: 'id1',
+                                        },
+                                        {
+                                            title: 'Devices',
+                                            itemID: 'id2',
+                                        },
+                                        {
+                                            title: 'Communication',
+                                            itemID: 'id3',
+                                        },
+                                    ]}
                                 />
-                            </DrawerNavGroup>
-                            {/* Using 'items' prop */}
-                            <DrawerNavGroup
-                                title={'Navigation Group'}
-                                items={[
-                                    {
-                                        title: 'Sensors',
-                                        itemID: 'id1',
-                                    },
-                                    {
-                                        title: 'Devices',
-                                        itemID: 'id2',
-                                    },
-                                    {
-                                        title: 'Communication',
-                                        itemID: 'id3',
-                                    },
-                                ]}
-                            />
-                        </DrawerBody>
-                    </Drawer>
-                </Card.Content>
-            </Card>
+                            </DrawerBody>
+                        </Drawer>
+                    </Card.Content>
+                </Card>
                 <Card style={styles.card}>
                     <Card.Title title="Header" />
                 </Card>
