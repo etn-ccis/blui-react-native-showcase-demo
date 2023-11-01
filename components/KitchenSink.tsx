@@ -223,7 +223,10 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <View style={{padding:5}}/>
                     <Grades.f/>
                     <View style={{padding:5}}/>
+                    <Grades.custom label='CS' size={40} color='#fff' backgroundColor='#000'/>
+                    <View style={{padding:5}}/>
                     <Grades.f label='E'/>
+
                 </Card.Content>
                 </Card>
                 <Card style={styles.card}>
