@@ -205,14 +205,25 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                  <Card style={styles.card}>
                 <Card.Title title="Grades" />
                 <Card.Content>
-                    {/* <Avatar.Text label='A+' 
-                    style={{backgroundColor:'#f00'}} 
-                    color='#fff' 
-                    labelStyle={{fontFamily:'OpenSans-Bold',fontWeight:'700'}}/> */}
-                    <Grades.APlus/>
-                    <Grades.A/>
-                    <Grades.ANeg/>
-                    <Grades.B/>
+                    <Grades.aPlus/>
+                    <View style={{padding:5}}/>
+                    <Grades.a/>
+                    <View style={{padding:5}}/>
+                    <Grades.aMinus/>
+                    <View style={{padding:5}}/>
+                    <Grades.bPlus/>
+                    <View style={{padding:5}}/>
+                    <Grades.b/>
+                    <View style={{padding:5}}/>
+                    <Grades.bMinus/>
+                    <View style={{padding:5}}/>
+                    <Grades.c/>
+                    <View style={{padding:5}}/>
+                    <Grades.d/>
+                    <View style={{padding:5}}/>
+                    <Grades.f/>
+                    <View style={{padding:5}}/>
+                    <Grades.f label='E'/>
                 </Card.Content>
                 </Card>
                 <Card style={styles.card}>
