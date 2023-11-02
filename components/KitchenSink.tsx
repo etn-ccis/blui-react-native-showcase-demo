@@ -56,6 +56,7 @@ import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
 import { MobileStepperExample } from './MobileStepperExample';
 import { BLUIColors } from '@brightlayer-ui/colors';
+import BottomNav from './bottomNav';
 
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -556,6 +557,53 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 </Card>
                 <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
                 <Card style={styles.card}>
+                            <Card.Title title={'AppBar'}/>
+                            <Appbar.Header>
+    <Appbar.BackAction onPress={() => {}} />
+    <Appbar.Content title="Title" />
+    <Appbar.Action icon="calendar" onPress={() => {}} />
+    <Appbar.Action icon="magnify" onPress={() => {}} />
+  </Appbar.Header>
+
+<View style={{padding:10}}/>
+
+  <Appbar.Header mode='medium'>
+    <Appbar.BackAction onPress={() => {}} />
+    <Appbar.Content title="Medium" />
+    <Appbar.Action icon="calendar" onPress={() => {}} />
+    <Appbar.Action icon="magnify" onPress={() => {}} />
+  </Appbar.Header>
+
+  <View style={{padding:10}}/>
+
+  
+                </Card>
+                <Card style={styles.card}>
+                            <Card.Title title={'Avatar'}/>
+                            <Avatar.Icon icon="account"  color={theme.colors.primaryContainer} style={{backgroundColor:theme.colors.primary}}/>
+                            <Avatar.Icon icon="account" />
+                            <Avatar.Text label="XD" />
+                </Card>
+                <Card style={styles.card}>
+                            <Card.Title title={'Bottom Nav'}/>
+                            <BottomNav/>
+                </Card>
+                <Card style={styles.card}>
+                            <Card.Title title={'Bottom Nav'}/>
+                            <Button icon="camera" mode="contained" onPress={() => console.log('Pressed')} style={{width:'40%'}}>
+                                Press me
+                            </Button>
+                            <Button icon="camera" mode='outlined' contentStyle={{flexDirection: 'row-reverse'}} onPress={() => console.log('Pressed')} style={{width:'40%'}}>
+                                Press me
+                            </Button>
+                            <Button icon="camera" mode='text' buttonColor={theme.colors.onSurfaceVariant} textColor={theme.colors.background} contentStyle={{flexDirection: 'row-reverse',}} onPress={() => console.log('Pressed')}>
+                                Press me
+                            </Button>
+                            <Button mode='outlined' onPress={() => console.log('Pressed')} compact={true}>
+                                Press me
+                            </Button>
+                </Card>
+                <Card style={styles.card}>
                     <View
                         style={{
                             justifyContent: 'center',
@@ -577,7 +625,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         onPress: () => setBannerVisible(false),
                                     },
                                 ]}
-                                icon={(props) => <Avatar.Icon {...props} icon="account-circle" />}
+                                icon={() => <Avatar.Icon size={30} icon="account-circle" />}
                             >
                                 There was a problem processing a transaction on your credit card.
                             </Banner>
