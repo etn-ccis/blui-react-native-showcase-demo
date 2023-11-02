@@ -345,7 +345,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     <Avatar.Text
                                         label="JS"
                                         size={40}
-                                        color={BLUIColors.blue[700]}
+                                        color={BLUIColors.blue[800]}
                                         style={{ backgroundColor: BLUIColors.blue[100] }}
                                     />
                                 }
