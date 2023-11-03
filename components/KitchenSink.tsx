@@ -51,7 +51,7 @@ import {
     DrawerBody,
     DrawerNavGroup,
     DrawerNavItem,
-    Grades,
+    Grade,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -203,37 +203,22 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 }}
             >
                 <Card style={styles.card}>
-                    <Card.Title title="Grades" />
+                    <Card.Title title="grades" />
                     <Card.Content>
-                        <Grades.aPlus />
-                        <View style={{ padding: 5 }} />
-                        <Grades.a />
-                        <View style={{ padding: 5 }} />
-                        <Grades.aMinus />
-                        <View style={{ padding: 5 }} />
-                        <Grades.bPlus />
-                        <View style={{ padding: 5 }} />
-                        <Grades.b />
-                        <View style={{ padding: 5 }} />
-                        <Grades.bMinus />
-                        <View style={{ padding: 5 }} />
-                        <Grades.cPlus />
-                        <View style={{ padding: 5 }} />
-                        <Grades.c />
-                        <View style={{ padding: 5 }} />
-                        <Grades.cMinus />
-                        <View style={{ padding: 5 }} />
-                        <Grades.dPlus />
-                        <View style={{ padding: 5 }} />
-                        <Grades.d />
-                        <View style={{ padding: 5 }} />
-                        <Grades.dMinus />
-                        <View style={{ padding: 5 }} />
-                        <Grades.f />
-                        <View style={{ padding: 5 }} />
-                        <Grades.custom label="CS" size={40} color="#fff" backgroundColor="#000" />
-                        <View style={{ padding: 5 }} />
-                        <Grades.f label="E" />
+                        <Grade label="Cg" size={40} />
+                        <Grade.APlus style={{ marginBottom: 10 }} />
+                        <Grade.A style={{ marginBottom: 10 }} />
+                        <Grade.AMinus style={{ marginBottom: 10 }} />
+                        <Grade.BPlus style={{ marginBottom: 10 }} />
+                        <Grade.B style={{ marginBottom: 10 }} />
+                        <Grade.BMinus style={{ marginBottom: 10 }} />
+                        <Grade.CPlus style={{ marginBottom: 10 }} />
+                        <Grade.C style={{ marginBottom: 10 }} />
+                        <Grade.CMinus style={{ marginBottom: 10 }} />
+                        <Grade.DPlus style={{ marginBottom: 10 }} />
+                        <Grade.D style={{ marginBottom: 10 }} />
+                        <Grade.DMinus style={{ marginBottom: 10 }} />
+                        <Grade.F style={{ marginBottom: 10 }} />
                     </Card.Content>
                 </Card>
                 <Card style={styles.card}>
