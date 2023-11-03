@@ -341,14 +341,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     },
                                     { title: 'Log Out', icon: { name: 'exit-to-app' } },
                                 ]}
-                                avatar={
-                                    <Avatar.Text
-                                        label="JS"
-                                        size={40}
-                                        color={BLUIColors.blue[800]}
-                                        style={{ backgroundColor: BLUIColors.blue[100] }}
-                                    />
-                                }
+                                avatar={<Avatar.Text label="JS" size={40} />}
                             />
                         </View>
                         <View style={{ alignItems: 'center', marginBottom: 8 }}>
