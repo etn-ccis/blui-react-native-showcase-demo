@@ -205,7 +205,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Card style={styles.card}>
                     <Card.Title title="grades" />
                     <Card.Content>
-                        <Grade label="Cg" size={40} />
                         <Grade.APlus style={{ marginBottom: 10 }} />
                         <Grade.A style={{ marginBottom: 10 }} />
                         <Grade.AMinus style={{ marginBottom: 10 }} />
@@ -219,6 +218,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <Grade.D style={{ marginBottom: 10 }} />
                         <Grade.DMinus style={{ marginBottom: 10 }} />
                         <Grade.F style={{ marginBottom: 10 }} />
+                        <Grade label="Cg" size={40} />
                     </Card.Content>
                 </Card>
                 <Card style={styles.card}>
