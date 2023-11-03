@@ -443,8 +443,10 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         {/* Default Font size : 16px */}
                         <ChannelValue value="Concord" icon={'🍇'} style={{ marginTop: 12 }} />
                         {/* Default Font size : 22px */}
-                        <ChannelValue value="1" icon={'A'} iconColor="blue" fontSize={22} style={{ marginTop: 12 }} />
+                        <ChannelValue value="100" units="%" fontSize={22} icon={{ family: 'brightlayer-ui', name: 'battery' }}  style={{ marginTop: 12 }} />
                         {/* Default Font size : 32px */}
+                        <ChannelValue value="50.2.1" fontSize={32} icon={{ name: 'settings' }}  iconColor="red" style={{ marginTop: 12 }} />
+                        <ChannelValue value="1" icon={'A'} iconColor="blue" style={{ marginTop: 12 }} />
                         <ChannelValue value="1" icon={PublicDomainAlice} fontSize={32} style={{ marginTop: 12 }} />
                     </Card.Content>
                 </Card>
