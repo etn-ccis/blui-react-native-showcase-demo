@@ -1,8 +1,10 @@
 import React from 'react';
 import { Hero, InfoListItem, ScoreCard } from '@brightlayer-ui/react-native-components';
 import { BLUIColors } from '@brightlayer-ui/colors';
+import { useTheme } from 'react-native-paper';
 
 export const ScoreCardExample: React.FC = () => {
+    const theme = useTheme();
     return (
         <ScoreCard
             headerTitle={'Substation 42'}
@@ -13,6 +15,7 @@ export const ScoreCardExample: React.FC = () => {
             badge={
                 // <HeroBanner style={{ flex: 0, minWidth: 80, justifyContent: 'flex-end' }}>
                 <Hero
+                    iconBackgroundColor={theme.colors.surface}
                     label={'Score'}
                     iconSize={48}
                     iconColor={BLUIColors.green[500]}

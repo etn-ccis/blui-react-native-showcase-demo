@@ -27,10 +27,10 @@ export const MD3BluiDarkTheme = {
         onBackground: '#EBF1F4',
         surface: '#141C1F',
         onSurface: '#EBF1F4',
-        surfaceVariant: '#333F48',
+        surfaceVariant: '#44474E',
         onSurfaceVariant: '#A8ABB4',
         outline: '#8E9099',
-        outlineVariant: '#44474E',
+        outlineVariant: 'rgba(142, 144, 153, 0.25)',
         shadow: '#000000',
         scrim: '#000000',
         inverseSurface: 'rgb(241, 240, 244)',
@@ -47,12 +47,13 @@ export const MD3BluiDarkTheme = {
         surfaceDisabled: 'rgba(26, 27, 30, 0.12)',
         onSurfaceDisabled: 'rgba(26, 27, 30, 0.38)',
         backdrop: 'rgba(45, 48, 56, 0.4)',
-        // @TODO verify disabled color for dark theme
-        disabled: '#192024',
+        disabled: '#D7E0E5',
         // @TODO verify neutral30
+        // @TODO verify neutral80
         neutralVariant: {
             neutral10: '#181C22',
             neutral30: '#414E54',
+            neutral80: '#BDCAD1',
             neutral100: '#FFFFFF',
         },
         // warning: '#FBE365',
@@ -74,6 +75,12 @@ export const MD3BluiDarkTheme = {
         // purpleNonText: '#B56EFF',
         // onPurple: '#480081',
         // purpleContainer: '#6700B5',
-        // onPurpleContainer: '#F0DBFF'
+        // onPurpleContainer: '#F0DBFF',
+        primaryNonText: '#4D9FEC',
+        surfaceContainerLowest: '#0D1317',
+        surfaceContainerLower: '#192024',
+        surfaceContainer: '#1E262A',
+        surfaceContainerHigh: '#293338',
+        surfaceContainerHighest: '#333F48',
     },
 };
