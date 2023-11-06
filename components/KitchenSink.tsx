@@ -599,10 +599,20 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             <Button icon="camera" mode='text' buttonColor={theme.colors.onSurfaceVariant} textColor={theme.colors.background} contentStyle={{flexDirection: 'row-reverse',}} onPress={() => console.log('Pressed')}>
                                 Press me
                             </Button>
-                            <Button mode='outlined' onPress={() => console.log('Pressed')} compact={true}>
+                            <Button mode='outlined' textColor='#f00' onPress={() => console.log('Pressed')} compact={true}>
                                 Press me
                             </Button>
+                            <Chip icon="information" onPress={() => console.log('Pressed')}>Example Chip</Chip>
+                            <Chip icon="information" selected={true} onPress={() => console.log('Pressed')}>Example Chip</Chip>
+                            <Chip icon="information" disabled={true} onPress={() => console.log('Pressed')}>Example Chip</Chip>
+
                 </Card>
+                <Card>
+                    <Card.Title title={'switch'}/>
+                    <Switch/>
+                    <Switch value={true}/>
+                    <RadioButton value='first' status='checked'/>
+                  </Card>
                 <Card style={styles.card}>
                     <View
                         style={{
