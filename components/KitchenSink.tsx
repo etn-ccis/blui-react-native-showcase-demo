@@ -695,14 +695,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 <DataTable.Header>
                                     <DataTable.Title>Dessert</DataTable.Title>
                                     <DataTable.Title numeric>Calories</DataTable.Title>
-                                    <DataTable.Title numeric>Fat</DataTable.Title>
+                                    <DataTable.Title>Fat</DataTable.Title>
                                 </DataTable.Header>
 
                                 {items.slice(from, to).map((item) => (
                                     <DataTable.Row key={item.key}>
                                         <DataTable.Cell>{item.name}</DataTable.Cell>
                                         <DataTable.Cell numeric>{item.calories}</DataTable.Cell>
-                                        <DataTable.Cell numeric>{item.fat}</DataTable.Cell>
+                                        <DataTable.Cell><Button mode='contained'>Fat</Button></DataTable.Cell>
                                     </DataTable.Row>
                                 ))}
 
@@ -834,7 +834,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 <List.Item
                                     title="Item 3"
                                     description="Item 3 Description"
-                                    left={(): JSX.Element => <List.Icon icon="folder" />}
+                                    left={(): JSX.Element => <Avatar.Text label='AB'/>}
+                                    right={():JSX.Element => <List.Icon icon='chevron-right' />}
                                 />
                             </View>
                             <View>
@@ -881,12 +882,22 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     </Button>
                                 }
                             >
-                                <Menu.Item onPress={(): void => setMenuVisible(false)} title="Item 1" />
-                                <Menu.Item onPress={(): void => setMenuVisible(false)} title="Item 2" />
-                                <Divider />
-                                <Menu.Item onPress={(): void => setMenuVisible(false)} title="Item 3" />
-                                <Menu.Item onPress={(): void => setMenuVisible(false)} title="Item 4" />
-                            </Menu>
+                            <Menu.Item leadingIcon="redo" onPress={() => {}} title="Redo" />
+    <Menu.Item leadingIcon="undo" trailingIcon='chevron-right' onPress={() => {}} title="Undo" />
+    <Menu.Item leadingIcon="content-cut" onPress={() => {}} title="Cut" disabled />
+    <Menu.Item leadingIcon="content-copy" onPress={() => {}} title="Copy" disabled />
+    <Menu.Item leadingIcon="content-paste" titleStyle={{color:'#f00'}} onPress={() => {}} title="Paste" />
+    <Menu.Item leadingIcon="redo" onPress={() => {}} title="Redo" />
+    <Menu.Item leadingIcon="undo" trailingIcon='chevron-right' onPress={() => {}} title="Undo" />
+    <Menu.Item leadingIcon="content-cut" onPress={() => {}} title="Cut" disabled />
+    <Menu.Item leadingIcon="content-copy" onPress={() => {}} title="Copy" disabled />
+    <Menu.Item leadingIcon="content-paste" titleStyle={{color:'#f00'}} onPress={() => {}} title="Paste" />
+    <Menu.Item leadingIcon="redo" onPress={() => {}} title="Redo" />
+    <Menu.Item leadingIcon="undo" trailingIcon='chevron-right' onPress={() => {}} title="Undo" />
+    <Menu.Item leadingIcon="content-cut" onPress={() => {}} title="Cut" disabled />
+    <Menu.Item leadingIcon="content-copy" onPress={() => {}} title="Copy" disabled />
+    <Menu.Item leadingIcon="content-paste" titleStyle={{color:'#f00'}} onPress={() => {}} title="Paste" />
+  </Menu>
                         </View>
                     </View>
                 </Card>
@@ -920,6 +931,45 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         </View>
                     </View>
                 </Card>
+                <Card style={styles.card}>
+                    <View
+                        style={{
+                            justifyContent: 'center',
+                            marginHorizontal: 24,
+                            marginVertical: 24,
+                        }}
+                    >
+                        <Text>Snackbar</Text>
+                        {/* <Snackbar
+        visible={true}
+        onDismiss={()=>{console.log("pressed")}}
+        icon="chevron-right"
+        onIconPress={()=>{console.log("aaaa")}}
+        action={{
+          label: 'Undo',
+          onPress: () => {
+            // Do something
+          },
+        }}>
+        Hey there! I'm a Snackbar.
+      </Snackbar> */}
+
+      <Snackbar
+        visible={false}
+        onDismiss={()=>{console.log("pressed")}}
+        icon="chevron-right"
+        onIconPress={()=>{console.log("aaaa")}}
+        >
+            <View>
+        <Text style={{color:theme.colors.surface}}>Hey there! I'm a Snackbar.</Text>
+        <View style={{flexDirection:'row', justifyContent:'flex-end'}}>
+            <Button onPress={()=>{}}>UNDO</Button>
+            <Button onPress={()=>{}}>Learn more</Button>
+        </View>
+            </View>
+      </Snackbar>
+                        </View>
+                        </Card>
                 <Card style={styles.card}>
                     <View
                         style={{
