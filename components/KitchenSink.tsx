@@ -51,6 +51,7 @@ import {
     DrawerBody,
     DrawerNavGroup,
     DrawerNavItem,
+    Grade,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -201,6 +202,25 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     actionItems: [{ icon: { name: 'more' }, onPress: () => {} }],
                 }}
             >
+                <Card style={styles.card}>
+                    <Card.Title title="grades" />
+                    <Card.Content>
+                        <Grade.APlus style={{ marginBottom: 10 }} />
+                        <Grade.A style={{ marginBottom: 10 }} />
+                        <Grade.AMinus style={{ marginBottom: 10 }} />
+                        <Grade.BPlus style={{ marginBottom: 10 }} />
+                        <Grade.B style={{ marginBottom: 10 }} />
+                        <Grade.BMinus style={{ marginBottom: 10 }} />
+                        <Grade.CPlus style={{ marginBottom: 10 }} />
+                        <Grade.C style={{ marginBottom: 10 }} />
+                        <Grade.CMinus style={{ marginBottom: 10 }} />
+                        <Grade.DPlus style={{ marginBottom: 10 }} />
+                        <Grade.D style={{ marginBottom: 10 }} />
+                        <Grade.DMinus style={{ marginBottom: 10 }} />
+                        <Grade.F style={{ marginBottom: 10 }} />
+                        <Grade label="Cg" size={40} />
+                    </Card.Content>
+                </Card>
                 <Card style={styles.card}>
                     <Card.Title title="Drawer" />
                     <Card.Content>
@@ -436,9 +456,21 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         {/* Default Font size : 16px */}
                         <ChannelValue value="Concord" icon={'🍇'} style={{ marginTop: 12 }} />
                         {/* Default Font size : 22px */}
-                        <ChannelValue value="100" units="%" fontSize={22} icon={{ family: 'brightlayer-ui', name: 'battery' }}  style={{ marginTop: 12 }} />
+                        <ChannelValue
+                            value="100"
+                            units="%"
+                            fontSize={22}
+                            icon={{ family: 'brightlayer-ui', name: 'battery' }}
+                            style={{ marginTop: 12 }}
+                        />
                         {/* Default Font size : 32px */}
-                        <ChannelValue value="50.2.1" fontSize={32} icon={{ name: 'settings' }}  iconColor="red" style={{ marginTop: 12 }} />
+                        <ChannelValue
+                            value="50.2.1"
+                            fontSize={32}
+                            icon={{ name: 'settings' }}
+                            iconColor="red"
+                            style={{ marginTop: 12 }}
+                        />
                         <ChannelValue value="1" icon={'A'} iconColor="blue" style={{ marginTop: 12 }} />
                         <ChannelValue value="1" icon={PublicDomainAlice} fontSize={32} style={{ marginTop: 12 }} />
                     </Card.Content>
