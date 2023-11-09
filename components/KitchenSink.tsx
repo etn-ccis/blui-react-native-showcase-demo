@@ -202,6 +202,26 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 }}
             >
                 <Card style={styles.card}>
+                    <Card.Title title="Fonts" />
+                    <Card.Content>
+                        <Text variant="displayLarge">Display Large</Text>
+                        <Text variant="displayMedium">Display Medium</Text>
+                        <Text variant="displaySmall">Display small</Text>
+                        <Text variant="headlineLarge">Headline Large</Text>
+                        <Text variant="headlineMedium">Headline Medium</Text>
+                        <Text variant="headlineSmall">Headline Small</Text>
+                        <Text variant="titleLarge">Title Large</Text>
+                        <Text variant="titleMedium">Title Medium</Text>
+                        <Text variant="titleSmall">Title Small</Text>
+                        <Text variant="bodyLarge">Body Large</Text>
+                        <Text variant="bodyMedium">Body Medium</Text>
+                        <Text variant="bodySmall">Body Small</Text>
+                        <Text variant="labelLarge">Label Large</Text>
+                        <Text variant="labelMedium">Label Medium</Text>
+                        <Text variant="labelSmall">Label Small</Text>
+                    </Card.Content>
+                </Card>
+                <Card style={styles.card}>
                     <Card.Title title="Drawer" />
                     <Card.Content>
                         <Drawer activeItem="item1">
@@ -436,9 +456,21 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         {/* Default Font size : 16px */}
                         <ChannelValue value="Concord" icon={'🍇'} style={{ marginTop: 12 }} />
                         {/* Default Font size : 22px */}
-                        <ChannelValue value="100" units="%" fontSize={22} icon={{ family: 'brightlayer-ui', name: 'battery' }}  style={{ marginTop: 12 }} />
+                        <ChannelValue
+                            value="100"
+                            units="%"
+                            fontSize={22}
+                            icon={{ family: 'brightlayer-ui', name: 'battery' }}
+                            style={{ marginTop: 12 }}
+                        />
                         {/* Default Font size : 32px */}
-                        <ChannelValue value="50.2.1" fontSize={32} icon={{ name: 'settings' }}  iconColor="red" style={{ marginTop: 12 }} />
+                        <ChannelValue
+                            value="50.2.1"
+                            fontSize={32}
+                            icon={{ name: 'settings' }}
+                            iconColor="red"
+                            style={{ marginTop: 12 }}
+                        />
                         <ChannelValue value="1" icon={'A'} iconColor="blue" style={{ marginTop: 12 }} />
                         <ChannelValue value="1" icon={PublicDomainAlice} fontSize={32} style={{ marginTop: 12 }} />
                     </Card.Content>
@@ -515,8 +547,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             title={'Title'}
                             icon={{ family: 'brightlayer-ui', name: 'leaf' }}
                             subtitle={'Subtitle'}
-                            statusColor={BLUIColors.red[500]}
-                            backgroundColor={BLUIColors.blue[50]}
+                            statusColor={BLUIColors.error[100]}
+                            backgroundColor={BLUIColors.primary[90]}
                             avatar
                             divider={'partial'}
                             chevron
