@@ -85,7 +85,7 @@ export const MobileStepperExample: React.FC = () => {
                     </Button>
                 }
                 variant={mobileStepperVariant}
-                activeColor={Colors.blue[500]}
+                activeColor={Colors.primary[50]}
             />
         </Card>
     );
