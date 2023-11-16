@@ -29,7 +29,7 @@ import {
     TextInput,
     Text,
     useTheme,
-    ProgressBar,
+    ProgressBar as PaperProgressBar,
     Snackbar,
     ActivityIndicator,
 } from 'react-native-paper';
@@ -52,6 +52,7 @@ import {
     DrawerNavGroup,
     DrawerNavItem,
     Grade,
+    ProgressBar,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -202,6 +203,10 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     actionItems: [{ icon: { name: 'more' }, onPress: () => {} }],
                 }}
             >
+                <Card style={styles.card}>
+                    <Card.Title title="Progress Bar" />
+                    <ProgressBar progress={0.5} style={{ margin: 8 }} />
+                </Card>
                 <Card style={styles.card}>
                     <Card.Title title="grades" />
                     <Card.Content>
@@ -1612,14 +1617,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     >
                         <Text>Progress Bar</Text>
                         <View style={{ marginTop: 24 }}>
-                            <ProgressBar progress={0} />
-                            <ProgressBar progress={0.5} style={{ marginTop: 24 }} />
-                            <ProgressBar progress={1.0} style={{ marginTop: 24 }} />
-                            <ProgressBar indeterminate style={{ marginTop: 24 }} />
-                            <ProgressBar progress={0} style={{ marginTop: 24 }} />
-                            <ProgressBar progress={0.5} style={{ marginTop: 24 }} />
-                            <ProgressBar progress={1.0} style={{ marginTop: 24 }} />
-                            <ProgressBar indeterminate style={{ marginTop: 24 }} />
+                            <PaperProgressBar progress={0} />
+                            <PaperProgressBar progress={0.5} style={{ marginTop: 24 }} />
+                            <PaperProgressBar progress={1.0} style={{ marginTop: 24 }} />
+                            <PaperProgressBar indeterminate style={{ marginTop: 24 }} />
+                            <PaperProgressBar progress={0} style={{ marginTop: 24 }} />
+                            <PaperProgressBar progress={0.5} style={{ marginTop: 24 }} />
+                            <PaperProgressBar progress={1.0} style={{ marginTop: 24 }} />
+                            <PaperProgressBar indeterminate style={{ marginTop: 24 }} />
                         </View>
                     </View>
                 </Card>
