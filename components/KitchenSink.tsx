@@ -7,7 +7,7 @@ import {
     Avatar,
     Badge,
     Banner,
-    Button,
+    // Button,
     BottomNavigation,
     Card,
     Checkbox,
@@ -52,6 +52,7 @@ import {
     DrawerNavGroup,
     DrawerNavItem,
     Grade,
+    Button,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -584,6 +585,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             chevron
                         />
                     </Card.Content>
+                </Card>
+                <Card style={styles.card}>
+                    <Text>Button</Text>
+                    <Button mode='contained' icon={{ family: 'brightlayer-ui', name: 'grade_a' }} label='Hello' />
+                    <Button mode='text' icon={{ family: 'brightlayer-ui', name: 'grade_a' }} label="hello" />
+                    <Button mode='outlined' label='Hello' />
+                    <Button mode='elevated' label='Hello' />
+                    <Button mode='contained-tonal' label='Hello' />
                 </Card>
                 <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
                 <Card style={styles.card}>
