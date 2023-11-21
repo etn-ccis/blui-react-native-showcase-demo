@@ -12,6 +12,7 @@ const Drawer = createDrawerNavigator();
 export type RootStackParamList = {
     App: undefined;
     NavigationDrawer: undefined;
+    KitchenSink: undefined;
 };
 
 const RootStack = createStackNavigator<RootStackParamList>();

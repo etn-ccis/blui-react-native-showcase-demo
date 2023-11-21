@@ -18,7 +18,7 @@ export const ScoreCardExample: React.FC = () => {
                     iconBackgroundColor={theme.colors.surface}
                     label={'Score'}
                     iconSize={48}
-                    iconColor={BLUIColors.green[500]}
+                    iconColor={BLUIColors.purple[50]}
                     ChannelValueProps={{
                         value: 98,
                         units: '/100',

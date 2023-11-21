@@ -1,7 +1,8 @@
-import { IconFamily, InfoListItemProps, UserMenu } from '@brightlayer-ui/react-native-components';
+import { InfoListItemProps, UserMenu } from '@brightlayer-ui/react-native-components';
 import React from 'react';
 import { Avatar } from 'react-native-paper';
-import * as Colors from '@brightlayer-ui/colors';
+import { BLUIColors } from '@brightlayer-ui/colors';
+import { IconFamily } from '@brightlayer-ui/react-native-components/md3/__types__';
 
 const SwapIcon: IconFamily = {
     family: 'material',
@@ -46,8 +47,8 @@ export const UserMenuExample: React.FC<UserMenuExampleProps> = (props) => {
                 <Avatar.Icon
                     icon="account-circle"
                     size={40}
-                    color={Colors.blue[500]}
-                    style={{ backgroundColor: Colors.blue[50] }}
+                    color={BLUIColors.primary[50]}
+                    style={{ backgroundColor: BLUIColors.primary[80] }}
                 />
             }
         />

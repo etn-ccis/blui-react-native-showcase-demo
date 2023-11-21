@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { I18nManager, StyleSheet, View } from 'react-native';
 import {
     Appbar,
     Avatar,
@@ -57,6 +57,11 @@ import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
 import { MobileStepperExample } from './MobileStepperExample';
 import { BLUIColors } from '@brightlayer-ui/colors';
+import { UserMenuExample } from './UserMenuExample';
+import RNRestart from 'react-native-restart';
+import { useThemeContext } from '../contexts/ThemeContext';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../router';
 
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -87,7 +92,21 @@ const styles = StyleSheet.create({
     },
 });
 
-export const KitchenSink: React.FC = (): JSX.Element => {
+export const toggleRTL = (): void => {
+    if (I18nManager.isRTL) {
+        I18nManager.allowRTL(false);
+        I18nManager.forceRTL(false);
+    } else {
+        I18nManager.forceRTL(true);
+    }
+    RNRestart.Restart();
+};
+
+type KitchenSinkProps = {
+    navigation?: StackNavigationProp<RootStackParamList, 'KitchenSink'>;
+};
+
+export const KitchenSink: React.FC<KitchenSinkProps> = ({ navigation }): JSX.Element => {
     const theme = useTheme();
     const [bannerVisible, setBannerVisible] = React.useState(true);
     const [checkboxAndroidOne, setCheckboxAndroidOne] = React.useState<'checked' | 'unchecked' | 'indeterminate'>(
@@ -187,6 +206,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const showModal = (): void => setVisible(true);
     const hideModal = (): void => setVisible(false);
 
+    const { theme: themeType, setTheme } = useThemeContext();
+
     return (
         <>
             <CollapsibleHeaderLayout
@@ -198,8 +219,21 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     info: 'hello',
                     expandable: true,
                     backgroundImage: require('../assets/images/farm.jpg'),
-                    onIconPress: () => {},
-                    actionItems: [{ icon: { name: 'more' }, onPress: () => {} }],
+                    onIconPress: (): void => {
+                        navigation.openDrawer();
+                    },
+                    actionItems: [
+                        {
+                            icon: { name: 'more' },
+                            onPress: () => {},
+                            component: (
+                                <UserMenuExample
+                                    onToggleRTL={toggleRTL}
+                                    onToggleTheme={(): void => setTheme(themeType === 'light' ? 'dark' : 'light')}
+                                />
+                            ),
+                        },
+                    ],
                 }}
             >
                 <Card style={styles.card}>
@@ -224,7 +258,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Card style={styles.card}>
                     <Card.Title title="Drawer" />
                     <Card.Content>
-                        <Drawer activeItem="item1">
+                        <Drawer activeItem="item1" style={{ margin: 10 }}>
                             <DrawerHeader title={'Drawer Title'} subtitle={'Drawer Subtitle'} icon={{ name: 'menu' }} />
                             <DrawerBody>
                                 {/* Using children */}
@@ -284,9 +318,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         </Drawer>
                     </Card.Content>
                 </Card>
-                <Card style={styles.card}>
+                {/* <Card style={styles.card}>
                     <Card.Title title="Header" />
-                </Card>
+                </Card> */}
                 <Header
                     title={'Valley Forge'}
                     subtitle={'The Last Stand'}
@@ -403,22 +437,21 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         </View>
                     </View>
                 </Card>
-                <Card style={styles.card}>
-                    <Card.Title title="Score Card" />
-                    <View
-                        style={{
-                            justifyContent: 'center',
-                            marginHorizontal: 24,
-                            marginBottom: 24,
-                        }}
-                    >
-                        <ScoreCardExample />
-                    </View>
-                </Card>
-                <Card style={styles.card}>
-                    <Card.Title title="Mobile Stepper" />
-                    <MobileStepperExample />
-                </Card>
+                {/* <Card style={styles.card}>
+                    <Card.Title title="Score Card" /> */}
+                <View
+                    style={{
+                        justifyContent: 'center',
+                        margin: 10,
+                    }}
+                >
+                    <ScoreCardExample />
+                </View>
+                {/* </Card> */}
+                {/* <Card style={styles.card}>
+                    <Card.Title title="Mobile Stepper" /> */}
+                <MobileStepperExample />
+                {/* </Card> */}
                 <Card style={styles.card}>
                     <Card.Title title="Overline" />
                     <Card.Content>
@@ -547,8 +580,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             title={'Title'}
                             icon={{ family: 'brightlayer-ui', name: 'leaf' }}
                             subtitle={'Subtitle'}
-                            statusColor={BLUIColors.red[500]}
-                            backgroundColor={BLUIColors.blue[50]}
+                            statusColor={BLUIColors.error[50]}
+                            backgroundColor={BLUIColors.primary[50]}
                             avatar
                             divider={'partial'}
                             chevron
@@ -1125,7 +1158,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         </View>
                     </View>
                 </Card>
-                <Card style={{ padding: 20, margin: 20, marginBottom: 0 }}>
+                <Card style={{ padding: 20, margin: 10 }}>
                     <Text>Button</Text>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <Button
@@ -1182,7 +1215,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         </Button>
                     </View>
                 </Card>
-                <Card style={{ padding: 20, margin: 20, marginBottom: 0 }}>
+                <Card style={{ padding: 20, margin: 10 }}>
                     <Text>Button(Disabled)</Text>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <Button
