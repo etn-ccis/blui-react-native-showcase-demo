@@ -588,11 +588,16 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 </Card>
                 <Card style={styles.card}>
                     <Text>Button</Text>
-                    <Button mode='contained' icon={{ family: 'brightlayer-ui', name: 'grade_a' }} label='Hello' />
-                    <Button mode='text' icon={{ family: 'brightlayer-ui', name: 'grade_a' }} label="hello" />
-                    <Button mode='outlined' label='Hello' />
-                    <Button mode='elevated' label='Hello' />
-                    <Button mode='contained-tonal' label='Hello' />
+                    <Button mode='contained' icon={{ name: 'settings' }} label='Hello' onPress={()=>{}}/>
+                    <Button mode='contained' icon={{ family: 'brightlayer-ui', name: 'grade_a' }} label='Hello' onPress={()=>{}} disabled={true}/>
+                    <Button mode='text' contentStyle={{flexDirection: 'row-reverse'}} icon={{ family: 'brightlayer-ui', name: 'grade_a' }} label='Hello' onPress={()=>{}}/>
+                    <Button mode='text' icon={{ family: 'brightlayer-ui', name: 'grade_a' }} label='Hello' onPress={() => { } } disabled={true} iconColor={''}/>
+                    <Button mode='outlined' label='Hello' onPress={()=>{}}/>
+                    <Button mode='outlined' label='Hello' onPress={()=>{}} disabled={true}/>
+                    <Button mode='elevated' label='Hello' onPress={()=>{}}/>
+                    <Button mode='elevated' label='Hello' onPress={()=>{}} disabled={true}/>
+                    <Button mode='contained-tonal' label='Hello' onPress={()=>{}} />
+                    <Button mode='contained-tonal' label='Hello' onPress={()=>{}} disabled={true}/>
                 </Card>
                 <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
                 <Card style={styles.card}>
