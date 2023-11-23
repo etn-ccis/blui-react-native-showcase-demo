@@ -14,6 +14,7 @@ import { Divider, useTheme } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
+import { DrawerActions } from '@react-navigation/native';
 
 const headerBgImage = require('../assets/images/topology_40.png');
 const eatonLogo = require('../assets/images/eatonLogo.png');
@@ -94,14 +95,14 @@ export const navGroupItems2: NavItem[] = [
         title: 'Devices',
         subtitle: '4 new alerts',
         itemID: 'g2i1',
-        statusColor: Colors.yellow[500],
+        statusColor: Colors.BLUIColors.primary[50],
         items: [
             {
                 title: 'Sub NavItem 1',
                 itemID: 'g2i1i1',
                 items: [
                     {
-                        statusColor: Colors.red[500],
+                        statusColor: Colors.BLUIColors.orange[50],
                         title: 'Deep Nested Nav',
                         itemID: 'g2i1i1i1',
                     },
@@ -125,14 +126,15 @@ export const navGroupItems2: NavItem[] = [
         subtitle: 'You cant see me, fix InfoListItem',
         title: 'Alerts',
         itemID: 'g2i4',
-        activeItemFontColor: Colors.white[50],
-        activeItemBackgroundColor: Colors.blue[900],
+        activeItemFontColor: Colors.BLUIColors.primary[100],
+        activeItemBackgroundColor: Colors.BLUIColors.neutral[50],
     },
 ];
 
 export type NavDrawerProps = {
     navigation: StackNavigationProp<RootStackParamList, 'NavigationDrawer'>;
 };
+
 export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
     const theme = useTheme();
     const [selected, setSelected] = useState('');
@@ -154,10 +156,10 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 title={'Drawer Title'}
                 subtitle={'Drawer Subtitle'}
                 backgroundImage={headerBgImage}
-                fontColor={Colors.white[50]}
+                fontColor={Colors.BLUIColors.neutralVariant[50]}
                 icon={MenuIcon}
                 onIconPress={(): void => {
-                    navigation.closeDrawer();
+                    navigation.dispatch(DrawerActions.closeDrawer());
                 }}
             />
             <DrawerBody>
@@ -178,7 +180,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 <View
                     style={{
                         padding: 16,
-                        backgroundColor: theme.dark ? Colors.darkBlack[100] : 'white',
+                        backgroundColor: theme.dark ? Colors.BLUIColors.purple[50] : 'white',
                         alignItems: 'center',
                     }}
                 >
