@@ -1,6 +1,6 @@
 import React from 'react';
 import { Hero, InfoListItem, ScoreCard } from '@brightlayer-ui/react-native-components';
-import { BLUIColors } from '@brightlayer-ui/colors';
+import * as Colors from '@brightlayer-ui/colors';
 import { useTheme } from 'react-native-paper';
 
 export const ScoreCardExample: React.FC = () => {
@@ -18,7 +18,7 @@ export const ScoreCardExample: React.FC = () => {
                     iconBackgroundColor={theme.colors.surface}
                     label={'Score'}
                     iconSize={48}
-                    iconColor={BLUIColors.green[500]}
+                    iconColor={Colors.purple[40]}
                     ChannelValueProps={{
                         value: 98,
                         units: '/100',

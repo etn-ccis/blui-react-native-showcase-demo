@@ -57,7 +57,7 @@ import {
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
 import { MobileStepperExample } from './MobileStepperExample';
-import { BLUIColors } from '@brightlayer-ui/colors';
+import * as Colors from '@brightlayer-ui/colors';
 
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -552,8 +552,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             title={'Title'}
                             icon={{ family: 'brightlayer-ui', name: 'leaf' }}
                             subtitle={'Subtitle'}
-                            statusColor={BLUIColors.red[500]}
-                            backgroundColor={BLUIColors.blue[50]}
+                            statusColor={Colors.error[40]}
+                            backgroundColor={Colors.primary[40]}
                             avatar
                             divider={'partial'}
                             chevron
