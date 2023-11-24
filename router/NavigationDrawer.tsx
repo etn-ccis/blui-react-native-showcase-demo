@@ -4,17 +4,16 @@ import {
     DrawerHeader,
     DrawerNavGroup,
     NavItem,
-    Subtitle1,
     DrawerFooter,
-    IconFamily,
 } from '@brightlayer-ui/react-native-components';
 import React, { useState, useCallback } from 'react';
 import { Image, View } from 'react-native';
-import { Divider, useTheme } from 'react-native-paper';
+import { Divider, Text, useTheme } from 'react-native-paper';
 import * as Colors from '@brightlayer-ui/colors';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './index';
 import { DrawerActions } from '@react-navigation/native';
+import { IconFamily } from '@brightlayer-ui/react-native-components/core/__types__';
 
 const headerBgImage = require('../assets/images/topology_40.png');
 const eatonLogo = require('../assets/images/eatonLogo.png');
@@ -95,14 +94,14 @@ export const navGroupItems2: NavItem[] = [
         title: 'Devices',
         subtitle: '4 new alerts',
         itemID: 'g2i1',
-        statusColor: Colors.BLUIColors.primary[50],
+        statusColor: Colors.purple[90],
         items: [
             {
                 title: 'Sub NavItem 1',
                 itemID: 'g2i1i1',
                 items: [
                     {
-                        statusColor: Colors.BLUIColors.orange[50],
+                        statusColor: Colors.neutral[87],
                         title: 'Deep Nested Nav',
                         itemID: 'g2i1i1i1',
                     },
@@ -126,8 +125,8 @@ export const navGroupItems2: NavItem[] = [
         subtitle: 'You cant see me, fix InfoListItem',
         title: 'Alerts',
         itemID: 'g2i4',
-        activeItemFontColor: Colors.BLUIColors.primary[100],
-        activeItemBackgroundColor: Colors.BLUIColors.neutral[50],
+        activeItemFontColor: Colors.primary[100],
+        activeItemBackgroundColor: Colors.primary[30],
     },
 ];
 
@@ -156,7 +155,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 title={'Drawer Title'}
                 subtitle={'Drawer Subtitle'}
                 backgroundImage={headerBgImage}
-                fontColor={Colors.BLUIColors.neutralVariant[50]}
+                fontColor={Colors.neutralVariant[50]}
                 icon={MenuIcon}
                 onIconPress={(): void => {
                     navigation.dispatch(DrawerActions.closeDrawer());
@@ -169,7 +168,9 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                     nestedDivider={true}
                     titleContent={
                         <View>
-                            <Subtitle1 style={{ padding: 16 }}>Custom Navgroup Content</Subtitle1>
+                            <Text variant="labelLarge" style={{ padding: 16 }}>
+                                Custom Navgroup Content
+                            </Text>
                             <Divider />
                         </View>
                     }
@@ -180,7 +181,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 <View
                     style={{
                         padding: 16,
-                        backgroundColor: theme.dark ? Colors.BLUIColors.purple[50] : 'white',
+                        backgroundColor: theme.dark ? Colors.primary[20] : 'white',
                         alignItems: 'center',
                     }}
                 >

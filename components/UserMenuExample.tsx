@@ -1,7 +1,7 @@
 import { InfoListItemProps, UserMenu } from '@brightlayer-ui/react-native-components';
 import React from 'react';
 import { Avatar } from 'react-native-paper';
-import { BLUIColors } from '@brightlayer-ui/colors';
+import * as BLUIColors from '@brightlayer-ui/colors';
 import { IconFamily } from '@brightlayer-ui/react-native-components/md3/__types__';
 
 const SwapIcon: IconFamily = {

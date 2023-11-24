@@ -3,10 +3,9 @@ import React, { ReactNode } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { View } from 'react-native';
-import { NavDrawerProps, NavigationDrawer } from './navigation-drawer';
+import { NavDrawerProps, NavigationDrawer } from './NavigationDrawer';
 import { App } from '../App';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Text } from 'react-native-paper';
 
 const Drawer = createDrawerNavigator();
 
@@ -27,17 +26,13 @@ export const MainRouter = (): any => (
     <NavigationContainer>
         <Drawer.Navigator
             initialRouteName="App"
-            // drawerStyle={{ backgroundColor: 'transparent', width: '80%' }}
-            // drawerContent={(props: any): ReactNode => <CustomDrawerContent {...props} />}
-            // screenOptions={{
-            //     headerShown: false,
-            // }}
-            drawerContent={(props): ReactNode => <CustomDrawerContent {...props} />}
+            drawerStyle={{ backgroundColor: 'transparent', width: '80%' }}
+            screenOptions={{
+                headerShown: false,
+            }}
+            drawerContent={(props: NavDrawerProps): ReactNode => <CustomDrawerContent {...props} />}
         >
             <RootStack.Screen name="App" component={App} />
         </Drawer.Navigator>
     </NavigationContainer>
-    // <View style={{ backgroundColor: 'white' }}>
-    //     <Text>Test</Text>
-    // </View>
 );

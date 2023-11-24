@@ -44,7 +44,6 @@ import {
     Header,
     InfoListItem,
     UserMenu,
-    CollapsibleHeaderLayout,
     Spacer,
     Drawer,
     DrawerHeader,
@@ -56,7 +55,7 @@ import {
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
 import { MobileStepperExample } from './MobileStepperExample';
-import { BLUIColors } from '@brightlayer-ui/colors';
+import * as BLUIColors from '@brightlayer-ui/colors';
 
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -189,6 +188,10 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
     return (
         <>
+            <Text variant="titleLarge" style={{ marginVertical: 48 }}>
+                MD3 BLUI Components
+            </Text>
+
             <Card style={styles.card}>
                 <Card.Title title="Grades" />
                 <Card.Content>
@@ -291,8 +294,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 expandable={true}
                 collapsedHeight={56}
             />
-            <Text style={{ marginVertical: 48 }}>MD3 BLUI Components</Text>
-
             <Card style={styles.card}>
                 <Card.Title title="Spacer" />
                 <View style={{ marginLeft: 20, marginRight: 20, marginBottom: 20 }}>
@@ -563,7 +564,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     />
                 </Card.Content>
             </Card>
-            <Text style={{ marginVertical: 48 }}>RN V5 Components</Text>
+            <Text variant="titleLarge" style={{ marginVertical: 48 }}>
+                RN V5 Components
+            </Text>
             <Card style={styles.card}>
                 <View
                     style={{
@@ -921,7 +924,10 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             {/**
              * BEGIN  WRAPPER COMPONENT SECTION
              *  */}
-            <Text style={{ marginVertical: 48 }}> (Wrapper) Components</Text>
+            <Text variant="titleLarge" style={{ marginVertical: 48 }}>
+                {' '}
+                (Wrapper) Components
+            </Text>
             <Card style={styles.card}>
                 <View
                     style={{
