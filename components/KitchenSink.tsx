@@ -5,7 +5,6 @@ import { StyleSheet, View } from 'react-native';
 import {
     Appbar,
     Avatar,
-    Badge,
     Banner,
     Button,
     BottomNavigation,
@@ -35,6 +34,7 @@ import {
 } from 'react-native-paper';
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
 import {
+    Badge,
     ChannelValue,
     ListItemTag,
     Overline,
@@ -203,6 +203,55 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     actionItems: [{ icon: { name: 'more' }, onPress: () => {} }],
                 }}
             >
+                <Card style={styles.card}>
+                    <View
+                        style={{
+                            justifyContent: 'center',
+                            marginHorizontal: 24,
+                            marginVertical: 24,
+                        }}
+                    >
+                        <Text>Badge</Text>
+                        <View
+                            style={{
+                                flexDirection: 'row',
+                                justifyContent: 'space-evenly',
+                                alignItems: 'center',
+                                marginTop: 24,
+                            }}
+                        >
+                            <Badge
+                                size={24}
+                                visible
+                                allowFontScaling={!DISABLE_FONT_SCALE}
+                                maxFontSizeMultiplier={MAX_FONT_SCALE}
+                            />
+                            <Badge
+                                size={24}
+                                visible
+                                allowFontScaling={!DISABLE_FONT_SCALE}
+                                maxFontSizeMultiplier={MAX_FONT_SCALE}
+                            >
+                                3
+                            </Badge>
+                            <Badge
+                                size={40}
+                                visible
+                                allowFontScaling={!DISABLE_FONT_SCALE}
+                                maxFontSizeMultiplier={MAX_FONT_SCALE}
+                            >
+                                8
+                            </Badge>
+                            <Badge size={24} visible />
+                            <Badge size={24} visible>
+                                3
+                            </Badge>
+                            <Badge size={40} visible>
+                                8
+                            </Badge>
+                        </View>
+                    </View>
+                </Card>
                 <Card style={styles.card}>
                     <Card.Title title="Progress Bar" />
                     <ProgressBar progress={0.5} style={{ margin: 8 }} />
@@ -1053,55 +1102,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             <Avatar.Icon size={40} icon="account-circle" />
                             <Avatar.Image size={40} source={PublicDomainAlice} />
                             <Avatar.Text size={40} label="PX" />
-                        </View>
-                    </View>
-                </Card>
-                <Card style={styles.card}>
-                    <View
-                        style={{
-                            justifyContent: 'center',
-                            marginHorizontal: 24,
-                            marginVertical: 24,
-                        }}
-                    >
-                        <Text>Badge</Text>
-                        <View
-                            style={{
-                                flexDirection: 'row',
-                                justifyContent: 'space-evenly',
-                                alignItems: 'center',
-                                marginTop: 24,
-                            }}
-                        >
-                            <Badge
-                                size={24}
-                                visible
-                                allowFontScaling={!DISABLE_FONT_SCALE}
-                                maxFontSizeMultiplier={MAX_FONT_SCALE}
-                            />
-                            <Badge
-                                size={24}
-                                visible
-                                allowFontScaling={!DISABLE_FONT_SCALE}
-                                maxFontSizeMultiplier={MAX_FONT_SCALE}
-                            >
-                                3
-                            </Badge>
-                            <Badge
-                                size={40}
-                                visible
-                                allowFontScaling={!DISABLE_FONT_SCALE}
-                                maxFontSizeMultiplier={MAX_FONT_SCALE}
-                            >
-                                8
-                            </Badge>
-                            <Badge size={24} visible />
-                            <Badge size={24} visible>
-                                3
-                            </Badge>
-                            <Badge size={40} visible>
-                                8
-                            </Badge>
                         </View>
                     </View>
                 </Card>
