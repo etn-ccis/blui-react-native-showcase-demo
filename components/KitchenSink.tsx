@@ -251,6 +251,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             </Badge>
                         </View>
                     </View>
+                </Card>
+                <Card style={styles.card}>
                     <Card.Title title="Progress Bar" />
                     <ProgressBar progress={0.5} style={{ margin: 8 }} />
                 </Card>
