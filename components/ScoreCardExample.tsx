@@ -1,6 +1,6 @@
 import React from 'react';
 import { Hero, InfoListItem, ScoreCard } from '@brightlayer-ui/react-native-components';
-import { BLUIColors } from '@brightlayer-ui/colors';
+import * as Colors from '@brightlayer-ui/colors';
 import { useTheme } from 'react-native-paper';
 
 export const ScoreCardExample: React.FC = () => {
