@@ -6,51 +6,47 @@
  */
 
 import React from 'react';
-//import type { PropsWithChildren } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { SafeAreaView, ScrollView, StatusBar, /*StyleSheet, Text,*/ useColorScheme, View } from 'react-native';
+import {
+    I18nManager,
+    SafeAreaView,
+    ScrollView,
+    StatusBar,
+    /*StyleSheet, Text,*/ useColorScheme,
+    View,
+} from 'react-native';
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { KitchenSink } from './components/KitchenSink';
+import { CollapsibleHeaderLayout } from '@brightlayer-ui/react-native-components';
+import { UserMenuExample } from './components/UserMenuExample';
+import { useThemeContext } from './contexts/ThemeContext';
+import RNRestart from 'react-native-restart';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from './router';
 
-/*type SectionProps = PropsWithChildren<{
-    title: string;
-}>;
+export const toggleRTL = (): void => {
+    if (I18nManager.isRTL) {
+        I18nManager.allowRTL(false);
+        I18nManager.forceRTL(false);
+    } else {
+        I18nManager.forceRTL(true);
+    }
+    RNRestart.Restart();
+};
 
-function Section({ children, title }: SectionProps): JSX.Element {
-    const isDarkMode = useColorScheme() === 'dark';
-    return (
-        <View style={styles.sectionContainer}>
-            <Text
-                style={[
-                    styles.sectionTitle,
-                    {
-                        color: isDarkMode ? Colors.white : Colors.black,
-                    },
-                ]}
-            >
-                {title}
-            </Text>
-            <Text
-                style={[
-                    styles.sectionDescription,
-                    {
-                        color: isDarkMode ? Colors.light : Colors.dark,
-                    },
-                ]}
-            >
-                {children}
-            </Text>
-        </View>
-    );
-}*/
+type AppProps = {
+    navigation: StackNavigationProp<RootStackParamList, 'App'>;
+};
 
-function App(): JSX.Element {
+export const App: React.FC<AppProps> = ({ navigation }) => {
     const isDarkMode = useColorScheme() === 'dark';
 
     const backgroundStyle = {
         backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
     };
+
+    const { theme: themeType, setTheme } = useThemeContext();
 
     return (
         <SafeAreaProvider>
@@ -65,31 +61,39 @@ function App(): JSX.Element {
                             backgroundColor: isDarkMode ? Colors.black : Colors.white,
                         }}
                     >
-                        <KitchenSink />
+                        <CollapsibleHeaderLayout
+                            HeaderProps={{
+                                variant: 'dynamic',
+                                title: 'Valley Forge',
+                                subtitle: 'The Last Stand',
+                                icon: { name: 'menu' },
+                                info: 'hello',
+                                expandable: true,
+                                backgroundImage: require('./assets/images/farm.jpg'),
+                                onIconPress: (): void => {
+                                    navigation.openDrawer();
+                                },
+                                actionItems: [
+                                    {
+                                        icon: { name: 'more' },
+                                        onPress: () => {},
+                                        component: (
+                                            <UserMenuExample
+                                                onToggleRTL={toggleRTL}
+                                                onToggleTheme={(): void =>
+                                                    setTheme(themeType === 'light' ? 'dark' : 'light')
+                                                }
+                                            />
+                                        ),
+                                    },
+                                ],
+                            }}
+                        >
+                            <KitchenSink />
+                        </CollapsibleHeaderLayout>
                     </View>
                 </ScrollView>
             </SafeAreaView>
         </SafeAreaProvider>
     );
-}
-
-/*const styles = StyleSheet.create({
-    sectionContainer: {
-        marginTop: 32,
-        paddingHorizontal: 24,
-    },
-    sectionTitle: {
-        fontSize: 24,
-        fontWeight: '600',
-    },
-    sectionDescription: {
-        marginTop: 8,
-        fontSize: 18,
-        fontWeight: '400',
-    },
-    highlight: {
-        fontWeight: '700',
-    },
-});*/
-
-export default App;
+};
