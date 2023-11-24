@@ -28,7 +28,7 @@ import {
     TextInput,
     Text,
     useTheme,
-    ProgressBar,
+    ProgressBar as PaperProgressBar,
     Snackbar,
     ActivityIndicator,
 } from 'react-native-paper';
@@ -52,11 +52,12 @@ import {
     DrawerNavGroup,
     DrawerNavItem,
     Grade,
+    ProgressBar,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
 import { MobileStepperExample } from './MobileStepperExample';
-import { BLUIColors } from '@brightlayer-ui/colors';
+import * as Colors from '@brightlayer-ui/colors';
 
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -250,6 +251,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             </Badge>
                         </View>
                     </View>
+                    <Card.Title title="Progress Bar" />
+                    <ProgressBar progress={0.5} style={{ margin: 8 }} />
                 </Card>
                 <Card style={styles.card}>
                     <Card.Title title="grades" />
@@ -596,8 +599,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             title={'Title'}
                             icon={{ family: 'brightlayer-ui', name: 'leaf' }}
                             subtitle={'Subtitle'}
-                            statusColor={BLUIColors.red[500]}
-                            backgroundColor={BLUIColors.blue[50]}
+                            statusColor={Colors.error[40]}
+                            backgroundColor={Colors.primary[40]}
                             avatar
                             divider={'partial'}
                             chevron
@@ -1612,14 +1615,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     >
                         <Text>Progress Bar</Text>
                         <View style={{ marginTop: 24 }}>
-                            <ProgressBar progress={0} />
-                            <ProgressBar progress={0.5} style={{ marginTop: 24 }} />
-                            <ProgressBar progress={1.0} style={{ marginTop: 24 }} />
-                            <ProgressBar indeterminate style={{ marginTop: 24 }} />
-                            <ProgressBar progress={0} style={{ marginTop: 24 }} />
-                            <ProgressBar progress={0.5} style={{ marginTop: 24 }} />
-                            <ProgressBar progress={1.0} style={{ marginTop: 24 }} />
-                            <ProgressBar indeterminate style={{ marginTop: 24 }} />
+                            <PaperProgressBar progress={0} />
+                            <PaperProgressBar progress={0.5} style={{ marginTop: 24 }} />
+                            <PaperProgressBar progress={1.0} style={{ marginTop: 24 }} />
+                            <PaperProgressBar indeterminate style={{ marginTop: 24 }} />
+                            <PaperProgressBar progress={0} style={{ marginTop: 24 }} />
+                            <PaperProgressBar progress={0.5} style={{ marginTop: 24 }} />
+                            <PaperProgressBar progress={1.0} style={{ marginTop: 24 }} />
+                            <PaperProgressBar indeterminate style={{ marginTop: 24 }} />
                         </View>
                     </View>
                 </Card>
