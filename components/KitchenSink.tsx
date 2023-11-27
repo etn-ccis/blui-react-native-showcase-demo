@@ -245,7 +245,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 <DrawerNavItem
                                     itemID={'item4'}
                                     title={'Localization'}
-                                    icon={{ family: 'material-community', name: 'circle' }}
+                                    icon={{ family: 'material-community', name: 'circle', direction: 'auto' }}
                                     activeItemBackgroundShape={'round'}
                                     InfoListItemProps={{
                                         iconAlign: 'center',
@@ -430,11 +430,11 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         icon={{ family: 'brightlayer-ui', name: 'device' }}
                         iconColor="green"
                     />
-                    {/* Default Font size : 14px */}
+                    {/* Font size : 14px */}
                     <ChannelValue value="2.5:1" icon={{ name: 'settings' }} fontSize={14} style={{ marginTop: 12 }} />
-                    {/* Default Font size : 16px */}
-                    <ChannelValue value="Concord" icon={'🍇'} style={{ marginTop: 12 }} />
-                    {/* Default Font size : 22px */}
+                    {/* Font size : 16px */}
+                    <ChannelValue value="Concord" icon={'🍇'} fontSize={14} style={{ marginTop: 12 }} />
+                    {/* Font size : 22px */}
                     <ChannelValue
                         value="100"
                         units="%"
@@ -442,7 +442,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         icon={{ family: 'brightlayer-ui', name: 'battery' }}
                         style={{ marginTop: 12 }}
                     />
-                    {/* Default Font size : 32px */}
+                    {/* Font size : 32px */}
                     <ChannelValue
                         value="50.2.1"
                         fontSize={32}
@@ -450,19 +450,31 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         iconColor="red"
                         style={{ marginTop: 12 }}
                     />
-                    <ChannelValue value="1" icon={'A'} iconColor="blue" style={{ marginTop: 12 }} />
-                    <ChannelValue value="1" icon={PublicDomainAlice} fontSize={32} style={{ marginTop: 12 }} />
+                    {/* Font size : 32px */}
+                    <ChannelValue value="1" icon={'A'} iconColor="blue" fontSize={32} style={{ marginTop: 12 }} />
+                    <ChannelValue value="1" icon={PublicDomainAlice} style={{ marginTop: 12 }} />
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
                 <Card.Title title="ListItemTag" />
                 <Card.Content style={{ alignItems: 'center' }}>
+                    {/* Font size : 10px */}
                     <ListItemTag label={'IN PROGRESS'} />
+                    {/* Font size : 14px */}
                     <ListItemTag
                         label={'Foo Bar'}
                         backgroundColor={'red'}
                         fontColor={'black'}
                         style={{ marginTop: 12 }}
+                        fontSize={14}
+                    />
+                    {/* Font size : 22px */}
+                    <ListItemTag
+                        label={'Foo Bar'}
+                        backgroundColor={'red'}
+                        fontColor={'black'}
+                        style={{ marginTop: 12 }}
+                        fontSize={22}
                     />
                 </Card.Content>
             </Card>
