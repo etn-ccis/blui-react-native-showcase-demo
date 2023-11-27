@@ -6,17 +6,8 @@
  */
 
 import React from 'react';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import {
-    I18nManager,
-    SafeAreaView,
-    ScrollView,
-    StatusBar,
-    /*StyleSheet, Text,*/ useColorScheme,
-    View,
-} from 'react-native';
+import { I18nManager } from 'react-native';
 
-import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { KitchenSink } from './components/KitchenSink';
 import { CollapsibleHeaderLayout } from '@brightlayer-ui/react-native-components';
 import { UserMenuExample } from './components/UserMenuExample';
@@ -40,60 +31,37 @@ type AppProps = {
 };
 
 export const App: React.FC<AppProps> = ({ navigation }) => {
-    const isDarkMode = useColorScheme() === 'dark';
-
-    const backgroundStyle = {
-        backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    };
-
     const { theme: themeType, setTheme } = useThemeContext();
 
     return (
-        <SafeAreaProvider>
-            <SafeAreaView style={backgroundStyle}>
-                <StatusBar
-                    barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-                    backgroundColor={backgroundStyle.backgroundColor}
-                />
-                <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
-                    <View
-                        style={{
-                            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-                        }}
-                    >
-                        <CollapsibleHeaderLayout
-                            HeaderProps={{
-                                variant: 'dynamic',
-                                title: 'Valley Forge',
-                                subtitle: 'The Last Stand',
-                                icon: { name: 'menu' },
-                                info: 'hello',
-                                expandable: true,
-                                backgroundImage: require('./assets/images/farm.jpg'),
-                                onIconPress: (): void => {
-                                    navigation.openDrawer();
-                                },
-                                actionItems: [
-                                    {
-                                        icon: { name: 'more' },
-                                        onPress: () => {},
-                                        component: (
-                                            <UserMenuExample
-                                                onToggleRTL={toggleRTL}
-                                                onToggleTheme={(): void =>
-                                                    setTheme(themeType === 'light' ? 'dark' : 'light')
-                                                }
-                                            />
-                                        ),
-                                    },
-                                ],
-                            }}
-                        >
-                            <KitchenSink />
-                        </CollapsibleHeaderLayout>
-                    </View>
-                </ScrollView>
-            </SafeAreaView>
-        </SafeAreaProvider>
+        <CollapsibleHeaderLayout
+            HeaderProps={{
+                variant: 'dynamic',
+                title: 'Valley Forge',
+                subtitle: 'The Last Stand',
+                icon: { name: 'menu' },
+                info: 'hello',
+                expandable: true,
+                backgroundImage: require('./assets/images/farm.jpg'),
+                onIconPress: (): void => {
+                    navigation.openDrawer();
+                },
+                searchableConfig: { placeholder: 'Search', autoFocus: true },
+                actionItems: [
+                    {
+                        icon: { name: 'more' },
+                        onPress: () => {},
+                        component: (
+                            <UserMenuExample
+                                onToggleRTL={toggleRTL}
+                                onToggleTheme={(): void => setTheme(themeType === 'light' ? 'dark' : 'light')}
+                            />
+                        ),
+                    },
+                ],
+            }}
+        >
+            <KitchenSink />
+        </CollapsibleHeaderLayout>
     );
 };

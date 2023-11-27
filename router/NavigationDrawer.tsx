@@ -50,16 +50,25 @@ export const navGroupItems1: NavItem[] = [
         title: 'Identity Management',
         itemID: 'g1i1',
         icon: Battery,
+        InfoListItemProps: {
+            iconAlign: 'center',
+        },
     },
     {
         title: 'Calendar',
         itemID: 'g1i2',
         icon: Humidity,
+        InfoListItemProps: {
+            iconAlign: 'center',
+        },
     },
     {
         title: 'Accessibility',
         itemID: 'g1i3',
         icon: Clock,
+        InfoListItemProps: {
+            iconAlign: 'center',
+        },
         subtitle: 'Sample subtitle',
         items: [
             {
@@ -86,6 +95,9 @@ export const navGroupItems1: NavItem[] = [
         title: 'Notifications',
         itemID: 'g1i4',
         icon: MailIcon,
+        InfoListItemProps: {
+            iconAlign: 'center',
+        },
     },
 ];
 
@@ -155,7 +167,6 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 title={'Drawer Title'}
                 subtitle={'Drawer Subtitle'}
                 backgroundImage={headerBgImage}
-                fontColor={Colors.neutralVariant[50]}
                 icon={MenuIcon}
                 onIconPress={(): void => {
                     navigation.dispatch(DrawerActions.closeDrawer());

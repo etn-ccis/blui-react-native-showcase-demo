@@ -222,7 +222,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 <DrawerNavItem
                                     itemID={'item1'}
                                     title={'Account'}
-                                    icon={{ family: 'material-community', name: 'account' }}
+                                    icon={{ family: 'material-community', name: 'account', direction: 'auto' }}
                                     // activeItemBackgroundShape={'round'}
                                     InfoListItemProps={{
                                         iconAlign: 'center',
@@ -231,7 +231,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 <DrawerNavItem
                                     itemID={'item2'}
                                     title={'Notification'}
-                                    icon={{ family: 'material-community', name: 'bell' }}
+                                    icon={{ family: 'material-community', name: 'bell', direction: 'auto' }}
                                     activeItemBackgroundShape={'round'}
                                     InfoListItemProps={{
                                         iconAlign: 'center',
@@ -245,7 +245,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 <DrawerNavItem
                                     itemID={'item4'}
                                     title={'Localization'}
-                                    icon={{ family: 'material-community', name: 'circle' }}
+                                    icon={{ family: 'material-community', name: 'circle', direction: 'auto' }}
                                     activeItemBackgroundShape={'round'}
                                     InfoListItemProps={{
                                         iconAlign: 'center',
@@ -391,8 +391,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     </View>
                 </View>
             </Card>
-            {/* <Card style={styles.card}>
-                    <Card.Title title="Score Card" /> */}
             <View
                 style={{
                     justifyContent: 'center',
@@ -401,11 +399,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             >
                 <ScoreCardExample />
             </View>
-            {/* </Card> */}
-            {/* <Card style={styles.card}>
-                    <Card.Title title="Mobile Stepper" /> */}
             <MobileStepperExample />
-            {/* </Card> */}
             <Card style={styles.card}>
                 <Card.Title title="Overline" />
                 <Card.Content>
