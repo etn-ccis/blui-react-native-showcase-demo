@@ -410,7 +410,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Card.Title title="Overline" />
                 <Card.Content>
                     <Overline>Overline</Overline>
-                    <Text style={{marginTop: 12}}> FontSize 14 </Text>
+                    <Text style={{ marginTop: 12 }}> FontSize 14 </Text>
                     <Overline fontSize={14}>Overline</Overline>
                 </Card.Content>
             </Card>
@@ -435,7 +435,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     {/* Font size : 14px */}
                     <ChannelValue value="2.5:1" icon={{ name: 'settings' }} fontSize={14} style={{ marginTop: 12 }} />
                     {/* Font size : 16px */}
-                    <ChannelValue value="Concord" icon={'🍇'} fontSize={14} style={{ marginTop: 12 }} />
+                    <ChannelValue value="Concord" icon={'🍇'} fontSize={16} style={{ marginTop: 12 }} />
                     {/* Font size : 22px */}
                     <ChannelValue
                         value="100"
@@ -471,13 +471,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         fontSize={14}
                     />
                     {/* Font size : 22px */}
-                    <Text style={{marginTop: 12}}>Font size : 22px</Text>
-                    <ListItemTag
-                        label={'Foo Bar'}
-                        backgroundColor={'red'}
-                        fontColor={'black'}
-                        fontSize={22}
-                    />
+                    <Text style={{ marginTop: 12 }}>Font size : 22px</Text>
+                    <ListItemTag label={'Foo Bar'} backgroundColor={'red'} fontColor={'black'} fontSize={22} />
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
