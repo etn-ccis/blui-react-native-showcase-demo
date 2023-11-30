@@ -11,7 +11,7 @@ import {
     BottomNavigation,
     Card,
     Checkbox,
-    Chip,
+    // Chip,
     DataTable,
     Dialog,
     Divider,
@@ -51,6 +51,7 @@ import {
     DrawerNavGroup,
     DrawerNavItem,
     Grade,
+    Chip,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -195,6 +196,74 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={styles.card}>
                 <Card.Title title="Grades" />
                 <Card.Content>
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip
+                            onPress={() => {
+                                console.log('hello');
+                            }}
+                            style={{marginRight:10}}
+                        >
+                            Unselect
+                        </Chip>
+                        <Chip selected={true}>Select</Chip>
+                    </View>
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip mode="elevated" style={{marginRight:10}}>Unselect</Chip>
+                        <Chip selected={true} mode="elevated">
+                            Select
+                        </Chip>
+                    </View>
+
+                    <Text>Disabled</Text>
+
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip
+                            disabled={true}
+                            onPress={() => {
+                                console.log('hello');
+                            }}
+                            style={{marginRight:10}}
+                        >
+                            Unselect
+                        </Chip>
+                        <Chip disabled selected={true}>
+                            Select
+                        </Chip>
+                    </View>
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip disabled mode="elevated" style={{marginRight:10}}>
+                            Unselect
+                        </Chip>
+                        <Chip disabled selected={true} mode="elevated">
+                            Select
+                        </Chip>
+                    </View>
+
+                    <Text>With icon</Text>
+
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip
+                            avatar={<Avatar.Text label="JS" size={20} />}
+                            onPress={() => {
+                                console.log('hello');
+                            }}
+                            style={{marginRight:10}}
+                        >
+                            Unselect
+                        </Chip>
+                        <Chip icon={{ name: 'settings' }} selected={true}>
+                            Select123
+                        </Chip>
+                    </View>
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip icon={{ name: 'settings' }} mode="elevated" style={{marginRight:10}}>
+                            Unselect
+                        </Chip>
+                        <Chip icon={{ name: 'settings' }} selected={true} mode="elevated">
+                            Select
+                        </Chip>
+                    </View>
+
                     <Grade.APlus style={{ marginBottom: 10 }} />
                     <Grade.A style={{ marginBottom: 10 }} />
                     <Grade.AMinus style={{ marginBottom: 10 }} />
