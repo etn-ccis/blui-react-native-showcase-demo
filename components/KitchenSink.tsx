@@ -194,21 +194,23 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             </Text>
 
             <Card style={styles.card}>
-                <Card.Title title="Grades" />
+                <Card.Title title="Chip" />
                 <Card.Content>
                     <View style={{ flexDirection: 'row', margin: 10 }}>
                         <Chip
                             onPress={() => {
                                 console.log('hello');
                             }}
-                            style={{marginRight:10}}
+                            style={{ marginRight: 10 }}
                         >
                             Unselect
                         </Chip>
                         <Chip selected={true}>Select</Chip>
                     </View>
                     <View style={{ flexDirection: 'row', margin: 10 }}>
-                        <Chip mode="elevated" style={{marginRight:10}}>Unselect</Chip>
+                        <Chip mode="elevated" style={{ marginRight: 10 }}>
+                            Unselect
+                        </Chip>
                         <Chip selected={true} mode="elevated">
                             Select
                         </Chip>
@@ -222,7 +224,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             onPress={() => {
                                 console.log('hello');
                             }}
-                            style={{marginRight:10}}
+                            style={{ marginRight: 10 }}
                         >
                             Unselect
                         </Chip>
@@ -231,7 +233,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         </Chip>
                     </View>
                     <View style={{ flexDirection: 'row', margin: 10 }}>
-                        <Chip disabled mode="elevated" style={{marginRight:10}}>
+                        <Chip disabled mode="elevated" style={{ marginRight: 10 }}>
                             Unselect
                         </Chip>
                         <Chip disabled selected={true} mode="elevated">
@@ -247,7 +249,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             onPress={() => {
                                 console.log('hello');
                             }}
-                            style={{marginRight:10}}
+                            style={{ marginRight: 10 }}
                         >
                             Unselect
                         </Chip>
@@ -256,14 +258,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         </Chip>
                     </View>
                     <View style={{ flexDirection: 'row', margin: 10 }}>
-                        <Chip icon={{ name: 'settings' }} mode="elevated" style={{marginRight:10}}>
+                        <Chip icon={{ name: 'settings' }} mode="elevated" style={{ marginRight: 10 }}>
                             Unselect
                         </Chip>
                         <Chip icon={{ name: 'settings' }} selected={true} mode="elevated">
                             Select
                         </Chip>
                     </View>
-
+                </Card.Content>
+            </Card>
+            <Card style={styles.card}>
+                <Card.Title title="Grades" />
+                <Card.Content>
                     <Grade.APlus style={{ marginBottom: 10 }} />
                     <Grade.A style={{ marginBottom: 10 }} />
                     <Grade.AMinus style={{ marginBottom: 10 }} />
