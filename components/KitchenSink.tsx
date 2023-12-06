@@ -51,6 +51,7 @@ import {
     DrawerNavGroup,
     DrawerNavItem,
     Grade,
+    IconSwitch,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -192,6 +193,21 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 MD3 BLUI Components
             </Text>
 
+            <Card style={styles.card}>
+                <Card.Title title="Icon Switch" />
+                <View style={{ padding: 10 }}>
+                    <IconSwitch />
+                </View>
+                <View style={{ padding: 10 }}>
+                    <IconSwitch value />
+                </View>
+                <View style={{ padding: 10 }}>
+                    <IconSwitch showIcon />
+                </View>
+                <View style={{ padding: 10 }}>
+                    <IconSwitch value showIcon />
+                </View>
+            </Card>
             <Card style={styles.card}>
                 <Card.Title title="Grades" />
                 <Card.Content>
