@@ -202,16 +202,16 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             }}
                             style={{ marginRight: 10 }}
                         >
-                            Unselect
+                            Unselect1
                         </Chip>
-                        <Chip selected={true}>Select</Chip>
+                        <Chip selected={true}>Select1</Chip>
                     </View>
                     <View style={{ flexDirection: 'row', margin: 10 }}>
                         <Chip mode="elevated" style={{ marginRight: 10 }}>
-                            Unselect
+                            Unselect2
                         </Chip>
                         <Chip selected={true} mode="elevated">
-                            Select
+                            Select2
                         </Chip>
                     </View>
 
@@ -261,6 +261,32 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             Unselect
                         </Chip>
                         <Chip icon={{ name: 'settings' }} selected={true} mode="elevated">
+                            Select
+                        </Chip>
+                    </View>
+
+                    <Text>With close icon</Text>
+
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip
+                            avatar={<Avatar.Text label="JS" size={20} />}
+                            onPress={() => {
+                                console.log('hello');
+                            }}
+                            onClose={() => {}}
+                            style={{ marginRight: 10 }}
+                        >
+                            Unselect
+                        </Chip>
+                        <Chip onClose={() => {}} selected={true}>
+                            Select123
+                        </Chip>
+                    </View>
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip onClose={() => {}} mode="elevated" style={{ marginRight: 10 }}>
+                            Unselect
+                        </Chip>
+                        <Chip icon={{ name: 'settings' }} onClose={() => {}} selected={true} mode="elevated">
                             Select
                         </Chip>
                     </View>
