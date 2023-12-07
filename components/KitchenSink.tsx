@@ -207,6 +207,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ padding: 10 }}>
                     <IconSwitch value showIcon />
                 </View>
+                <View style={{ padding: 10 }}>
+                    <IconSwitch showIcon disabled />
+                </View>
+                <View style={{ padding: 10 }}>
+                    <IconSwitch value showIcon disabled />
+                </View>
+                <View style={{ padding: 10 }}>
+                    <IconSwitch disabled />
+                </View>
+                <View style={{ padding: 10 }}>
+                    <IconSwitch value disabled />
+                </View>
             </Card>
             <Card style={styles.card}>
                 <Card.Title title="Grades" />
