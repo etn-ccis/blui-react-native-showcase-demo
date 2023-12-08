@@ -27,7 +27,7 @@ const Battery: IconFamily = {
 const Humidity: IconFamily = {
     family: 'brightlayer-ui',
     name: 'moisture',
-    direction: 'ltr',
+    direction: 'auto',
 };
 const MenuIcon: IconFamily = {
     family: 'material',
@@ -37,7 +37,7 @@ const MenuIcon: IconFamily = {
 const Clock: IconFamily = {
     family: 'material-community',
     name: 'clock-outline',
-    direction: 'ltr',
+    direction: 'auto',
 };
 const MailIcon: IconFamily = {
     family: 'material',
@@ -173,7 +173,7 @@ export const NavigationDrawer: React.FC<NavDrawerProps> = ({ navigation }) => {
                 }}
             />
             <DrawerBody>
-                <DrawerNavGroup items={navGroupItems1} title={'Group 1'} hidePadding={false} />
+                <DrawerNavGroup items={navGroupItems1} title={'Group 1'} hidePadding={true} />
                 <DrawerNavGroup
                     items={navGroupItems2}
                     nestedDivider={true}

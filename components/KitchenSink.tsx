@@ -215,7 +215,11 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Card.Title title="Drawer" />
                 <Card.Content>
                     <Drawer activeItem="item1" style={{ margin: 10 }}>
-                        <DrawerHeader title={'Drawer Title'} subtitle={'Drawer Subtitle'} icon={{ name: 'menu' }} />
+                        <DrawerHeader
+                            title={'Drawer Title'}
+                            subtitle={'Drawer Subtitle'}
+                            icon={{ name: 'menu', direction: 'auto' }}
+                        />
                         <DrawerBody>
                             {/* Using children */}
                             <DrawerNavGroup title={'Navigation Group'}>
