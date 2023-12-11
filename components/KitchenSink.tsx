@@ -1103,23 +1103,16 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={{ padding: 20, margin: 10 }}>
                 <Text>Contained Button</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        mode="contained"
-                        onPress={(): void => console.log('Pressed Contained Button')}
-                    >
+                    <Button mode="contained" onPress={(): void => console.log('Pressed Contained Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="contained" onPress={(): void => console.log('Pressed Contained Button')}>
                         Label
                     </Button>
                     <Button
                         icon="plus"
                         mode="contained"
-                        onPress={(): void => console.log('Pressed Contained Button')}
-                    >
-                        Label
-                    </Button>
-                    <Button
-                        icon="plus"
-                        mode="contained"
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Contained Button')}
                     >
                         Label
@@ -1128,7 +1121,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         mode="contained"
-                        buttonColor='red'
+                        buttonColor={BLUIColors.error[40]}
                         onPress={(): void => console.log('Pressed Contained Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1137,7 +1130,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="contained"
-                        buttonColor='red'
+                        buttonColor={BLUIColors.error[40]}
                         onPress={(): void => console.log('Pressed Contained Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1146,8 +1139,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="contained"
-                        buttonColor='red'
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        buttonColor={BLUIColors.error[40]}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Contained Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1155,26 +1148,17 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        mode="contained"
-                        disabled
-                        style={{ marginTop: 24 }}
-                    >
+                    <Button mode="contained" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="contained" disabled style={{ marginTop: 24 }}>
                         Label
                     </Button>
                     <Button
                         icon="plus"
                         mode="contained"
                         disabled
-                        style={{ marginTop: 24 }}
-                    >
-                        Label
-                    </Button>
-                    <Button
-                        icon="plus"
-                        mode="contained"
-                        disabled
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         style={{ marginTop: 24 }}
                     >
                         Label
@@ -1184,23 +1168,16 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={{ padding: 20, margin: 10 }}>
                 <Text>Outlined Button</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        mode="outlined"
-                        onPress={(): void => console.log('Pressed Outlined Button')}
-                    >
+                    <Button mode="outlined" onPress={(): void => console.log('Pressed Outlined Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="outlined" onPress={(): void => console.log('Pressed Outlined Button')}>
                         Label
                     </Button>
                     <Button
                         icon="plus"
                         mode="outlined"
-                        onPress={(): void => console.log('Pressed Outlined Button')}
-                    >
-                        Label
-                    </Button>
-                    <Button
-                        icon="plus"
-                        mode="outlined"
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Outlined Button')}
                     >
                         Label
@@ -1209,7 +1186,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         mode="outlined"
-                        textColor='red'
+                        textColor={BLUIColors.error[40]}
                         onPress={(): void => console.log('Pressed Outlined Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1218,7 +1195,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="outlined"
-                        textColor='red'
+                        textColor={BLUIColors.error[40]}
                         onPress={(): void => console.log('Pressed Outlined Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1227,8 +1204,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="outlined"
-                        textColor='red'
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        textColor={BLUIColors.error[40]}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Outlined Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1236,26 +1213,17 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        mode="outlined"
-                        disabled
-                        style={{ marginTop: 24 }}
-                    >
+                    <Button mode="outlined" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="outlined" disabled style={{ marginTop: 24 }}>
                         Label
                     </Button>
                     <Button
                         icon="plus"
                         mode="outlined"
                         disabled
-                        style={{ marginTop: 24 }}
-                    >
-                        Label
-                    </Button>
-                    <Button
-                        icon="plus"
-                        mode="outlined"
-                        disabled
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         style={{ marginTop: 24 }}
                     >
                         Label
@@ -1265,23 +1233,16 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={{ padding: 20, margin: 10 }}>
                 <Text>Text Button</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        mode="text"
-                        onPress={(): void => console.log('Pressed Text Button')}
-                    >
+                    <Button mode="text" onPress={(): void => console.log('Pressed Text Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="text" onPress={(): void => console.log('Pressed Text Button')}>
                         Label
                     </Button>
                     <Button
                         icon="plus"
                         mode="text"
-                        onPress={(): void => console.log('Pressed Text Button')}
-                    >
-                        Label
-                    </Button>
-                    <Button
-                        icon="plus"
-                        mode="text"
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Text Button')}
                     >
                         Label
@@ -1290,7 +1251,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         mode="text"
-                        textColor='red'
+                        textColor={BLUIColors.error[40]}
                         onPress={(): void => console.log('Pressed Text Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1299,7 +1260,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="text"
-                        textColor='red'
+                        textColor={BLUIColors.error[40]}
                         onPress={(): void => console.log('Pressed Text Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1308,8 +1269,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="text"
-                        textColor='red'
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        textColor={BLUIColors.error[40]}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Text Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1317,26 +1278,17 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        mode="text"
-                        disabled
-                        style={{ marginTop: 24 }}
-                    >
+                    <Button mode="text" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="text" disabled style={{ marginTop: 24 }}>
                         Label
                     </Button>
                     <Button
                         icon="plus"
                         mode="text"
                         disabled
-                        style={{ marginTop: 24 }}
-                    >
-                        Label
-                    </Button>
-                    <Button
-                        icon="plus"
-                        mode="text"
-                        disabled
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         style={{ marginTop: 24 }}
                     >
                         Label
@@ -1346,23 +1298,16 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={{ padding: 20, margin: 10 }}>
                 <Text>Elevated Button</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        mode="elevated"
-                        onPress={(): void => console.log('Pressed Elevated Button')}
-                    >
+                    <Button mode="elevated" onPress={(): void => console.log('Pressed Elevated Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="elevated" onPress={(): void => console.log('Pressed Elevated Button')}>
                         Label
                     </Button>
                     <Button
                         icon="plus"
                         mode="elevated"
-                        onPress={(): void => console.log('Pressed Elevated Button')}
-                    >
-                        Label
-                    </Button>
-                    <Button
-                        icon="plus"
-                        mode="elevated"
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Elevated Button')}
                     >
                         Label
@@ -1371,7 +1316,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         mode="elevated"
-                        textColor='red'
+                        textColor={BLUIColors.error[40]}
                         onPress={(): void => console.log('Pressed Elevated Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1380,7 +1325,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="elevated"
-                        textColor='red'
+                        textColor={BLUIColors.error[40]}
                         onPress={(): void => console.log('Pressed Elevated Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1389,8 +1334,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="elevated"
-                        textColor='red'
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        textColor={BLUIColors.error[40]}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Elevated Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1398,26 +1343,17 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        mode="elevated"
-                        disabled
-                        style={{ marginTop: 24 }}
-                    >
+                    <Button mode="elevated" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="elevated" disabled style={{ marginTop: 24 }}>
                         Label
                     </Button>
                     <Button
                         icon="plus"
                         mode="elevated"
                         disabled
-                        style={{ marginTop: 24 }}
-                    >
-                        Label
-                    </Button>
-                    <Button
-                        icon="plus"
-                        mode="elevated"
-                        disabled
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         style={{ marginTop: 24 }}
                     >
                         Label
@@ -1427,10 +1363,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={{ padding: 20, margin: 10 }}>
                 <Text>Contained-Tonal Button</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        mode="contained-tonal"
-                        onPress={(): void => console.log('Pressed Contained-tonal Button')}
-                    >
+                    <Button mode="contained-tonal" onPress={(): void => console.log('Pressed Contained-tonal Button')}>
                         Label
                     </Button>
                     <Button
@@ -1443,7 +1376,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="contained-tonal"
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Contained-tonal Button')}
                     >
                         Label
@@ -1452,7 +1385,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         mode="contained-tonal"
-                        buttonColor='red'
+                        buttonColor={BLUIColors.error[90]}
+                        textColor={BLUIColors.error[30]}
                         onPress={(): void => console.log('Pressed Contained-tonal Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1461,7 +1395,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="contained-tonal"
-                        buttonColor='red'
+                        buttonColor={BLUIColors.error[90]}
+                        textColor={BLUIColors.error[30]}
                         onPress={(): void => console.log('Pressed Contained-tonal Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1470,8 +1405,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="contained-tonal"
-                        buttonColor='red'
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        buttonColor={BLUIColors.error[90]}
+                        textColor={BLUIColors.error[30]}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Contained-tonal Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1479,26 +1415,17 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        mode="contained-tonal"
-                        disabled
-                        style={{ marginTop: 24 }}
-                    >
+                    <Button mode="contained-tonal" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="contained-tonal" disabled style={{ marginTop: 24 }}>
                         Label
                     </Button>
                     <Button
                         icon="plus"
                         mode="contained-tonal"
                         disabled
-                        style={{ marginTop: 24 }}
-                    >
-                        Label
-                    </Button>
-                    <Button
-                        icon="plus"
-                        mode="contained-tonal"
-                        disabled
-                        contentStyle={{flexDirection: 'row-reverse'}}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         style={{ marginTop: 24 }}
                     >
                         Label
