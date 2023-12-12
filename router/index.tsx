@@ -29,6 +29,8 @@ export const MainRouter = (): any => (
             drawerStyle={{ backgroundColor: 'transparent', width: '80%' }}
             screenOptions={{
                 headerShown: false,
+                drawerType: 'front',
+                drawerStyle: { backgroundColor: 'transparent' },
             }}
             drawerContent={(props: NavDrawerProps): ReactNode => <CustomDrawerContent {...props} />}
         >
