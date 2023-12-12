@@ -1988,7 +1988,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 iconColor={theme.colors.onPrimaryContainer}
                             />
                             <ToggleButton
-                                icon="format-underlined"
+                                icon="format-underline"
                                 value="underlined"
                                 iconColor={theme.colors.onPrimaryContainer}
                             />
