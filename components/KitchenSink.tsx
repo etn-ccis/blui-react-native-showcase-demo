@@ -1587,14 +1587,46 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 >
                     <Text>Progress Bar</Text>
                     <View style={{ marginTop: 24 }}>
-                        <ProgressBar progress={0} />
-                        <ProgressBar progress={0.5} style={{ marginTop: 24 }} />
-                        <ProgressBar progress={1.0} style={{ marginTop: 24 }} />
-                        <ProgressBar indeterminate style={{ marginTop: 24 }} />
-                        <ProgressBar progress={0} style={{ marginTop: 24 }} />
-                        <ProgressBar progress={0.5} style={{ marginTop: 24 }} />
-                        <ProgressBar progress={1.0} style={{ marginTop: 24 }} />
-                        <ProgressBar indeterminate style={{ marginTop: 24 }} />
+                        <ProgressBar
+                            progress={0}
+                            // @ts-ignore
+                            style={{ backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            progress={0.5}
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            progress={1.0}
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            indeterminate
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            progress={0}
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            progress={0.5}
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            progress={1.0}
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            indeterminate
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
                     </View>
                 </View>
             </Card>
