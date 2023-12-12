@@ -1121,7 +1121,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         mode="contained"
-                        buttonColor={BLUIColors.error[40]}
+                        buttonColor={theme.colors.error}
                         onPress={(): void => console.log('Pressed Contained Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1130,7 +1130,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="contained"
-                        buttonColor={BLUIColors.error[40]}
+                        buttonColor={theme.colors.error}
                         onPress={(): void => console.log('Pressed Contained Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1139,7 +1139,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="contained"
-                        buttonColor={BLUIColors.error[40]}
+                        buttonColor={theme.colors.error}
                         contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Contained Button')}
                         style={{ marginTop: 24 }}
@@ -1186,7 +1186,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         mode="outlined"
-                        textColor={BLUIColors.error[40]}
+                        textColor={theme.colors.error}
                         onPress={(): void => console.log('Pressed Outlined Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1195,7 +1195,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="outlined"
-                        textColor={BLUIColors.error[40]}
+                        textColor={theme.colors.error}
                         onPress={(): void => console.log('Pressed Outlined Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1204,7 +1204,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="outlined"
-                        textColor={BLUIColors.error[40]}
+                        textColor={theme.colors.error}
                         contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Outlined Button')}
                         style={{ marginTop: 24 }}
@@ -1251,7 +1251,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         mode="text"
-                        textColor={BLUIColors.error[40]}
+                        textColor={theme.colors.error}
                         onPress={(): void => console.log('Pressed Text Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1260,7 +1260,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="text"
-                        textColor={BLUIColors.error[40]}
+                        textColor={theme.colors.error}
                         onPress={(): void => console.log('Pressed Text Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1269,7 +1269,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="text"
-                        textColor={BLUIColors.error[40]}
+                        textColor={theme.colors.error}
                         contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Text Button')}
                         style={{ marginTop: 24 }}
@@ -1316,7 +1316,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         mode="elevated"
-                        textColor={BLUIColors.error[40]}
+                        textColor={theme.colors.error}
                         onPress={(): void => console.log('Pressed Elevated Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1325,7 +1325,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="elevated"
-                        textColor={BLUIColors.error[40]}
+                        textColor={theme.colors.error}
                         onPress={(): void => console.log('Pressed Elevated Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1334,7 +1334,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="elevated"
-                        textColor={BLUIColors.error[40]}
+                        textColor={theme.colors.error}
                         contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Elevated Button')}
                         style={{ marginTop: 24 }}
@@ -1385,8 +1385,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
                         mode="contained-tonal"
-                        buttonColor={BLUIColors.error[90]}
-                        textColor={BLUIColors.error[30]}
+                        buttonColor={theme.colors.errorContainer}
+                        textColor={theme.colors.onErrorContainer}
                         onPress={(): void => console.log('Pressed Contained-tonal Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1395,8 +1395,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="contained-tonal"
-                        buttonColor={BLUIColors.error[90]}
-                        textColor={BLUIColors.error[30]}
+                        buttonColor={theme.colors.errorContainer}
+                        textColor={theme.colors.onErrorContainer}
                         onPress={(): void => console.log('Pressed Contained-tonal Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1405,8 +1405,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         icon="plus"
                         mode="contained-tonal"
-                        buttonColor={BLUIColors.error[90]}
-                        textColor={BLUIColors.error[30]}
+                        buttonColor={theme.colors.errorContainer}
+                        textColor={theme.colors.onErrorContainer}
                         contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Contained-tonal Button')}
                         style={{ marginTop: 24 }}
