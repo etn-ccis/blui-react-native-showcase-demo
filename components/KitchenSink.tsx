@@ -108,6 +108,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const [snackbarTwoVisible, setSnackbarTwoVisible] = React.useState(false);
     const [isSwitchOn, setIsSwitchOn] = React.useState(false);
     const [toggleButtonValue, setToggleButtonValue] = useState('left');
+    const [toggleButtonFontValue, setToggleButtonFontValue] = useState('bold');
     const [nameInputText, setNameInputText] = React.useState('');
     const [emailInputText, setEmailInputText] = React.useState('');
     const [errorNameInputText, setErrorNameInputText] = React.useState('');
@@ -769,24 +770,32 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             <List.Item
                                 title="Item 1"
                                 description="Item 1 Description"
-                                left={(): JSX.Element => <List.Icon icon="folder" />}
+                                left={(): JSX.Element => (
+                                    <List.Icon icon="folder" color={BLUIColors.neutralVariant[30]} />
+                                )}
                             />
                             <List.Item
                                 title="Item 2"
                                 description="Item 2 Description"
-                                left={(): JSX.Element => <List.Icon icon="folder" />}
+                                left={(): JSX.Element => (
+                                    <List.Icon icon="folder" color={BLUIColors.neutralVariant[30]} />
+                                )}
                             />
                             <List.Item
                                 title="Item 3"
                                 description="Item 3 Description"
-                                left={(): JSX.Element => <List.Icon icon="folder" />}
+                                left={(): JSX.Element => (
+                                    <List.Icon icon="folder" color={BLUIColors.neutralVariant[30]} />
+                                )}
                             />
                         </View>
                         <View>
                             <List.Section title="Accordions">
                                 <List.Accordion
                                     title="Accordion 1"
-                                    left={(): JSX.Element => <List.Icon icon="folder" />}
+                                    left={(): JSX.Element => (
+                                        <List.Icon icon="folder" color={BLUIColors.neutralVariant[30]} />
+                                    )}
                                     expanded={accordionOneExpanded}
                                     onPress={(): void => setAccordionOneExpanded(!accordionOneExpanded)}
                                 >
@@ -795,7 +804,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 </List.Accordion>
                                 <List.Accordion
                                     title="Accordion 2"
-                                    left={(): JSX.Element => <List.Icon icon="folder" />}
+                                    left={(): JSX.Element => (
+                                        <List.Icon icon="folder" color={BLUIColors.neutralVariant[30]} />
+                                    )}
                                     expanded={accordionTwoExpanded}
                                     onPress={(): void => setAccordionTwoExpanded(!accordionTwoExpanded)}
                                 >
@@ -1942,18 +1953,45 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <ToggleButton.Row
                             onValueChange={(value: string): void => setToggleButtonValue(value)}
                             value={toggleButtonValue}
+                            style={{
+                                backgroundColor: theme.colors.primaryContainer,
+                            }}
                         >
-                            <ToggleButton icon="format-align-left" value="left" />
-                            <ToggleButton icon="format-align-center" value="center" />
-                            <ToggleButton icon="format-align-right" value="right" />
+                            <ToggleButton
+                                icon="format-align-left"
+                                value="left"
+                                iconColor={theme.colors.onPrimaryContainer}
+                            />
+                            <ToggleButton
+                                icon="format-align-center"
+                                value="center"
+                                iconColor={theme.colors.onPrimaryContainer}
+                            />
+                            <ToggleButton
+                                icon="format-align-right"
+                                value="right"
+                                iconColor={theme.colors.onPrimaryContainer}
+                            />
                         </ToggleButton.Row>
                         <ToggleButton.Row
-                            onValueChange={(value: string): void => setToggleButtonValue(value)}
-                            value={toggleButtonValue}
+                            onValueChange={(value: string): void => setToggleButtonFontValue(value)}
+                            value={toggleButtonFontValue}
+                            style={{
+                                marginTop: 10,
+                                backgroundColor: theme.colors.primaryContainer,
+                            }}
                         >
-                            <ToggleButton icon="format-align-left" value="left" />
-                            <ToggleButton icon="format-align-center" value="center" />
-                            <ToggleButton icon="format-align-right" value="right" />
+                            <ToggleButton icon="format-bold" value="bold" iconColor={theme.colors.onPrimaryContainer} />
+                            <ToggleButton
+                                icon="format-italic"
+                                value="italic"
+                                iconColor={theme.colors.onPrimaryContainer}
+                            />
+                            <ToggleButton
+                                icon="format-underline"
+                                value="underlined"
+                                iconColor={theme.colors.onPrimaryContainer}
+                            />
                         </ToggleButton.Row>
                     </View>
                 </View>
