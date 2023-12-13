@@ -1785,8 +1785,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         setSnackbarTwoVisible(false);
                                     },
                                 }}
+                                style={{ backgroundColor: theme.colors.inverseSurface }}
                             >
-                                Hey there! I&apos;m a Snackbar.
+                                Im a Snackbar.
                             </Snackbar>
                         </Portal>
                         <Button mode={'contained'} onPress={(): void => setSnackbarTwoVisible(!snackbarTwoVisible)}>
