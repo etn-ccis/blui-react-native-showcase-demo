@@ -1112,123 +1112,334 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 </View>
             </Card>
             <Card style={{ padding: 20, margin: 10 }}>
-                <Text>Button</Text>
+                <Text>Contained Button</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        icon="download"
-                        mode="text"
-                        onPress={(): void => console.log('Pressed Text Button')}
-                        style={{ width: 150 }}
-                    >
-                        Press me
+                    <Button mode="contained" onPress={(): void => console.log('Pressed Contained Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="contained" onPress={(): void => console.log('Pressed Contained Button')}>
+                        Label
                     </Button>
                     <Button
-                        icon="download"
-                        mode="text"
-                        onPress={(): void => console.log('Pressed Text Button')}
-                        style={{ width: 150 }}
+                        icon="plus"
+                        mode="contained"
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Contained Button')}
                     >
-                        Press me
+                        Label
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
-                        icon="download"
-                        mode="outlined"
-                        onPress={(): void => console.log('Pressed Outlined Button')}
-                        style={{ marginTop: 24, width: 150 }}
+                        mode="contained"
+                        buttonColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Contained Button')}
+                        style={{ marginTop: 24 }}
                     >
-                        Press me
+                        Label
                     </Button>
                     <Button
-                        icon="download"
-                        mode="outlined"
-                        onPress={(): void => console.log('Pressed Outlined Button')}
-                        style={{ marginTop: 24, width: 150 }}
+                        icon="plus"
+                        mode="contained"
+                        buttonColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Contained Button')}
+                        style={{ marginTop: 24 }}
                     >
-                        Press me
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained"
+                        buttonColor={theme.colors.error}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Contained Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        icon="download"
-                        mode="contained"
-                        onPress={(): void => console.log('Pressed Contained Button')}
-                        style={{ marginTop: 24, width: 150 }}
-                    >
-                        Press me
+                    <Button mode="contained" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="contained" disabled style={{ marginTop: 24 }}>
+                        Label
                     </Button>
                     <Button
-                        icon="download"
+                        icon="plus"
                         mode="contained"
-                        onPress={(): void => console.log('Pressed Contained Button')}
-                        style={{ marginTop: 24, width: 150 }}
+                        disabled
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        style={{ marginTop: 24 }}
                     >
-                        Press me
+                        Label
                     </Button>
                 </View>
             </Card>
             <Card style={{ padding: 20, margin: 10 }}>
-                <Text>Button(Disabled)</Text>
+                <Text>Outlined Button</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        icon="download"
-                        mode="text"
-                        onPress={(): void => console.log('Pressed Text Button')}
-                        style={{ width: 150 }}
-                        disabled
-                    >
-                        Press me
+                    <Button mode="outlined" onPress={(): void => console.log('Pressed Outlined Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="outlined" onPress={(): void => console.log('Pressed Outlined Button')}>
+                        Label
                     </Button>
                     <Button
-                        icon="download"
-                        mode="text"
-                        onPress={(): void => console.log('Pressed Text Button')}
-                        style={{ width: 150 }}
-                        disabled
-                    >
-                        Press me
-                    </Button>
-                </View>
-
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        icon="download"
+                        icon="plus"
                         mode="outlined"
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Outlined Button')}
-                        style={{ marginTop: 24, width: 150 }}
-                        disabled
                     >
-                        Press me
-                    </Button>
-                    <Button
-                        icon="download"
-                        mode="outlined"
-                        onPress={(): void => console.log('Pressed Outlined Button')}
-                        style={{ marginTop: 24, width: 150 }}
-                        disabled
-                    >
-                        Press me
+                        Label
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
-                        icon="download"
-                        mode="contained"
-                        onPress={(): void => console.log('Pressed Contained Button')}
-                        style={{ marginTop: 24, width: 150 }}
-                        disabled
+                        mode="outlined"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Outlined Button')}
+                        style={{ marginTop: 24 }}
                     >
-                        Press me
+                        Label
                     </Button>
                     <Button
-                        icon="download"
-                        mode="contained"
-                        onPress={(): void => console.log('Pressed Contained Button')}
-                        style={{ marginTop: 24, width: 150 }}
-                        disabled
+                        icon="plus"
+                        mode="outlined"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Outlined Button')}
+                        style={{ marginTop: 24 }}
                     >
-                        Press me
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="outlined"
+                        textColor={theme.colors.error}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Outlined Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="outlined" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="outlined" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="outlined"
+                        disabled
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+            </Card>
+            <Card style={{ padding: 20, margin: 10 }}>
+                <Text>Text Button</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="text" onPress={(): void => console.log('Pressed Text Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="text" onPress={(): void => console.log('Pressed Text Button')}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="text"
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Text Button')}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button
+                        mode="text"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Text Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="text"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Text Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="text"
+                        textColor={theme.colors.error}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Text Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="text" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="text" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="text"
+                        disabled
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+            </Card>
+            <Card style={{ padding: 20, margin: 10 }}>
+                <Text>Elevated Button</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="elevated" onPress={(): void => console.log('Pressed Elevated Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="elevated" onPress={(): void => console.log('Pressed Elevated Button')}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="elevated"
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Elevated Button')}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button
+                        mode="elevated"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Elevated Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="elevated"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Elevated Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="elevated"
+                        textColor={theme.colors.error}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Elevated Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="elevated" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="elevated" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="elevated"
+                        disabled
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+            </Card>
+            <Card style={{ padding: 20, margin: 10 }}>
+                <Text>Contained-Tonal Button</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="contained-tonal" onPress={(): void => console.log('Pressed Contained-tonal Button')}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained-tonal"
+                        onPress={(): void => console.log('Pressed Contained-tonal Button')}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained-tonal"
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Contained-tonal Button')}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button
+                        mode="contained-tonal"
+                        buttonColor={theme.colors.errorContainer}
+                        textColor={theme.colors.onErrorContainer}
+                        onPress={(): void => console.log('Pressed Contained-tonal Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained-tonal"
+                        buttonColor={theme.colors.errorContainer}
+                        textColor={theme.colors.onErrorContainer}
+                        onPress={(): void => console.log('Pressed Contained-tonal Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained-tonal"
+                        buttonColor={theme.colors.errorContainer}
+                        textColor={theme.colors.onErrorContainer}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Contained-tonal Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="contained-tonal" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="contained-tonal" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained-tonal"
+                        disabled
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
                     </Button>
                 </View>
             </Card>
