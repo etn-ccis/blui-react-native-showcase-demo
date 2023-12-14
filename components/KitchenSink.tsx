@@ -654,9 +654,23 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <View style={{ marginTop: 24 }}>
                         <DataTable>
                             <DataTable.Header>
-                                <DataTable.Title>Dessert</DataTable.Title>
-                                <DataTable.Title numeric>Calories</DataTable.Title>
-                                <DataTable.Title numeric>Fat</DataTable.Title>
+                                <DataTable.Title
+                                    textStyle={{ color: theme.colors.onSurface, ...theme.fonts.labelLarge }}
+                                >
+                                    Dessert
+                                </DataTable.Title>
+                                <DataTable.Title
+                                    numeric
+                                    textStyle={{ color: theme.colors.onSurface, ...theme.fonts.labelLarge }}
+                                >
+                                    Calories
+                                </DataTable.Title>
+                                <DataTable.Title
+                                    numeric
+                                    textStyle={{ color: theme.colors.onSurface, ...theme.fonts.labelLarge }}
+                                >
+                                    Fat
+                                </DataTable.Title>
                             </DataTable.Header>
 
                             {items.slice(from, to).map((item) => (
