@@ -242,7 +242,7 @@ export const TextFieldExample: React.FC = () => {
                         setHasError(value.length > 5);
                     }}
                     error={hasError}
-                    style={{ marginHorizontal: 8, marginTop: 8 }}
+                    style={{ marginHorizontal: 8, marginTop: 8, backgroundColor: 'transparent' }}
                 />
                 <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
                     Error Message
@@ -272,7 +272,7 @@ export const TextFieldExample: React.FC = () => {
                     value={normalFilledText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalFilledText(value)}
-                    style={[styles.flatInput]}
+                    style={[styles.outlineInput]}
                 />
 
                 <Text> Error Outline Filled TextInput </Text>
@@ -288,7 +288,7 @@ export const TextFieldExample: React.FC = () => {
                         setHasError(value.length > 4);
                     }}
                     error={hasError}
-                    style={{ marginHorizontal: 8, marginTop: 8 }}
+                    style={{ marginHorizontal: 8, marginTop: 8, backgroundColor: 'transparent' }}
                 />
                 <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
                     Error Message
@@ -304,7 +304,7 @@ export const TextFieldExample: React.FC = () => {
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setDisabledFilledText(value)}
                     disabled
-                    style={[styles.flatInput]}
+                    style={[styles.outlineInput]}
                 />
             </View>
             <View style={styles.container}>
@@ -318,7 +318,7 @@ export const TextFieldExample: React.FC = () => {
                     dense={true}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalText(value)}
-                    style={[styles.flatInput]}
+                    style={[styles.outlineInput]}
                 />
 
                 <Text> Error Dense Outline TextInput </Text>
@@ -335,7 +335,7 @@ export const TextFieldExample: React.FC = () => {
                     }}
                     dense={true}
                     error={hasError}
-                    style={{ marginHorizontal: 8, marginTop: 8 }}
+                    style={{ marginHorizontal: 8, marginTop: 8, backgroundColor: 'transparent' }}
                 />
                 <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
                     Error Message
@@ -352,7 +352,7 @@ export const TextFieldExample: React.FC = () => {
                     onChangeText={(value) => setDisabledText(value)}
                     disabled
                     dense={true}
-                    style={[styles.flatInput]}
+                    style={[styles.outlineInput]}
                 />
             </View>
             <View style={styles.container}>
@@ -366,7 +366,7 @@ export const TextFieldExample: React.FC = () => {
                     dense={true}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalFilledText(value)}
-                    style={[styles.flatInput]}
+                    style={[styles.outlineInput]}
                 />
 
                 <Text> Error Dense Outline Filled TextInput </Text>
@@ -383,7 +383,7 @@ export const TextFieldExample: React.FC = () => {
                     }}
                     dense={true}
                     error={hasError}
-                    style={{ marginHorizontal: 8, marginTop: 8 }}
+                    style={{ marginHorizontal: 8, marginTop: 8, backgroundColor: 'transparent' }}
                 />
                 <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
                     Error Message
@@ -400,7 +400,7 @@ export const TextFieldExample: React.FC = () => {
                     onChangeText={(value) => setDisabledFilledText(value)}
                     disabled
                     dense={true}
-                    style={[styles.flatInput]}
+                    style={[styles.outlineInput]}
                 />
             </View>
         </View>

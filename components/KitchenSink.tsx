@@ -2480,7 +2480,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             label="Email"
                             mode="outlined"
                             outlineColor={theme.colors.outline}
-                            style={{ marginTop: 24 }}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={emailInputText}
                             onChangeText={(text: string): void => setEmailInputText(text)}
                             allowFontScaling={!DISABLE_FONT_SCALE}
@@ -2500,7 +2500,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             label="Email Error"
                             mode="outlined"
                             outlineColor={theme.colors.outline}
-                            style={{ marginTop: 24 }}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={errorEmailInputText}
                             onChangeText={(text: string): void => setErrorEmailInputText(text)}
                             error
@@ -2521,7 +2521,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             mode="outlined"
                             outlineColor={theme.colors.outline}
                             value="j.smith@email.com"
-                            style={{ marginTop: 24 }}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             disabled
                             allowFontScaling={!DISABLE_FONT_SCALE}
                             maxFontSizeMultiplier={MAX_FONT_SCALE}
@@ -2544,7 +2544,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             label="Email"
                             mode="outlined"
                             outlineColor={theme.colors.outline}
-                            style={{ marginTop: 24 }}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={emailInputText}
                             onChangeText={(text: string): void => setEmailInputText(text)}
                         />
@@ -2560,7 +2560,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             label="Email Error"
                             mode="outlined"
                             outlineColor={theme.colors.outline}
-                            style={{ marginTop: 24 }}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={errorEmailInputText}
                             onChangeText={(text: string): void => setErrorEmailInputText(text)}
                             error
@@ -2577,7 +2577,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             mode="outlined"
                             outlineColor={theme.colors.outline}
                             value="j.smith@email.com"
-                            style={{ marginTop: 24 }}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             disabled
                         />
                     </View>
