@@ -2565,7 +2565,13 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             onChangeText={(text: string): void => setErrorEmailInputText(text)}
                             error
                         />
-                        <TextInput label="Name Disabled" underlineColor={theme.colors.onSurfaceVariant} value="John Smith" style={{ marginTop: 24 }} disabled />
+                        <TextInput
+                            label="Name Disabled"
+                            underlineColor={theme.colors.onSurfaceVariant}
+                            value="John Smith"
+                            style={{ marginTop: 24 }}
+                            disabled
+                        />
                         <TextInput
                             label="Email Disabled"
                             mode="outlined"
