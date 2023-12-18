@@ -11,7 +11,6 @@ import {
     BottomNavigation,
     Card,
     Checkbox,
-    Chip,
     DataTable,
     Dialog,
     Divider,
@@ -52,11 +51,13 @@ import {
     DrawerNavItem,
     Grade,
     IconSwitch,
+    Chip
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
 import { MobileStepperExample } from './MobileStepperExample';
 import * as BLUIColors from '@brightlayer-ui/colors';
+import { TextFieldExample } from './TextInputExample';
 
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -109,6 +110,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const [snackbarTwoVisible, setSnackbarTwoVisible] = React.useState(false);
     const [isSwitchOn, setIsSwitchOn] = React.useState(false);
     const [toggleButtonValue, setToggleButtonValue] = useState('left');
+    const [toggleButtonFontValue, setToggleButtonFontValue] = useState('bold');
     const [nameInputText, setNameInputText] = React.useState('');
     const [emailInputText, setEmailInputText] = React.useState('');
     const [errorNameInputText, setErrorNameInputText] = React.useState('');
@@ -195,30 +197,132 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
             <Card style={styles.card}>
                 <Card.Title title="Icon Switch" />
-                <View style={{ padding: 10 }}>
-                    <IconSwitch value />
-                </View>
-                <View style={{ padding: 10 }}>
-                    <IconSwitch value showIcon />
-                </View>
-                <View style={{ padding: 10 }}>
-                    <IconSwitch />
-                </View>
-                <View style={{ padding: 10 }}>
-                    <IconSwitch showIcon />
-                </View>
-                <View style={{ padding: 10 }}>
-                    <IconSwitch value disabled />
-                </View>
-                <View style={{ padding: 10 }}>
-                    <IconSwitch value showIcon disabled />
-                </View>
-                <View style={{ padding: 10 }}>
-                    <IconSwitch disabled />
-                </View>
-                <View style={{ padding: 10 }}>
-                    <IconSwitch showIcon disabled />
-                </View>
+                <Card.Content>
+                  <View style={{ padding: 10 }}>
+                      <IconSwitch value />
+                  </View>
+                  <View style={{ padding: 10 }}>
+                      <IconSwitch value showIcon />
+                  </View>
+                  <View style={{ padding: 10 }}>
+                      <IconSwitch />
+                  </View>
+                  <View style={{ padding: 10 }}>
+                      <IconSwitch showIcon />
+                  </View>
+                  <View style={{ padding: 10 }}>
+                      <IconSwitch value disabled />
+                  </View>
+                  <View style={{ padding: 10 }}>
+                      <IconSwitch value showIcon disabled />
+                  </View>
+                  <View style={{ padding: 10 }}>
+                      <IconSwitch disabled />
+                  </View>
+                  <View style={{ padding: 10 }}>
+                      <IconSwitch showIcon disabled />
+                  </View>
+                </Card.Content>
+            </Card> 
+        <Card style={styles.card}>
+                <Card.Title title="Chip" />
+                <Card.Content>
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip
+                            onPress={() => {
+                                console.log('hello');
+                            }}
+                            style={{ marginRight: 10 }}
+                        >
+                            Unselect1
+                        </Chip>
+                        <Chip selected={true}>Select1</Chip>
+                    </View>
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip mode="elevated" style={{ marginRight: 10 }}>
+                            Unselect2
+                        </Chip>
+                        <Chip selected={true} mode="elevated">
+                            Select2
+                        </Chip>
+                    </View>
+
+                    <Text>Disabled</Text>
+
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip
+                            disabled={true}
+                            onPress={() => {
+                                console.log('hello');
+                            }}
+                            style={{ marginRight: 10 }}
+                        >
+                            Unselect
+                        </Chip>
+                        <Chip disabled selected={true}>
+                            Select
+                        </Chip>
+                    </View>
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip disabled mode="elevated" style={{ marginRight: 10 }}>
+                            Unselect
+                        </Chip>
+                        <Chip disabled selected={true} mode="elevated">
+                            Select
+                        </Chip>
+                    </View>
+
+                    <Text>With icon</Text>
+
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip
+                            avatar={<Avatar.Text label="JS" size={20} />}
+                            onPress={() => {
+                                console.log('hello');
+                            }}
+                            style={{ marginRight: 10 }}
+                        >
+                            Unselect
+                        </Chip>
+                        <Chip icon={{ name: 'settings' }} selected={true}>
+                            Select123
+                        </Chip>
+                    </View>
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip icon={{ name: 'settings' }} mode="elevated" style={{ marginRight: 10 }}>
+                            Unselect
+                        </Chip>
+                        <Chip icon={{ name: 'settings' }} selected={true} mode="elevated">
+                            Select
+                        </Chip>
+                    </View>
+
+                    <Text>With close icon</Text>
+
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip
+                            avatar={<Avatar.Text label="JS" size={20} />}
+                            onPress={() => {
+                                console.log('hello');
+                            }}
+                            onClose={() => {}}
+                            style={{ marginRight: 10 }}
+                        >
+                            Unselect
+                        </Chip>
+                        <Chip onClose={() => {}} selected={true}>
+                            Select123
+                        </Chip>
+                    </View>
+                    <View style={{ flexDirection: 'row', margin: 10 }}>
+                        <Chip onClose={() => {}} mode="elevated" style={{ marginRight: 10 }}>
+                            Unselect
+                        </Chip>
+                        <Chip icon={{ name: 'settings' }} onClose={() => {}} selected={true} mode="elevated">
+                            Select
+                        </Chip>
+                    </View>
+                </Card.Content>
             </Card>
             <Card style={styles.card}>
                 <Card.Title title="Grades" />
@@ -603,6 +707,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 RN V5 Components
             </Text>
             <Card style={styles.card}>
+                <TextFieldExample />
+            </Card>
+            <Card style={styles.card}>
                 <View
                     style={{
                         justifyContent: 'center',
@@ -752,6 +859,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             label="Email"
                             value={helperTextInputText}
                             onChangeText={onChangeHelperTextInputText}
+                            underlineColor={theme.colors.onSurfaceVariant}
                         />
                         <HelperText type="error" visible={helperTextInputHasErrors()}>
                             Email address is invalid!
@@ -797,24 +905,32 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             <List.Item
                                 title="Item 1"
                                 description="Item 1 Description"
-                                left={(): JSX.Element => <List.Icon icon="folder" />}
+                                left={(): JSX.Element => (
+                                    <List.Icon icon="folder" color={BLUIColors.neutralVariant[30]} />
+                                )}
                             />
                             <List.Item
                                 title="Item 2"
                                 description="Item 2 Description"
-                                left={(): JSX.Element => <List.Icon icon="folder" />}
+                                left={(): JSX.Element => (
+                                    <List.Icon icon="folder" color={BLUIColors.neutralVariant[30]} />
+                                )}
                             />
                             <List.Item
                                 title="Item 3"
                                 description="Item 3 Description"
-                                left={(): JSX.Element => <List.Icon icon="folder" />}
+                                left={(): JSX.Element => (
+                                    <List.Icon icon="folder" color={BLUIColors.neutralVariant[30]} />
+                                )}
                             />
                         </View>
                         <View>
                             <List.Section title="Accordions">
                                 <List.Accordion
                                     title="Accordion 1"
-                                    left={(): JSX.Element => <List.Icon icon="folder" />}
+                                    left={(): JSX.Element => (
+                                        <List.Icon icon="folder" color={BLUIColors.neutralVariant[30]} />
+                                    )}
                                     expanded={accordionOneExpanded}
                                     onPress={(): void => setAccordionOneExpanded(!accordionOneExpanded)}
                                 >
@@ -823,7 +939,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 </List.Accordion>
                                 <List.Accordion
                                     title="Accordion 2"
-                                    left={(): JSX.Element => <List.Icon icon="folder" />}
+                                    left={(): JSX.Element => (
+                                        <List.Icon icon="folder" color={BLUIColors.neutralVariant[30]} />
+                                    )}
                                     expanded={accordionTwoExpanded}
                                     onPress={(): void => setAccordionTwoExpanded(!accordionTwoExpanded)}
                                 >
@@ -1129,123 +1247,334 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 </View>
             </Card>
             <Card style={{ padding: 20, margin: 10 }}>
-                <Text>Button</Text>
+                <Text>Contained Button</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        icon="download"
-                        mode="text"
-                        onPress={(): void => console.log('Pressed Text Button')}
-                        style={{ width: 150 }}
-                    >
-                        Press me
+                    <Button mode="contained" onPress={(): void => console.log('Pressed Contained Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="contained" onPress={(): void => console.log('Pressed Contained Button')}>
+                        Label
                     </Button>
                     <Button
-                        icon="download"
-                        mode="text"
-                        onPress={(): void => console.log('Pressed Text Button')}
-                        style={{ width: 150 }}
+                        icon="plus"
+                        mode="contained"
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Contained Button')}
                     >
-                        Press me
+                        Label
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
-                        icon="download"
-                        mode="outlined"
-                        onPress={(): void => console.log('Pressed Outlined Button')}
-                        style={{ marginTop: 24, width: 150 }}
+                        mode="contained"
+                        buttonColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Contained Button')}
+                        style={{ marginTop: 24 }}
                     >
-                        Press me
+                        Label
                     </Button>
                     <Button
-                        icon="download"
-                        mode="outlined"
-                        onPress={(): void => console.log('Pressed Outlined Button')}
-                        style={{ marginTop: 24, width: 150 }}
+                        icon="plus"
+                        mode="contained"
+                        buttonColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Contained Button')}
+                        style={{ marginTop: 24 }}
                     >
-                        Press me
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained"
+                        buttonColor={theme.colors.error}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Contained Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        icon="download"
-                        mode="contained"
-                        onPress={(): void => console.log('Pressed Contained Button')}
-                        style={{ marginTop: 24, width: 150 }}
-                    >
-                        Press me
+                    <Button mode="contained" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="contained" disabled style={{ marginTop: 24 }}>
+                        Label
                     </Button>
                     <Button
-                        icon="download"
+                        icon="plus"
                         mode="contained"
-                        onPress={(): void => console.log('Pressed Contained Button')}
-                        style={{ marginTop: 24, width: 150 }}
+                        disabled
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        style={{ marginTop: 24 }}
                     >
-                        Press me
+                        Label
                     </Button>
                 </View>
             </Card>
             <Card style={{ padding: 20, margin: 10 }}>
-                <Text>Button(Disabled)</Text>
+                <Text>Outlined Button</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        icon="download"
-                        mode="text"
-                        onPress={(): void => console.log('Pressed Text Button')}
-                        style={{ width: 150 }}
-                        disabled
-                    >
-                        Press me
+                    <Button mode="outlined" onPress={(): void => console.log('Pressed Outlined Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="outlined" onPress={(): void => console.log('Pressed Outlined Button')}>
+                        Label
                     </Button>
                     <Button
-                        icon="download"
-                        mode="text"
-                        onPress={(): void => console.log('Pressed Text Button')}
-                        style={{ width: 150 }}
-                        disabled
-                    >
-                        Press me
-                    </Button>
-                </View>
-
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button
-                        icon="download"
+                        icon="plus"
                         mode="outlined"
+                        contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Outlined Button')}
-                        style={{ marginTop: 24, width: 150 }}
-                        disabled
                     >
-                        Press me
-                    </Button>
-                    <Button
-                        icon="download"
-                        mode="outlined"
-                        onPress={(): void => console.log('Pressed Outlined Button')}
-                        style={{ marginTop: 24, width: 150 }}
-                        disabled
-                    >
-                        Press me
+                        Label
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Button
-                        icon="download"
-                        mode="contained"
-                        onPress={(): void => console.log('Pressed Contained Button')}
-                        style={{ marginTop: 24, width: 150 }}
-                        disabled
+                        mode="outlined"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Outlined Button')}
+                        style={{ marginTop: 24 }}
                     >
-                        Press me
+                        Label
                     </Button>
                     <Button
-                        icon="download"
-                        mode="contained"
-                        onPress={(): void => console.log('Pressed Contained Button')}
-                        style={{ marginTop: 24, width: 150 }}
-                        disabled
+                        icon="plus"
+                        mode="outlined"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Outlined Button')}
+                        style={{ marginTop: 24 }}
                     >
-                        Press me
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="outlined"
+                        textColor={theme.colors.error}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Outlined Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="outlined" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="outlined" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="outlined"
+                        disabled
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+            </Card>
+            <Card style={{ padding: 20, margin: 10 }}>
+                <Text>Text Button</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="text" onPress={(): void => console.log('Pressed Text Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="text" onPress={(): void => console.log('Pressed Text Button')}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="text"
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Text Button')}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button
+                        mode="text"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Text Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="text"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Text Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="text"
+                        textColor={theme.colors.error}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Text Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="text" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="text" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="text"
+                        disabled
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+            </Card>
+            <Card style={{ padding: 20, margin: 10 }}>
+                <Text>Elevated Button</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="elevated" onPress={(): void => console.log('Pressed Elevated Button')}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="elevated" onPress={(): void => console.log('Pressed Elevated Button')}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="elevated"
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Elevated Button')}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button
+                        mode="elevated"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Elevated Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="elevated"
+                        textColor={theme.colors.error}
+                        onPress={(): void => console.log('Pressed Elevated Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="elevated"
+                        textColor={theme.colors.error}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Elevated Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="elevated" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="elevated" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="elevated"
+                        disabled
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+            </Card>
+            <Card style={{ padding: 20, margin: 10 }}>
+                <Text>Contained-Tonal Button</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="contained-tonal" onPress={(): void => console.log('Pressed Contained-tonal Button')}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained-tonal"
+                        onPress={(): void => console.log('Pressed Contained-tonal Button')}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained-tonal"
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Contained-tonal Button')}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button
+                        mode="contained-tonal"
+                        buttonColor={theme.colors.errorContainer}
+                        textColor={theme.colors.onErrorContainer}
+                        onPress={(): void => console.log('Pressed Contained-tonal Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained-tonal"
+                        buttonColor={theme.colors.errorContainer}
+                        textColor={theme.colors.onErrorContainer}
+                        onPress={(): void => console.log('Pressed Contained-tonal Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained-tonal"
+                        buttonColor={theme.colors.errorContainer}
+                        textColor={theme.colors.onErrorContainer}
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        onPress={(): void => console.log('Pressed Contained-tonal Button')}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
+                    </Button>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Button mode="contained-tonal" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button icon="plus" mode="contained-tonal" disabled style={{ marginTop: 24 }}>
+                        Label
+                    </Button>
+                    <Button
+                        icon="plus"
+                        mode="contained-tonal"
+                        disabled
+                        contentStyle={{ flexDirection: 'row-reverse' }}
+                        style={{ marginTop: 24 }}
+                    >
+                        Label
                     </Button>
                 </View>
             </Card>
@@ -1392,16 +1721,42 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Text>Chip</Text>
                     <View style={{ alignItems: 'center', marginTop: 24 }}>
                         <Chip
-                            icon="information"
                             style={{
                                 width: 250,
                             }}
                         >
-                            Unselected Flat Chip
+                            Flat Chip
                         </Chip>
                         <Chip
                             icon="information"
-                            selected={true}
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
+                        >
+                            Flat Chip With Icon
+                        </Chip>
+                        <Chip
+                            avatar={<Avatar.Icon size={40} icon="account-circle" />}
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
+                        >
+                            Flat Chip With Avatar
+                        </Chip>
+                        <Chip
+                            style={{
+                                width: 250,
+                                marginTop: 24,
+                            }}
+                            closeIcon="delete"
+                            onClose={(): void => {}}
+                        >
+                            Flat Chip With Close Icon
+                        </Chip>
+                        <Chip
+                            selected
                             style={{
                                 marginTop: 24,
                                 width: 250,
@@ -1410,8 +1765,48 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             Selected Flat Chip
                         </Chip>
                         <Chip
+                            selected
+                            selectedColor={BLUIColors.primary[100]}
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
+                        >
+                            Selected Flat Chip With Color
+                        </Chip>
+                        <Chip
+                            selected
+                            showSelectedOverlay
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
+                        >
+                            Selected Flat Chip With Overlay
+                        </Chip>
+                        <Chip
+                            selected
+                            showSelectedCheck
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
+                        >
+                            Selected Flat Chip With Check
+                        </Chip>
+                        <Chip
                             icon="information"
-                            disabled={true}
+                            rippleColor={BLUIColors.primary[50]}
+                            onPress={() => console.log('ripple effect')}
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
+                        >
+                            Flat Chip With Ripple Color
+                        </Chip>
+                        <Chip
+                            disabled
                             style={{
                                 marginTop: 24,
                                 width: 250,
@@ -1419,83 +1814,294 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         >
                             Disabled Flat Chip
                         </Chip>
-                        <Chip icon="information" mode={'outlined'} style={{ marginTop: 24, width: 250 }}>
-                            Unselected Outlined Chip
-                        </Chip>
                         <Chip
-                            icon="information"
-                            mode={'outlined'}
-                            selected={true}
+                            onPress={() => console.log('flat chip pressed')}
                             style={{
                                 marginTop: 24,
                                 width: 250,
                             }}
                         >
-                            Selected Outlined Chip
+                            Flat Chip On Press
                         </Chip>
                         <Chip
-                            icon="information"
-                            mode={'outlined'}
-                            disabled={true}
-                            style={{ marginTop: 24, width: 250 }}
+                            onPress={() => console.log('flat chip pressed')}
+                            onLongPress={() => console.log('flat chip long pressed')}
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
                         >
-                            Disabled Outlined Chip
+                            Flat Chip On Long Press
+                        </Chip>
+                        <Chip
+                            onPressIn={() => console.log('flat chip on press in')}
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
+                        >
+                            Flat Chip On Press In
+                        </Chip>
+                        <Chip
+                            onPressOut={() => console.log('flat chip on press out')}
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
+                        >
+                            Flat Chip On Press Out
+                        </Chip>
+                        <Chip
+                            onClose={(): void => {
+                                console.log('flat chip on close');
+                            }}
+                            style={{
+                                width: 250,
+                                marginTop: 24,
+                            }}
+                        >
+                            Flat Chip On Close
+                        </Chip>
+                        <Chip
+                            delayLongPress={3000}
+                            onPress={() => console.log('flat chip pressed')}
+                            onLongPress={() => console.log('flat chip long pressed for 3 seconds')}
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
+                        >
+                            Flat Chip Delay Long Press
+                        </Chip>
+                        <Chip
+                            compact
+                            style={{
+                                marginTop: 24,
+                            }}
+                        >
+                            Compact Flat Chip
+                        </Chip>
+                        <Chip
+                            elevated
+                            style={{
+                                marginTop: 24,
+                            }}
+                        >
+                            Elevated Flat Chip
+                        </Chip>
+                        <Chip
+                            textStyle={{ color: BLUIColors.neutralVariant[50] }}
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
+                        >
+                            Flat Chip With Text Style
+                        </Chip>
+                        <Chip
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                                backgroundColor: BLUIColors.neutralVariant[50],
+                            }}
+                        >
+                            Flat Chip With Style
+                        </Chip>
+                        <Chip
+                            ellipsizeMode="middle"
+                            style={{
+                                marginTop: 24,
+                                width: 250,
+                            }}
+                        >
+                            Flat Chip With Ellipsize Mode
                         </Chip>
                         <Divider style={{ width: '100%', marginTop: 24 }} />
-                        <Chip
-                            icon="information"
-                            style={{
-                                width: 250,
-                                marginTop: 24,
-                            }}
-                            onClose={(): void => {}}
-                        >
-                            Unselected Flat Chip
+                        <Chip mode={'outlined'} style={{ marginTop: 24, width: 300 }}>
+                            Outlined Chip
                         </Chip>
                         <Chip
-                            icon="information"
-                            selected={true}
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                            onClose={(): void => {}}
-                        >
-                            Selected Flat Chip
-                        </Chip>
-                        <Chip
-                            icon="information"
-                            disabled={true}
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                            onClose={(): void => {}}
-                        >
-                            Disabled Flat Chip
-                        </Chip>
-                        <Chip icon="information" mode={'outlined'} style={{ marginTop: 24, width: 250 }}>
-                            Unselected Outlined Chip
-                        </Chip>
-                        <Chip
-                            icon="information"
                             mode={'outlined'}
-                            selected={true}
+                            icon="information"
                             style={{
                                 marginTop: 24,
-                                width: 250,
+                                width: 300,
+                            }}
+                        >
+                            Outlined Chip With Icon
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            avatar={<Avatar.Icon size={40} icon="account-circle" />}
+                            style={{
+                                marginTop: 24,
+                                width: 300,
+                            }}
+                        >
+                            Outlined Chip With Avatar
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            closeIcon="delete"
+                            style={{
+                                marginTop: 24,
+                                width: 300,
+                            }}
+                            onClose={() => {}}
+                        >
+                            Outlined Chip With Close Icon
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            selected
+                            style={{
+                                marginTop: 24,
+                                width: 300,
                             }}
                         >
                             Selected Outlined Chip
                         </Chip>
                         <Chip
-                            icon="information"
                             mode={'outlined'}
-                            disabled={true}
                             selected
-                            style={{ marginTop: 24, width: 250 }}
+                            selectedColor={BLUIColors.primary[50]}
+                            style={{
+                                marginTop: 24,
+                                width: 300,
+                            }}
                         >
+                            Selected Outlined Chip With Color
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            selected
+                            showSelectedOverlay
+                            style={{
+                                marginTop: 24,
+                                width: 300,
+                            }}
+                        >
+                            Selected Outlined Chip With Overlay
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            selected
+                            showSelectedCheck
+                            style={{
+                                marginTop: 24,
+                                width: 300,
+                            }}
+                        >
+                            Selected Outlined Chip With Check
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            rippleColor={BLUIColors.primary[50]}
+                            onPress={() => console.log('ripple effect')}
+                            style={{
+                                marginTop: 24,
+                                width: 300,
+                            }}
+                        >
+                            Outlined Chip With Ripple Color
+                        </Chip>
+                        <Chip mode={'outlined'} disabled style={{ marginTop: 24, width: 300 }}>
                             Disabled Outlined Chip
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            onPress={() => console.log('outlined chip pressed')}
+                            style={{ marginTop: 24, width: 300 }}
+                        >
+                            Outlined Chip On Press
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            onPress={() => console.log('outlined chip pressed')}
+                            onLongPress={() => console.log('outlined chip long pressed')}
+                            style={{ marginTop: 24, width: 300 }}
+                        >
+                            Outlined Chip On Long Press
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            onPressIn={() => console.log('outlined chip on press in')}
+                            style={{ marginTop: 24, width: 300 }}
+                        >
+                            Outlined Chip On Press In
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            onPressOut={() => console.log('outlined chip on press out')}
+                            style={{ marginTop: 24, width: 300 }}
+                        >
+                            Outlined Chip On Press Out
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            onClose={(): void => {
+                                console.log('outlined chip on close');
+                            }}
+                            style={{ marginTop: 24, width: 300 }}
+                        >
+                            Outlined Chip On Close
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            delayLongPress={3000}
+                            onPress={() => console.log('outlined chip pressed')}
+                            onLongPress={() => console.log('outlined chip long pressed for 3 seconds')}
+                            style={{ marginTop: 24, width: 300 }}
+                        >
+                            Outlined Chip Delay Long Press
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            compact
+                            style={{
+                                marginTop: 24,
+                            }}
+                        >
+                            Compact Outlined Chip
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            elevated
+                            style={{
+                                marginTop: 24,
+                            }}
+                        >
+                            Elevated Outlined Chip
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            textStyle={{ color: BLUIColors.neutralVariant[50] }}
+                            style={{
+                                marginTop: 24,
+                                width: 300,
+                            }}
+                        >
+                            Outlined Chip With Text Style
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            style={{
+                                marginTop: 24,
+                                width: 300,
+                                backgroundColor: BLUIColors.neutralVariant[50],
+                            }}
+                        >
+                            Outlined Chip With Style
+                        </Chip>
+                        <Chip
+                            mode={'outlined'}
+                            ellipsizeMode="middle"
+                            style={{
+                                marginTop: 24,
+                                width: 300,
+                            }}
+                        >
+                            Outlined Chip With Ellipsize Mode
                         </Chip>
                     </View>
                 </View>
@@ -1615,14 +2221,46 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 >
                     <Text>Progress Bar</Text>
                     <View style={{ marginTop: 24 }}>
-                        <ProgressBar progress={0} />
-                        <ProgressBar progress={0.5} style={{ marginTop: 24 }} />
-                        <ProgressBar progress={1.0} style={{ marginTop: 24 }} />
-                        <ProgressBar indeterminate style={{ marginTop: 24 }} />
-                        <ProgressBar progress={0} style={{ marginTop: 24 }} />
-                        <ProgressBar progress={0.5} style={{ marginTop: 24 }} />
-                        <ProgressBar progress={1.0} style={{ marginTop: 24 }} />
-                        <ProgressBar indeterminate style={{ marginTop: 24 }} />
+                        <ProgressBar
+                            progress={0}
+                            // @ts-ignore
+                            style={{ backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            progress={0.5}
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            progress={1.0}
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            indeterminate
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            progress={0}
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            progress={0.5}
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            progress={1.0}
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
+                        <ProgressBar
+                            indeterminate
+                            // @ts-ignore
+                            style={{ marginTop: 24, backgroundColor: theme.colors.surfaceContainerHighest }}
+                        />
                     </View>
                 </View>
             </Card>
@@ -1770,8 +2408,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         setSnackbarTwoVisible(false);
                                     },
                                 }}
+                                style={{ backgroundColor: theme.colors.inverseSurface }}
                             >
-                                Hey there! I&apos;m a Snackbar.
+                                Im a Snackbar.
                             </Snackbar>
                         </Portal>
                         <Button mode={'contained'} onPress={(): void => setSnackbarTwoVisible(!snackbarTwoVisible)}>
@@ -1861,6 +2500,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <View style={{ marginTop: 24 }}>
                         <TextInput
                             label="Name"
+                            underlineColor={theme.colors.onSurfaceVariant}
                             value={nameInputText}
                             onChangeText={(text: string): void => setNameInputText(text)}
                             allowFontScaling={!DISABLE_FONT_SCALE}
@@ -1869,7 +2509,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Email"
                             mode="outlined"
-                            style={{ marginTop: 24 }}
+                            outlineColor={theme.colors.outline}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={emailInputText}
                             onChangeText={(text: string): void => setEmailInputText(text)}
                             allowFontScaling={!DISABLE_FONT_SCALE}
@@ -1877,6 +2518,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         />
                         <TextInput
                             label="Name Error"
+                            underlineColor={theme.colors.onSurfaceVariant}
                             style={{ marginTop: 24 }}
                             value={errorNameInputText}
                             onChangeText={(text: string): void => setErrorNameInputText(text)}
@@ -1887,7 +2529,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Email Error"
                             mode="outlined"
-                            style={{ marginTop: 24 }}
+                            outlineColor={theme.colors.outline}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={errorEmailInputText}
                             onChangeText={(text: string): void => setErrorEmailInputText(text)}
                             error
@@ -1897,6 +2540,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Name Disabled"
                             value="John Smith"
+                            underlineColor={theme.colors.onSurfaceVariant}
                             style={{ marginTop: 24 }}
                             disabled
                             allowFontScaling={!DISABLE_FONT_SCALE}
@@ -1905,8 +2549,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Email Disabled"
                             mode="outlined"
+                            outlineColor={theme.colors.outline}
                             value="j.smith@email.com"
-                            style={{ marginTop: 24 }}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             disabled
                             allowFontScaling={!DISABLE_FONT_SCALE}
                             maxFontSizeMultiplier={MAX_FONT_SCALE}
@@ -1920,6 +2565,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         />
                         <TextInput
                             label="Name"
+                            underlineColor={theme.colors.onSurfaceVariant}
                             style={{ marginTop: 24 }}
                             value={nameInputText}
                             onChangeText={(text: string): void => setNameInputText(text)}
@@ -1927,12 +2573,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Email"
                             mode="outlined"
-                            style={{ marginTop: 24 }}
+                            outlineColor={theme.colors.outline}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={emailInputText}
                             onChangeText={(text: string): void => setEmailInputText(text)}
                         />
                         <TextInput
                             label="Name Error"
+                            underlineColor={theme.colors.onSurfaceVariant}
                             style={{ marginTop: 24 }}
                             value={errorNameInputText}
                             onChangeText={(text: string): void => setErrorNameInputText(text)}
@@ -1941,17 +2589,25 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Email Error"
                             mode="outlined"
-                            style={{ marginTop: 24 }}
+                            outlineColor={theme.colors.outline}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={errorEmailInputText}
                             onChangeText={(text: string): void => setErrorEmailInputText(text)}
                             error
                         />
-                        <TextInput label="Name Disabled" value="John Smith" style={{ marginTop: 24 }} disabled />
+                        <TextInput
+                            label="Name Disabled"
+                            underlineColor={theme.colors.onSurfaceVariant}
+                            value="John Smith"
+                            style={{ marginTop: 24 }}
+                            disabled
+                        />
                         <TextInput
                             label="Email Disabled"
                             mode="outlined"
+                            outlineColor={theme.colors.outline}
                             value="j.smith@email.com"
-                            style={{ marginTop: 24 }}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             disabled
                         />
                     </View>
@@ -1970,18 +2626,45 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <ToggleButton.Row
                             onValueChange={(value: string): void => setToggleButtonValue(value)}
                             value={toggleButtonValue}
+                            style={{
+                                backgroundColor: theme.colors.primaryContainer,
+                            }}
                         >
-                            <ToggleButton icon="format-align-left" value="left" />
-                            <ToggleButton icon="format-align-center" value="center" />
-                            <ToggleButton icon="format-align-right" value="right" />
+                            <ToggleButton
+                                icon="format-align-left"
+                                value="left"
+                                iconColor={theme.colors.onPrimaryContainer}
+                            />
+                            <ToggleButton
+                                icon="format-align-center"
+                                value="center"
+                                iconColor={theme.colors.onPrimaryContainer}
+                            />
+                            <ToggleButton
+                                icon="format-align-right"
+                                value="right"
+                                iconColor={theme.colors.onPrimaryContainer}
+                            />
                         </ToggleButton.Row>
                         <ToggleButton.Row
-                            onValueChange={(value: string): void => setToggleButtonValue(value)}
-                            value={toggleButtonValue}
+                            onValueChange={(value: string): void => setToggleButtonFontValue(value)}
+                            value={toggleButtonFontValue}
+                            style={{
+                                marginTop: 10,
+                                backgroundColor: theme.colors.primaryContainer,
+                            }}
                         >
-                            <ToggleButton icon="format-align-left" value="left" />
-                            <ToggleButton icon="format-align-center" value="center" />
-                            <ToggleButton icon="format-align-right" value="right" />
+                            <ToggleButton icon="format-bold" value="bold" iconColor={theme.colors.onPrimaryContainer} />
+                            <ToggleButton
+                                icon="format-italic"
+                                value="italic"
+                                iconColor={theme.colors.onPrimaryContainer}
+                            />
+                            <ToggleButton
+                                icon="format-underline"
+                                value="underlined"
+                                iconColor={theme.colors.onPrimaryContainer}
+                            />
                         </ToggleButton.Row>
                     </View>
                 </View>
