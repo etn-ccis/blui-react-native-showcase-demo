@@ -56,6 +56,7 @@ import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
 import { MobileStepperExample } from './MobileStepperExample';
 import * as BLUIColors from '@brightlayer-ui/colors';
+import { TextFieldExample } from './TextInputExample';
 
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -676,6 +677,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 RN V5 Components
             </Text>
             <Card style={styles.card}>
+                <TextFieldExample />
+            </Card>
+            <Card style={styles.card}>
                 <View
                     style={{
                         justifyContent: 'center',
@@ -825,6 +829,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             label="Email"
                             value={helperTextInputText}
                             onChangeText={onChangeHelperTextInputText}
+                            underlineColor={theme.colors.onSurfaceVariant}
                         />
                         <HelperText type="error" visible={helperTextInputHasErrors()}>
                             Email address is invalid!
@@ -2465,6 +2470,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <View style={{ marginTop: 24 }}>
                         <TextInput
                             label="Name"
+                            underlineColor={theme.colors.onSurfaceVariant}
                             value={nameInputText}
                             onChangeText={(text: string): void => setNameInputText(text)}
                             allowFontScaling={!DISABLE_FONT_SCALE}
@@ -2473,7 +2479,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Email"
                             mode="outlined"
-                            style={{ marginTop: 24 }}
+                            outlineColor={theme.colors.outline}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={emailInputText}
                             onChangeText={(text: string): void => setEmailInputText(text)}
                             allowFontScaling={!DISABLE_FONT_SCALE}
@@ -2481,6 +2488,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         />
                         <TextInput
                             label="Name Error"
+                            underlineColor={theme.colors.onSurfaceVariant}
                             style={{ marginTop: 24 }}
                             value={errorNameInputText}
                             onChangeText={(text: string): void => setErrorNameInputText(text)}
@@ -2491,7 +2499,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Email Error"
                             mode="outlined"
-                            style={{ marginTop: 24 }}
+                            outlineColor={theme.colors.outline}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={errorEmailInputText}
                             onChangeText={(text: string): void => setErrorEmailInputText(text)}
                             error
@@ -2501,6 +2510,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Name Disabled"
                             value="John Smith"
+                            underlineColor={theme.colors.onSurfaceVariant}
                             style={{ marginTop: 24 }}
                             disabled
                             allowFontScaling={!DISABLE_FONT_SCALE}
@@ -2509,8 +2519,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Email Disabled"
                             mode="outlined"
+                            outlineColor={theme.colors.outline}
                             value="j.smith@email.com"
-                            style={{ marginTop: 24 }}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             disabled
                             allowFontScaling={!DISABLE_FONT_SCALE}
                             maxFontSizeMultiplier={MAX_FONT_SCALE}
@@ -2524,6 +2535,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         />
                         <TextInput
                             label="Name"
+                            underlineColor={theme.colors.onSurfaceVariant}
                             style={{ marginTop: 24 }}
                             value={nameInputText}
                             onChangeText={(text: string): void => setNameInputText(text)}
@@ -2531,12 +2543,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Email"
                             mode="outlined"
-                            style={{ marginTop: 24 }}
+                            outlineColor={theme.colors.outline}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={emailInputText}
                             onChangeText={(text: string): void => setEmailInputText(text)}
                         />
                         <TextInput
                             label="Name Error"
+                            underlineColor={theme.colors.onSurfaceVariant}
                             style={{ marginTop: 24 }}
                             value={errorNameInputText}
                             onChangeText={(text: string): void => setErrorNameInputText(text)}
@@ -2545,17 +2559,25 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <TextInput
                             label="Email Error"
                             mode="outlined"
-                            style={{ marginTop: 24 }}
+                            outlineColor={theme.colors.outline}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             value={errorEmailInputText}
                             onChangeText={(text: string): void => setErrorEmailInputText(text)}
                             error
                         />
-                        <TextInput label="Name Disabled" value="John Smith" style={{ marginTop: 24 }} disabled />
+                        <TextInput
+                            label="Name Disabled"
+                            underlineColor={theme.colors.onSurfaceVariant}
+                            value="John Smith"
+                            style={{ marginTop: 24 }}
+                            disabled
+                        />
                         <TextInput
                             label="Email Disabled"
                             mode="outlined"
+                            outlineColor={theme.colors.outline}
                             value="j.smith@email.com"
-                            style={{ marginTop: 24 }}
+                            style={{ marginTop: 24, backgroundColor: 'transparent' }}
                             disabled
                         />
                     </View>
