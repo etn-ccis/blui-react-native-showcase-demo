@@ -53,7 +53,6 @@ export const MobileStepperExample: React.FC = () => {
         rightButton: {
             alignSelf: 'flex-end',
             backgroundColor: disabledContainer,
-            color: onDisabledContainer,
         },
     });
 
@@ -84,6 +83,7 @@ export const MobileStepperExample: React.FC = () => {
                         disabled={currentStep === totalSteps - 1}
                         onPress={(): void => updateStep(1)}
                         mode="contained"
+                        textColor={onDisabledContainer}
                     >
                         Next
                     </Button>
