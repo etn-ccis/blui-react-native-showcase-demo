@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { StyleSheet, Text } from 'react-native';
-import { MobileStepper, DotStepperVariant, useAppTheme } from '@brightlayer-ui/react-native-components';
+import { MobileStepper, DotStepperVariant } from '@brightlayer-ui/react-native-components';
 import { Button, Card, Divider, useTheme } from 'react-native-paper';
 import * as BLUIColors from '@brightlayer-ui/colors';
 
@@ -9,9 +9,6 @@ export const MobileStepperExample: React.FC = () => {
     const totalSteps = 5;
     const [currentStep, setCurrentStep] = useState(0);
     const [mobileStepperVariant, setMobileStepperVariant] = useState<DotStepperVariant>('dots');
-    const {
-        colors: { disabledContainer, onDisabledContainer },
-    } = useAppTheme();
 
     const updateStep = useCallback(
         (delta: number): void => {
@@ -52,7 +49,6 @@ export const MobileStepperExample: React.FC = () => {
         },
         rightButton: {
             alignSelf: 'flex-end',
-            backgroundColor: disabledContainer,
         },
     });
 
@@ -83,7 +79,8 @@ export const MobileStepperExample: React.FC = () => {
                         disabled={currentStep === totalSteps - 1}
                         onPress={(): void => updateStep(1)}
                         mode="contained"
-                        textColor={onDisabledContainer}
+                        buttonColor={currentStep === totalSteps - 1 ? theme.colors.disabledContainer : undefined}
+                        textColor={currentStep === totalSteps - 1 ? theme.colors.onDisabledContainer : undefined}
                     >
                         Next
                     </Button>
