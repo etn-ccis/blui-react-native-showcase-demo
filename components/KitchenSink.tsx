@@ -1006,10 +1006,10 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Text>Surface</Text>
                     <View style={{ marginTop: 24 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
-                            <Surface style={[styles.surface, { elevation: 1 }]}>
+                            <Surface elevation={1} style={[styles.surface]}>
                                 <Text>Surface 1</Text>
                             </Surface>
-                            <Surface style={[styles.surface, { elevation: 2 }]}>
+                            <Surface elevation={2} style={[styles.surface]}>
                                 <Text>Surface 2</Text>
                             </Surface>
                         </View>
@@ -1020,10 +1020,10 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 marginTop: 24,
                             }}
                         >
-                            <Surface style={[styles.surface, { elevation: 3 }]}>
+                            <Surface elevation={3} style={[styles.surface]}>
                                 <Text>Surface 3</Text>
                             </Surface>
-                            <Surface style={[styles.surface, { elevation: 4 }]}>
+                            <Surface elevation={4} style={[styles.surface]}>
                                 <Text>Surface 4</Text>
                             </Surface>
                         </View>
@@ -1034,25 +1034,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 marginTop: 24,
                             }}
                         >
-                            <Surface style={[styles.surface, { elevation: 5 }]}>
+                            <Surface elevation={5} style={[styles.surface]}>
                                 <Text>Surface 5</Text>
-                            </Surface>
-                            <Surface style={[styles.surface, { elevation: 6 }]}>
-                                <Text>Surface 6</Text>
-                            </Surface>
-                        </View>
-                        <View
-                            style={{
-                                flexDirection: 'row',
-                                justifyContent: 'space-evenly',
-                                marginTop: 24,
-                            }}
-                        >
-                            <Surface style={[styles.surface, { elevation: 7 }]}>
-                                <Text>Surface 7</Text>
-                            </Surface>
-                            <Surface style={[styles.surface, { elevation: 8 }]}>
-                                <Text>Surface 8</Text>
                             </Surface>
                         </View>
                     </View>
