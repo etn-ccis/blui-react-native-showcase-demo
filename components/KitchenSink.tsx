@@ -51,7 +51,7 @@ import {
     DrawerNavItem,
     Grade,
     IconSwitch,
-    Chip
+    Chip,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -198,33 +198,33 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={styles.card}>
                 <Card.Title title="Icon Switch" />
                 <Card.Content>
-                  <View style={{ padding: 10 }}>
-                      <IconSwitch value />
-                  </View>
-                  <View style={{ padding: 10 }}>
-                      <IconSwitch value showIcon />
-                  </View>
-                  <View style={{ padding: 10 }}>
-                      <IconSwitch />
-                  </View>
-                  <View style={{ padding: 10 }}>
-                      <IconSwitch showIcon />
-                  </View>
-                  <View style={{ padding: 10 }}>
-                      <IconSwitch value disabled />
-                  </View>
-                  <View style={{ padding: 10 }}>
-                      <IconSwitch value showIcon disabled />
-                  </View>
-                  <View style={{ padding: 10 }}>
-                      <IconSwitch disabled />
-                  </View>
-                  <View style={{ padding: 10 }}>
-                      <IconSwitch showIcon disabled />
-                  </View>
+                    <View style={{ padding: 10 }}>
+                        <IconSwitch value />
+                    </View>
+                    <View style={{ padding: 10 }}>
+                        <IconSwitch value showIcon />
+                    </View>
+                    <View style={{ padding: 10 }}>
+                        <IconSwitch />
+                    </View>
+                    <View style={{ padding: 10 }}>
+                        <IconSwitch showIcon />
+                    </View>
+                    <View style={{ padding: 10 }}>
+                        <IconSwitch value disabled />
+                    </View>
+                    <View style={{ padding: 10 }}>
+                        <IconSwitch value showIcon disabled />
+                    </View>
+                    <View style={{ padding: 10 }}>
+                        <IconSwitch disabled />
+                    </View>
+                    <View style={{ padding: 10 }}>
+                        <IconSwitch showIcon disabled />
+                    </View>
                 </Card.Content>
-            </Card> 
-        <Card style={styles.card}>
+            </Card>
+            <Card style={styles.card}>
                 <Card.Title title="Chip" />
                 <Card.Content>
                     <View style={{ flexDirection: 'row', margin: 10 }}>
