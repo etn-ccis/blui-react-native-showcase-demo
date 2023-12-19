@@ -79,6 +79,8 @@ export const MobileStepperExample: React.FC = () => {
                         disabled={currentStep === totalSteps - 1}
                         onPress={(): void => updateStep(1)}
                         mode="contained"
+                        buttonColor={currentStep === totalSteps - 1 ? theme.colors.disabledContainer : undefined}
+                        textColor={currentStep === totalSteps - 1 ? theme.colors.onDisabledContainer : undefined}
                     >
                         Next
                     </Button>
