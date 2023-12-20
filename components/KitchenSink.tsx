@@ -227,101 +227,345 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Card style={styles.card}>
                 <Card.Title title="Chip" />
                 <Card.Content>
-                    <View style={{ flexDirection: 'row', margin: 10 }}>
-                        <Chip
-                            onPress={() => {
-                                console.log('hello');
-                            }}
-                            style={{ marginRight: 10 }}
-                        >
-                            Unselect1
-                        </Chip>
-                        <Chip selected={true}>Select1</Chip>
-                    </View>
-                    <View style={{ flexDirection: 'row', margin: 10 }}>
-                        <Chip mode="elevated" style={{ marginRight: 10 }}>
-                            Unselect2
-                        </Chip>
-                        <Chip selected={true} mode="elevated">
-                            Select2
-                        </Chip>
-                    </View>
-
-                    <Text>Disabled</Text>
-
-                    <View style={{ flexDirection: 'row', margin: 10 }}>
-                        <Chip
-                            disabled={true}
-                            onPress={() => {
-                                console.log('hello');
-                            }}
-                            style={{ marginRight: 10 }}
-                        >
-                            Unselect
-                        </Chip>
-                        <Chip disabled selected={true}>
-                            Select
-                        </Chip>
-                    </View>
-                    <View style={{ flexDirection: 'row', margin: 10 }}>
-                        <Chip disabled mode="elevated" style={{ marginRight: 10 }}>
-                            Unselect
-                        </Chip>
-                        <Chip disabled selected={true} mode="elevated">
-                            Select
-                        </Chip>
-                    </View>
-
-                    <Text>With icon</Text>
-
-                    <View style={{ flexDirection: 'row', margin: 10 }}>
-                        <Chip
-                            avatar={<Avatar.Text label="JS" size={20} />}
-                            onPress={() => {
-                                console.log('hello');
-                            }}
-                            style={{ marginRight: 10 }}
-                        >
-                            Unselect
-                        </Chip>
-                        <Chip icon={{ name: 'settings' }} selected={true}>
-                            Select123
-                        </Chip>
-                    </View>
-                    <View style={{ flexDirection: 'row', margin: 10 }}>
-                        <Chip icon={{ name: 'settings' }} mode="elevated" style={{ marginRight: 10 }}>
-                            Unselect
-                        </Chip>
-                        <Chip icon={{ name: 'settings' }} selected={true} mode="elevated">
-                            Select
-                        </Chip>
-                    </View>
-
-                    <Text>With close icon</Text>
-
-                    <View style={{ flexDirection: 'row', margin: 10 }}>
-                        <Chip
-                            avatar={<Avatar.Text label="JS" size={20} />}
-                            onPress={() => {
-                                console.log('hello');
-                            }}
-                            onClose={() => {}}
-                            style={{ marginRight: 10 }}
-                        >
-                            Unselect
-                        </Chip>
-                        <Chip onClose={() => {}} selected={true}>
-                            Select123
-                        </Chip>
-                    </View>
-                    <View style={{ flexDirection: 'row', margin: 10 }}>
-                        <Chip onClose={() => {}} mode="elevated" style={{ marginRight: 10 }}>
-                            Unselect
-                        </Chip>
-                        <Chip icon={{ name: 'settings' }} onClose={() => {}} selected={true} mode="elevated">
-                            Select
-                        </Chip>
-                    </View>
+                    <Chip style={{ marginTop: 10 }}>Outlined Chip</Chip>
+                    <Chip
+                        icon={{ name: 'info' }}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Outlined Chip With Icon
+                    </Chip>
+                    <Chip
+                        avatar={<Avatar.Icon size={40} icon="account-circle" />}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Outlined Chip With Avatar
+                    </Chip>
+                    <Chip
+                        closeIcon="delete"
+                        style={{
+                            marginTop: 10,
+                        }}
+                        onClose={() => {}}
+                    >
+                        Outlined Chip With Close Icon
+                    </Chip>
+                    <Chip selected style={{ marginTop: 10 }}>
+                        Selected Outlined Chip
+                    </Chip>
+                    <Chip
+                        selected
+                        showSelectedOverlay
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Selected Outlined Chip With Overlay
+                    </Chip>
+                    <Chip
+                        selected
+                        showSelectedCheck
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Selected Outlined Chip With Check
+                    </Chip>
+                    <Chip
+                        rippleColor={BLUIColors.primary[50]}
+                        onPress={() => console.log('ripple effect')}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Outlined Chip With Ripple Color
+                    </Chip>
+                    <Chip disabled style={{ marginTop: 10 }}>
+                        Disabled Outlined Chip
+                    </Chip>
+                    <Chip onPress={() => console.log('outlined chip pressed')} style={{ marginTop: 10 }}>
+                        Outlined Chip On Press
+                    </Chip>
+                    <Chip
+                        onPress={() => console.log('outlined chip pressed')}
+                        onLongPress={() => console.log('outlined chip long pressed')}
+                        style={{ marginTop: 10 }}
+                    >
+                        Outlined Chip On Long Press
+                    </Chip>
+                    <Chip onPressIn={() => console.log('outlined chip on press in')} style={{ marginTop: 10 }}>
+                        Outlined Chip On Press In
+                    </Chip>
+                    <Chip onPressOut={() => console.log('outlined chip on press out')} style={{ marginTop: 10 }}>
+                        Outlined Chip On Press Out
+                    </Chip>
+                    <Chip
+                        onClose={(): void => {
+                            console.log('outlined chip on close');
+                        }}
+                        style={{ marginTop: 10 }}
+                    >
+                        Outlined Chip On Close
+                    </Chip>
+                    <Chip
+                        delayLongPress={3000}
+                        onPress={() => console.log('outlined chip pressed')}
+                        onLongPress={() => console.log('outlined chip long pressed for 3 seconds')}
+                        style={{ marginTop: 10 }}
+                    >
+                        Outlined Chip Delay Long Press
+                    </Chip>
+                    <Chip
+                        compact
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Compact Outlined Chip
+                    </Chip>
+                    <Chip
+                        elevated
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Elevated Outlined Chip
+                    </Chip>
+                    <Chip
+                        textStyle={{ color: BLUIColors.neutralVariant[50] }}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Outlined Chip With Text Style
+                    </Chip>
+                    <Chip
+                        style={{
+                            marginTop: 10,
+                            backgroundColor: BLUIColors.neutralVariant[50],
+                        }}
+                    >
+                        Outlined Chip With Style
+                    </Chip>
+                    <Chip
+                        ellipsizeMode="middle"
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Outlined Chip With Ellipsize Mode Outlined Chip With Ellipsize Mode
+                    </Chip>
+                    <Chip
+                        icon={{ name: 'info' }}
+                        iconColor={BLUIColors.error[50]}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Outlined Chip With Icon Color
+                    </Chip>
+                    <Chip
+                        chipColor={BLUIColors.primary[50]}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Outlined Chip With Chip Color
+                    </Chip>
+                    <Chip
+                        borderColor={BLUIColors.primary[50]}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Outlined Chip With Border Color
+                    </Chip>
+                    <Divider style={{ marginVertical: 10 }} />
+                    <Chip mode="elevated">Elevated Chip</Chip>
+                    <Chip
+                        mode="elevated"
+                        icon={{ name: 'info' }}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Elevated Chip With Icon
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        avatar={<Avatar.Icon size={40} icon="account-circle" />}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Elevated Chip With Avatar
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        closeIcon="delete"
+                        style={{
+                            marginTop: 10,
+                        }}
+                        onClose={() => {}}
+                    >
+                        Elevated Chip With Close Icon
+                    </Chip>
+                    <Chip
+                        selected
+                        mode="elevated"
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Selected Elevated Chip
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        selected
+                        showSelectedOverlay
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Selected Elevated Chip With Overlay
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        selected
+                        showSelectedCheck
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Selected Elevated Chip With Check
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        rippleColor={BLUIColors.primary[50]}
+                        onPress={() => console.log('ripple effect')}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Elevated Chip With Ripple Color
+                    </Chip>
+                    <Chip mode="elevated" disabled style={{ marginTop: 10 }}>
+                        Disabled Elevated Chip
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        onPress={() => console.log('elevated chip pressed')}
+                        style={{ marginTop: 10 }}
+                    >
+                        Elevated Chip On Press
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        onPress={() => console.log('elevated chip pressed')}
+                        onLongPress={() => console.log('elevated chip long pressed')}
+                        style={{ marginTop: 10 }}
+                    >
+                        Elevated Chip On Long Press
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        onPressIn={() => console.log('elevated chip on press in')}
+                        style={{ marginTop: 10 }}
+                    >
+                        Elevated Chip On Press In
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        onPressOut={() => console.log('elevated chip on press out')}
+                        style={{ marginTop: 10 }}
+                    >
+                        Elevated Chip On Press Out
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        onClose={(): void => {
+                            console.log('elevated chip on close');
+                        }}
+                        style={{ marginTop: 10 }}
+                    >
+                        Elevated Chip On Close
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        delayLongPress={3000}
+                        onPress={() => console.log('elevated chip pressed')}
+                        onLongPress={() => console.log('elevated chip long pressed for 3 seconds')}
+                        style={{ marginTop: 10 }}
+                    >
+                        Elevated Chip Delay Long Press
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        compact
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Compact Elevated Chip
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        textStyle={{ color: BLUIColors.neutralVariant[50] }}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Elevated Chip With Text Style
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        style={{
+                            marginTop: 10,
+                            backgroundColor: BLUIColors.neutralVariant[50],
+                        }}
+                    >
+                        Elevated Chip With Style
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        ellipsizeMode="middle"
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Elevated Chip With Ellipsize Mode Elevated Chip With Ellipsize Mode
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        icon={{ name: 'info' }}
+                        iconColor={BLUIColors.error[50]}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Elevated Chip With Icon Color
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        chipColor={BLUIColors.primary[50]}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Elevated Chip With Chip Color
+                    </Chip>
+                    <Chip
+                        mode="elevated"
+                        borderColor={BLUIColors.primary[50]}
+                        style={{
+                            marginTop: 10,
+                        }}
+                    >
+                        Elevated Chip With Border Color
+                    </Chip>
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
@@ -1036,10 +1280,10 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Text>Surface</Text>
                     <View style={{ marginTop: 24 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
-                            <Surface style={[styles.surface, { elevation: 1 }]}>
+                            <Surface elevation={1} style={[styles.surface]}>
                                 <Text>Surface 1</Text>
                             </Surface>
-                            <Surface style={[styles.surface, { elevation: 2 }]}>
+                            <Surface elevation={2} style={[styles.surface]}>
                                 <Text>Surface 2</Text>
                             </Surface>
                         </View>
@@ -1050,10 +1294,10 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 marginTop: 24,
                             }}
                         >
-                            <Surface style={[styles.surface, { elevation: 3 }]}>
+                            <Surface elevation={3} style={[styles.surface]}>
                                 <Text>Surface 3</Text>
                             </Surface>
-                            <Surface style={[styles.surface, { elevation: 4 }]}>
+                            <Surface elevation={4} style={[styles.surface]}>
                                 <Text>Surface 4</Text>
                             </Surface>
                         </View>
@@ -1064,25 +1308,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 marginTop: 24,
                             }}
                         >
-                            <Surface style={[styles.surface, { elevation: 5 }]}>
+                            <Surface elevation={5} style={[styles.surface]}>
                                 <Text>Surface 5</Text>
-                            </Surface>
-                            <Surface style={[styles.surface, { elevation: 6 }]}>
-                                <Text>Surface 6</Text>
-                            </Surface>
-                        </View>
-                        <View
-                            style={{
-                                flexDirection: 'row',
-                                justifyContent: 'space-evenly',
-                                marginTop: 24,
-                            }}
-                        >
-                            <Surface style={[styles.surface, { elevation: 7 }]}>
-                                <Text>Surface 7</Text>
-                            </Surface>
-                            <Surface style={[styles.surface, { elevation: 8 }]}>
-                                <Text>Surface 8</Text>
                             </Surface>
                         </View>
                     </View>
@@ -1721,402 +1948,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             <Checkbox.IOS status={'unchecked'} disabled={true} />
                             <Checkbox.IOS status={'unchecked'} disabled={true} />
                         </View>
-                    </View>
-                </View>
-            </Card>
-            <Card style={styles.card}>
-                <View
-                    style={{
-                        justifyContent: 'center',
-                        marginHorizontal: 24,
-                        marginVertical: 24,
-                    }}
-                >
-                    <Text>Chip</Text>
-                    <View style={{ alignItems: 'center', marginTop: 24 }}>
-                        <Chip
-                            style={{
-                                width: 250,
-                            }}
-                        >
-                            Flat Chip
-                        </Chip>
-                        <Chip
-                            icon="information"
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Flat Chip With Icon
-                        </Chip>
-                        <Chip
-                            avatar={<Avatar.Icon size={40} icon="account-circle" />}
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Flat Chip With Avatar
-                        </Chip>
-                        <Chip
-                            style={{
-                                width: 250,
-                                marginTop: 24,
-                            }}
-                            closeIcon="delete"
-                            onClose={(): void => {}}
-                        >
-                            Flat Chip With Close Icon
-                        </Chip>
-                        <Chip
-                            selected
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Selected Flat Chip
-                        </Chip>
-                        <Chip
-                            selected
-                            selectedColor={BLUIColors.primary[100]}
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Selected Flat Chip With Color
-                        </Chip>
-                        <Chip
-                            selected
-                            showSelectedOverlay
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Selected Flat Chip With Overlay
-                        </Chip>
-                        <Chip
-                            selected
-                            showSelectedCheck
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Selected Flat Chip With Check
-                        </Chip>
-                        <Chip
-                            icon="information"
-                            rippleColor={BLUIColors.primary[50]}
-                            onPress={() => console.log('ripple effect')}
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Flat Chip With Ripple Color
-                        </Chip>
-                        <Chip
-                            disabled
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Disabled Flat Chip
-                        </Chip>
-                        <Chip
-                            onPress={() => console.log('flat chip pressed')}
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Flat Chip On Press
-                        </Chip>
-                        <Chip
-                            onPress={() => console.log('flat chip pressed')}
-                            onLongPress={() => console.log('flat chip long pressed')}
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Flat Chip On Long Press
-                        </Chip>
-                        <Chip
-                            onPressIn={() => console.log('flat chip on press in')}
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Flat Chip On Press In
-                        </Chip>
-                        <Chip
-                            onPressOut={() => console.log('flat chip on press out')}
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Flat Chip On Press Out
-                        </Chip>
-                        <Chip
-                            onClose={(): void => {
-                                console.log('flat chip on close');
-                            }}
-                            style={{
-                                width: 250,
-                                marginTop: 24,
-                            }}
-                        >
-                            Flat Chip On Close
-                        </Chip>
-                        <Chip
-                            delayLongPress={3000}
-                            onPress={() => console.log('flat chip pressed')}
-                            onLongPress={() => console.log('flat chip long pressed for 3 seconds')}
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Flat Chip Delay Long Press
-                        </Chip>
-                        <Chip
-                            compact
-                            style={{
-                                marginTop: 24,
-                            }}
-                        >
-                            Compact Flat Chip
-                        </Chip>
-                        <Chip
-                            elevated
-                            style={{
-                                marginTop: 24,
-                            }}
-                        >
-                            Elevated Flat Chip
-                        </Chip>
-                        <Chip
-                            textStyle={{ color: BLUIColors.neutralVariant[50] }}
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Flat Chip With Text Style
-                        </Chip>
-                        <Chip
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                                backgroundColor: BLUIColors.neutralVariant[50],
-                            }}
-                        >
-                            Flat Chip With Style
-                        </Chip>
-                        <Chip
-                            ellipsizeMode="middle"
-                            style={{
-                                marginTop: 24,
-                                width: 250,
-                            }}
-                        >
-                            Flat Chip With Ellipsize Mode
-                        </Chip>
-                        <Divider style={{ width: '100%', marginTop: 24 }} />
-                        <Chip mode={'outlined'} style={{ marginTop: 24, width: 300 }}>
-                            Outlined Chip
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            icon="information"
-                            style={{
-                                marginTop: 24,
-                                width: 300,
-                            }}
-                        >
-                            Outlined Chip With Icon
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            avatar={<Avatar.Icon size={40} icon="account-circle" />}
-                            style={{
-                                marginTop: 24,
-                                width: 300,
-                            }}
-                        >
-                            Outlined Chip With Avatar
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            closeIcon="delete"
-                            style={{
-                                marginTop: 24,
-                                width: 300,
-                            }}
-                            onClose={() => {}}
-                        >
-                            Outlined Chip With Close Icon
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            selected
-                            style={{
-                                marginTop: 24,
-                                width: 300,
-                            }}
-                        >
-                            Selected Outlined Chip
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            selected
-                            selectedColor={BLUIColors.primary[50]}
-                            style={{
-                                marginTop: 24,
-                                width: 300,
-                            }}
-                        >
-                            Selected Outlined Chip With Color
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            selected
-                            showSelectedOverlay
-                            style={{
-                                marginTop: 24,
-                                width: 300,
-                            }}
-                        >
-                            Selected Outlined Chip With Overlay
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            selected
-                            showSelectedCheck
-                            style={{
-                                marginTop: 24,
-                                width: 300,
-                            }}
-                        >
-                            Selected Outlined Chip With Check
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            rippleColor={BLUIColors.primary[50]}
-                            onPress={() => console.log('ripple effect')}
-                            style={{
-                                marginTop: 24,
-                                width: 300,
-                            }}
-                        >
-                            Outlined Chip With Ripple Color
-                        </Chip>
-                        <Chip mode={'outlined'} disabled style={{ marginTop: 24, width: 300 }}>
-                            Disabled Outlined Chip
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            onPress={() => console.log('outlined chip pressed')}
-                            style={{ marginTop: 24, width: 300 }}
-                        >
-                            Outlined Chip On Press
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            onPress={() => console.log('outlined chip pressed')}
-                            onLongPress={() => console.log('outlined chip long pressed')}
-                            style={{ marginTop: 24, width: 300 }}
-                        >
-                            Outlined Chip On Long Press
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            onPressIn={() => console.log('outlined chip on press in')}
-                            style={{ marginTop: 24, width: 300 }}
-                        >
-                            Outlined Chip On Press In
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            onPressOut={() => console.log('outlined chip on press out')}
-                            style={{ marginTop: 24, width: 300 }}
-                        >
-                            Outlined Chip On Press Out
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            onClose={(): void => {
-                                console.log('outlined chip on close');
-                            }}
-                            style={{ marginTop: 24, width: 300 }}
-                        >
-                            Outlined Chip On Close
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            delayLongPress={3000}
-                            onPress={() => console.log('outlined chip pressed')}
-                            onLongPress={() => console.log('outlined chip long pressed for 3 seconds')}
-                            style={{ marginTop: 24, width: 300 }}
-                        >
-                            Outlined Chip Delay Long Press
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            compact
-                            style={{
-                                marginTop: 24,
-                            }}
-                        >
-                            Compact Outlined Chip
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            elevated
-                            style={{
-                                marginTop: 24,
-                            }}
-                        >
-                            Elevated Outlined Chip
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            textStyle={{ color: BLUIColors.neutralVariant[50] }}
-                            style={{
-                                marginTop: 24,
-                                width: 300,
-                            }}
-                        >
-                            Outlined Chip With Text Style
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            style={{
-                                marginTop: 24,
-                                width: 300,
-                                backgroundColor: BLUIColors.neutralVariant[50],
-                            }}
-                        >
-                            Outlined Chip With Style
-                        </Chip>
-                        <Chip
-                            mode={'outlined'}
-                            ellipsizeMode="middle"
-                            style={{
-                                marginTop: 24,
-                                width: 300,
-                            }}
-                        >
-                            Outlined Chip With Ellipsize Mode
-                        </Chip>
                     </View>
                 </View>
             </Card>
