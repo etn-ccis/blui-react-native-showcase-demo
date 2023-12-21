@@ -2,7 +2,6 @@ import React, { useCallback, useState } from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { MobileStepper, DotStepperVariant } from '@brightlayer-ui/react-native-components';
 import { Button, Card, Divider, useTheme } from 'react-native-paper';
-import * as BLUIColors from '@brightlayer-ui/colors';
 
 export const MobileStepperExample: React.FC = () => {
     const theme = useTheme();
@@ -86,7 +85,6 @@ export const MobileStepperExample: React.FC = () => {
                     </Button>
                 }
                 variant={mobileStepperVariant}
-                activeColor={BLUIColors.primary[50]}
             />
         </Card>
     );
