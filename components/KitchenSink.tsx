@@ -196,7 +196,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
             <Card style={styles.card}>
                 <Card.Title title="Chip" />
-                <Card.Content>
+                <Card.Content style={{ alignItems: 'flex-start' }}>
                     <Chip style={{ marginTop: 10 }}>Outlined Chip</Chip>
                     <Chip
                         icon={{ name: 'info' }}
