@@ -52,6 +52,7 @@ import {
     Grade,
     IconSwitch,
     Chip,
+    Icon,
 } from '@brightlayer-ui/react-native-components';
 import BLUIIcon from '@brightlayer-ui/react-native-vector-icons';
 import { ScoreCardExample } from './ScoreCardExample';
@@ -194,7 +195,12 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Text variant="titleLarge" style={{ marginVertical: 48 }}>
                 MD3 BLUI Components
             </Text>
-
+            <Card style={styles.card}>
+                <Card.Title title="Icon" />
+                <Card.Content>
+                    <Icon source={{ family: 'brightlayer-ui', name: 'device' }} />
+                </Card.Content>
+            </Card>
             <Card style={styles.card}>
                 <Card.Title title="Icon Switch" />
                 <Card.Content>
