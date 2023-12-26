@@ -2477,9 +2477,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <ToggleButton.Row
                             onValueChange={(value: string): void => setToggleButtonValue(value)}
                             value={toggleButtonValue}
-                            style={{
-                                backgroundColor: theme.colors.primaryContainer,
-                            }}
                         >
                             <ToggleButton
                                 icon="format-align-left"
@@ -2502,7 +2499,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             value={toggleButtonFontValue}
                             style={{
                                 marginTop: 10,
-                                backgroundColor: theme.colors.primaryContainer,
                             }}
                         >
                             <ToggleButton icon="format-bold" value="bold" iconColor={theme.colors.onPrimaryContainer} />
