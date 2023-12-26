@@ -27,7 +27,6 @@ import {
     ToggleButton,
     TextInput,
     Text,
-    useTheme,
     ProgressBar,
     Snackbar,
     ActivityIndicator,
@@ -59,6 +58,7 @@ import { ScoreCardExample } from './ScoreCardExample';
 import { MobileStepperExample } from './MobileStepperExample';
 import * as BLUIColors from '@brightlayer-ui/colors';
 import { TextFieldExample } from './TextInputExample';
+import { useExtendedTheme } from '@brightlayer-ui/react-native-themes';
 
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
 });
 
 export const KitchenSink: React.FC = (): JSX.Element => {
-    const theme = useTheme();
+    const theme = useExtendedTheme();
     const [bannerVisible, setBannerVisible] = React.useState(true);
     const [checkboxAndroidOne, setCheckboxAndroidOne] = React.useState<'checked' | 'unchecked' | 'indeterminate'>(
         'unchecked'
