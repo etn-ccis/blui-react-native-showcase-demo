@@ -841,7 +841,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Card.Title title="ListItemTag" />
                 <Card.Content style={{ alignItems: 'center' }}>
                     {/* Font size : 10px */}
-                    <ListItemTag label={'IN PROGRESS'} font={theme.fonts.headlineLarge as any} />
+                    <ListItemTag label={'IN PROGRESS'}/>
                     {/* Font size : 14px */}
                     <ListItemTag
                         label={'Foo Bar'}
