@@ -841,7 +841,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Card.Title title="ListItemTag" />
                 <Card.Content style={{ alignItems: 'center' }}>
                     {/* Font size : 10px */}
-                    <ListItemTag label={'IN PROGRESS'} />
+                    <ListItemTag label={'IN PROGRESS'} font={theme.fonts.headlineLarge as any} />
                     {/* Font size : 14px */}
                     <ListItemTag
                         label={'Foo Bar'}
@@ -2481,17 +2481,35 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                             <ToggleButton
                                 icon="format-align-left"
                                 value="left"
-                                iconColor={theme.colors.onPrimaryContainer}
+                                iconColor={
+                                    toggleButtonValue === 'left'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                rippleColor={'transparent'}
                             />
                             <ToggleButton
                                 icon="format-align-center"
                                 value="center"
-                                iconColor={theme.colors.onPrimaryContainer}
+                                iconColor={
+                                    toggleButtonValue === 'center'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                rippleColor={'transparent'}
                             />
                             <ToggleButton
                                 icon="format-align-right"
                                 value="right"
-                                iconColor={theme.colors.onPrimaryContainer}
+                                iconColor={
+                                    toggleButtonValue === 'right'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                rippleColor={'transparent'}
                             />
                         </ToggleButton.Row>
                         <ToggleButton.Row
@@ -2501,16 +2519,38 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 marginTop: 10,
                             }}
                         >
-                            <ToggleButton icon="format-bold" value="bold" iconColor={theme.colors.onPrimaryContainer} />
+                            <ToggleButton
+                                icon="format-bold"
+                                value="bold"
+                                iconColor={
+                                    toggleButtonFontValue === 'bold'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                rippleColor={'transparent'}
+                            />
                             <ToggleButton
                                 icon="format-italic"
                                 value="italic"
-                                iconColor={theme.colors.onPrimaryContainer}
+                                iconColor={
+                                    toggleButtonFontValue === 'italic'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                rippleColor={'transparent'}
                             />
                             <ToggleButton
                                 icon="format-underline"
                                 value="underlined"
-                                iconColor={theme.colors.onPrimaryContainer}
+                                iconColor={
+                                    toggleButtonFontValue === 'underlined'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                rippleColor={'transparent'}
                             />
                         </ToggleButton.Row>
                     </View>
