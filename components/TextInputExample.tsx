@@ -39,8 +39,10 @@ export const TextFieldExample: React.FC = () => {
                     right={<TextInput.Icon icon="menu-down" />}
                     value={normalText}
                     underlineColor={theme.colors.onSurfaceVariant}
+                    textColor={theme.colors.onSurface}
+                    placeholderTextColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalText(value)}
-                    style={[styles.flatInput]}
+                    style={[styles.flatInput, {backgroundColor: '#BDCAD133'}]}
                 />
 
                 <Text> Error Flat TextInput </Text>
