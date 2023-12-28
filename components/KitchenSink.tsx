@@ -1699,11 +1699,20 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             </Card>
             <Card style={{ padding: 20, margin: 10 }}>
                 <Text>Elevated Button</Text>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button mode="elevated" onPress={(): void => console.log('Pressed Elevated Button')}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 }}>
+                    <Button
+                        mode="elevated"
+                        onPress={(): void => console.log('Pressed Elevated Button')}
+                        buttonColor={theme.colors.surfaceContainerLow}
+                    >
                         Label
                     </Button>
-                    <Button icon="plus" mode="elevated" onPress={(): void => console.log('Pressed Elevated Button')}>
+                    <Button
+                        icon="plus"
+                        mode="elevated"
+                        onPress={(): void => console.log('Pressed Elevated Button')}
+                        buttonColor={theme.colors.surfaceContainerLow}
+                    >
                         Label
                     </Button>
                     <Button
@@ -1711,6 +1720,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         mode="elevated"
                         contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Elevated Button')}
+                        buttonColor={theme.colors.surfaceContainerLow}
                     >
                         Label
                     </Button>
@@ -1720,6 +1730,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         mode="elevated"
                         textColor={theme.colors.error}
                         onPress={(): void => console.log('Pressed Elevated Button')}
+                        buttonColor={theme.colors.surfaceContainerLow}
                         style={{ marginTop: 24 }}
                     >
                         Label
@@ -1729,6 +1740,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         mode="elevated"
                         textColor={theme.colors.error}
                         onPress={(): void => console.log('Pressed Elevated Button')}
+                        buttonColor={theme.colors.surfaceContainerLow}
                         style={{ marginTop: 24 }}
                     >
                         Label
@@ -1739,16 +1751,28 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         textColor={theme.colors.error}
                         contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Elevated Button')}
+                        buttonColor={theme.colors.surfaceContainerLow}
                         style={{ marginTop: 24 }}
                     >
                         Label
                     </Button>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <Button mode="elevated" disabled style={{ marginTop: 24 }}>
+                    <Button
+                        mode="elevated"
+                        disabled
+                        style={{ marginTop: 24 }}
+                        buttonColor={theme.colors.surfaceContainerLow}
+                    >
                         Label
                     </Button>
-                    <Button icon="plus" mode="elevated" disabled style={{ marginTop: 24 }}>
+                    <Button
+                        icon="plus"
+                        mode="elevated"
+                        disabled
+                        style={{ marginTop: 24 }}
+                        buttonColor={theme.colors.surfaceContainerLow}
+                    >
                         Label
                     </Button>
                     <Button
@@ -1757,6 +1781,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         disabled
                         contentStyle={{ flexDirection: 'row-reverse' }}
                         style={{ marginTop: 24 }}
+                        buttonColor={theme.colors.surfaceContainerLow}
                     >
                         Label
                     </Button>
