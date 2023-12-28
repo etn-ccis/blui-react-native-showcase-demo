@@ -123,15 +123,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const helperTextInputHasErrors = (): boolean => !helperTextInputText.includes('@');
 
     const [routes] = React.useState([
-        { key: 'music', title: 'Music', icon: 'music', color: 'red', badge: true },
+        { key: 'music', title: 'Music', focusedIcon: 'music', badge: true },
         {
             key: 'albums',
             title: 'Albums',
-            icon: 'album',
-            color: 'orange',
+            focusedIcon: 'album',
             badge: '1',
         },
-        { key: 'recents', title: 'Recents', icon: 'history', color: 'yellow' },
+        { key: 'recents', title: 'Recents', focusedIcon: 'history' },
     ]);
 
     const renderScene = BottomNavigation.SceneMap({
