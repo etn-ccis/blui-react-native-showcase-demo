@@ -758,7 +758,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 },
                                 { title: 'Log Out', icon: { name: 'exit-to-app' } },
                             ]}
-                            avatar={<Avatar.Icon size={40} icon="account-circle" />}
+                            avatar={
+                                <Avatar.Icon
+                                    size={40}
+                                    icon="account-circle"
+                                    color={theme.colors.primaryNonText}
+                                    style={{ backgroundColor: theme.colors.primaryContainer }}
+                                />
+                            }
                         />
                     </View>
                     <View style={{ alignItems: 'center', marginBottom: 8 }}>
