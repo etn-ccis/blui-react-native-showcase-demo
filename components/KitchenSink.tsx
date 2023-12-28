@@ -762,8 +762,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 <Avatar.Icon
                                     size={40}
                                     icon="account-circle"
-                                    color={BLUIColors.primary[50]}
-                                    style={{ backgroundColor: BLUIColors.primary[80] }}
+                                    color={theme.colors.primaryNonText}
+                                    style={{ backgroundColor: theme.colors.primaryContainer }}
                                 />
                             }
                         />
