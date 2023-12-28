@@ -981,7 +981,9 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     onPress: () => setBannerVisible(false),
                                 },
                             ]}
-                            icon={(props) => <Avatar.Icon {...props} icon="account-circle" />}
+                            icon={(props) => (
+                                <Avatar.Icon {...props} icon="account-circle" color={theme.colors.onPrimary} />
+                            )}
                         >
                             There was a problem processing a transaction on your credit card.
                         </Banner>
