@@ -2486,7 +2486,12 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         ? theme.colors.onPrimaryContainer
                                         : theme.colors.onSurface
                                 }
-                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonValue === 'left'
+                                            ? theme.colors.primaryContainer
+                                            : theme.colors.surface,
+                                }}
                                 rippleColor={'transparent'}
                             />
                             <ToggleButton
@@ -2497,7 +2502,12 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         ? theme.colors.onPrimaryContainer
                                         : theme.colors.onSurface
                                 }
-                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonValue === 'center'
+                                            ? theme.colors.primaryContainer
+                                            : theme.colors.surface,
+                                }}
                                 rippleColor={'transparent'}
                             />
                             <ToggleButton
@@ -2508,10 +2518,16 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         ? theme.colors.onPrimaryContainer
                                         : theme.colors.onSurface
                                 }
-                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonValue === 'right'
+                                            ? theme.colors.primaryContainer
+                                            : theme.colors.surface,
+                                }}
                                 rippleColor={'transparent'}
                             />
                         </ToggleButton.Row>
+
                         <ToggleButton.Row
                             onValueChange={(value: string): void => setToggleButtonFontValue(value)}
                             value={toggleButtonFontValue}
@@ -2527,7 +2543,12 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         ? theme.colors.onPrimaryContainer
                                         : theme.colors.onSurface
                                 }
-                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonFontValue === 'bold'
+                                            ? theme.colors.primaryContainer
+                                            : theme.colors.surface,
+                                }}
                                 rippleColor={'transparent'}
                             />
                             <ToggleButton
@@ -2538,18 +2559,28 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                         ? theme.colors.onPrimaryContainer
                                         : theme.colors.onSurface
                                 }
-                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonFontValue === 'italic'
+                                            ? theme.colors.primaryContainer
+                                            : theme.colors.surface,
+                                }}
                                 rippleColor={'transparent'}
                             />
                             <ToggleButton
                                 icon="format-underline"
-                                value="underlined"
+                                value="underline"
                                 iconColor={
-                                    toggleButtonFontValue === 'underlined'
+                                    toggleButtonFontValue === 'underline'
                                         ? theme.colors.onPrimaryContainer
                                         : theme.colors.onSurface
                                 }
-                                theme={{ colors: { onSecondaryContainer: theme.colors.primaryContainer } }}
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonFontValue === 'underline'
+                                            ? theme.colors.primaryContainer
+                                            : theme.colors.surface,
+                                }}
                                 rippleColor={'transparent'}
                             />
                         </ToggleButton.Row>
