@@ -20,6 +20,12 @@ export const TextFieldExample: React.FC = () => {
         flatInput: {
             margin: 8,
         },
+        flatTextInputBackgroundColor: {
+            backgroundColor: theme.colors.textFieldContainer,
+        },
+        disabledFlatTextInputBackgroundColor: {
+            backgroundColor: theme.colors.disabledContainer,
+        },
         outlineInput: {
             margin: 8,
             backgroundColor: 'transparent',
@@ -41,7 +47,7 @@ export const TextFieldExample: React.FC = () => {
                     value={normalText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalText(value)}
-                    style={[styles.flatInput, { backgroundColor: theme.colors.textFieldContainer }]}
+                    style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
 
                 <Text> Error Flat TextInput </Text>
@@ -57,7 +63,7 @@ export const TextFieldExample: React.FC = () => {
                         setHasError(value.length > 5);
                     }}
                     error={hasError}
-                    style={[styles.flatInput, { backgroundColor: theme.colors.textFieldContainer }]}
+                    style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
                 <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
                     Error Message
@@ -73,7 +79,7 @@ export const TextFieldExample: React.FC = () => {
                     underlineColor={theme.colors.onDisabledContainer}
                     onChangeText={(value) => setDisabledText(value)}
                     disabled
-                    style={[styles.flatInput, { backgroundColor: theme.colors.disabledContainer }]}
+                    style={[styles.flatInput, styles.disabledFlatTextInputBackgroundColor]}
                 />
             </View>
             <View style={styles.container}>
@@ -86,7 +92,7 @@ export const TextFieldExample: React.FC = () => {
                     value={normalFilledText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalFilledText(value)}
-                    style={[styles.flatInput, { backgroundColor: theme.colors.textFieldContainer }]}
+                    style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
 
                 <Text> Error Flat Filled TextInput </Text>
@@ -102,7 +108,7 @@ export const TextFieldExample: React.FC = () => {
                         setHasError(value.length > 4);
                     }}
                     error={hasError}
-                    style={[styles.flatInput, { backgroundColor: theme.colors.textFieldContainer }]}
+                    style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
                 <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
                     Error Message
@@ -118,7 +124,7 @@ export const TextFieldExample: React.FC = () => {
                     underlineColor={theme.colors.onDisabledContainer}
                     onChangeText={(value) => setDisabledFilledText(value)}
                     disabled
-                    style={[styles.flatInput, { backgroundColor: theme.colors.disabledContainer }]}
+                    style={[styles.flatInput, styles.disabledFlatTextInputBackgroundColor]}
                 />
             </View>
             <View style={styles.container}>
@@ -132,7 +138,7 @@ export const TextFieldExample: React.FC = () => {
                     dense={true}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalText(value)}
-                    style={[styles.flatInput, { backgroundColor: theme.colors.textFieldContainer }]}
+                    style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
 
                 <Text> Error Dense Flat TextInput </Text>
@@ -149,7 +155,7 @@ export const TextFieldExample: React.FC = () => {
                     }}
                     dense={true}
                     error={hasError}
-                    style={[styles.flatInput, { backgroundColor: theme.colors.textFieldContainer }]}
+                    style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
                 <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
                     Error Message
@@ -166,7 +172,7 @@ export const TextFieldExample: React.FC = () => {
                     onChangeText={(value) => setDisabledText(value)}
                     disabled
                     dense={true}
-                    style={[styles.flatInput, { backgroundColor: theme.colors.disabledContainer }]}
+                    style={[styles.flatInput, styles.disabledFlatTextInputBackgroundColor]}
                 />
             </View>
             <View style={styles.container}>
@@ -180,7 +186,7 @@ export const TextFieldExample: React.FC = () => {
                     dense={true}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalFilledText(value)}
-                    style={[styles.flatInput, { backgroundColor: theme.colors.textFieldContainer }]}
+                    style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
 
                 <Text> Error Dense Flat Filled TextInput </Text>
@@ -197,7 +203,7 @@ export const TextFieldExample: React.FC = () => {
                     }}
                     dense={true}
                     error={hasError}
-                    style={[styles.flatInput, { backgroundColor: theme.colors.textFieldContainer }]}
+                    style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
                 <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
                     Error Message
@@ -214,7 +220,7 @@ export const TextFieldExample: React.FC = () => {
                     onChangeText={(value) => setDisabledFilledText(value)}
                     disabled
                     dense={true}
-                    style={[styles.flatInput, { backgroundColor: theme.colors.disabledContainer }]}
+                    style={[styles.flatInput, styles.disabledFlatTextInputBackgroundColor]}
                 />
             </View>
             <View style={{ marginTop: 30 }}>
