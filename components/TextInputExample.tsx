@@ -26,6 +26,10 @@ export const TextFieldExample: React.FC = () => {
         thinUnderline: {
             borderBottomWidth: 0, // Adjust the thickness as needed
         },
+        helperText: {
+            marginBottom: 8,
+            paddingHorizontal: 16,
+        },
     });
 
     return (
@@ -58,7 +62,7 @@ export const TextFieldExample: React.FC = () => {
                     error={hasError}
                     style={{ marginHorizontal: 8, marginTop: 8 }}
                 />
-                <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
+                <HelperText type="error" visible={hasError} style={styles.helperText}>
                     Error Message
                 </HelperText>
 
@@ -103,7 +107,7 @@ export const TextFieldExample: React.FC = () => {
                     error={hasError}
                     style={{ marginHorizontal: 8, marginTop: 8 }}
                 />
-                <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
+                <HelperText type="error" visible={hasError} style={styles.helperText}>
                     Error Message
                 </HelperText>
 
@@ -150,7 +154,7 @@ export const TextFieldExample: React.FC = () => {
                     error={hasError}
                     style={{ marginHorizontal: 8, marginTop: 8 }}
                 />
-                <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
+                <HelperText type="error" visible={hasError} style={styles.helperText}>
                     Error Message
                 </HelperText>
 
@@ -198,7 +202,7 @@ export const TextFieldExample: React.FC = () => {
                     error={hasError}
                     style={{ marginHorizontal: 8, marginTop: 8 }}
                 />
-                <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
+                <HelperText type="error" visible={hasError} style={styles.helperText}>
                     Error Message
                 </HelperText>
 
@@ -244,7 +248,7 @@ export const TextFieldExample: React.FC = () => {
                     error={hasError}
                     style={{ marginHorizontal: 8, marginTop: 8, backgroundColor: 'transparent' }}
                 />
-                <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
+                <HelperText type="error" visible={hasError} style={styles.helperText}>
                     Error Message
                 </HelperText>
 
@@ -290,7 +294,7 @@ export const TextFieldExample: React.FC = () => {
                     error={hasError}
                     style={{ marginHorizontal: 8, marginTop: 8, backgroundColor: 'transparent' }}
                 />
-                <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
+                <HelperText type="error" visible={hasError} style={styles.helperText}>
                     Error Message
                 </HelperText>
 
@@ -337,7 +341,7 @@ export const TextFieldExample: React.FC = () => {
                     error={hasError}
                     style={{ marginHorizontal: 8, marginTop: 8, backgroundColor: 'transparent' }}
                 />
-                <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
+                <HelperText type="error" visible={hasError} style={styles.helperText}>
                     Error Message
                 </HelperText>
 
@@ -385,7 +389,7 @@ export const TextFieldExample: React.FC = () => {
                     error={hasError}
                     style={{ marginHorizontal: 8, marginTop: 8, backgroundColor: 'transparent' }}
                 />
-                <HelperText type="error" visible={hasError} style={{ marginBottom: 8 }}>
+                <HelperText type="error" visible={hasError} style={styles.helperText}>
                     Error Message
                 </HelperText>
 
