@@ -332,14 +332,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         Compact Outlined Chip
                     </Chip>
                     <Chip
-                        elevated
-                        style={{
-                            marginTop: 10,
-                        }}
-                    >
-                        Elevated Outlined Chip
-                    </Chip>
-                    <Chip
                         textStyle={{ color: BLUIColors.neutralVariant[50] }}
                         style={{
                             marginTop: 10,
