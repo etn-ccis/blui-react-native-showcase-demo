@@ -1515,6 +1515,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                     <Button
                         mode="contained"
                         buttonColor={theme.colors.error}
+                        textColor={theme.colors.onError}
                         onPress={(): void => console.log('Pressed Contained Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1524,6 +1525,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         icon="plus"
                         mode="contained"
                         buttonColor={theme.colors.error}
+                        textColor={theme.colors.onError}
                         onPress={(): void => console.log('Pressed Contained Button')}
                         style={{ marginTop: 24 }}
                     >
@@ -1533,6 +1535,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         icon="plus"
                         mode="contained"
                         buttonColor={theme.colors.error}
+                        textColor={theme.colors.onError}
                         contentStyle={{ flexDirection: 'row-reverse' }}
                         onPress={(): void => console.log('Pressed Contained Button')}
                         style={{ marginTop: 24 }}
