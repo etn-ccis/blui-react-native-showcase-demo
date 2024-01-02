@@ -28,6 +28,7 @@ export const TextFieldExample: React.FC = () => {
         },
         helperText: {
             marginBottom: 8,
+            marginHorizontal: 8,
             paddingHorizontal: 16,
         },
     });
