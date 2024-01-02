@@ -2505,44 +2505,111 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                         <ToggleButton.Row
                             onValueChange={(value: string): void => setToggleButtonValue(value)}
                             value={toggleButtonValue}
-                            style={{
-                                backgroundColor: theme.colors.primaryContainer,
-                            }}
                         >
                             <ToggleButton
                                 icon="format-align-left"
                                 value="left"
-                                iconColor={theme.colors.onPrimaryContainer}
+                                iconColor={
+                                    toggleButtonValue === 'left'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonValue === 'left' ? theme.colors.primaryContainer : 'transparent',
+                                    borderWidth: 1,
+                                }}
+                                rippleColor={'transparent'}
                             />
                             <ToggleButton
                                 icon="format-align-center"
                                 value="center"
-                                iconColor={theme.colors.onPrimaryContainer}
+                                iconColor={
+                                    toggleButtonValue === 'center'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonValue === 'center' ? theme.colors.primaryContainer : 'transparent',
+                                    borderWidth: 1,
+                                }}
+                                rippleColor={'transparent'}
                             />
                             <ToggleButton
                                 icon="format-align-right"
                                 value="right"
-                                iconColor={theme.colors.onPrimaryContainer}
+                                iconColor={
+                                    toggleButtonValue === 'right'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonValue === 'right' ? theme.colors.primaryContainer : 'transparent',
+                                    borderWidth: 1,
+                                }}
+                                rippleColor={'transparent'}
                             />
                         </ToggleButton.Row>
+
                         <ToggleButton.Row
                             onValueChange={(value: string): void => setToggleButtonFontValue(value)}
                             value={toggleButtonFontValue}
                             style={{
                                 marginTop: 10,
-                                backgroundColor: theme.colors.primaryContainer,
                             }}
                         >
-                            <ToggleButton icon="format-bold" value="bold" iconColor={theme.colors.onPrimaryContainer} />
+                            <ToggleButton
+                                icon="format-bold"
+                                value="bold"
+                                iconColor={
+                                    toggleButtonFontValue === 'bold'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonFontValue === 'bold'
+                                            ? theme.colors.primaryContainer
+                                            : 'transparent',
+                                    borderWidth: 1,
+                                }}
+                                rippleColor={'transparent'}
+                            />
                             <ToggleButton
                                 icon="format-italic"
                                 value="italic"
-                                iconColor={theme.colors.onPrimaryContainer}
+                                iconColor={
+                                    toggleButtonFontValue === 'italic'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonFontValue === 'italic'
+                                            ? theme.colors.primaryContainer
+                                            : 'transparent',
+                                    borderWidth: 1,
+                                }}
+                                rippleColor={'transparent'}
                             />
                             <ToggleButton
                                 icon="format-underline"
-                                value="underlined"
-                                iconColor={theme.colors.onPrimaryContainer}
+                                value="underline"
+                                iconColor={
+                                    toggleButtonFontValue === 'underline'
+                                        ? theme.colors.onPrimaryContainer
+                                        : theme.colors.onSurface
+                                }
+                                style={{
+                                    backgroundColor:
+                                        toggleButtonFontValue === 'underline'
+                                            ? theme.colors.primaryContainer
+                                            : 'transparent',
+                                    borderWidth: 1,
+                                }}
+                                rippleColor={'transparent'}
                             />
                         </ToggleButton.Row>
                     </View>
