@@ -2490,7 +2490,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     backgroundColor:
                                         toggleButtonValue === 'left' ? theme.colors.primaryContainer : 'transparent',
                                     borderWidth: 1,
-                                    borderColor: theme.colors.outline,
                                 }}
                                 rippleColor={'transparent'}
                             />
@@ -2506,7 +2505,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     backgroundColor:
                                         toggleButtonValue === 'center' ? theme.colors.primaryContainer : 'transparent',
                                     borderWidth: 1,
-                                    borderColor: theme.colors.outline,
                                 }}
                                 rippleColor={'transparent'}
                             />
@@ -2522,7 +2520,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     backgroundColor:
                                         toggleButtonValue === 'right' ? theme.colors.primaryContainer : 'transparent',
                                     borderWidth: 1,
-                                    borderColor: theme.colors.outline,
                                 }}
                                 rippleColor={'transparent'}
                             />
@@ -2549,7 +2546,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                             ? theme.colors.primaryContainer
                                             : 'transparent',
                                     borderWidth: 1,
-                                    borderColor: theme.colors.outline,
                                 }}
                                 rippleColor={'transparent'}
                             />
@@ -2567,7 +2563,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                             ? theme.colors.primaryContainer
                                             : 'transparent',
                                     borderWidth: 1,
-                                    borderColor: theme.colors.outline,
                                 }}
                                 rippleColor={'transparent'}
                             />
@@ -2585,7 +2580,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                             ? theme.colors.primaryContainer
                                             : 'transparent',
                                     borderWidth: 1,
-                                    borderColor: theme.colors.outline,
                                 }}
                                 rippleColor={'transparent'}
                             />
