@@ -62,6 +62,7 @@ export const TextFieldExample: React.FC = () => {
                     mode="flat"
                     left={<TextInput.Icon icon="email-outline" />}
                     right={<TextInput.Icon icon="menu-down" />}
+                    textColor={hasError ? theme.colors.error : theme.colors.onSurface}
                     value={errorText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => {
@@ -108,6 +109,7 @@ export const TextFieldExample: React.FC = () => {
                     mode="flat"
                     left={<TextInput.Icon icon="email-outline" />}
                     right={<TextInput.Icon icon="menu-down" />}
+                    textColor={hasError ? theme.colors.error : theme.colors.onSurface}
                     value={errorFilledText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => {
@@ -155,6 +157,7 @@ export const TextFieldExample: React.FC = () => {
                     mode="flat"
                     left={<TextInput.Icon icon="email-outline" />}
                     right={<TextInput.Icon icon="menu-down" />}
+                    textColor={hasError ? theme.colors.error : theme.colors.onSurface}
                     value={errorText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => {
@@ -204,6 +207,7 @@ export const TextFieldExample: React.FC = () => {
                     mode="flat"
                     left={<TextInput.Icon icon="email-outline" />}
                     right={<TextInput.Icon icon="menu-down" />}
+                    textColor={hasError ? theme.colors.error : theme.colors.onSurface}
                     value={errorFilledText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => {
