@@ -30,6 +30,7 @@ import {
     ProgressBar,
     Snackbar,
     ActivityIndicator,
+    SegmentedButtons,
 } from 'react-native-paper';
 import { DISABLE_FONT_SCALE, MAX_FONT_SCALE } from '../constants';
 import {
@@ -189,11 +190,77 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     const showModal = (): void => setVisible(true);
     const hideModal = (): void => setVisible(false);
 
+    const [text, setText] = useState('');
+    const [icon, setIcon] = React.useState('');
+    const [value, setValue] = React.useState('');
+
     return (
         <>
             <Text variant="titleLarge" style={{ marginVertical: 48 }}>
                 MD3 BLUI Components
             </Text>
+            <Card style={styles.card}>
+                <Card.Title title="Segmented Buttons" />
+                <Card.Content>
+                    <SegmentedButtons
+                        value={text}
+                        onValueChange={setText}
+                        buttons={[
+                            {
+                                value: 'walk',
+                                label: 'Walking',
+                            },
+                            {
+                                value: 'train',
+                                label: 'Transit',
+                            },
+                            { value: 'drive', label: 'Driving' },
+                        ]}
+                        style={{ marginBottom: 20 }}
+                    />
+                    <SegmentedButtons
+                        value={icon}
+                        onValueChange={setIcon}
+                        buttons={[
+                            {
+                                value: 'walk',
+                                icon: 'walk',
+                            },
+                            {
+                                value: 'train',
+                                icon: 'train',
+                            },
+                            {
+                                value: 'drive',
+                                icon: 'car',
+                            },
+                        ]}
+                        style={{ marginBottom: 20 }}
+                    />
+                    <SegmentedButtons
+                        value={value}
+                        onValueChange={setValue}
+                        buttons={[
+                            {
+                                value: 'walk',
+                                label: 'Walking',
+                                icon: 'walk',
+                            },
+                            {
+                                value: 'train',
+                                label: 'Transit',
+                                icon: 'train',
+                            },
+                            {
+                                value: 'drive',
+                                label: 'Driving',
+                                icon: 'car',
+                            },
+                        ]}
+                        style={{ marginBottom: 10 }}
+                    />
+                </Card.Content>
+            </Card>
             <Card style={styles.card}>
                 <Card.Title title="Icon" />
                 <Card.Content>
