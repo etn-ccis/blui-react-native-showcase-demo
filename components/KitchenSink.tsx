@@ -788,8 +788,6 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Card.Title title="Overline" />
                 <Card.Content>
                     <Overline>Overline</Overline>
-                    <Text style={{ marginTop: 12 }}> FontSize 14 </Text>
-                    <Overline fontSize={14}>Overline</Overline>
                 </Card.Content>
             </Card>
             <Card style={styles.card}>
