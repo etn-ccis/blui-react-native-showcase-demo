@@ -49,6 +49,7 @@ export const TextFieldExample: React.FC = () => {
                     mode="flat"
                     left={<TextInput.Icon icon="email-outline" />}
                     right={<TextInput.Icon icon="menu-down" />}
+                    textColor={theme.colors.onSurface} // We can remove this prop when this issue gets fixed https://github.com/callstack/react-native-paper/issues/4250.
                     value={normalText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalText(value)}
@@ -61,6 +62,7 @@ export const TextFieldExample: React.FC = () => {
                     mode="flat"
                     left={<TextInput.Icon icon="email-outline" />}
                     right={<TextInput.Icon icon="menu-down" />}
+                    textColor={hasError ? theme.colors.error : theme.colors.onSurface}
                     value={errorText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => {
@@ -95,6 +97,7 @@ export const TextFieldExample: React.FC = () => {
                     left={<TextInput.Icon icon="email-outline" />}
                     right={<TextInput.Icon icon="menu-down" />}
                     value={normalFilledText}
+                    textColor={theme.colors.onSurface}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalFilledText(value)}
                     style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
@@ -106,6 +109,7 @@ export const TextFieldExample: React.FC = () => {
                     mode="flat"
                     left={<TextInput.Icon icon="email-outline" />}
                     right={<TextInput.Icon icon="menu-down" />}
+                    textColor={hasError ? theme.colors.error : theme.colors.onSurface}
                     value={errorFilledText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => {
@@ -141,6 +145,7 @@ export const TextFieldExample: React.FC = () => {
                     right={<TextInput.Icon icon="menu-down" />}
                     value={normalText}
                     dense={true}
+                    textColor={theme.colors.onSurface}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalText(value)}
                     style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
@@ -152,6 +157,7 @@ export const TextFieldExample: React.FC = () => {
                     mode="flat"
                     left={<TextInput.Icon icon="email-outline" />}
                     right={<TextInput.Icon icon="menu-down" />}
+                    textColor={hasError ? theme.colors.error : theme.colors.onSurface}
                     value={errorText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => {
@@ -189,6 +195,7 @@ export const TextFieldExample: React.FC = () => {
                     right={<TextInput.Icon icon="menu-down" />}
                     value={normalFilledText}
                     dense={true}
+                    textColor={theme.colors.onSurface}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => setNormalFilledText(value)}
                     style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
@@ -200,6 +207,7 @@ export const TextFieldExample: React.FC = () => {
                     mode="flat"
                     left={<TextInput.Icon icon="email-outline" />}
                     right={<TextInput.Icon icon="menu-down" />}
+                    textColor={hasError ? theme.colors.error : theme.colors.onSurface}
                     value={errorFilledText}
                     underlineColor={theme.colors.onSurfaceVariant}
                     onChangeText={(value) => {
