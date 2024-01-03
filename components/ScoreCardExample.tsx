@@ -10,6 +10,7 @@ export const ScoreCardExample: React.FC = () => {
             headerTitle={'Substation 42'}
             headerSubtitle={'Normal'}
             headerInfo={'42 Devices'}
+            actionIconColor={BLUIColors.error[50]}
             actionItems={[{ icon: { name: 'star-outline' } }, { icon: { name: 'more-vert' }, onPress: () => {} }]}
             badgeOffset={-55}
             badge={
