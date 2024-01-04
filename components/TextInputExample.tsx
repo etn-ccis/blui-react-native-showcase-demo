@@ -15,10 +15,11 @@ export const TextFieldExample: React.FC = () => {
 
     const styles = StyleSheet.create({
         container: {
-            marginTop: 16,
+            marginVertical: 8,
         },
         flatInput: {
-            margin: 8,
+            marginTop: 8,
+            marginHorizontal: 8,
         },
         flatTextInputBackgroundColor: {
             backgroundColor: theme.colors.textFieldContainer,
@@ -34,16 +35,19 @@ export const TextFieldExample: React.FC = () => {
             borderBottomWidth: 0, // Adjust the thickness as needed
         },
         helperText: {
-            marginBottom: 8,
             marginHorizontal: 8,
             paddingHorizontal: 16,
+        },
+        textInputLabel: {
+            marginTop: 16,
+            marginHorizontal: 8,
         },
     });
 
     return (
         <View>
             <View style={styles.container}>
-                <Text> Flat TextInput </Text>
+                <Text style={styles.textInputLabel}> Flat TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -56,7 +60,7 @@ export const TextFieldExample: React.FC = () => {
                     style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
 
-                <Text> Error Flat TextInput </Text>
+                <Text style={styles.textInputLabel}> Error Flat TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -76,7 +80,7 @@ export const TextFieldExample: React.FC = () => {
                     Error Message
                 </HelperText>
 
-                <Text> Disabled Flat TextInput </Text>
+                <Text style={styles.textInputLabel}> Disabled Flat TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -90,7 +94,7 @@ export const TextFieldExample: React.FC = () => {
                 />
             </View>
             <View style={styles.container}>
-                <Text> Flat Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Flat Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -103,7 +107,7 @@ export const TextFieldExample: React.FC = () => {
                     style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
 
-                <Text> Error Flat Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Error Flat Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -123,7 +127,7 @@ export const TextFieldExample: React.FC = () => {
                     Error Message
                 </HelperText>
 
-                <Text> Disabled Flat Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Disabled Flat Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -137,7 +141,7 @@ export const TextFieldExample: React.FC = () => {
                 />
             </View>
             <View style={styles.container}>
-                <Text> Dense Flat TextInput </Text>
+                <Text style={styles.textInputLabel}> Dense Flat TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -151,7 +155,7 @@ export const TextFieldExample: React.FC = () => {
                     style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
 
-                <Text> Error Dense Flat TextInput </Text>
+                <Text style={styles.textInputLabel}> Error Dense Flat TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -172,7 +176,7 @@ export const TextFieldExample: React.FC = () => {
                     Error Message
                 </HelperText>
 
-                <Text> Disabled Dense Flat TextInput </Text>
+                <Text style={styles.textInputLabel}> Disabled Dense Flat TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -187,7 +191,7 @@ export const TextFieldExample: React.FC = () => {
                 />
             </View>
             <View style={styles.container}>
-                <Text> Dense Flat Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Dense Flat Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -201,7 +205,7 @@ export const TextFieldExample: React.FC = () => {
                     style={[styles.flatInput, styles.flatTextInputBackgroundColor]}
                 />
 
-                <Text> Error Dense Flat Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Error Dense Flat Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -222,7 +226,7 @@ export const TextFieldExample: React.FC = () => {
                     Error Message
                 </HelperText>
 
-                <Text> Disabled Dense Flat Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Disabled Dense Flat Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="flat"
@@ -236,8 +240,8 @@ export const TextFieldExample: React.FC = () => {
                     style={[styles.flatInput, styles.disabledFlatTextInputBackgroundColor]}
                 />
             </View>
-            <View style={{ marginTop: 30 }}>
-                <Text> Normal Outlined TextInput </Text>
+            <View style={styles.container}>
+                <Text style={styles.textInputLabel}> Normal Outlined TextInput </Text>
                 <TextInput
                     label="Normal Outlined TextInput"
                     mode="outlined"
@@ -249,7 +253,7 @@ export const TextFieldExample: React.FC = () => {
                     style={styles.outlineInput}
                 />
 
-                <Text> Error Outlined TextInput </Text>
+                <Text style={styles.textInputLabel}> Error Outlined TextInput </Text>
                 <TextInput
                     label="Error Outlined TextInput"
                     mode="outlined"
@@ -268,7 +272,7 @@ export const TextFieldExample: React.FC = () => {
                     Error Message
                 </HelperText>
 
-                <Text> Disabled Outlined TextInput </Text>
+                <Text style={styles.textInputLabel}> Disabled Outlined TextInput </Text>
                 <TextInput
                     label="Disabled Outlined TextInput"
                     mode="outlined"
@@ -283,7 +287,7 @@ export const TextFieldExample: React.FC = () => {
             </View>
 
             <View style={styles.container}>
-                <Text> Outline Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Outline Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="outlined"
@@ -295,7 +299,7 @@ export const TextFieldExample: React.FC = () => {
                     style={[styles.outlineInput]}
                 />
 
-                <Text> Error Outline Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Error Outline Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="outlined"
@@ -314,7 +318,7 @@ export const TextFieldExample: React.FC = () => {
                     Error Message
                 </HelperText>
 
-                <Text> Disabled Outline Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Disabled Outline Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="outlined"
@@ -328,7 +332,7 @@ export const TextFieldExample: React.FC = () => {
                 />
             </View>
             <View style={styles.container}>
-                <Text> Dense Outline TextInput </Text>
+                <Text style={styles.textInputLabel}> Dense Outline TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="outlined"
@@ -341,7 +345,7 @@ export const TextFieldExample: React.FC = () => {
                     style={[styles.outlineInput]}
                 />
 
-                <Text> Error Dense Outline TextInput </Text>
+                <Text style={styles.textInputLabel}> Error Dense Outline TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="outlined"
@@ -361,7 +365,7 @@ export const TextFieldExample: React.FC = () => {
                     Error Message
                 </HelperText>
 
-                <Text> Disabled Dense Outline TextInput </Text>
+                <Text style={styles.textInputLabel}> Disabled Dense Outline TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="outlined"
@@ -376,7 +380,7 @@ export const TextFieldExample: React.FC = () => {
                 />
             </View>
             <View style={styles.container}>
-                <Text> Dense Outline Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Dense Outline Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="outlined"
@@ -389,7 +393,7 @@ export const TextFieldExample: React.FC = () => {
                     style={[styles.outlineInput]}
                 />
 
-                <Text> Error Dense Outline Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Error Dense Outline Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="outlined"
@@ -409,7 +413,7 @@ export const TextFieldExample: React.FC = () => {
                     Error Message
                 </HelperText>
 
-                <Text> Disabled Dense Outline Filled TextInput </Text>
+                <Text style={styles.textInputLabel}> Disabled Dense Outline Filled TextInput </Text>
                 <TextInput
                     label="TextInput"
                     mode="outlined"
