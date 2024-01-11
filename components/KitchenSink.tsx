@@ -1102,7 +1102,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 >
                     <Text>Data Table</Text>
                     <View style={{ marginTop: 24 }}>
-                    <DataTable>
+                        <DataTable>
                             <DataTable.Header>
                                 <DataTable.Title
                                     textStyle={{ color: theme.colors.onSurface, ...theme.fonts.labelLarge }}
@@ -1125,9 +1125,15 @@ export const KitchenSink: React.FC = (): JSX.Element => {
 
                             {items.slice(from, to).map((item) => (
                                 <DataTable.Row key={item.key}>
-                                    <DataTable.Cell textStyle={{...theme.fonts.bodyMedium}} >{item.name}</DataTable.Cell>
-                                    <DataTable.Cell textStyle={{...theme.fonts.bodyMedium}} numeric>{item.calories}</DataTable.Cell>
-                                    <DataTable.Cell textStyle={{...theme.fonts.bodyMedium}} numeric>{item.fat}</DataTable.Cell>
+                                    <DataTable.Cell textStyle={{ ...theme.fonts.bodyMedium }}>
+                                        {item.name}
+                                    </DataTable.Cell>
+                                    <DataTable.Cell textStyle={{ ...theme.fonts.bodyMedium }} numeric>
+                                        {item.calories}
+                                    </DataTable.Cell>
+                                    <DataTable.Cell textStyle={{ ...theme.fonts.bodyMedium }} numeric>
+                                        {item.fat}
+                                    </DataTable.Cell>
                                 </DataTable.Row>
                             ))}
 
@@ -1136,12 +1142,18 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 numberOfPages={Math.ceil(items.length / itemsPerPage)}
                                 // eslint-disable-next-line @typescript-eslint/no-shadow
                                 onPageChange={(page): void => setPage(page)}
-                                label={<Text style={{...theme.fonts.bodyMedium}}>{`${from + 1}-${to} of ${items.length}`}</Text>}
+                                label={
+                                    <Text style={{ ...theme.fonts.bodyMedium }}>{`${from + 1}-${to} of ${
+                                        items.length
+                                    }`}</Text>
+                                }
                                 numberOfItemsPerPageList={numberOfItemsPerPageList}
                                 numberOfItemsPerPage={itemsPerPage}
                                 onItemsPerPageChange={onItemsPerPageChange}
                                 showFastPaginationControls
-                                selectPageDropdownLabel={<Text style={{...theme.fonts.bodyMedium}}>Rows per page</Text>}
+                                selectPageDropdownLabel={
+                                    <Text style={{ ...theme.fonts.bodyMedium }}>Rows per page</Text>
+                                }
                             />
                         </DataTable>
                     </View>
