@@ -1307,10 +1307,10 @@
   dependencies:
     color "^3.1.3"
 
-"@brightlayer-ui/react-native-themes@7.0.0-alpha.4":
-  version "7.0.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/react-native-themes/-/react-native-themes-7.0.0-alpha.4.tgz#c9835b6e3a570a70e978d0e74cda6dcdbd76b338"
-  integrity sha512-KHConT2F1WJNiwOSh9qS35Y0xXULDLWwuBVlqIGImdcnkQamaTwQz1VSBTkbi4lL4NRYYuPsaWVHq2bwPUN+oA==
+"@brightlayer-ui/react-native-themes@7.0.1-alpha.5":
+  version "7.0.1-alpha.5"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/react-native-themes/-/react-native-themes-7.0.1-alpha.5.tgz#8e1508606c5e670ad434ffcc82781af3118e2a28"
+  integrity sha512-D99P8QiHzNEPZdzd8XFEGTmg/M0rcwiBF7fKpaT1PlqlXFVteAJHS+bCK3yC7LQlrK5eQ0YqJROhtVMZVT478Q==
   dependencies:
     "@brightlayer-ui/colors" "4.0.0"
     color "^4.2.3"
