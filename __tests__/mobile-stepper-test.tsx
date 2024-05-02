@@ -16,7 +16,7 @@ it('Renders correctly and snapShot matches', () => {
     const snap = renderer
         .create(
             <SafeAreaProvider>
-                <ThemeContext.Provider value={{ theme: 'light', setTheme: (): void => { } }}>
+                <ThemeContext.Provider value={{ theme: 'light', setTheme: (): void => {} }}>
                     <PaperProvider theme={blue}>
                         <MobileStepperExample />
                     </PaperProvider>

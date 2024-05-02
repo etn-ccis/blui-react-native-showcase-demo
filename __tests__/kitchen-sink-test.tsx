@@ -2,7 +2,6 @@
  * @format
  */
 
-
 import 'react-native';
 import React from 'react';
 import { KitchenSink } from '../components/KitchenSink';
@@ -13,17 +12,17 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { it } from '@jest/globals';
 import renderer from 'react-test-renderer';
 
-
 it('Renders correctly and snapShot matches', () => {
-    const snap = renderer.create(
-        <SafeAreaProvider>
-            <ThemeContext.Provider value={{ theme: 'light', setTheme: (): void => { } }}>
-                <PaperProvider theme={blue}>
-                    <KitchenSink />
-                </PaperProvider>
-            </ThemeContext.Provider>
-        </SafeAreaProvider>
-    )
+    const snap = renderer
+        .create(
+            <SafeAreaProvider>
+                <ThemeContext.Provider value={{ theme: 'light', setTheme: (): void => {} }}>
+                    <PaperProvider theme={blue}>
+                        <KitchenSink />
+                    </PaperProvider>
+                </ThemeContext.Provider>
+            </SafeAreaProvider>
+        )
         .toJSON();
     expect(snap).toMatchSnapshot();
 });

@@ -12,17 +12,17 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { it } from '@jest/globals';
 import renderer from 'react-test-renderer';
 
-    it('Renders correctly and snapShot matches', () => {
-        const snap = renderer
-            .create(
-                <SafeAreaProvider>
+it('Renders correctly and snapShot matches', () => {
+    const snap = renderer
+        .create(
+            <SafeAreaProvider>
                 <ThemeContext.Provider value={{ theme: 'light', setTheme: (): void => {} }}>
                     <PaperProvider theme={blue}>
                         <UserMenuExample onToggleRTL={(): void => {}} onToggleTheme={(): void => {}} />
                     </PaperProvider>
                 </ThemeContext.Provider>
-                </SafeAreaProvider>
-            )
-            .toJSON();
-        expect(snap).toMatchSnapshot();
-    });
+            </SafeAreaProvider>
+        )
+        .toJSON();
+    expect(snap).toMatchSnapshot();
+});
