@@ -1,6 +1,6 @@
 # React Native Showcase Demo
 
-[![](https://img.shields.io/circleci/project/github/etn-ccis/blui-react-native-showcase-demo/master.svg?style=flat)](https://circleci.com/gh/etn-ccis/blui-react-native-showcase-demo/tree/master) [![codecov](https://codecov.io/gh/etn-ccis/blui-react-native-showcase-demo/branch/master/graph/badge.svg?token=6KBS9UWAXP)](https://codecov.io/gh/etn-ccis/blui-react-native-showcase-demo)
+[![Build](https://github.com/etn-ccis/blui-react-native-showcase-demo/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-react-native-showcase-demo/actions/workflows/blui-ci.yml) [![codecov](https://codecov.io/gh/etn-ccis/blui-react-native-showcase-demo/branch/master/graph/badge.svg?token=6KBS9UWAXP)](https://codecov.io/gh/etn-ccis/blui-react-native-showcase-demo)
 
 This applications is a demo applications that is used to demonstrate and test various Brightayer UI components, resources, etc.
 
