@@ -200,7 +200,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Text variant="titleLarge" style={{ marginVertical: 48 }}>
                 MD3 BLUI Components
             </Text>
-            <AutoCompleteExample/>
+            <AutoCompleteExample />
             <Card style={styles.card}>
                 <Card.Title title="Segmented Buttons" />
                 <Card.Content>
