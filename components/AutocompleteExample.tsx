@@ -13,7 +13,7 @@ export const AutoCompleteExample: React.FC = () => {
                     helperText="helper text"
                     value={['tag1']}
                     addCustomTag={true}
-                    label='label'
+                    label="label"
                     options={['tag1', 'tag2', 'tag3', 'tag4']}
                 />
             </Card.Content>
