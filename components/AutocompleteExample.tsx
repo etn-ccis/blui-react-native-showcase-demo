@@ -12,9 +12,8 @@ export const AutoCompleteExample: React.FC = () => {
                 <AutoComplete
                     helperText="helper text"
                     value={['tag1']}
-                    disabled={false}
                     addCustomTag={true}
-                    options={['tag1', 'tag2', 'tag3', 'tag4', 'abc', 'bcd']}
+                    options={['tag1', 'tag2', 'tag3', 'tag4']}
                 />
             </Card.Content>
         </Card>

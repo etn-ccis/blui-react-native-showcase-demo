@@ -60,6 +60,10 @@ export const App: React.FC<AppProps> = ({ navigation }) => {
                     },
                 ],
             }}
+            ScrollViewProps={{
+                nestedScrollEnabled: true,
+                keyboardShouldPersistTaps: 'handled',
+            }}
         >
             <KitchenSink />
         </CollapsibleHeaderLayout>
