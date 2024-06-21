@@ -10,11 +10,11 @@ export const AutoCompleteExample: React.FC = () => {
             <Card.Title title="AutoComplete" />
             <Card.Content>
                 <AutoComplete
-                    helperText="helper text"
-                    value={['tag1']}
-                    addCustomTag={true}
-                    label="label"
-                    options={['tag1', 'tag2', 'tag3', 'tag4']}
+                    helperText="Helper text"
+                    value={['Tag1']}
+                    allowCustomtag={true}
+                    label="Label"
+                    options={['Tag1', 'Tag2', 'Tag3', 'Tag4']}
                 />
             </Card.Content>
         </Card>
