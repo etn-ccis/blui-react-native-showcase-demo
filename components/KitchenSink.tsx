@@ -60,6 +60,7 @@ import { MobileStepperExample } from './MobileStepperExample';
 import * as BLUIColors from '@brightlayer-ui/colors';
 import { TextFieldExample } from './TextInputExample';
 import { useExtendedTheme } from '@brightlayer-ui/react-native-themes';
+import { AutoCompleteExample } from './AutocompleteExample';
 
 const PublicDomainAlice = require('../assets/images/public-domain-alice.png');
 
@@ -199,6 +200,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
             <Text variant="titleLarge" style={{ marginVertical: 48 }}>
                 MD3 BLUI Components
             </Text>
+            <AutoCompleteExample />
             <Card style={styles.card}>
                 <Card.Title title="Segmented Buttons" />
                 <Card.Content>
