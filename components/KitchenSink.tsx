@@ -685,7 +685,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 <DrawerNavItem
                                     itemID={'item4'}
                                     title={'Localization'}
-                                    icon={{ family: 'material-community', name: 'circle', direction: 'auto' }}
+                                    icon={{ family: 'material-community', name: 'map', direction: 'auto' }}
                                     activeItemBackgroundShape={'round'}
                                 />
                             </DrawerNavGroup>
