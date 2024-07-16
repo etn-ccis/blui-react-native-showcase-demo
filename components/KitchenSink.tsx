@@ -669,19 +669,13 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     itemID={'item1'}
                                     title={'Account'}
                                     icon={{ family: 'material-community', name: 'account', direction: 'auto' }}
-                                    // activeItemBackgroundShape={'round'}
-                                    InfoListItemProps={{
-                                        iconAlign: 'center',
-                                    }}
+                                    activeItemBackgroundShape={'round'}
                                 />
                                 <DrawerNavItem
                                     itemID={'item2'}
                                     title={'Notification'}
                                     icon={{ family: 'material-community', name: 'bell', direction: 'auto' }}
                                     activeItemBackgroundShape={'round'}
-                                    InfoListItemProps={{
-                                        iconAlign: 'center',
-                                    }}
                                 >
                                     <DrawerNavItem itemID={'item3'} title={'item3'}>
                                         <DrawerNavItem itemID={'item31'} title={'Item31'} />
@@ -691,11 +685,8 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 <DrawerNavItem
                                     itemID={'item4'}
                                     title={'Localization'}
-                                    icon={{ family: 'material-community', name: 'circle', direction: 'auto' }}
+                                    icon={{ family: 'material-community', name: 'map', direction: 'auto' }}
                                     activeItemBackgroundShape={'round'}
-                                    InfoListItemProps={{
-                                        iconAlign: 'center',
-                                    }}
                                 />
                             </DrawerNavGroup>
                             {/* Using 'items' prop */}
