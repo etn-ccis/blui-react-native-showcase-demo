@@ -22,7 +22,7 @@
         "@brightlayer-ui/react-native-components": "^7.1.0",
         "@brightlayer-ui/react-native-progress-icons": "^1.0.2",
         "@brightlayer-ui/react-native-themes": "7.0.1-alpha.5",
-        "@brightlayer-ui/react-native-vector-icons": "^2.2.0",
+        "@brightlayer-ui/react-native-vector-icons": "^2.4.0",
         "@react-navigation/drawer": "^6.6.6",
         "@react-navigation/native": "^6.1.9",
         "@react-navigation/stack": "^5.14.3",
