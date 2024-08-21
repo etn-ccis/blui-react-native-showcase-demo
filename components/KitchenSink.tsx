@@ -142,6 +142,14 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     });
 
     const [state, setState] = React.useState({ open: false });
+    const [toggledIconValue, settoggledIconValue] = useState([true, true, false, false, true, true, false,false]);
+    const handleIconSwitchChange = (index: number) => {
+        settoggledIconValue((prevState) => {
+            const newState = [...prevState];
+            newState[index] = !newState[index];
+            return newState;
+        });
+    };
 
     const onStateChange = ({ open }: { open: boolean }): void => setState({ open });
 
@@ -273,28 +281,76 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                 <Card.Title title="Icon Switch" />
                 <Card.Content>
                     <View style={{ padding: 10 }}>
-                        <IconSwitch value />
+                        <IconSwitch
+                            value={toggledIconValue[0]}
+                            onValueChange={() => {
+                                handleIconSwitchChange(0);
+                            }}
+                        />
                     </View>
                     <View style={{ padding: 10 }}>
-                        <IconSwitch value showIcon />
+                        <IconSwitch
+                            value={toggledIconValue[1]}
+                            onValueChange={() => {
+                                handleIconSwitchChange(1);
+                            }}
+                            showIcon
+                        />
                     </View>
                     <View style={{ padding: 10 }}>
-                        <IconSwitch />
+                        <IconSwitch
+                            value={toggledIconValue[2]}
+                            onValueChange={() => {
+                                handleIconSwitchChange(2);
+                            }}
+                        />
                     </View>
                     <View style={{ padding: 10 }}>
-                        <IconSwitch showIcon />
+                        <IconSwitch
+                            showIcon
+                            value={toggledIconValue[3]}
+                            onValueChange={() => {
+                                handleIconSwitchChange(3);
+                            }}
+                        />
                     </View>
                     <View style={{ padding: 10 }}>
-                        <IconSwitch value disabled />
+                        <IconSwitch
+                            value={toggledIconValue[4]}
+                            onValueChange={() => {
+                                handleIconSwitchChange(4);
+                            }}
+                            disabled
+                        />
                     </View>
                     <View style={{ padding: 10 }}>
-                        <IconSwitch value showIcon disabled />
+                        <IconSwitch
+                            value={toggledIconValue[5]}
+                            onValueChange={() => {
+                                handleIconSwitchChange(5);
+                            }}
+                            showIcon
+                            disabled
+                        />
                     </View>
                     <View style={{ padding: 10 }}>
-                        <IconSwitch disabled />
+                        <IconSwitch
+                            value={toggledIconValue[6]}
+                            onValueChange={() => {
+                                handleIconSwitchChange(6);
+                            }}
+                            disabled
+                        />
                     </View>
                     <View style={{ padding: 10 }}>
-                        <IconSwitch showIcon disabled />
+                        <IconSwitch
+                            value={toggledIconValue[7]}
+                            onValueChange={() => {
+                                handleIconSwitchChange(7);
+                            }}
+                            showIcon
+                            disabled
+                        />
                     </View>
                 </Card.Content>
             </Card>
@@ -669,13 +725,19 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                     itemID={'item1'}
                                     title={'Account'}
                                     icon={{ family: 'material-community', name: 'account', direction: 'auto' }}
-                                    activeItemBackgroundShape={'round'}
+                                    // activeItemBackgroundShape={'round'}
+                                    InfoListItemProps={{
+                                        iconAlign: 'center',
+                                    }}
                                 />
                                 <DrawerNavItem
                                     itemID={'item2'}
                                     title={'Notification'}
                                     icon={{ family: 'material-community', name: 'bell', direction: 'auto' }}
                                     activeItemBackgroundShape={'round'}
+                                    InfoListItemProps={{
+                                        iconAlign: 'center',
+                                    }}
                                 >
                                     <DrawerNavItem itemID={'item3'} title={'item3'}>
                                         <DrawerNavItem itemID={'item31'} title={'Item31'} />
@@ -685,8 +747,11 @@ export const KitchenSink: React.FC = (): JSX.Element => {
                                 <DrawerNavItem
                                     itemID={'item4'}
                                     title={'Localization'}
-                                    icon={{ family: 'material-community', name: 'map', direction: 'auto' }}
+                                    icon={{ family: 'material-community', name: 'circle', direction: 'auto' }}
                                     activeItemBackgroundShape={'round'}
+                                    InfoListItemProps={{
+                                        iconAlign: 'center',
+                                    }}
                                 />
                             </DrawerNavGroup>
                             {/* Using 'items' prop */}
