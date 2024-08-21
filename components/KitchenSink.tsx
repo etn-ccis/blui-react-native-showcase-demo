@@ -142,7 +142,7 @@ export const KitchenSink: React.FC = (): JSX.Element => {
     });
 
     const [state, setState] = React.useState({ open: false });
-    const [toggledIconValue, settoggledIconValue] = useState([true, true, false, false, true, true, false,false]);
+    const [toggledIconValue, settoggledIconValue] = useState([true, true, false, false, true, true, false, false]);
     const handleIconSwitchChange = (index: number) => {
         settoggledIconValue((prevState) => {
             const newState = [...prevState];
