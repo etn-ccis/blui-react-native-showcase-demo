@@ -1257,11 +1257,6 @@
   resolved "https://registry.yarnpkg.com/@brightlayer-ui/colors/-/colors-4.0.0.tgz#5bb3706eca98e849d1e80ca4c9f9ca731380d227"
   integrity sha512-fF7Ne7cz4yFCzR96HrP1RVBw55s+cWbqYkPallnpmmtYnPwNS/DyAbbHFEnl2bxziq3CvAR2S+D6AnjIeluOZA==
 
-"@brightlayer-ui/colors@4.0.0-alpha.2":
-  version "4.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/@brightlayer-ui/colors/-/colors-4.0.0-alpha.2.tgz#6de90235ff5b8b7a72a0c31a76d680762e0e38ec"
-  integrity sha512-9EVJtEoyjSeCKjS7tK/MdMDhuPnONVxUIc0gwF3Jgi28Ya9zbUzxYPxCXrwt/vnbLkQPyYPo3a6aHf3VAv2nBg==
-
 "@brightlayer-ui/colors@^3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@brightlayer-ui/colors/-/colors-3.1.1.tgz#7bc86498e30172c410ba4c3237149b16a2eed4c6"
