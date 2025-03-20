@@ -86,3 +86,7 @@ git submodule update --remote //this is the command to update the pointer
 ```
 
 Most parent repositories will have an NPM script to update the pointer.
+
+> **Important Migration Notice:**
+>
+> This repository has been migrated to a monorepo to consolidate All the React Native libraries developed by Brightlayer Team into a single workspace. Future development and updates will now occur in the following location: [https://github.com/etn-ccis/blui-react-native/tree/dev/examples/showcase]. Please update your bookmarks and contribute to the monorepo for the latest changes.
