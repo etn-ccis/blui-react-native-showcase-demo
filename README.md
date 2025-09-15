@@ -2,6 +2,10 @@
 
 [![Build](https://github.com/etn-ccis/blui-react-native-showcase-demo/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-react-native-showcase-demo/actions/workflows/blui-ci.yml) [![codecov](https://codecov.io/gh/etn-ccis/blui-react-native-showcase-demo/branch/master/graph/badge.svg?token=6KBS9UWAXP)](https://codecov.io/gh/etn-ccis/blui-react-native-showcase-demo)
 
+> **Important Migration Notice:**
+>
+> This repository has been migrated to a monorepo to consolidate all the React Native libraries developed by Brightlayer UI team into a single workspace. Future development and updates will now occur in [this location](https://github.com/etn-ccis/blui-react-native/tree/dev/examples/showcase). Please update your bookmarks and contribute to the monorepo for the latest changes.
+
 This applications is a demo applications that is used to demonstrate and test various Brightayer UI components, resources, etc.
 
 It is used as a git submodule for:
